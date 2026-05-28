@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE College Predictor | Discover Your Future</title>
+    <meta name="description" content="Predict your JEE colleges based on rank, quota, and category with our advanced prediction engine.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>window.jsPDF = window.jspdf.jsPDF;</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    
+    <style>
+        :root {
+            --bg-color-1: #0f172a;
+            --bg-color-2: #1e1b4b;
+            --accent-glow: #8b5cf6;
+            --accent-primary: #a855f7;
+            --accent-secondary: #ec4899;
+            --surface-glass: rgba(255, 255, 255, 0.05);
+            --surface-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --input-bg: rgba(15, 23, 42, 0.6);
+            --input-border: rgba(255, 255, 255, 0.15);
+            --card-glass: rgba(30, 41, 59, 0.7);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar for a smoother look */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.8);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-primary);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-secondary);
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(135deg, var(--bg-color-1), var(--bg-color-2));
+            color: var(--text-main);
+            margin: 0;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            background-attachment: fixed;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Ambient background glow */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.5;
+            animation: float 10s infinite ease-in-out alternate;
+        }
+
+        body::before {
+            background: rgba(139, 92, 246, 0.4);
+            top: -100px;
+            left: -100px;
+        }
+
+        body::after {
+            background: rgba(236, 72, 153, 0.3);
+            bottom: -100px;
+            right: -100px;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            animation: fadeInDown 0.8s ease-out;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(168, 85, 247, 0.4);
+        }
+
+        .header p {
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            font-size: 1.15rem;
+        }
+
+        /* Main layout split */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            width: 100%;
+            max-width: 1200px;
+            align-items: stretch;
+            z-index: 1;
+        }
+
+        /* Filters Card */
+        .container {
+            background: var(--surface-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--surface-border);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            animation: fadeInDown 0.8s ease-out;
+            box-sizing: border-box;
+        }
+
+        /* Results Area */
+        .results-area {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+
+        .form-actions button {
+            width: auto;
+            min-width: 250px;
+            margin-top: 0;
+            padding: 0.85rem 2.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.25rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            letter-spacing: 0.5px;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 0.65rem 1rem;
+            border: 1px solid var(--input-border);
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--text-main);
+            background-color: var(--input-bg);
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Webkit autofill fix */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active{
+            -webkit-box-shadow: 0 0 0 30px var(--bg-color-1) inset !important;
+            -webkit-text-fill-color: white !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
+        select option {
+            background-color: var(--bg-color-1);
+            color: var(--text-main);
+        }
+
+        input[type="number"]:focus,
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.25), inset 0 2px 4px rgba(0,0,0,0.1);
+            background-color: rgba(15, 23, 42, 0.8);
+        }
+
+        input[type="number"]::placeholder,
+        input[type="text"]::placeholder {
+            color: var(--text-muted);
+        }
+
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            font-family: 'Space Grotesk', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-top: 1.25rem;
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(168, 85, 247, 0.6);
+        }
+
+        button:hover::after {
+            left: 100%;
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 10px rgba(168, 85, 247, 0.4);
+        }
+
+        button:disabled {
+            background: transparent;
+            border: 1px solid var(--text-muted);
+            color: var(--text-muted);
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .download-btn {
+            background: rgba(168, 85, 247, 0.2);
+            color: var(--accent-primary);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: auto;
+            width: auto;
+            margin-top: 0;
+            box-shadow: none;
+        }
+
+        .download-btn:hover {
+            background: rgba(168, 85, 247, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        .download-btn::after {
+            display: none;
+        }
+
+        .loading-container {
+            display: none;
+            text-align: center;
+            margin-top: 4rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(168, 85, 247, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--accent-primary);
+            animation: spin 1s ease-in-out infinite;
+            margin: 0 auto 1.5rem;
+        }
+
+        .loading-text {
+            color: var(--accent-primary);
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        #results-container {
+            width: 100%;
+        }
+
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            min-height: 400px;
+            color: var(--text-muted);
+            text-align: center;
+            background: var(--surface-glass);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px dashed var(--surface-border);
+        }
+
+        .empty-state svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 1.4rem;
+            margin: 0 0 0.5rem 0;
+            color: var(--text-main);
+        }
+
+        .summary-card {
+            background: var(--card-glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--surface-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .summary-card h4 {
+            margin: 0 0 1rem 0;
+            color: var(--accent-primary);
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--surface-border);
+            padding-bottom: 0.5rem;
+        }
+
+        .summary-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .summary-chip {
+            background: rgba(255,255,255,0.05);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+        }
+        
+        .summary-chip strong {
+            color: var(--text-muted);
+            margin-right: 0.5rem;
+            font-weight: 400;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .result-card {
+            background: var(--card-glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--surface-border);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            animation: slideUp 0.5s ease-out backwards;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .result-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
+            border-radius: 16px 0 0 16px;
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4), 0 0 30px rgba(168, 85, 247, 0.15);
+            border-color: rgba(168, 85, 247, 0.4);
+        }
+        
+        .rc-main {
+            flex: 1;
+            padding-right: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .rc-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            border-left: 1px solid var(--surface-border);
+            padding-left: 2rem;
+            min-width: 200px;
+        }
+
+        .rc-type {
+            font-size: 0.85rem;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .result-card h3 {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.3rem;
+            color: #fff;
+            line-height: 1.3;
+        }
+
+        .rc-branch {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.4;
+        }
+
+        .rc-branch svg {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            flex-shrink: 0;
+            color: var(--accent-primary);
+            position: relative;
+            top: 2px;
+        }
+
+        .rc-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: flex-end;
+            margin-bottom: 1.25rem;
+        }
+
+        .rc-tag {
+            font-size: 0.8rem;
+            background: rgba(255,255,255,0.05);
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-main);
+        }
+        
+        .rc-tag.safe {
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        
+        .rc-tag.low {
+            background: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            position: relative;
+            cursor: help;
+        }
+        
+        .rc-tag.low::after {
+            content: "Note on 'Low Chance': Your rank is slightly higher than last year’s cutoff. You might still get this college if rank shifts, but it is not sure.";
+            position: absolute;
+            bottom: calc(100% + 5px);
+            right: 0;
+            width: max-content;
+            max-width: 250px;
+            white-space: normal;
+            background: rgba(15, 23, 42, 0.95);
+            color: #f1f5f9;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            line-height: 1.4;
+            text-align: left;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .rc-tag.low:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .rc-rank {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            white-space: nowrap;
+        }
+        
+        .rc-rank strong {
+            color: var(--accent-primary);
+            font-size: 1.2rem;
+            margin-left: 0.3rem;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .result-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem;
+            }
+            .rc-main {
+                padding-right: 0;
+                margin-bottom: 1.5rem;
+            }
+            .rc-meta {
+                border-left: none;
+                border-top: 1px solid var(--surface-border);
+                padding-left: 0;
+                padding-top: 1.5rem;
+                width: 100%;
+                align-items: flex-start;
+            }
+            .rc-tags {
+                justify-content: flex-start;
+            }
+        }
+
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            min-height: 50vh;
+            text-align: center;
+            color: var(--text-muted);
+            animation: fadeIn 0.8s ease;
+        }
+
+        .empty-state svg {
+            width: 120px;
+            height: 120px;
+            color: var(--accent-primary);
+            opacity: 0.7;
+            margin-bottom: 1.5rem;
+            animation: floatEmpty 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.4));
+        }
+
+        .empty-state h3 {
+            color: var(--text-main);
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .empty-state p {
+            max-width: 400px;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        @keyframes floatEmpty {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .message {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .error {
+            background: rgba(220, 38, 38, 0.1);
+            color: #fca5a5;
+            border: 1px solid rgba(220, 38, 38, 0.3);
+        }
+
+        .info {
+            background: rgba(56, 189, 248, 0.1);
+            color: #bae6fd;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .match-count {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .match-count span {
+            background: rgba(168, 85, 247, 0.2);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            color: var(--accent-primary);
+            font-weight: 700;
+            margin: 0 0.5rem;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .container {
+                flex: none;
+                width: 100%;
+                max-width: 500px;
+                position: relative;
+                top: 0;
+            }
+            .results-area {
+                width: 100%;
+                max-width: 600px;
+            }
+            .header h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        /* Autocomplete styling */
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            border-top: none;
+            z-index: 99;
+            top: 100%;
+            left: 0;
+            right: 0;
+            max-height: 250px;
+            overflow-y: auto;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 0 20px rgba(168, 85, 247, 0.15);
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(20px);
+            display: none;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-primary) transparent;
+        }
+
+        .autocomplete-items::-webkit-scrollbar {
+            width: 6px;
+        }
+        .autocomplete-items::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .autocomplete-items::-webkit-scrollbar-thumb {
+            background-color: var(--accent-primary);
+            border-radius: 10px;
+        }
+
+        .autocomplete-items div {
+            padding: 12px 16px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-main);
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+            position: relative;
+        }
+        
+        .autocomplete-items div::before {
+            content: '→';
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            color: var(--accent-primary);
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.2s ease;
+            font-weight: bold;
+        }
+
+        .autocomplete-items div:hover {
+            background-color: rgba(168, 85, 247, 0.15);
+            padding-left: 36px;
+        }
+        
+        .autocomplete-items div:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .autocomplete-items div:last-child {
+            border-bottom: none;
+        }
+
+        /* Chat Styles */
+        .chat-suggested-chip {
+            background: rgba(168, 85, 247, 0.1);
+            color: var(--accent-primary);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: auto !important;
+            min-width: 0 !important;
+            margin-top: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .chat-suggested-chip:hover {
+            background: rgba(168, 85, 247, 0.25);
+            border-color: var(--accent-primary);
+            transform: translateY(-1px);
+        }
+
+        .chat-message {
+            animation: slideUp 0.3s ease-out;
+        }
+
+        .chat-message.user-message {
+            align-self: flex-end;
+            max-width: 80%;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            padding: 0.9rem 1.2rem;
+            border-radius: 16px 16px 4px 16px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+        }
+
+        .chat-message.bot-message ul {
+            margin: 0.5rem 0;
+            padding-left: 1.2rem;
+        }
+
+        .chat-message.bot-message li {
+            margin-bottom: 0.4rem;
+        }
+        
+        .chat-message.bot-message p {
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .chat-message.bot-message p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>College Predictor</h1>
+        <p>Find your dream engineering institution based on real data</p>
+    </div>
+
+    <div class="main-content">
+        <!-- Sidebar: Form -->
+        <div class="container">
+            <div class="tabs" style="display: flex; gap: 1rem; margin-bottom: 2rem; justify-content: center; flex-wrap: wrap;">
+                <button type="button" id="tab-predict" style="width: 140px; margin-top: 0; padding: 0.7rem; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); color: white; border: none; border-radius: 12px; font-family: 'Space Grotesk', sans-serif; font-weight: 600; cursor: pointer; font-size: 0.95rem;">CSAB</button>
+                <button type="button" id="tab-josaa" style="width: 140px; margin-top: 0; padding: 0.7rem; background: transparent; border: 1px solid var(--accent-primary); color: var(--text-main); border-radius: 12px; font-family: 'Space Grotesk', sans-serif; font-weight: 600; cursor: pointer; font-size: 0.95rem;">JoSAA</button>
+                <button type="button" id="tab-search" style="width: 140px; margin-top: 0; padding: 0.7rem; background: transparent; border: 1px solid var(--accent-primary); color: var(--text-main); border-radius: 12px; font-family: 'Space Grotesk', sans-serif; font-weight: 600; cursor: pointer; font-size: 0.95rem;">Search</button>
+                <button type="button" id="tab-lowest" style="width: 140px; margin-top: 0; padding: 0.7rem; background: transparent; border: 1px solid var(--accent-primary); color: var(--text-main); border-radius: 12px; font-family: 'Space Grotesk', sans-serif; font-weight: 600; cursor: pointer; font-size: 0.95rem;">Cutoff</button>
+                <button type="button" id="tab-chat" style="width: 140px; margin-top: 0; padding: 0.7rem; background: transparent; border: 1px solid var(--accent-primary); color: var(--text-main); border-radius: 12px; font-family: 'Space Grotesk', sans-serif; font-weight: 600; cursor: pointer; font-size: 0.95rem;">AI Assistant</button>
+            </div>
+            <form id="prediction-form">
+                <div class="form-grid">
+                    <div class="form-group" style="display: none;">
+                        <label for="counseling_type">Counseling Type</label>
+                        <select id="counseling_type" name="counseling_type" required>
+                            <option value="CSAB" selected>CSAB</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="round">Select Round</label>
+                        <select id="round" name="round" required>
+                            <!-- Options populated by JS -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="institute_type">Institute Type</label>
+                        <select id="institute_type" name="institute_type" required>
+                            <option value="" disabled>Choose Institute</option>
+                            <option value="All" selected>All (GFTI+NIT+IIIT)</option>
+                            <option value="GFTI">GFTI - Govt. Funded</option>
+                            <option value="NIT">NIT - National Inst. of Tech</option>
+                            <option value="IIIT">IIIT - Indian Inst. of Info Tech</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rank">JEE Main Rank</label>
+                        <input type="number" id="rank" name="rank" placeholder="e.g. 25000" required min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quota">Quota</label>
+                        <select id="quota" name="quota" required>
+                            <option value="" disabled>Choose Quota</option>
+                            <option value="All India" selected>All India</option>
+                            <option value="Home State">Home State</option>
+                            <option value="Other State">Other State</option>
+                            <option value="All India + Other State">All India + Other State</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="predict_college_group" style="display: none; position: relative;">
+                        <label for="predict_college">Preferred College (Optional)</label>
+                        <input type="text" id="predict_college" name="predict_college" placeholder="e.g. MNIT Jaipur" autocomplete="off">
+                        <div id="autocomplete-predict-college" class="autocomplete-items"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="" disabled>Choose Category</option>
+                            <option value="OPEN" selected>OPEN / General</option>
+                            <option value="OBC-NCL">OBC-NCL</option>
+                            <option value="EWS">EWS</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                            <option value="OPEN (PwD)">OPEN (PwD)</option>
+                            <option value="OBC-NCL (PwD)">OBC-NCL (PwD)</option>
+                            <option value="EWS (PwD)">EWS (PwD)</option>
+                            <option value="SC (PwD)">SC (PwD)</option>
+                            <option value="ST (PwD)">ST (PwD)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="" disabled>Choose Gender Profile</option>
+                            <option value="Gender-Neutral" selected>Gender-Neutral</option>
+                            <option value="Female-only">Female-only</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="position: relative;">
+                        <label for="predict_branch">Preferred Branch (Optional)</label>
+                        <input type="text" id="predict_branch" name="predict_branch" placeholder="e.g. Computer Science" autocomplete="off">
+                        <div id="autocomplete-predict-branch" class="autocomplete-items"></div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="predict-btn">
+                        <span>Discover Options</span>
+                    </button>
+                </div>
+            </form>
+
+            <form id="josaa-prediction-form" style="display: none;">
+                <div class="form-grid">
+                    <div class="form-group" style="display: none;">
+                        <label for="josaa_counseling_type">Counseling Type</label>
+                        <select id="josaa_counseling_type" name="josaa_counseling_type" required>
+                            <option value="JOSAA" selected>JoSAA</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="josaa_round">Select Round</label>
+                        <select id="josaa_round" name="josaa_round" required>
+                            <!-- Options populated by JS -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="josaa_institute_type">Institute Type</label>
+                        <select id="josaa_institute_type" name="josaa_institute_type" required>
+                            <option value="" disabled>Choose Institute</option>
+                            <option value="All" selected>All (GFTI+NIT+IIIT)</option>
+                            <option value="GFTI">GFTI - Govt. Funded</option>
+                            <option value="NIT">NIT - National Inst. of Tech</option>
+                            <option value="IIIT">IIIT - Indian Inst. of Info Tech</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="josaa_rank">JEE Main Rank</label>
+                        <input type="number" id="josaa_rank" name="josaa_rank" placeholder="e.g. 25000" required min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="josaa_quota">Quota</label>
+                        <select id="josaa_quota" name="josaa_quota" required>
+                            <option value="" disabled>Choose Quota</option>
+                            <option value="All India" selected>All India</option>
+                            <option value="Home State">Home State</option>
+                            <option value="Other State">Other State</option>
+                            <option value="All India + Other State">All India + Other State</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="josaa_predict_college_group" style="display: none; position: relative;">
+                        <label for="josaa_predict_college">Preferred College (Optional)</label>
+                        <input type="text" id="josaa_predict_college" name="josaa_predict_college" placeholder="e.g. MNIT Jaipur" autocomplete="off">
+                        <div id="autocomplete-josaa-predict-college" class="autocomplete-items"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="josaa_category">Category</label>
+                        <select id="josaa_category" name="josaa_category" required>
+                            <option value="" disabled>Choose Category</option>
+                            <option value="OPEN" selected>OPEN / General</option>
+                            <option value="OBC-NCL">OBC-NCL</option>
+                            <option value="EWS">EWS</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                            <option value="OPEN (PwD)">OPEN (PwD)</option>
+                            <option value="OBC-NCL (PwD)">OBC-NCL (PwD)</option>
+                            <option value="EWS (PwD)">EWS (PwD)</option>
+                            <option value="SC (PwD)">SC (PwD)</option>
+                            <option value="ST (PwD)">ST (PwD)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="josaa_gender">Gender</label>
+                        <select id="josaa_gender" name="josaa_gender" required>
+                            <option value="" disabled>Choose Gender Profile</option>
+                            <option value="Gender-Neutral" selected>Gender-Neutral</option>
+                            <option value="Female-only">Female-only</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="position: relative;">
+                        <label for="josaa_predict_branch">Preferred Branch (Optional)</label>
+                        <input type="text" id="josaa_predict_branch" name="josaa_predict_branch" placeholder="e.g. Computer Science" autocomplete="off">
+                        <div id="autocomplete-josaa-predict-branch" class="autocomplete-items"></div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="josaa-predict-btn">
+                        <span>Discover Options</span>
+                    </button>
+                </div>
+            </form>
+
+            <form id="search-form" style="display: none;">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="search_counseling_type">Counseling Type</label>
+                        <select id="search_counseling_type" name="search_counseling_type" required>
+                            <option value="CSAB" selected>CSAB</option>
+                            <option value="JOSAA">JoSAA</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="search_round">Select Round</label>
+                        <select id="search_round" name="search_round" required>
+                            <!-- Options populated by JS -->
+                        </select>
+                    </div>
+                    <div class="form-group" style="position: relative;">
+                        <label for="search_college_name">College Name</label>
+                        <input type="text" id="search_college_name" name="search_college_name" placeholder="e.g. Punjab Engineering" autocomplete="off" required>
+                        <div id="autocomplete-list" class="autocomplete-items"></div>
+                    </div>
+
+                    <div class="form-group" style="position: relative;">
+                        <label for="search_branch">Branch (Optional)</label>
+                        <input type="text" id="search_branch" name="search_branch" placeholder="e.g. Computer Science" autocomplete="off">
+                        <div id="autocomplete-list-branch" class="autocomplete-items"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="search_category">Category (Optional)</label>
+                        <select id="search_category" name="search_category">
+                            <option value="" selected>All Categories</option>
+                            <option value="OPEN">OPEN / General</option>
+                            <option value="OBC-NCL">OBC-NCL</option>
+                            <option value="EWS">EWS</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                            <option value="OPEN (PwD)">OPEN (PwD)</option>
+                            <option value="OBC-NCL (PwD)">OBC-NCL (PwD)</option>
+                            <option value="EWS (PwD)">EWS (PwD)</option>
+                            <option value="SC (PwD)">SC (PwD)</option>
+                            <option value="ST (PwD)">ST (PwD)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="search_gender">Gender (Optional)</label>
+                        <select id="search_gender" name="search_gender">
+                            <option value="" selected>All Genders</option>
+                            <option value="Gender-Neutral">Gender-Neutral</option>
+                            <option value="Female-only">Female-only</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="search-btn">
+                        <span>Search College</span>
+                    </button>
+                </div>
+            </form>
+
+            <form id="lowest-cutoff-form" style="display: none;">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="lowest_counseling_type">Counseling Type</label>
+                        <select id="lowest_counseling_type" name="lowest_counseling_type" required>
+                            <option value="CSAB" selected>CSAB</option>
+                            <option value="JOSAA">JoSAA</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lowest_round">Select Round</label>
+                        <select id="lowest_round" name="lowest_round" required>
+                            <!-- Options populated by JS -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lowest_institute_type">Institute Type</label>
+                        <select id="lowest_institute_type" name="lowest_institute_type" required>
+                            <option value="" disabled selected>Choose Institute</option>
+                            <option value="All">All (GFTI+NIT+IIIT)</option>
+                            <option value="GFTI">GFTI - Govt. Funded</option>
+                            <option value="NIT">NIT - National Inst. of Tech</option>
+                            <option value="IIIT">IIIT - Indian Inst. of Info Tech</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="position: relative;">
+                        <label for="lowest_search_branch">Branch (Optional)</label>
+                        <input type="text" id="lowest_search_branch" name="lowest_search_branch" placeholder="e.g. Computer Science" autocomplete="off">
+                        <div id="lowest-autocomplete-list-branch" class="autocomplete-items"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lowest_search_category">Category (Optional)</label>
+                        <select id="lowest_search_category" name="lowest_search_category">
+                            <option value="" selected>All Categories</option>
+                            <option value="OPEN">OPEN / General</option>
+                            <option value="OBC-NCL">OBC-NCL</option>
+                            <option value="EWS">EWS</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                            <option value="OPEN (PwD)">OPEN (PwD)</option>
+                            <option value="OBC-NCL (PwD)">OBC-NCL (PwD)</option>
+                            <option value="EWS (PwD)">EWS (PwD)</option>
+                            <option value="SC (PwD)">SC (PwD)</option>
+                            <option value="ST (PwD)">ST (PwD)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lowest_search_quota">Quota</label>
+                        <select id="lowest_search_quota" name="lowest_search_quota">
+                            <option value="All India" selected>All India (Default)</option>
+                            <option value="Home State">Home State</option>
+                            <option value="Other State">Other State</option>
+                            <option value="All India + Other State">All India + Other State</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lowest_search_gender">Gender (Optional)</label>
+                        <select id="lowest_search_gender" name="lowest_search_gender">
+                            <option value="" selected>All Genders</option>
+                            <option value="Gender-Neutral">Gender-Neutral</option>
+                            <option value="Female-only">Female-only</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="lowest-btn">
+                        <span>Find Lowest Cutoff</span>
+                    </button>
+                </div>
+            </form>
+
+            <form id="chat-form" style="display: none;" onsubmit="handleChatSubmit(event)">
+                <div class="chat-container" style="display: flex; flex-direction: column; gap: 1rem; max-width: 900px; margin: 0 auto;">
+                    <div id="chat-suggested-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 0.5rem;">
+                        <button type="button" class="chat-suggested-chip" onclick="sendSuggestedChat('Can I get NIT Jaipur at 70k rank?')">Can I get NIT Jaipur at 70k rank?</button>
+                        <button type="button" class="chat-suggested-chip" onclick="sendSuggestedChat('Best branch available at 25000 rank?')">Best branch at 25000 rank?</button>
+                        <button type="button" class="chat-suggested-chip" onclick="sendSuggestedChat('Best GFTI for OBC at 1 lakh rank?')">Best GFTI for OBC at 1 lakh?</button>
+                        <button type="button" class="chat-suggested-chip" onclick="sendSuggestedChat('What are my low chance options at 40000 rank?')">Low chance options at 40000?</button>
+                    </div>
+                    
+                    <div id="chat-history" style="height: 380px; overflow-y: auto; padding: 1.5rem; background: rgba(15, 23, 42, 0.6); border: 1px solid var(--surface-border); border-radius: 16px; display: flex; flex-direction: column; gap: 1rem; box-shadow: inset 0 4px 12px rgba(0,0,0,0.5); scrollbar-width: thin; scrollbar-color: var(--accent-primary) transparent;">
+                        <!-- Messages dynamically added -->
+                        <div class="chat-message bot-message" style="align-self: flex-start; max-width: 80%; background: var(--surface-glass); border: 1px solid var(--surface-border); color: var(--text-main); padding: 0.9rem 1.2rem; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; line-height: 1.5; white-space: pre-wrap; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">Hello! I am your smart JEE College Counseling Assistant. 🎓
+
+How can I help you today? Please tell me your **JEE Main Rank**, **Category**, and **Gender** or ask about a specific college/branch (e.g., *"Can I get NIT Jaipur at 70k rank?"*).</div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 0.75rem; align-items: stretch; margin-top: 0.5rem;">
+                        <input type="text" id="chat-input" placeholder="Type your JEE counseling question here..." style="flex: 1; padding: 0.8rem 1.2rem; border: 1px solid var(--input-border); border-radius: 14px; font-size: 0.95rem; background: var(--input-bg); color: var(--text-main); font-family: 'Space Grotesk', sans-serif;" required>
+                        <button type="submit" id="chat-send-btn" style="width: auto; min-width: 100px; margin-top: 0; padding: 0.8rem 1.5rem; border-radius: 14px; display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4); border: none; font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: white; cursor: pointer;">
+                            <span>Send</span>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Side: Loading / Results -->
+        <div class="results-area">
+            
+            <div id="loading" class="loading-container">
+                <div class="spinner"></div>
+                <div class="loading-text">Mining dataset...</div>
+            </div>
+
+            <div id="results-container">
+                <!-- Initial Empty State -->
+                <div class="empty-state">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <h3>Ready to predict your future</h3>
+                    <p>Enter your rank and details on the left to see which colleges you can unlock.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        // Fetch college list for autocomplete
+        let collegeList = [];
+        fetch('http://127.0.0.1:5000/api/colleges')
+            .then(res => res.json())
+            .then(data => {
+                collegeList = data;
+            })
+            .catch(err => console.error("Error loading colleges list:", err));
+
+        // Fetch branch list for autocomplete
+        let branchList = [];
+        fetch('http://127.0.0.1:5000/api/branches')
+            .then(res => res.json())
+            .then(data => {
+                branchList = data;
+            })
+            .catch(err => console.error("Error loading branches list:", err));
+
+        // Tab switching logic
+        const tabPredict = document.getElementById('tab-predict');
+        const tabJosaa = document.getElementById('tab-josaa');
+        const tabSearch = document.getElementById('tab-search');
+        const tabLowest = document.getElementById('tab-lowest');
+        const tabChat = document.getElementById('tab-chat');
+        const formPredict = document.getElementById('prediction-form');
+        const formJosaa = document.getElementById('josaa-prediction-form');
+        const formSearch = document.getElementById('search-form');
+        const formLowest = document.getElementById('lowest-cutoff-form');
+        const formChat = document.getElementById('chat-form');
+        const resultsContainer = document.getElementById('results-container');
+
+        // Update Round Options based on Counseling Type
+        function updateRoundOptions(typeSelectId, roundSelectId) {
+            const type = document.getElementById(typeSelectId).value;
+            const roundSelect = document.getElementById(roundSelectId);
+            roundSelect.innerHTML = '';
+            if (type === 'CSAB') {
+                roundSelect.innerHTML = `
+                    <option value="Round 1">Round 1</option>
+                    <option value="Round 2">Round 2</option>
+                    <option value="Round 3" selected>Round 3</option>
+                `;
+            } else if (type === 'JOSAA') {
+                roundSelect.innerHTML = `
+                    <option value="Round 1" selected>Round 1</option>
+                    <option value="Round 2">Round 2</option>
+                    <option value="Round 3">Round 3</option>
+                    <option value="Round 4">Round 4</option>
+                    <option value="Round 6">Round 6</option>
+                `;
+            }
+        }
+
+        ['counseling_type', 'josaa_counseling_type', 'search_counseling_type', 'lowest_counseling_type'].forEach((typeId, idx) => {
+            const roundIds = ['round', 'josaa_round', 'search_round', 'lowest_round'];
+            const typeEl = document.getElementById(typeId);
+            if(typeEl) {
+                typeEl.addEventListener('change', () => updateRoundOptions(typeId, roundIds[idx]));
+                // Initialize
+                updateRoundOptions(typeId, roundIds[idx]);
+            }
+        });
+
+        // Autocomplete Logic Setup
+        function setupAutocomplete(inputElement, listElement, dataListArrayFn) {
+            inputElement.addEventListener("input", function() {
+                const val = this.value;
+                listElement.innerHTML = '';
+                
+                if (!val) {
+                    listElement.style.display = 'none';
+                    return;
+                }
+                
+                const dataList = dataListArrayFn();
+                const matched = dataList.filter(item => item.toLowerCase().includes(val.toLowerCase()));
+                
+                if (matched.length > 0) {
+                    listElement.style.display = 'block';
+                    matched.forEach(match => {
+                        const div = document.createElement("div");
+                        const regex = new RegExp(`(${val})`, "gi");
+                        div.innerHTML = match.replace(regex, "<strong style='color: var(--accent-primary);'>$1</strong>");
+                        div.addEventListener("click", function() {
+                            inputElement.value = match;
+                            listElement.style.display = 'none';
+                        });
+                        listElement.appendChild(div);
+                    });
+                } else {
+                    listElement.style.display = 'none';
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener("click", function(e) {
+                if (e.target !== inputElement) {
+                    listElement.style.display = 'none';
+                }
+            });
+        }
+
+        const searchInput = document.getElementById("search_college_name");
+        const autocompleteList = document.getElementById("autocomplete-list");
+        setupAutocomplete(searchInput, autocompleteList, () => collegeList);
+
+        const branchInput = document.getElementById("search_branch");
+        const autocompleteListBranch = document.getElementById("autocomplete-list-branch");
+        setupAutocomplete(branchInput, autocompleteListBranch, () => branchList);
+
+        const lowestBranchInput = document.getElementById("lowest_search_branch");
+        const lowestAutocompleteListBranch = document.getElementById("lowest-autocomplete-list-branch");
+        setupAutocomplete(lowestBranchInput, lowestAutocompleteListBranch, () => branchList);
+
+        const predictCollegeInput = document.getElementById("predict_college");
+        const autocompleteListPredictCollege = document.getElementById("autocomplete-predict-college");
+        setupAutocomplete(predictCollegeInput, autocompleteListPredictCollege, () => collegeList);
+
+        const predictBranchInput = document.getElementById("predict_branch");
+        const autocompleteListPredictBranch = document.getElementById("autocomplete-predict-branch");
+        setupAutocomplete(predictBranchInput, autocompleteListPredictBranch, () => branchList);
+
+        document.getElementById('quota').addEventListener('change', function() {
+            const predictCollegeGroup = document.getElementById('predict_college_group');
+            if (this.value === 'Home State') {
+                predictCollegeGroup.style.display = 'block';
+            } else {
+                predictCollegeGroup.style.display = 'none';
+                predictCollegeInput.value = '';
+            }
+        });
+
+        
+        const josaaPredictCollegeInput = document.getElementById("josaa_predict_college");
+        const autocompleteListJosaaPredictCollege = document.getElementById("autocomplete-josaa-predict-college");
+        setupAutocomplete(josaaPredictCollegeInput, autocompleteListJosaaPredictCollege, () => collegeList);
+
+        const josaaPredictBranchInput = document.getElementById("josaa_predict_branch");
+        const autocompleteListJosaaPredictBranch = document.getElementById("autocomplete-josaa-predict-branch");
+        setupAutocomplete(josaaPredictBranchInput, autocompleteListJosaaPredictBranch, () => branchList);
+
+        document.getElementById('josaa_quota').addEventListener('change', function() {
+            const predictCollegeGroup = document.getElementById('josaa_predict_college_group');
+            if (this.value === 'Home State') {
+                predictCollegeGroup.style.display = 'block';
+            } else {
+                predictCollegeGroup.style.display = 'none';
+                josaaPredictCollegeInput.value = '';
+            }
+        });
+
+        function resetTabs() {
+            [tabPredict, tabJosaa, tabSearch, tabLowest, tabChat].forEach(tab => {
+                if (tab) {
+                    tab.style.background = 'transparent';
+                    tab.style.color = 'var(--text-main)';
+                    tab.style.border = '1px solid var(--accent-primary)';
+                }
+            });
+            [formPredict, formJosaa, formSearch, formLowest, formChat].forEach(form => {
+                if (form) {
+                    form.style.display = 'none';
+                }
+            });
+            const resultsArea = document.querySelector('.results-area');
+            if (resultsArea) {
+                resultsArea.style.display = 'flex';
+            }
+        }
+
+        const emptyStateHtml = `
+            <div class="empty-state">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                <h3>Ready to predict your future</h3>
+                <p>Enter your rank and details on the left to see which colleges you can unlock.</p>
+            </div>
+        `;
+
+        tabPredict.addEventListener('click', () => {
+            resetTabs();
+            tabPredict.style.background = 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))';
+            tabPredict.style.color = 'white';
+            tabPredict.style.border = 'none';
+            formPredict.style.display = 'block';
+            resultsContainer.innerHTML = emptyStateHtml;
+        });
+
+        
+        tabJosaa.addEventListener('click', () => {
+            resetTabs();
+            tabJosaa.style.background = 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))';
+            tabJosaa.style.color = 'white';
+            tabJosaa.style.border = 'none';
+            formJosaa.style.display = 'block';
+            resultsContainer.innerHTML = emptyStateHtml;
+        });
+
+        tabSearch.addEventListener('click', () => {
+            resetTabs();
+            tabSearch.style.background = 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))';
+            tabSearch.style.color = 'white';
+            tabSearch.style.border = 'none';
+            formSearch.style.display = 'block';
+            resultsContainer.innerHTML = emptyStateHtml;
+        });
+
+        tabLowest.addEventListener('click', () => {
+            resetTabs();
+            tabLowest.style.background = 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))';
+            tabLowest.style.color = 'white';
+            tabLowest.style.border = 'none';
+            formLowest.style.display = 'block';
+            resultsContainer.innerHTML = emptyStateHtml;
+        });
+
+        if (tabChat) {
+            tabChat.addEventListener('click', () => {
+                resetTabs();
+                tabChat.style.background = 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))';
+                tabChat.style.color = 'white';
+                tabChat.style.border = 'none';
+                formChat.style.display = 'block';
+                const resultsArea = document.querySelector('.results-area');
+                if (resultsArea) {
+                    resultsArea.style.display = 'none';
+                }
+            });
+        }
+
+        // Lowest Cutoff Form Submit Logic
+        formLowest.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('lowest-btn');
+            const loading = document.getElementById('loading');
+            resultsContainer.innerHTML = '';
+            
+            const instituteType = document.getElementById('lowest_institute_type').value.split(' ')[0];
+            const branch = document.getElementById('lowest_search_branch').value;
+            const categoryObj = document.getElementById('lowest_search_category');
+            const category = categoryObj.value || '';
+            const quotaObj = document.getElementById('lowest_search_quota');
+            const quota = quotaObj.value || '';
+            const genderObj = document.getElementById('lowest_search_gender');
+            const gender = genderObj.value || '';
+            const round = document.getElementById('lowest_round').value;
+            const counselingType = document.getElementById('lowest_counseling_type').value;
+
+            if (!instituteType) {
+                displayMessage("Institute type is required.", "error");
+                return;
+            }
+
+            const payloadData = {
+                counseling_type: counselingType,
+                institute_type: instituteType,
+                branch: branch,
+                category: category,
+                quota: quota,
+                gender: gender,
+                round: round
+            };
+
+            btn.disabled = true;
+            btn.innerHTML = 'Searching...';
+            loading.style.display = 'block';
+
+            if (window.innerWidth <= 900) {
+                setTimeout(() => {
+                    document.querySelector('.results-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/lowest_cutoff', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payloadData)
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || "An error occurred");
+                }
+
+                const summaryHtml = `
+                    <div class="summary-card">
+                        <h4>Lowest Cutoff Summary</h4>
+                        <div class="summary-details">
+                            <div class="summary-chip"><strong>Counseling</strong> ${payloadData.counseling_type}</div>
+                            <div class="summary-chip"><strong>Round</strong> ${payloadData.round}</div>
+                            <div class="summary-chip"><strong>Inst.</strong> ${instituteType}</div>
+                            ${branch ? `<div class="summary-chip"><strong>Branch</strong> ${branch}</div>` : ''}
+                            ${category ? `<div class="summary-chip"><strong>Category</strong> ${category}</div>` : ''}
+                            ${quota ? `<div class="summary-chip"><strong>Quota</strong> ${quota}</div>` : ''}
+                            ${gender ? `<div class="summary-chip"><strong>Gender</strong> ${gender}</div>` : ''}
+                        </div>
+                    </div>
+                `;
+
+                if (data.length === 0) {
+                    resultsContainer.innerHTML = summaryHtml + `
+                        <div class="message info">
+                            <svg style="width: 48px; height: 48px; margin-bottom: 1rem; color: #bae6fd;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <br>
+                            No matching records found.
+                        </div>
+                    `;
+                } else {
+                    let html = summaryHtml;
+                    html += `
+                        <div class="message info" style="margin-bottom: 1.5rem; text-align: left; padding: 1rem; border-left: 4px solid var(--accent-primary);">
+                            <strong>Data Source:</strong> Results are based on <strong>${payloadData.counseling_type} ${round.toUpperCase()} data</strong>.
+                        </div>
+                        <div class="match-count" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                            <div>Found the college with the lowest cutoff!</div>
+                        </div>
+                    `;
+                    
+                    html += `<div class="results-grid" style="grid-template-columns: 1fr;">`;
+                    data.forEach((item) => {
+                        html += `
+                            <div class="result-card" style="border-color: var(--accent-primary); box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2);">
+                                <div class="rc-main">
+                                    <div class="rc-type">${item.Institute_Type}</div>
+                                    <h3>${item.College}</h3>
+                                    <div class="rc-branch">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                        <span>${item.Branch}</span>
+                                    </div>
+                                </div>
+                                <div class="rc-meta">
+                                    <div class="rc-tags">
+                                        <span class="rc-tag">${item.Category}</span>
+                                        <span class="rc-tag">${item.Quota}</span>
+                                        <span class="rc-tag">${item.Gender}</span>
+                                    </div>
+                                    <div class="rc-rank">
+                                        Opening: ${item['Opening Rank'] ? item['Opening Rank'].toLocaleString() : 'N/A'} <span style="margin: 0 0.5rem; color: rgba(255,255,255,0.2);">|</span> Closing: <strong>${item['Closing Rank'].toLocaleString()}</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    html += `</div>`;
+                    
+                    resultsContainer.innerHTML = html;
+                }
+            } catch (error) {
+                console.error("Fetch API Error:", error);
+                displayMessage(error.message || "Failed to reach servers.", "error");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<span>Find Lowest Cutoff</span>';
+                loading.style.display = 'none';
+            }
+        });
+
+        // Search Form Submit Logic
+        formSearch.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('search-btn');
+            const loading = document.getElementById('loading');
+            
+            resultsContainer.innerHTML = '';
+            
+            const collegeName = document.getElementById('search_college_name').value;
+            const branch = document.getElementById('search_branch').value;
+            const categoryObj = document.getElementById('search_category');
+            const category = categoryObj.value || '';
+            const genderObj = document.getElementById('search_gender');
+            const gender = genderObj.value || '';
+            const round = document.getElementById('search_round').value;
+            const counselingType = document.getElementById('search_counseling_type').value;
+
+            if (!collegeName) {
+                displayMessage("College name is required.", "error");
+                return;
+            }
+
+            const payloadData = {
+                counseling_type: counselingType,
+                college_name: collegeName,
+                branch: branch,
+                category: category,
+                gender: gender,
+                round: round
+            };
+
+            btn.disabled = true;
+            btn.innerHTML = 'Searching...';
+            loading.style.display = 'block';
+
+            if (window.innerWidth <= 900) {
+                setTimeout(() => {
+                    document.querySelector('.results-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/search', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payloadData)
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || "An error occurred while searching");
+                }
+
+                const summaryHtml = `
+                    <div class="summary-card">
+                        <h4>Search Summary</h4>
+                        <div class="summary-details">
+                            <div class="summary-chip" style="border-color: rgba(168, 85, 247, 0.4); background: rgba(168, 85, 247, 0.1); color: var(--accent-primary); font-weight: bold;">
+                                <strong>Results Found:</strong> ${data.length}
+                            </div>
+                            <div class="summary-chip"><strong>Counseling</strong> ${payloadData.counseling_type}</div>
+                            <div class="summary-chip"><strong>Round</strong> ${payloadData.round}</div>
+                            <div class="summary-chip"><strong>College</strong> ${collegeName}</div>
+                            ${branch ? `<div class="summary-chip"><strong>Branch</strong> ${branch}</div>` : ''}
+                            ${category ? `<div class="summary-chip"><strong>Category</strong> ${category}</div>` : ''}
+                        </div>
+                    </div>
+                `;
+
+                if (data.length === 0) {
+                    resultsContainer.innerHTML = summaryHtml + `
+                        <div class="message info">
+                            <svg style="width: 48px; height: 48px; margin-bottom: 1rem; color: #bae6fd;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <br>
+                            No matching colleges found. Try checking the spelling or use a more general term.
+                        </div>
+                    `;
+                } else {
+                    let html = summaryHtml;
+                    html += `
+                        <div class="message info" style="margin-bottom: 1.5rem; text-align: left; padding: 1rem; border-left: 4px solid var(--accent-primary);">
+                            <strong>Data Source:</strong> Results are based on <strong>${payloadData.counseling_type} ${round.toUpperCase()} data</strong>.
+                        </div>
+                        <div class="match-count" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                            <div>Found <span>${data.length}</span> result${data.length > 1 ? 's' : ''}</div>
+                        </div>
+                    `;
+                    
+                    html += `<div class="results-grid">`;
+                    data.forEach((item, index) => {
+                        const delay = Math.min(index * 0.05, 1);
+                        html += `
+                            <div class="result-card" style="animation-delay: ${delay}s">
+                                <div class="rc-main">
+                                    <div class="rc-type">${item.Institute_Type}</div>
+                                    <h3>${item.College}</h3>
+                                    <div class="rc-branch">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                        <span>${item.Branch}</span>
+                                    </div>
+                                </div>
+                                <div class="rc-meta">
+                                    <div class="rc-tags">
+                                        <span class="rc-tag">${item.Category}</span>
+                                        <span class="rc-tag">${item.Quota}</span>
+                                        <span class="rc-tag">${item.Gender}</span>
+                                    </div>
+                                    <div class="rc-rank">
+                                        Opening: ${item['Opening Rank'] ? item['Opening Rank'].toLocaleString() : 'N/A'} <span style="margin: 0 0.5rem; color: rgba(255,255,255,0.2);">|</span> Closing: <strong>${item['Closing Rank'].toLocaleString()}</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    html += `</div>`;
+                    
+                    resultsContainer.innerHTML = html;
+                }
+            } catch (error) {
+                console.error("Fetch API Error:", error);
+                displayMessage(error.message || "Failed to reach servers.", "error");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<span>Search College</span>';
+                loading.style.display = 'none';
+            }
+        });
+
+        
+        async function handlePredictionSubmit(e, formPrefix) {
+            e.preventDefault();
+            
+            const btn = document.getElementById(formPrefix === '' ? 'predict-btn' : formPrefix + '-predict-btn');
+            const loading = document.getElementById('loading');
+            const resultsContainer = document.getElementById('results-container');
+            
+            // Clear previous output
+            resultsContainer.innerHTML = '';
+            
+            const p = formPrefix === '' ? '' : formPrefix + '_';
+            
+            // Extract values
+            const institute_type = document.getElementById(p + 'institute_type').value.split(' ')[0];
+            const rank = parseInt(document.getElementById(p + 'rank').value, 10);
+            const quota = document.getElementById(p + 'quota').value;
+            const category = document.getElementById(p + 'category').value;
+            const gender = document.getElementById(p + 'gender').value;
+            const predict_college = document.getElementById(p + 'predict_college').value;
+            const predict_branch = document.getElementById(p + 'predict_branch').value;
+            const round = document.getElementById(p + 'round').value;
+            const counselingType = document.getElementById(p + 'counseling_type').value;
+
+            // Form validation
+            if(!institute_type || !quota || !category || !gender || !rank) {
+                displayMessage("Please ensure all fields are selected correctly.", "error");
+                return;
+            }
+
+            const payloadData = {
+                counseling_type: counselingType,
+                institute_type: institute_type,
+                rank: rank,
+                quota: quota,
+                category: category,
+                gender: gender,
+                college: predict_college,
+                branch: predict_branch,
+                round: round
+            };
+
+            // Update UI state
+            btn.disabled = true;
+            btn.innerHTML = 'Analyzing...';
+            loading.style.display = 'block';
+            
+            if (window.innerWidth <= 900) {
+                setTimeout(() => {
+                    document.querySelector('.results-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/predict', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payloadData)
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || "An error occurred while fetching predictions");
+                }
+
+                // Building the UI for results
+                const summaryHtml = `
+                    <div class="summary-card">
+                        <h4>Prediction Summary</h4>
+                        <div class="summary-details">
+                            <div class="summary-chip" style="border-color: rgba(168, 85, 247, 0.4); background: rgba(168, 85, 247, 0.1); color: var(--accent-primary); font-weight: bold;">
+                                <strong>Options Matched:</strong> ${data.length}
+                            </div>
+                            <div class="summary-chip"><strong>Counseling</strong> ${payloadData.counseling_type}</div>
+                            <div class="summary-chip"><strong>Round</strong> ${payloadData.round}</div>
+                            <div class="summary-chip"><strong>Inst.</strong> ${institute_type}</div>
+                            <div class="summary-chip"><strong>Rank</strong> ${rank.toLocaleString()}</div>
+                            <div class="summary-chip"><strong>Quota</strong> ${quota}</div>
+                            <div class="summary-chip"><strong>Category</strong> ${category}</div>
+                            ${predict_college ? `<div class="summary-chip"><strong>College</strong> ${predict_college}</div>` : ''}
+                            ${predict_branch ? `<div class="summary-chip"><strong>Branch</strong> ${predict_branch}</div>` : ''}
+                        </div>
+                    </div>
+                `;
+
+                if (data.length === 0) {
+                    resultsContainer.innerHTML = summaryHtml + `
+                        <div class="message info">
+                            <svg style="width: 48px; height: 48px; margin-bottom: 1rem; color: #bae6fd;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <br>
+                            No colleges match these exact criteria. Try analyzing a slightly higher rank bracket or changing the quota.
+                        </div>
+                    `;
+                } else {
+                    let html = summaryHtml;
+                    html += `
+                        <div class="message info" style="margin-bottom: 1.5rem; text-align: left; padding: 1rem; border-left: 4px solid var(--accent-primary);">
+                            <strong>Data Source:</strong> These predictions are based on <strong>${payloadData.counseling_type} ${round.toUpperCase()} data</strong>.
+                        </div>
+                    `;
+                    
+                    // Top warning removed, tooltip used on hover instead.
+                    html += `
+                        <div class="match-count" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                            <div>Unlocked <span>${data.length}</span> possibility${data.length > 1 ? 'ies' : ''}</div>
+                            <button id="download-pdf-btn" class="download-btn">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                Download PDF
+                            </button>
+                        </div>
+                    `;
+                    
+                    html += `<div class="results-grid">`;
+                    data.forEach((item, index) => {
+                        const delay = Math.min(index * 0.05, 1);
+                        html += `
+                            <div class="result-card" style="animation-delay: ${delay}s">
+                                <div class="rc-main">
+                                    <div class="rc-type">${item.Institute_Type}</div>
+                                    <h3>${item.College}</h3>
+                                    <div class="rc-branch">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                        <span>${item.Branch}</span>
+                                    </div>
+                                </div>
+                                <div class="rc-meta">
+                                    <div class="rc-tags">
+                                        <span class="rc-tag">${item.Quota || payloadData.quota}</span>
+                                        <span class="rc-tag ${item.Status === 'Safe' ? 'safe' : 'low'}">${item.Status}</span>
+                                    </div>
+                                    <div class="rc-rank">
+                                        Opening: ${item['Opening Rank'] ? item['Opening Rank'].toLocaleString() : 'N/A'} <span style="margin: 0 0.5rem; color: rgba(255,255,255,0.2);">|</span> Closing: <strong>${item['Closing Rank'].toLocaleString()}</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    html += `</div>`;
+                    
+                    resultsContainer.innerHTML = html;
+
+                    document.getElementById('download-pdf-btn').addEventListener('click', function() {
+                        const { jsPDF } = window.jspdf;
+                        let doc;
+                        try {
+                            doc = new jsPDF({
+                                encryption: {
+                                    userPermissions: ["print"],
+                                    ownerPassword: "CampusCipher_Owner_" + Math.random().toString(36).substring(2, 10),
+                                    userPassword: ""
+                                }
+                            });
+                        } catch (e) {
+                            console.warn("jsPDF encryption error, falling back to standard PDF:", e);
+                            doc = new jsPDF();
+                        }
+                        
+                        doc.setFillColor(30, 27, 75);
+                        doc.rect(0, 0, 210, 42, 'F');
+                        
+                        doc.setTextColor(255, 255, 255);
+                        doc.setFontSize(24);
+                        doc.setFont("helvetica", "bold");
+                        doc.text("CampusCipher College Predictor", 105, 20, { align: "center" });
+
+                        doc.setFontSize(12);
+                        doc.setFont("helvetica", "normal");
+                        doc.setTextColor(168, 85, 247);
+                        doc.text("Personalized JEE Main Prediction Report", 105, 28, { align: "center" });
+                        doc.setFontSize(10);
+                        doc.setTextColor(200, 200, 200);
+                        doc.text(`Based on ${payloadData.counseling_type} ${round.toUpperCase()} Data`, 105, 34, { align: "center" });
+                        
+                        let yPos = 52;
+                        doc.setFontSize(14);
+                        doc.setTextColor(30, 27, 75);
+                        doc.setFont("helvetica", "bold");
+                        doc.text("Your Profile & Filters", 14, yPos);
+                        
+                        doc.setDrawColor(220, 220, 220);
+                        doc.setLineWidth(0.5);
+                        doc.line(14, yPos + 3, 196, yPos + 3);
+                        
+                        const displayInstType = payloadData.institute_type === 'All' ? 'ALL (NIT + IIIT + GFTI)' : payloadData.institute_type;
+                        
+                        const profileRows = [
+                            [
+                                { content: 'Counseling:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.counseling_type },
+                                { content: 'Round:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.round }
+                            ],
+                            [
+                                { content: 'Institute Type:', styles: { fontStyle: 'bold' } },
+                                { content: displayInstType },
+                                { content: 'Rank:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.rank.toLocaleString() }
+                            ],
+                            [
+                                { content: 'Quota:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.quota },
+                                { content: 'Category:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.category }
+                            ],
+                            [
+                                { content: 'Gender:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.gender },
+                                { content: payloadData.college ? 'Pref. College:' : '', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.college || '' }
+                            ]
+                        ];
+                        
+                        if (payloadData.branch) {
+                            profileRows.push([
+                                { content: 'Pref. Branch:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.branch, colSpan: 3 },
+                                {}, {}
+                            ]);
+                        }
+
+                        profileRows.push([
+                            { content: 'Options Matched:', styles: { fontStyle: 'bold', textColor: [168, 85, 247] } },
+                            { content: data.length.toString() + (data.length === 1 ? ' option matched' : ' options matched'), colSpan: 3, styles: { fontStyle: 'bold', textColor: [168, 85, 247] } },
+                            {}, {}
+                        ]);
+                        
+                        doc.autoTable({
+                            startY: yPos + 6,
+                            body: profileRows,
+                            theme: 'plain',
+                            styles: {
+                                font: 'helvetica',
+                                fontSize: 9.5,
+                                cellPadding: { top: 1.5, bottom: 1.5, left: 0, right: 0 },
+                                textColor: [80, 80, 80],
+                                valign: 'top'
+                            },
+                            columnStyles: {
+                                0: { cellWidth: 28 },
+                                1: { cellWidth: 65 },
+                                2: { cellWidth: 25 },
+                                3: { cellWidth: 65 }
+                            },
+                            margin: { left: 14, right: 14 }
+                        });
+                        
+                        yPos = doc.lastAutoTable.finalY + 8;
+                        
+                        const hasLowChanceInPdf = data.some(item => item.Status === 'Low Chance');
+                        if (hasLowChanceInPdf) {
+                            doc.setFontSize(9);
+                            doc.setTextColor(245, 158, 11);
+                            doc.setFont("helvetica", "bold");
+                            doc.text("Note on 'Low Chance':", 14, yPos);
+                            
+                            doc.setTextColor(80, 80, 80);
+                            doc.setFont("helvetica", "normal");
+                            let noteText = doc.splitTextToSize("Your rank is slightly higher than last year's cutoff. You might still get this college if rank shifts, but it is not sure.", 145);
+                            doc.text(noteText, 50, yPos);
+                            
+                            yPos += doc.getTextDimensions(noteText).h + 5;
+                        } else {
+                            yPos += 5;
+                        }
+                        
+                        const tableBody = data.map((item, i) => [
+                            (i + 1).toString(),
+                            item.Institute_Type || payloadData.institute_type,
+                            item.College,
+                            item.Branch,
+                            item.Quota || payloadData.quota,
+                            item['Opening Rank'] ? item['Opening Rank'].toLocaleString() : 'N/A',
+                            item['Closing Rank'].toLocaleString(),
+                            item.Status
+                        ]);
+                        
+                        doc.autoTable({
+                            startY: yPos,
+                            head: [['S.No.', 'Type', 'College Name', 'Branch', 'Quota', 'Opening Rank', 'Closing Rank', 'Status']],
+                            body: tableBody,
+                            theme: 'grid',
+                            headStyles: { 
+                                fillColor: [30, 27, 75], 
+                                textColor: 255,
+                                fontStyle: 'bold',
+                                halign: 'center'
+                            },
+                            alternateRowStyles: { fillColor: [248, 250, 252] },
+                            styles: { 
+                                font: 'helvetica', 
+                                fontSize: 9, 
+                                cellPadding: 2, 
+                                lineColor: [220, 220, 220],
+                                lineWidth: 0.1
+                            },
+                            columnStyles: {
+                                0: { cellWidth: 6, halign: 'center' },
+                                1: { cellWidth: 10, halign: 'center', fontStyle: 'bold', textColor: [168, 85, 247] },
+                                2: { cellWidth: 55 },
+                                3: { cellWidth: 42 },
+                                4: { cellWidth: 18, halign: 'center' },
+                                5: { cellWidth: 16, halign: 'center' },
+                                6: { cellWidth: 16, halign: 'center', fontStyle: 'bold' },
+                                7: { cellWidth: 23, halign: 'center', fontStyle: 'bold' }
+                            },
+                            didParseCell: function(data) {
+                                if (data.section === 'body' && data.column.index === 7) {
+                                    if (data.cell.raw === 'Safe') {
+                                        data.cell.styles.textColor = [34, 197, 94]; // Green color
+                                    } else if (data.cell.raw === 'Low Chance') {
+                                        data.cell.styles.textColor = [245, 158, 11]; // Amber/Yellow color
+                                    }
+                                }
+                            },
+                            didDrawPage: function(data) {
+                                doc.setFontSize(8);
+                                doc.setTextColor(150, 150, 150);
+                                doc.text(`Generated by CampusCipher - Page ${data.pageNumber}`, 105, 290, { align: 'center' });
+                                
+                                try {
+                                    if (typeof doc.saveGraphicsState === 'function') {
+                                        doc.saveGraphicsState();
+                                    }
+                                    const GState = window.jspdf.GState;
+                                    if (GState && typeof doc.setGState === 'function') {
+                                        doc.setGState(new GState({opacity: 0.15}));
+                                        doc.setTextColor(150, 150, 150);
+                                    } else {
+                                        doc.setTextColor(235, 235, 235);
+                                    }
+                                    doc.setFontSize(60);
+                                    doc.setFont("helvetica", "bold");
+                                    
+                                    // Draw 3 watermarks spread across the page vertically
+                                    const yPositions = [80, 150, 220];
+                                    yPositions.forEach(y => {
+                                        doc.text("CampusCipher", 105, y, { align: "center", angle: 45 });
+                                    });
+                                    
+                                    if (typeof doc.restoreGraphicsState === 'function') {
+                                        doc.restoreGraphicsState();
+                                    }
+                                } catch (err) {
+                                    console.warn("Watermark error:", err);
+                                }
+                            }
+                        });
+                        
+                        doc.save(`CampusCipher_College_Report.pdf`);
+                    });
+
+                }
+            } catch (error) {
+                console.error("Fetch API Error:", error);
+                displayMessage(error.message || "Failed to reach servers.", "error");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<span>Discover Options</span>';
+                loading.style.display = 'none';
+            }
+        }
+
+        document.getElementById('prediction-form').addEventListener('submit', (e) => handlePredictionSubmit(e, ''));
+        document.getElementById('josaa-prediction-form').addEventListener('submit', (e) => handlePredictionSubmit(e, 'josaa'));
+
+        function displayMessage(message, type = 'error') {
+            const resultsContainer = document.getElementById('results-container');
+            let svg = '';
+            if (type === 'error') {
+                svg = '<svg style="width: 48px; height: 48px; margin-bottom: 1rem; color: #fca5a5;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg><br>';
+            } else {
+                svg = '<svg style="width: 48px; height: 48px; margin-bottom: 1rem; color: #bae6fd;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><br>';
+            }
+            resultsContainer.innerHTML = `<div class="message ${type}">${svg}${message}</div>`;
+        }
+
+        // --- AI CHATBOT FUNCTIONALITY ---
+        
+        // Helper to format chatbot markdown response
+        function formatChatMessage(text) {
+            if (!text) return "";
+            
+            const lines = text.split('\n');
+            let inList = false;
+            let htmlLines = [];
+            
+            for (let line of lines) {
+                let trimmed = line.trim();
+                
+                // Handle list items starting with '* '
+                if (trimmed.startsWith('* ')) {
+                    if (!inList) {
+                        htmlLines.push('<ul>');
+                        inList = true;
+                    }
+                    let content = trimmed.substring(2);
+                    content = parseInlineMarkdown(content);
+                    htmlLines.push(`<li>${content}</li>`);
+                } else {
+                    if (inList) {
+                        htmlLines.push('</ul>');
+                        inList = false;
+                    }
+                    
+                    if (trimmed === '') {
+                        continue;
+                    }
+                    
+                    let content = parseInlineMarkdown(trimmed);
+                    htmlLines.push(`<p>${content}</p>`);
+                }
+            }
+            
+            if (inList) {
+                htmlLines.push('</ul>');
+            }
+            
+            return htmlLines.join('\n');
+        }
+
+        function parseInlineMarkdown(text) {
+            // Escape HTML entities to prevent injection
+            let temp = text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+                
+            // Convert **bold** to <strong>
+            temp = temp.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            
+            return temp;
+        }
+
+        // Helper to append a chat message bubble
+        function appendChatMessage(text, sender) {
+            const chatHistory = document.getElementById('chat-history');
+            if (!chatHistory) return;
+            
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `chat-message ${sender}-message`;
+            
+            if (sender === 'user') {
+                msgDiv.textContent = text;
+                msgDiv.style.alignSelf = 'flex-end';
+                msgDiv.style.maxWidth = '80%';
+                msgDiv.style.background = 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))';
+                msgDiv.style.color = 'white';
+                msgDiv.style.padding = '0.9rem 1.2rem';
+                msgDiv.style.borderRadius = '16px 16px 4px 16px';
+                msgDiv.style.fontSize = '0.95rem';
+                msgDiv.style.lineHeight = '1.5';
+                msgDiv.style.boxShadow = '0 4px 15px rgba(168, 85, 247, 0.3)';
+            } else {
+                msgDiv.innerHTML = formatChatMessage(text);
+                msgDiv.style.alignSelf = 'flex-start';
+                msgDiv.style.maxWidth = '80%';
+                msgDiv.style.background = 'var(--surface-glass)';
+                msgDiv.style.border = '1px solid var(--surface-border)';
+                msgDiv.style.color = 'var(--text-main)';
+                msgDiv.style.padding = '0.9rem 1.2rem';
+                msgDiv.style.borderRadius = '16px 16px 16px 4px';
+                msgDiv.style.fontSize = '0.95rem';
+                msgDiv.style.lineHeight = '1.5';
+                msgDiv.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+            }
+            
+            chatHistory.appendChild(msgDiv);
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+        }
+
+        // Helper to append the bot analyzing placeholder
+        function appendChatLoading(id) {
+            const chatHistory = document.getElementById('chat-history');
+            if (!chatHistory) return;
+            
+            const loadingDiv = document.createElement('div');
+            loadingDiv.id = id;
+            loadingDiv.className = 'chat-message bot-message';
+            loadingDiv.style.alignSelf = 'flex-start';
+            loadingDiv.style.maxWidth = '80%';
+            loadingDiv.style.background = 'var(--surface-glass)';
+            loadingDiv.style.border = '1px solid var(--surface-border)';
+            loadingDiv.style.color = 'var(--text-muted)';
+            loadingDiv.style.padding = '0.9rem 1.2rem';
+            loadingDiv.style.borderRadius = '16px 16px 16px 4px';
+            loadingDiv.style.fontSize = '0.95rem';
+            loadingDiv.style.lineHeight = '1.5';
+            
+            loadingDiv.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div class="spinner" style="width: 16px; height: 16px; border-width: 2px; margin: 0; animation: spin 1s ease-in-out infinite;"></div>
+                    <span>Analyzing ranks...</span>
+                </div>
+            `;
+            
+            chatHistory.appendChild(loadingDiv);
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+        }
+
+        // Helper to remove bot loading placeholder
+        function removeChatLoading(id) {
+            const loadingDiv = document.getElementById(id);
+            if (loadingDiv) {
+                loadingDiv.remove();
+            }
+        }
+
+        // Form submit handler for chat
+        async function handleChatSubmit(e) {
+            if (e) e.preventDefault();
+            
+            const chatInput = document.getElementById('chat-input');
+            const message = chatInput.value.trim();
+            if (!message) return;
+            
+            // Append user message
+            appendChatMessage(message, 'user');
+            
+            // Clear input
+            chatInput.value = '';
+            
+            // Append temporary bot loading bubble
+            const loadingId = 'chat-loading-' + Date.now();
+            appendChatLoading(loadingId);
+            
+            try {
+                const response = await fetch('http://127.0.0.1:5000/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: message })
+                });
+                
+                const data = await response.json();
+                
+                removeChatLoading(loadingId);
+                
+                if (response.ok) {
+                    appendChatMessage(data.response, 'bot');
+                } else {
+                    appendChatMessage("This information is not available in the current dataset.", 'bot');
+                }
+            } catch (err) {
+                console.error("Chat API error:", err);
+                removeChatLoading(loadingId);
+                appendChatMessage("Sorry, I am unable to connect to the counseling assistant server right now. Make sure the backend is running.", 'bot');
+            }
+        }
+
+        // Expose suggested chips helper globally
+        window.sendSuggestedChat = function(message) {
+            const chatInput = document.getElementById('chat-input');
+            if (chatInput) {
+                chatInput.value = message;
+                handleChatSubmit();
+            }
+        };
+
+        // Expose form submit globally
+        window.handleChatSubmit = handleChatSubmit;
+</script>
+</body>
+</html>
