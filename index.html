@@ -79,7 +79,7 @@
             box-sizing: border-box;
             background-attachment: fixed;
             position: relative;
-            overflow: visible; /* Prevent dual scrollbars by letting html handle scrolling */
+            overflow-x: hidden; /* Hides horizontal glow overflows while letting html govern vertical scrolls */
         }
 
         /* Ambient background glow (optimized with GPU acceleration for lag-free scrolling) */
@@ -824,6 +824,9 @@
 
         /* Responsive Breakpoints */
         @media (max-width: 900px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
             .main-content {
                 flex-direction: column;
                 align-items: center;
@@ -834,6 +837,7 @@
                 max-width: 500px;
                 position: relative;
                 top: 0;
+                padding: 1.75rem 1.25rem; /* Reduced padding to maximize content width on smaller screens */
             }
             .results-area {
                 width: 100%;
@@ -1133,6 +1137,16 @@
                 background: linear-gradient(to right, #ffffff, var(--text-muted)) !important;
                 -webkit-background-clip: text !important;
                 -webkit-text-fill-color: transparent !important;
+            }
+            .predictor-tab {
+                width: 110px !important;
+                font-size: 0.82rem !important;
+                padding: 0.55rem 0.6rem !important;
+            }
+            .search-tab-standalone {
+                width: 140px !important;
+                font-size: 0.82rem !important;
+                padding: 0.55rem 1rem !important;
             }
         }
 
