@@ -1632,7 +1632,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
     <script>
         // API Base URL (Change to your Render/Production backend URL when deploying)
         const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-            ? ''
+            ? (window.location.port === '5500' ? 'http://127.0.0.1:5000' : '')
             : 'https://college-predictor-backend-mgf1.onrender.com'; // Replace with actual backend URL
 
         // Fetch college list for autocomplete
