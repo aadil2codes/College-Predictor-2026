@@ -1,4 +1,4 @@
-const CACHE_NAME = 'campus-cipher-pwa-v1';
+const CACHE_NAME = 'campus-cipher-pwa-v2';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -56,6 +56,7 @@ self.addEventListener('fetch', event => {
     requestUrl.pathname === '/search' ||
     requestUrl.pathname === '/lowest_cutoff' ||
     requestUrl.pathname === '/api/colleges' ||
+    requestUrl.pathname === '/api/branches' ||
     requestUrl.pathname === '/api/chat' ||
     event.request.method !== 'GET'
   ) {

@@ -1633,18 +1633,26 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
         // Fetch college list for autocomplete
         let collegeList = [];
         fetch('/api/colleges')
-            .then(res => res.json())
-            .then(data => {
-                collegeList = data;
+            .then(res => res.text())
+            .then(text => {
+                try {
+                    collegeList = text ? JSON.parse(text) : [];
+                } catch(e) {
+                    console.error("Error parsing colleges list JSON:", e);
+                }
             })
             .catch(err => console.error("Error loading colleges list:", err));
 
         // Fetch branch list for autocomplete
         let branchList = [];
         fetch('/api/branches')
-            .then(res => res.json())
-            .then(data => {
-                branchList = data;
+            .then(res => res.text())
+            .then(text => {
+                try {
+                    branchList = text ? JSON.parse(text) : [];
+                } catch(e) {
+                    console.error("Error parsing branches list JSON:", e);
+                }
             })
             .catch(err => console.error("Error loading branches list:", err));
 
@@ -1902,7 +1910,14 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                     body: JSON.stringify(payloadData)
                 });
 
-                const data = await response.json();
+                const responseText = await response.text();
+                let data = {};
+                try {
+                    data = responseText ? JSON.parse(responseText) : {};
+                } catch(e) {
+                    console.error("JSON parse error:", e);
+                    throw new Error("Invalid response format received from server.");
+                }
 
                 if (!response.ok) {
                     throw new Error(data.error || "An error occurred");
@@ -2031,7 +2046,14 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                     body: JSON.stringify(payloadData)
                 });
 
-                const data = await response.json();
+                const responseText = await response.text();
+                let data = {};
+                try {
+                    data = responseText ? JSON.parse(responseText) : {};
+                } catch(e) {
+                    console.error("JSON parse error:", e);
+                    throw new Error("Invalid response format received from server.");
+                }
 
                 if (!response.ok) {
                     throw new Error(data.error || "An error occurred while searching");
@@ -2172,7 +2194,14 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                     body: JSON.stringify(payloadData)
                 });
 
-                const data = await response.json();
+                const responseText = await response.text();
+                let data = {};
+                try {
+                    data = responseText ? JSON.parse(responseText) : {};
+                } catch(e) {
+                    console.error("JSON parse error:", e);
+                    throw new Error("Invalid response format received from server.");
+                }
 
                 if (!response.ok) {
                     throw new Error(data.error || "An error occurred while fetching predictions");
@@ -2635,16 +2664,23 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                     })
                 });
                 
-                const data = await response.json();
+                const responseText = await response.text();
+                let data = {};
+                try {
+                    data = responseText ? JSON.parse(responseText) : {};
+                } catch(e) {
+                    console.error("JSON parse error:", e);
+                    data = { error: "invalid_format", response: "Invalid response format received from server." };
+                }
                 
                 removeChatLoading(loadingId);
                 
-                if (response.ok) {
+                if (response.ok && data.response) {
                     appendChatMessage(data.response, 'bot');
                     // Store bot reply in history context
                     chatMessagesState.push({role: "model", content: data.response});
                 } else {
-                    const fallback = "This information is not available in the current dataset.";
+                    const fallback = data.response || "This information is not available in the current dataset.";
                     appendChatMessage(fallback, 'bot');
                     chatMessagesState.push({role: "model", content: fallback});
                 }

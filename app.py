@@ -62,9 +62,24 @@ def get_category_variants(category_name):
 
 def safe_read_csv(filename):
     try:
-        return pd.read_csv(filename, on_bad_lines='skip')
+        df = pd.read_csv(filename, on_bad_lines='skip')
     except TypeError:
-        return pd.read_csv(filename, error_bad_lines=False, warn_bad_lines=False)
+        df = pd.read_csv(filename, error_bad_lines=False, warn_bad_lines=False)
+        
+    expected_cols = ['College', 'Branch', 'Quota', 'Category', 'Gender', 'Opening Rank', 'Closing Rank']
+    
+    # Check if standard column headers are missing or corrupted
+    has_standard = all(c in df.columns for c in ['College', 'Branch', 'Closing Rank'])
+    if not has_standard and len(df.columns) == 7:
+        print(f"[RECOVER] Re-assigning columns for headerless or corrupted CSV: {filename}")
+        try:
+            df = pd.read_csv(filename, header=None, on_bad_lines='skip')
+        except TypeError:
+            df = pd.read_csv(filename, header=None, error_bad_lines=False, warn_bad_lines=False)
+            
+        df.columns = expected_cols
+        
+    return df
 
 def is_data_query(message):
     msg_lower = message.lower()
@@ -515,6 +530,33 @@ def get_colleges():
         return jsonify(colleges), 200
     except Exception as e:
         print(f"Error fetching colleges: {e}")
+        return jsonify([]), 500
+
+@app.route('/api/branches', methods=['GET'])
+def get_branches():
+    try:
+        file_map = get_file_map('CSAB', 'Round 3')
+        dfs = []
+        for itype, fname in file_map.items():
+            try:
+                temp_df = safe_read_csv(fname)
+                dfs.append(temp_df)
+            except Exception as e:
+                pass
+        if not dfs:
+            return jsonify([]), 200
+            
+        df = pd.concat(dfs, ignore_index=True)
+        
+        if 'Branch' not in df.columns:
+            return jsonify([]), 200
+            
+        branches = df['Branch'].dropna().unique().tolist()
+        branches.sort()
+        
+        return jsonify(branches), 200
+    except Exception as e:
+        print(f"Error fetching branches: {e}")
         return jsonify([]), 500
 
 import re
@@ -1168,10 +1210,8 @@ def chat():
         print(f"Error in /api/chat: {e}")
         traceback.print_exc()
         return jsonify({"response": "This information is not available in the current dataset."}), 200
-
 if __name__ == '__main__':
-    # Running Flask backend
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5000, use_reloader=False)
 
 
 # git add .
