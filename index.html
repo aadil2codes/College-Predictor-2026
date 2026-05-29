@@ -79,7 +79,7 @@
             box-sizing: border-box;
             background-attachment: fixed;
             position: relative;
-            overflow-x: hidden; /* Hides horizontal glow overflows while letting html govern vertical scrolls */
+            overflow: visible !important; /* Prevents duplicate scrollbars by letting html govern all scrolls */
         }
 
         /* Ambient background glow (optimized with GPU acceleration for lag-free scrolling) */
