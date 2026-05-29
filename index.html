@@ -895,6 +895,53 @@
             padding: 1rem 0 0 0 !important; /* tight layout to fit container card */
         }
 
+        /* Frosted Glass Toast Notification */
+        .toast-notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100px);
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(168, 85, 247, 0.15);
+            padding: 0.85rem 1.75rem;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            z-index: 10000000; /* extremely high to overlap everything */
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .toast-notification.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .toast-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #10b981;
+            border-radius: 50%;
+        }
+
+        .toast-text {
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
         /* Responsive Breakpoints */
         @media (max-width: 900px) {
             body {
@@ -2632,6 +2679,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                         });
                         
                         doc.save(`CampusCipher_College_Report.pdf`);
+                        showToast(`PDF Report downloaded successfully!`);
                     });
 
                 }
@@ -2657,6 +2705,37 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                 svg = '<svg style="width: 48px; height: 48px; margin-bottom: 1rem; color: #bae6fd;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><br>';
             }
             resultsContainer.innerHTML = `<div class="message ${type}">${svg}${message}</div>`;
+        }
+
+        // Beautiful Frosted Glass Notification System
+        function showToast(message) {
+            let toast = document.getElementById('app-toast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'app-toast';
+                toast.className = 'toast-notification';
+                toast.innerHTML = `
+                    <div class="toast-icon">
+                        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="toast-text" id="toast-message"></div>
+                `;
+                document.body.appendChild(toast);
+            }
+            
+            document.getElementById('toast-message').textContent = message;
+            
+            // Trigger animation
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 10);
+            
+            // Hide after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
         }
 
         // --- AI CHATBOT FUNCTIONALITY ---
