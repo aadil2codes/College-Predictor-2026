@@ -1556,9 +1556,18 @@
                             <!-- Options populated by JS -->
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="search_institute_type">Institute Type</label>
+                        <select id="search_institute_type" name="search_institute_type" required>
+                            <option value="All" selected>All (GFTI+NIT+IIIT)</option>
+                            <option value="GFTI">GFTI - Govt. Funded</option>
+                            <option value="NIT">NIT - National Inst. of Tech</option>
+                            <option value="IIIT">IIIT - Indian Inst. of Info Tech</option>
+                        </select>
+                    </div>
                     <div class="form-group" style="position: relative;">
-                        <label for="search_college_name">College Name</label>
-                        <input type="text" id="search_college_name" name="search_college_name" placeholder="e.g. Punjab Engineering" autocomplete="off" required>
+                        <label for="search_college_name">College Name (Optional)</label>
+                        <input type="text" id="search_college_name" name="search_college_name" placeholder="e.g. Punjab Engineering" autocomplete="off">
                         <div id="autocomplete-list" class="autocomplete-items"></div>
                     </div>
 
@@ -2209,14 +2218,16 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
             const gender = genderObj.value || '';
             const round = document.getElementById('search_round').value;
             const counselingType = document.getElementById('search_counseling_type').value;
+            const instituteType = document.getElementById('search_institute_type').value;
 
-            if (!collegeName) {
-                displayMessage("College name is required.", "error");
+            if (!collegeName && instituteType === 'All' && !branch && !category && !gender) {
+                displayMessage("Please enter a College Name or select a specific Institute Type (GFTI/NIT/IIIT) to search.", "error");
                 return;
             }
 
             const payloadData = {
                 counseling_type: counselingType,
+                institute_type: instituteType,
                 college_name: collegeName,
                 branch: branch,
                 category: category,
@@ -2263,7 +2274,8 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                             </div>
                             <div class="summary-chip"><strong>Counseling</strong> ${payloadData.counseling_type}</div>
                             <div class="summary-chip"><strong>Round</strong> ${payloadData.round}</div>
-                            <div class="summary-chip"><strong>College</strong> ${collegeName}</div>
+                            <div class="summary-chip"><strong>Inst. Type</strong> ${payloadData.institute_type}</div>
+                            ${collegeName ? `<div class="summary-chip"><strong>College</strong> ${collegeName}</div>` : '<div class="summary-chip"><strong>College</strong> All Colleges</div>'}
                             ${branch ? `<div class="summary-chip"><strong>Branch</strong> ${branch}</div>` : ''}
                             ${category ? `<div class="summary-chip"><strong>Category</strong> ${category}</div>` : ''}
                         </div>
@@ -2373,8 +2385,10 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                                 { content: payloadData.round }
                             ],
                             [
+                                { content: 'Institute Type:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.institute_type },
                                 { content: 'College Query:', styles: { fontStyle: 'bold' } },
-                                { content: payloadData.college_name, colSpan: 3 }
+                                { content: payloadData.college_name || 'ALL COLLEGES' }
                             ],
                             [
                                 { content: 'Branch Query:', styles: { fontStyle: 'bold' } },

@@ -376,9 +376,11 @@ def search_college():
         branch = data.get('branch', '').strip()
         category = data.get('category', '').strip()
         gender = data.get('gender', '').strip()
+        institute_type = data.get('institute_type', 'All').strip()
 
-        if not college_name:
-            return jsonify({"error": "College name is required for search."}), 400
+        # At least one filter must be applied to prevent huge database dump
+        if not college_name and institute_type == 'All' and not branch and not category and not gender:
+            return jsonify({"error": "Please provide a College Name, Branch, or select a specific Institute Type (GFTI/NIT/IIIT) to search."}), 400
 
         round_selected = data.get('round', 'Round 3')
         counseling_type = data.get('counseling_type', 'CSAB')
@@ -398,7 +400,13 @@ def search_college():
             
         df = pd.concat(dfs, ignore_index=True)
 
-        filtered_df = df[df['College'].str.contains(college_name, case=False, na=False)].copy()
+        filtered_df = df.copy()
+
+        if college_name:
+            filtered_df = filtered_df[filtered_df['College'].str.contains(college_name, case=False, na=False)]
+
+        if institute_type and institute_type != 'All':
+            filtered_df = filtered_df[filtered_df['Institute_Type'] == institute_type]
 
         if branch:
             filtered_df = filtered_df[filtered_df['Branch'].str.contains(branch, case=False, na=False)]
