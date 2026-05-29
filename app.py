@@ -1,9 +1,23 @@
 import os
+import re
+import requests
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pandas as pd
 import traceback
 import random
+
+def load_env():
+    if os.path.exists('.env'):
+        with open('.env', 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    parts = line.split('=', 1)
+                    k = parts[0].strip()
+                    v = parts[1].strip().strip('"').strip("'")
+                    os.environ[k] = v
+load_env()
 
 def get_file_map(counseling_type, round_selected):
     base_dir = os.path.join(counseling_type.upper(), round_selected.upper())
@@ -46,6 +60,108 @@ def get_category_variants(category_name):
         return ['ST (PWD)', 'ST (PwD)', 'ST PWD', 'ST(PWD)', 'ST(PwD)', 'PWD ST']
     return [category_name, category_name.upper(), category_name.lower()]
 
+def safe_read_csv(filename):
+    try:
+        return pd.read_csv(filename, on_bad_lines='skip')
+    except TypeError:
+        return pd.read_csv(filename, error_bad_lines=False, warn_bad_lines=False)
+
+def is_data_query(message):
+    msg_lower = message.lower()
+    
+    # 1. Rank indicators: 4-6 digit numbers, lakh/thousand terms, or numbers accompanied by rank/crl
+    if re.search(r'\b\d{4,6}\b', msg_lower) or re.search(r'\b\d+(?:\.\d+)?\s*(?:lakh|lakhs|l|k|thousand|thousands)\b', msg_lower):
+        return True
+    if re.search(r'\b(?:rank|crl|air)\s*(?:of|is|equals)?\s*#?\d{1,7}\b', msg_lower) or re.search(r'\b\d{1,7}\s*(?:rank|crl|air)\b', msg_lower):
+        return True
+        
+    # 2. Database/prediction keywords
+    data_keywords = [
+        'cutoff', 'cut-off', 'closing rank', 'opening rank', 'closing', 'opening',
+        'safe', 'low chance', 'chance', 'probability', 'unlock', 'seat',
+        'nit', 'iiit', 'gfti', 'josaa', 'csab', 'quota', 'counseling', 'counselling',
+        'crl', 'obc', 'ncl', 'ews', 'sc', 'st', 'pwd', 'category', 'gender',
+        'neutral', 'female', 'male', 'open', 'general', 'state', 'home', 'other'
+    ]
+    if any(re.search(rf'\b{kw}\b', msg_lower) for kw in data_keywords):
+        return True
+        
+    # 3. Branch keywords
+    branch_keywords = ['cse', 'ece', 'eee', 'mech', 'civil', 'branch', 'computer science', 'information technology']
+    if any(re.search(rf'\b{kw}\b', msg_lower) for kw in branch_keywords):
+        return True
+        
+    # 4. Known college keywords
+    college_keywords = ['jaipur', 'allahabad', 'bhopal', 'jalandhar', 'calicut', 'delhi', 'agartala', 'durgapur', 'goa', 'hamirpur', 'surathkal', 'trichy', 'warangal', 'patna', 'rourkela', 'silchar', 'srinagar', 'surat', 'kurukshetra', 'jamshedpur', 'nagpur', 'shibpur', 'puducherry']
+    if any(re.search(rf'\b{kw}\b', msg_lower) for kw in college_keywords):
+        return True
+        
+    return False
+
+def get_gemini_response(prompt, history=None):
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        return "GEMINI_API_KEY is not configured in the Flask backend environment. Please set your API key in the environment to chat with me!"
+        
+    # API endpoint for Gemini 2.5 Flash
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+    
+    # System instruction (empathetic, concise, student-friendly counselor)
+    system_instruction = (
+        "You are CampusCipher AI, an empathetic, friendly, and supportive JEE college counseling assistant. "
+        "Your target audience is stressed JEE engineering aspirants. Act natural, warm, and comforting. "
+        "Keep your responses extremely natural, concise (under 2-3 sentences where possible), and emotionally aware. "
+        "Use dynamic student-friendly chat language (like 'bro', 'bruh', 'chilling', 'take a breath'). "
+        "Do NOT talk about specific cutoff numbers or predict seats in this mode, as those are handled by a separate local data system. "
+        "Do NOT repeat the same robotic templates."
+    )
+    
+    # Build payload contents incorporating chat history
+    contents = []
+    
+    if history:
+        # Prevent consecutive role violation if history already has the current prompt
+        if len(history) > 0 and history[-1].get("content") == prompt:
+            history = history[:-1]
+            
+        for msg in history:
+            role = "user" if msg.get("role") == "user" else "model"
+            contents.append({
+                "role": role,
+                "parts": [{"text": msg.get("content", "")}]
+            })
+            
+    # Append current user prompt
+    contents.append({
+        "role": "user",
+        "parts": [{"text": prompt}]
+    })
+    
+    payload = {
+        "contents": contents,
+        "systemInstruction": {
+            "parts": [{"text": system_instruction}]
+        },
+        "generationConfig": {
+            "temperature": 0.7,
+            "maxOutputTokens": 300
+        }
+    }
+    
+    try:
+        headers = {"Content-Type": "application/json"}
+        response = requests.post(url, json=payload, headers=headers, timeout=10)
+        if response.status_code == 200:
+            res_data = response.json()
+            text = res_data['candidates'][0]['content']['parts'][0]['text']
+            return text.strip()
+        else:
+            print(f"Gemini API error status {response.status_code}: {response.text}")
+            return "Ah, I encountered a connection hiccup with my AI brain. Let's try again in a moment!"
+    except Exception as e:
+        print(f"Exception during Gemini call: {e}")
+        return "I had trouble connecting to the AI server. Make sure your internet is active!"
+
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for frontend requests
@@ -57,6 +173,22 @@ USER_CONTEXT = {
     "last_quota": None,
     "last_college": None,
     "last_branch": None,
+    "last_counseling_type": None,
+    "last_round": None,
+    "last_institute_type": None,
+    "last_topic": None
+}
+
+CHAT_CONTEXT = {
+    "last_rank": None,
+    "last_category": None,
+    "last_gender": None,
+    "last_quota": None,
+    "last_college": None,
+    "last_branch": None,
+    "last_counseling_type": None,
+    "last_round": None,
+    "last_institute_type": None,
     "last_topic": None
 }
 
@@ -104,7 +236,7 @@ def predict():
             dfs = []
             for itype, fname in file_map.items():
                 try:
-                    temp_df = pd.read_csv(fname)
+                    temp_df = safe_read_csv(fname)
                     temp_df['Institute_Type'] = itype
                     dfs.append(temp_df)
                 except Exception as e:
@@ -117,7 +249,7 @@ def predict():
                 return jsonify({"error": "Invalid or missing institute type."}), 400
 
             try:
-                df = pd.read_csv(filename)
+                df = safe_read_csv(filename)
                 df['Institute_Type'] = institute_type
             except Exception as e:
                 print(f"Error loading {filename}: {e}")
@@ -212,7 +344,7 @@ def search_college():
         dfs = []
         for itype, fname in file_map.items():
             try:
-                temp_df = pd.read_csv(fname)
+                temp_df = safe_read_csv(fname)
                 temp_df['Institute_Type'] = itype
                 dfs.append(temp_df)
             except Exception as e:
@@ -271,7 +403,7 @@ def lowest_cutoff():
         if institute_type == 'All':
             for itype, fname in file_map.items():
                 try:
-                    temp_df = pd.read_csv(fname)
+                    temp_df = safe_read_csv(fname)
                     temp_df['Institute_Type'] = itype
                     dfs.append(temp_df)
                 except Exception as e:
@@ -281,7 +413,7 @@ def lowest_cutoff():
             if not fname:
                 return jsonify({"error": "Invalid institute type."}), 400
             try:
-                temp_df = pd.read_csv(fname)
+                temp_df = safe_read_csv(fname)
                 temp_df['Institute_Type'] = institute_type
                 dfs.append(temp_df)
             except Exception as e:
@@ -341,7 +473,7 @@ def get_colleges():
         dfs = []
         for itype, fname in file_map.items():
             try:
-                temp_df = pd.read_csv(fname)
+                temp_df = safe_read_csv(fname)
                 dfs.append(temp_df)
             except Exception as e:
                 pass
@@ -381,6 +513,22 @@ def parse_chat_message(message):
             except ValueError:
                 pass
                 
+    # Check for rank/crl keyword + short/long numbers (e.g. rank 500 or 500 rank)
+    if not rank:
+        rank_pattern_match = re.search(r'\b(?:rank|crl|air)\s*(?:of|is|equals)?\s*#?(\d{1,7})\b', message_lower)
+        if rank_pattern_match:
+            try:
+                rank = int(rank_pattern_match.group(1))
+            except ValueError:
+                pass
+    if not rank:
+        rank_pattern_match = re.search(r'\b(\d{1,7})\s*(?:rank|crl|air)\b', message_lower)
+        if rank_pattern_match:
+            try:
+                rank = int(rank_pattern_match.group(1))
+            except ValueError:
+                pass
+
     # Check for raw numbers (4-6 digits)
     if not rank:
         num_match = re.search(r'\b(\d{4,6})\b', message_lower)
@@ -435,8 +583,8 @@ def parse_chat_message(message):
         "goa": "Goa",
         "hamirpur": "Hamirpur",
         "surathkal": "Surathkal",
-        "trichy": "Trichy",
-        "tiruchirappalli": "Trichy",
+        "trichy": "Tiruchirappalli",
+        "tiruchirappalli": "Tiruchirappalli",
         "warangal": "Warangal",
         "patna": "Patna",
         "raipur": "Raipur",
@@ -491,6 +639,32 @@ def parse_chat_message(message):
         "data science": "Data Science"
     }
     
+    # 7. Counseling Type Extraction
+    counseling_type = None
+    if re.search(r'\bjosaa\b|\bjosa\b', message_lower):
+        counseling_type = "JOSAA"
+    elif re.search(r'\bcsab\b', message_lower):
+        counseling_type = "CSAB"
+        
+    # 8. Round Extraction
+    round_val = None
+    round_match = re.search(r'\b(?:round|r)\s*(\d)\b', message_lower)
+    if round_match:
+        round_num = round_match.group(1)
+        if round_num in ['1', '2', '3', '4', '6']:
+            round_val = f"Round {round_num}"
+
+    # 9. Institute Type Extraction
+    institute_type = None
+    if re.search(r'\bnit\b|\bnits\b', message_lower):
+        institute_type = "NIT"
+    elif re.search(r'\biiit\b|\biiits\b', message_lower):
+        institute_type = "IIIT"
+    elif re.search(r'\bgfti\b|\bgftis\b', message_lower):
+        institute_type = "GFTI"
+    elif "all" in message_lower or "any" in message_lower:
+        institute_type = "All"
+
     extracted_branch = None
     for keyword, br_name in branch_keywords.items():
         if re.search(rf'\b{keyword}\b', message_lower):
@@ -503,7 +677,10 @@ def parse_chat_message(message):
         "quota": quota,
         "gender": gender,
         "college": extracted_college,
-        "branch": extracted_branch
+        "branch": extracted_branch,
+        "counseling_type": counseling_type,
+        "round": round_val,
+        "institute_type": institute_type
     }
 
 def load_all_cutoff_data():
@@ -512,7 +689,7 @@ def load_all_cutoff_data():
     # 1. Look for main nit_data.csv in current directory
     if os.path.exists('nit_data.csv'):
         try:
-            df = pd.read_csv('nit_data.csv')
+            df = safe_read_csv('nit_data.csv')
             df['Counseling'] = 'CSAB'
             df['Round'] = 'Round 3'
             df['Institute_Type'] = 'NIT'
@@ -532,7 +709,7 @@ def load_all_cutoff_data():
                         if f.lower().endswith('.csv'):
                             path = os.path.join(round_dir, f)
                             try:
-                                df = pd.read_csv(path)
+                                df = safe_read_csv(path)
                                 df['Counseling'] = counseling
                                 df['Round'] = r
                                 if 'gfti' in f.lower() or f.lower() == 'data.csv':
@@ -553,14 +730,74 @@ def load_all_cutoff_data():
 # Load dataset on startup
 CHAT_DF = load_all_cutoff_data()
 
-def get_casual_response(message):
-    msg_lower = message.lower()
-    global USER_CONTEXT
+def rebuild_chat_context(history, current_message):
+    context = {
+        "last_rank": None,
+        "last_category": None,
+        "last_gender": None,
+        "last_quota": None,
+        "last_college": None,
+        "last_branch": None,
+        "last_counseling_type": None,
+        "last_round": None,
+        "last_institute_type": None
+    }
     
-    rank = USER_CONTEXT.get("last_rank")
-    category = USER_CONTEXT.get("last_category", "OPEN")
-    college = USER_CONTEXT.get("last_college")
-    branch = USER_CONTEXT.get("last_branch")
+    # We collect all user messages chronologically
+    user_messages = []
+    if history:
+        for msg in history:
+            if msg.get("role") == "user":
+                user_messages.append(msg.get("content", ""))
+                
+    user_messages.append(current_message)
+    
+    # Process each user message in chronological order
+    for msg in user_messages:
+        parsed = parse_chat_message(msg)
+        rank = parsed.get("rank")
+        category = parsed.get("category")
+        gender = parsed.get("gender")
+        quota = parsed.get("quota")
+        college = parsed.get("college")
+        branch = parsed.get("branch")
+        counseling_type = parsed.get("counseling_type")
+        round_val = parsed.get("round")
+        institute_type = parsed.get("institute_type")
+        
+        if rank is not None:
+            # A new rank is specified! Reset context parameters not in this message
+            context["last_rank"] = rank
+            context["last_category"] = category
+            context["last_gender"] = gender
+            context["last_quota"] = quota
+            context["last_college"] = college
+            context["last_branch"] = branch
+            context["last_counseling_type"] = counseling_type
+            context["last_round"] = round_val
+            context["last_institute_type"] = institute_type
+        else:
+            # No rank specified in this message, update only the fields that are present
+            if category is not None: context["last_category"] = category
+            if gender is not None: context["last_gender"] = gender
+            if quota is not None: context["last_quota"] = quota
+            if college is not None: context["last_college"] = college
+            if branch is not None: context["last_branch"] = branch
+            if counseling_type is not None: context["last_counseling_type"] = counseling_type
+            if round_val is not None: context["last_round"] = round_val
+            if institute_type is not None: context["last_institute_type"] = institute_type
+            
+    return context
+
+def get_casual_response(message, context=None):
+    msg_lower = message.lower()
+    if context is None:
+        context = {}
+    
+    rank = context.get("last_rank")
+    category = context.get("last_category")
+    college = context.get("last_college")
+    branch = context.get("last_branch")
     
     # 1. "cooked" / exam failure / messed up
     if re.search(r'\b(cooked|messed\s*up|fail|failed|ruined|screwed|over|it\s*is\s*over)\b', msg_lower):
@@ -707,68 +944,28 @@ def chat():
         if not message:
             return jsonify({"response": "Please type a message to start counseling."}), 400
             
-        if CHAT_DF is None:
-            CHAT_DF = load_all_cutoff_data()
+        history = data.get('history', [])
             
-        if CHAT_DF is None:
-            return jsonify({"response": "This information is not available in the current dataset."}), 200
-
-        # Parse message
-        parsed = parse_chat_message(message)
-        rank = parsed.get('rank')
-        category = parsed.get('category')
-        gender = parsed.get('gender')
-        quota = parsed.get('quota')
-        college = parsed.get('college')
-        branch = parsed.get('branch')
-        
-        # Keep track of parsed parameters in session context
-        global USER_CONTEXT
-        try:
-            if rank: USER_CONTEXT['last_rank'] = rank
-            if category: USER_CONTEXT['last_category'] = category
-            if gender: USER_CONTEXT['last_gender'] = gender
-            if quota: USER_CONTEXT['last_quota'] = quota
-            if college: USER_CONTEXT['last_college'] = college
-            if branch: USER_CONTEXT['last_branch'] = branch
-        except Exception:
-            pass
+        # Reconstruct active conversation profile parameters completely stateless from the chat history
+        session_context = rebuild_chat_context(history, message)
             
-        current_rank = USER_CONTEXT.get('last_rank')
-        current_category = USER_CONTEXT.get('last_category')
-        current_quota = USER_CONTEXT.get('last_quota')
-        current_gender = USER_CONTEXT.get('last_gender')
-        
-        # Check if this matches a casual intent first
-        casual_response = get_casual_response(message)
-        is_direct_cutoff = (rank is not None) or (college is not None) or (branch is not None)
-        
-        if casual_response and not is_direct_cutoff:
-            return jsonify({"response": casual_response}), 200
-            
-        # Determine if this is a cutoff prediction query or context update
-        is_cutoff_query = is_direct_cutoff or (current_rank is not None)
-        
-        if is_cutoff_query:
-            # Enforce completeness check for Rank, Category, Quota, Gender
-            if current_rank is not None:
-                missing = []
-                if not current_category: missing.append("Category (OPEN, OBC-NCL, SC, ST, EWS, or PwD categories)")
-                if not current_quota: missing.append("Quota (Home State or Other State)")
-                if not current_gender: missing.append("Gender (Gender-Neutral or Female-only)")
+        # DUAL-MODE ROUTER:
+        if not is_data_query(message):
+            # 1. Gemini API (Online conversational mode)
+            api_key = os.environ.get("GEMINI_API_KEY")
+            if api_key:
+                gemini_reply = get_gemini_response(message, history)
+                if "hiccup" not in gemini_reply and "trouble connecting" not in gemini_reply and "not configured" not in gemini_reply:
+                    return jsonify({"response": gemini_reply}), 200
                 
-                if missing:
-                    missing_str = " and ".join([", ".join(missing[:-1]), missing[-1]] if len(missing) > 1 else missing)
-                    responses = [
-                        f"I see your rank is **{current_rank:,}**. To give you 100% accurate college options, could you please tell me your **{missing_str}**? Cutoffs vary significantly based on these details!",
-                        f"At rank **{current_rank:,}**, predictions depend heavily on your profile details. Could you share your **{missing_str}** so I can search the official JoSAA/CSAB cutoffs accurately?",
-                        f"Got the rank **{current_rank:,}**! 🎓 Before I show you the matching colleges, I'll need your **{missing_str}** to make sure we get the correct data. What are those?"
-                    ]
-                    return jsonify({"response": random.choice(responses)}), 200
-        else:
-            # Custom guiding prompt that also respects memory
-            prev_rank = USER_CONTEXT.get('last_rank')
-            prev_category = USER_CONTEXT.get('last_category')
+            # 2. Local fallback (Offline conversational mode)
+            casual_response = get_casual_response(message, session_context)
+            if casual_response:
+                return jsonify({"response": casual_response}), 200
+                
+            # 3. Default fallback
+            prev_rank = session_context.get('last_rank')
+            prev_category = session_context.get('last_category')
             if prev_rank:
                 fallback_msg = (f"I'm here as your smart JEE Counseling Assistant. 🎓 "
                                 f"Earlier we were looking at options for your rank of **{prev_rank:,}**" + (f" ({prev_category})" if prev_category else "") + ". "
@@ -779,16 +976,85 @@ def chat():
                                 "JoSAA/CSAB cutoff databases and predict your best options, please share your "
                                 "**JEE Main Rank**, **Category**, and **Gender** (e.g., *'Can I get NIT Jaipur at 70k rank OPEN?'*).")
             return jsonify({"response": fallback_msg}), 200
+
+        # --- PREDICTION/DATA MODE ---
+        if CHAT_DF is None:
+            CHAT_DF = load_all_cutoff_data()
+            
+        if CHAT_DF is None:
+            return jsonify({"response": "This information is not available in the current dataset."}), 200
+
+        current_rank = session_context.get('last_rank')
+        current_category = session_context.get('last_category')
+        current_quota = session_context.get('last_quota')
+        current_gender = session_context.get('last_gender')
+        current_counseling_type = session_context.get('last_counseling_type')
+        current_round = session_context.get('last_round')
+        current_institute_type = session_context.get('last_institute_type')
+        
+        # Resolve 'final' or 'last' round if counseling type is known
+        if "final" in message.lower() or "last" in message.lower():
+            if not current_round:
+                if current_counseling_type == "CSAB":
+                    current_round = "Round 3"
+                else:
+                    current_round = "Round 6"
+
+        # Check for missing mandatory fields
+        missing = []
+        if not current_rank:
+            missing.append("JEE Main Rank")
+        if not current_category:
+            missing.append("Category (e.g. OPEN, OBC-NCL, EWS, SC, ST or PwD)")
+        if not current_quota:
+            missing.append("Quota (All India, Home State, or Other State)")
+        if not current_gender:
+            missing.append("Gender Profile (Gender-Neutral or Female-only)")
+        if not current_counseling_type:
+            missing.append("Counseling Type (JoSAA or CSAB)")
+        if not current_round:
+            missing.append("Round (e.g. Round 1, Round 2, Round 3, Round 4, Round 6)")
+            
+        if missing:
+            bullet_points = "\n".join([f"* **{item}**" for item in missing])
+            inst_hint = ""
+            if not current_institute_type:
+                inst_hint = "\n* **Preferred Institute Type** (NIT, IIIT, GFTI, or all - *optional*)"
                 
+            response_msg = (
+                "Sure — I can help you find your best engineering college options! "
+                "However, to query the official cutoff database accurately, please tell me your:\n\n"
+                f"{bullet_points}{inst_hint}\n\n"
+                "Just tell me these parameters (e.g., *'OBC category, other state, gender neutral, CSAB Round 3'*) and I will predict your matches instantly!"
+            )
+            return jsonify({"response": response_msg}), 200
+
         # Re-assign validated consolidated values for prediction engine
         category = current_category
         gender = current_gender
         quota = current_quota
         rank = current_rank
+        counseling_type = current_counseling_type
+        round_val = current_round
+        inst_type = current_institute_type if (current_institute_type and current_institute_type.lower() != 'all') else 'All'
+        college = session_context.get('last_college')
+        branch = session_context.get('last_branch')
         
         # Filter matching rows
         df_filtered = CHAT_DF.copy()
         
+        # Filter Counseling Type
+        if counseling_type:
+            df_filtered = df_filtered[df_filtered['Counseling'].str.upper() == counseling_type.upper()]
+            
+        # Filter Round
+        if round_val:
+            df_filtered = df_filtered[df_filtered['Round'].str.upper() == round_val.upper()]
+            
+        # Filter Institute Type
+        if inst_type != 'All':
+            df_filtered = df_filtered[df_filtered['Institute_Type'].str.upper() == inst_type.upper()]
+            
         # Filter Category (Required matching)
         if category:
             cat_variants = get_category_variants(category)
@@ -800,9 +1066,12 @@ def chat():
         else:
             df_filtered = df_filtered[df_filtered['Gender'] == 'Gender-Neutral']
             
-        # Filter Quota (If user specified OS, HS, or AI)
+        # Filter Quota
         if quota:
-            df_filtered = df_filtered[df_filtered['Quota'] == quota]
+            if quota == "All India + Other State":
+                df_filtered = df_filtered[df_filtered['Quota'].isin(["All India", "Other State"])]
+            else:
+                df_filtered = df_filtered[df_filtered['Quota'] == quota]
             
         # Filter College (If mentioned)
         if college:
@@ -816,103 +1085,56 @@ def chat():
             return jsonify({"response": "This information is not available in the current dataset."}), 200
 
         # Generate Answer
-        if rank:
-            df_filtered = df_filtered.sort_values(by='Closing Rank')
+        df_filtered = df_filtered.sort_values(by='Closing Rank')
+        
+        # Safe: rank <= Closing Rank
+        safe_options = df_filtered[df_filtered['Closing Rank'] >= rank]
+        # Low chance: rank is slightly higher than Closing Rank (within a buffer of 15% or up to 15k rank)
+        buffer = int(rank * 0.15) if rank < 100000 else 15000
+        low_chance_options = df_filtered[(df_filtered['Closing Rank'] < rank) & (df_filtered['Closing Rank'] >= (rank - buffer))]
+        
+        response_text = f"Based on your profile (**{category}**, **{gender}**, **{quota}**) at **{counseling_type} {round_val}** with a rank of **{rank:,}**:\n\n"
+        
+        # Sort safe options ascending (meaning closest to rank first, which are higher tier)
+        safe_options = safe_options.sort_values(by='Closing Rank')
+        # Sort low chance options descending (meaning closest to rank first)
+        low_chance_options = low_chance_options.sort_values(by='Closing Rank', ascending=False)
+        
+        limit = 6 if not (college or branch) else 12
+        
+        if college or branch:
+            filter_desc = []
+            if college: filter_desc.append(f"college matching **{college}**")
+            if branch: filter_desc.append(f"branch matching **{branch}**")
+            response_text += f"Here are the matches for " + " and ".join(filter_desc) + ":\n\n"
+        
+        has_low_chance = False
+        
+        if not safe_options.empty:
+            response_text += "🟢 **Safe Options (High Probability of Admission):**\n"
+            for _, row in safe_options.head(limit).iterrows():
+                response_text += f"* **{row['College']}**\n"
+                response_text += f"  - Branch: {row['Branch']}\n"
+                response_text += f"  - Closing Rank: **{row['Closing Rank']:,}** (Status: 🟢 Safe)\n"
+            response_text += "\n"
             
-            # Safe: rank <= Closing Rank
-            safe_options = df_filtered[df_filtered['Closing Rank'] >= rank]
-            # Low chance: rank is slightly higher than Closing Rank (within a buffer of 15% or up to 15k rank)
-            buffer = int(rank * 0.15) if rank < 100000 else 15000
-            low_chance_options = df_filtered[(df_filtered['Closing Rank'] < rank) & (df_filtered['Closing Rank'] >= (rank - buffer))]
+        if not low_chance_options.empty:
+            has_low_chance = True
+            response_text += "🟡 **Borderline / Low Chance Options (Slightly Above Last Year's Cutoff):**\n"
+            for _, row in low_chance_options.head(limit).iterrows():
+                response_text += f"* **{row['College']}**\n"
+                response_text += f"  - Branch: {row['Branch']}\n"
+                response_text += f"  - Closing Rank: **{row['Closing Rank']:,}** (Status: 🟡 Low Chance)\n"
+            response_text += "\n"
             
-            response_text = f"Based on your profile (**{category}**, **{gender}**"
-            if quota:
-                response_text += f", **{quota}**"
-            response_text += f") and your rank of **{rank:,}**:\n\n"
+        if safe_options.empty and low_chance_options.empty:
+            min_cls = CHAT_DF['Closing Rank'].min()
+            response_text += f"At **{rank:,} rank**, there are no options available in the {inst_type} dataset. Usually, standard NITs close around **{min_cls:,}**.\n"
             
-            if college:
-                matched_college = df_filtered['College'].iloc[0]
-                response_text += f"Looking at **{matched_college}**:\n"
-                
-                if branch:
-                    matched_branch = df_filtered['Branch'].iloc[0]
-                    records = df_filtered[df_filtered['Branch'].str.contains(branch, case=False, na=False)]
-                    if not records.empty:
-                        closing_rank = int(records['Closing Rank'].max())
-                        op_rank = int(records['Opening Rank'].min()) if not pd.isna(records['Opening Rank'].min()) else None
-                        
-                        if rank <= closing_rank:
-                            response_text += f"🎉 **Yes, you have an excellent chance!** last year's cutoff for **{matched_branch}** was between Opening Rank **{op_rank:,}** and Closing Rank **{closing_rank:,}**. You are well within this range."
-                        elif rank <= (closing_rank + buffer):
-                            response_text += f"⚖️ **Borderline/Low Chance.** Cutoffs for **{matched_branch}** closed around **{closing_rank:,}** last year. At your rank of **{rank:,}**, you are close, so it stands as a low chance option in later rounds if cutoffs shift."
-                        else:
-                            response_text += f"❌ **Unlikely.** Last year's cutoff for **{matched_branch}** closed at **{closing_rank:,}**. Since your rank is **{rank:,}**, this option is out of range."
-                    else:
-                        response_text += f"No records found for branch **{branch}** at this college."
-                else:
-                    college_safe = safe_options[safe_options['College'].str.contains(college, case=False, na=False)]
-                    college_low = low_chance_options[low_chance_options['College'].str.contains(college, case=False, na=False)]
-                    
-                    if not college_safe.empty:
-                        branches = college_safe['Branch'].unique()[:3]
-                        br_list = ", ".join(branches)
-                        max_closing = college_safe['Closing Rank'].max()
-                        response_text += f"🎉 **You have safe chances here!** You can comfortably unlock several branches like **{br_list}**. The lowest cutoff closed around **{max_closing:,}**."
-                    elif not college_low.empty:
-                        br = college_low['Branch'].iloc[0]
-                        cls = college_low['Closing Rank'].max()
-                        response_text += f"⚖️ **Low Chance / Borderline.** You are slightly above last year's cutoffs for this college. The closest option is **{br}** which closed around **{cls:,}**."
-                    else:
-                        min_closing = df_filtered['Closing Rank'].min()
-                        response_text += f"❌ **Unlikely.** Cutoffs for this college closed around **{min_closing:,}** (highest closing rank was **{df_filtered['Closing Rank'].max():,}**). At your rank of **{rank:,}**, it looks difficult."
-            else:
-                if not safe_options.empty:
-                    response_text += f"🎉 **Safe Options (Comfortable Seats):**\n"
-                    safe_samples = safe_options.tail(3)
-                    for _, row in safe_samples.iterrows():
-                        response_text += f"* **{row['College']}** - {row['Branch']} (Closed at **{row['Closing Rank']:,}**)\n"
-                
-                if not low_chance_options.empty:
-                    response_text += f"\n⚖️ **Borderline / Low Chance Options:**\n"
-                    low_samples = low_chance_options.head(3)
-                    for _, row in low_samples.iterrows():
-                        response_text += f"* **{row['College']}** - {row['Branch']} (Closed at **{row['Closing Rank']:,}**)\n"
-                        
-                if safe_options.empty and low_chance_options.empty:
-                    min_cls = CHAT_DF['Closing Rank'].min()
-                    response_text += f"At **{rank:,} rank**, there are no options available in the NIT/IIIT dataset. Usually, standard NITs close around **{min_cls:,}**."
+        if has_low_chance:
+            response_text += "*⚠️ **Low Chance Note:** Your rank is close to the cutoff. You might get it, but it’s not guaranteed.*\n"
             
-            return jsonify({"response": response_text}), 200
-
-        else:
-            response_text = f"Based on your filters (**{category}**, **{gender}**):\n\n"
-            
-            if college:
-                matched_college = df_filtered['College'].iloc[0]
-                response_text += f"For **{matched_college}**:\n"
-                
-                if branch:
-                    records = df_filtered[df_filtered['Branch'].str.contains(branch, case=False, na=False)]
-                    if not records.empty:
-                        row = records.iloc[0]
-                        response_text += f"The cutoff for **{row['Branch']}** opened at **{row['Opening Rank']:,}** and closed at **{row['Closing Rank']:,}** last year."
-                    else:
-                        response_text += f"I couldn't find cutoffs for the branch **{branch}** at this college."
-                else:
-                    df_sorted = df_filtered.sort_values(by='Closing Rank')
-                    response_text += "Here are the closing ranks for popular branches last year:\n"
-                    for _, row in df_sorted.head(4).iterrows():
-                        response_text += f"* **{row['Branch']}**: Closed at **{row['Closing Rank']:,}**\n"
-            else:
-                if branch:
-                    response_text += f"Here are some cutoffs for **{branch}** across top institutes last year:\n"
-                    df_sorted = df_filtered.sort_values(by='Closing Rank')
-                    for _, row in df_sorted.head(4).iterrows():
-                        response_text += f"* **{row['College']}** - Closed at **{row['Closing Rank']:,}**\n"
-                else:
-                    response_text = "Hello! I am your smart JEE Counseling Assistant. 🎓\n\nHow can I help you today? Please tell me your **JEE Main Rank**, **Category**, and **Gender** or ask about a specific college/branch (e.g., *'Can I get NIT Jaipur at 70k rank?'* or *'Safe options at 40000 rank OPEN SC'*)."
-
-            return jsonify({"response": response_text}), 200
+        return jsonify({"response": response_text}), 200
 
     except Exception as e:
         print(f"Error in /api/chat: {e}")
@@ -922,3 +1144,8 @@ def chat():
 if __name__ == '__main__':
     # Running Flask backend
     app.run(debug=True, port=5000)
+
+
+# git add .
+# git commit -m "updated ui"
+# git push
