@@ -881,9 +881,16 @@
             animation: fadeIn 0.4s ease-out !important;
         }
 
-        .chat-widget-container.inline-tab #chat-widget-close,
+        .chat-widget-container.inline-tab #chat-widget-close {
+            display: none !important; /* Hide close button by default in inline card tab */
+        }
+
+        .chat-widget-container.inline-tab.fullscreen #chat-widget-close {
+            display: flex !important; /* Show close button in fullscreen to exit back to card */
+        }
+
         .chat-widget-container.inline-tab #chat-widget-expand {
-            display: none !important;
+            display: flex !important; /* Always show expand button in inline card tab to go fullscreen */
         }
 
         .chat-widget-container.inline-tab .chat-widget-header {
@@ -2955,6 +2962,19 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
         
         if (chatClose && chatContainer) {
             chatClose.addEventListener('click', () => {
+                if (chatContainer.classList.contains('inline-tab') && chatContainer.classList.contains('fullscreen')) {
+                    // In inline-tab mode, closing the fullscreen view simply returns to the card view!
+                    chatContainer.classList.remove('fullscreen');
+                    const iconSvg = document.getElementById('expand-icon');
+                    if (iconSvg) {
+                        iconSvg.innerHTML = '<path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path>';
+                    }
+                    if (chatExpand) {
+                        chatExpand.title = "Toggle Fullscreen";
+                    }
+                    return;
+                }
+
                 chatContainer.style.transform = 'scale(0.8)';
                 chatContainer.style.opacity = '0';
                 setTimeout(() => {
