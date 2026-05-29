@@ -1783,7 +1783,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
     <script>
         // API Base URL (Change to your Render/Production backend URL when deploying)
         const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-            ? (window.location.port === '5500' ? 'http://127.0.0.1:5000' : '')
+            ? (window.location.port && window.location.port !== '5000' ? 'http://127.0.0.1:5000' : '')
             : 'https://college-predictor-backend-mgf1.onrender.com'; // Replace with actual backend URL
 
         // Fetch college list for autocomplete
@@ -2280,12 +2280,16 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                     `;
                 } else {
                     let html = summaryHtml;
-                    html += `
+                     html += `
                         <div class="message info" style="margin-bottom: 1.5rem; text-align: left; padding: 1rem; border-left: 4px solid var(--accent-primary);">
                             <strong>Data Source:</strong> Results are based on <strong>${payloadData.counseling_type} ${round.toUpperCase()} data</strong>.
                         </div>
                         <div class="match-count" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
                             <div>Found <span>${data.length}</span> result${data.length > 1 ? 's' : ''}</div>
+                            <button id="download-pdf-btn" class="download-btn">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                Download PDF
+                            </button>
                         </div>
                     `;
                     
@@ -2318,6 +2322,166 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                     html += `</div>`;
                     
                     resultsContainer.innerHTML = html;
+
+                    document.getElementById('download-pdf-btn').addEventListener('click', function() {
+                        const { jsPDF } = window.jspdf;
+                        let doc;
+                        try {
+                            doc = new jsPDF({
+                                encryption: {
+                                    userPermissions: ["print"],
+                                    ownerPassword: "CampusCipher_Owner_" + Math.random().toString(36).substring(2, 10),
+                                    userPassword: ""
+                                }
+                            });
+                        } catch (e) {
+                            console.warn("jsPDF encryption error, falling back to standard PDF:", e);
+                            doc = new jsPDF();
+                        }
+                        
+                        doc.setFillColor(30, 27, 75);
+                        doc.rect(0, 0, 210, 42, 'F');
+                        
+                        doc.setTextColor(255, 255, 255);
+                        doc.setFontSize(24);
+                        doc.setFont("helvetica", "bold");
+                        doc.text("CampusCipher College Predictor", 105, 20, { align: "center" });
+
+                        doc.setFontSize(12);
+                        doc.setFont("helvetica", "normal");
+                        doc.setTextColor(6, 182, 212); // Search database Cyan accent color
+                        doc.text("JEE Main Database Search Report", 105, 28, { align: "center" });
+                        doc.setFontSize(10);
+                        doc.setTextColor(200, 200, 200);
+                        doc.text(`Based on ${payloadData.counseling_type} ${round.toUpperCase()} Data`, 105, 34, { align: "center" });
+                        
+                        let yPos = 52;
+                        doc.setFontSize(14);
+                        doc.setTextColor(30, 27, 75);
+                        doc.setFont("helvetica", "bold");
+                        doc.text("Search Filters Applied", 14, yPos);
+                        
+                        doc.setDrawColor(220, 220, 220);
+                        doc.setLineWidth(0.5);
+                        doc.line(14, yPos + 3, 196, yPos + 3);
+                        
+                        const profileRows = [
+                            [
+                                { content: 'Counseling:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.counseling_type },
+                                { content: 'Round:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.round }
+                            ],
+                            [
+                                { content: 'College Query:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.college_name, colSpan: 3 }
+                            ],
+                            [
+                                { content: 'Branch Query:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.branch || 'ALL BRANCHES' },
+                                { content: 'Category Filter:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.category || 'ALL CATEGORIES' }
+                            ],
+                            [
+                                { content: 'Gender Filter:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.gender || 'ALL GENDERS' },
+                                { content: 'Results Found:', styles: { fontStyle: 'bold', textColor: [6, 182, 212] } },
+                                { content: data.length.toString() + (data.length === 1 ? ' result matched' : ' results matched'), styles: { fontStyle: 'bold', textColor: [6, 182, 212] } }
+                            ]
+                        ];
+                        
+                        doc.autoTable({
+                            startY: yPos + 6,
+                            body: profileRows,
+                            theme: 'plain',
+                            styles: {
+                                font: 'helvetica',
+                                fontSize: 9.5,
+                                cellPadding: { top: 1.5, bottom: 1.5, left: 0, right: 0 },
+                                textColor: [80, 80, 80],
+                                valign: 'top'
+                            },
+                            columnStyles: {
+                                0: { cellWidth: 28 },
+                                1: { cellWidth: 65 },
+                                2: { cellWidth: 25 },
+                                3: { cellWidth: 65 }
+                            },
+                            margin: { left: 14, right: 14 }
+                        });
+                        
+                        yPos = doc.lastAutoTable.finalY + 8;
+                        
+                        const tableBody = data.map((item, i) => [
+                            (i + 1).toString(),
+                            item.Institute_Type,
+                            item.College,
+                            item.Branch,
+                            item.Category,
+                            item.Quota,
+                            item.Gender,
+                            item['Opening Rank'] ? item['Opening Rank'].toLocaleString() : 'N/A',
+                            item['Closing Rank'].toLocaleString()
+                        ]);
+                        
+                        doc.autoTable({
+                            startY: yPos,
+                            head: [['S.No.', 'Type', 'College Name', 'Branch', 'Category', 'Quota', 'Gender', 'Opening Rank', 'Closing Rank']],
+                            body: tableBody,
+                            theme: 'grid',
+                            headStyles: { 
+                                fillColor: [30, 27, 75], 
+                                textColor: 255,
+                                fontStyle: 'bold',
+                                halign: 'center'
+                            },
+                            alternateRowStyles: { fillColor: [248, 250, 252] },
+                            styles: { 
+                                font: 'helvetica', 
+                                fontSize: 8.5, 
+                                cellPadding: 2, 
+                                lineColor: [220, 220, 220],
+                                lineWidth: 0.1
+                            },
+                            columnStyles: {
+                                0: { cellWidth: 8, halign: 'center' },
+                                1: { cellWidth: 10, halign: 'center', fontStyle: 'bold', textColor: [6, 182, 212] },
+                                2: { cellWidth: 50 },
+                                3: { cellWidth: 38 },
+                                4: { cellWidth: 18, halign: 'center' },
+                                5: { cellWidth: 15, halign: 'center' },
+                                6: { cellWidth: 18, halign: 'center' },
+                                7: { cellWidth: 17, halign: 'center' },
+                                8: { cellWidth: 17, halign: 'center' }
+                            },
+                            margin: { left: 14, right: 14 },
+                            didDrawPage: function(data) {
+                                try {
+                                    if (typeof doc.saveGraphicsState === 'function') {
+                                        doc.saveGraphicsState();
+                                    }
+                                    doc.setFont("helvetica", "bold");
+                                    doc.setFontSize(35);
+                                    doc.setTextColor(230, 230, 230);
+                                    doc.setGState(new doc.GState({ opacity: 0.04 }));
+                                    
+                                    const yPositions = [80, 150, 220];
+                                    yPositions.forEach(y => {
+                                        doc.text("CampusCipher", 105, y, { align: "center", angle: 45 });
+                                    });
+                                    
+                                    if (typeof doc.restoreGraphicsState === 'function') {
+                                        doc.restoreGraphicsState();
+                                    }
+                                } catch (err) {
+                                    console.warn("Watermark error:", err);
+                                }
+                            }
+                        });
+                        
+                        doc.save(`CampusCipher_Search_Report.pdf`);
+                        showToast(`PDF Report downloaded successfully!`);
+                    });
                 }
             } catch (error) {
                 console.error("Fetch API Error:", error);

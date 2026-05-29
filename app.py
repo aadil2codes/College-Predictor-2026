@@ -413,7 +413,7 @@ def search_college():
 
         filtered_df = filtered_df.sort_values(by=['College', 'Closing Rank'])
 
-        results = filtered_df[['College', 'Branch', 'Category', 'Quota', 'Gender', 'Closing Rank', 'Institute_Type']].to_dict(orient='records')
+        results = filtered_df[['College', 'Branch', 'Category', 'Quota', 'Gender', 'Opening Rank', 'Closing Rank', 'Institute_Type']].to_dict(orient='records')
         
         return jsonify(results), 200
 
