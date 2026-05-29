@@ -480,6 +480,20 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.4), 0 0 30px rgba(168, 85, 247, 0.15);
             border-color: rgba(168, 85, 247, 0.4);
         }
+
+        /* Last Cutoffs Green Theme Overrides */
+        .result-card.last-cutoff-card::before {
+            background: linear-gradient(to bottom, #10b881, #059669);
+        }
+
+        .result-card.last-cutoff-card:hover {
+            border-color: rgba(16, 185, 129, 0.4);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4), 0 0 30px rgba(16, 185, 129, 0.15);
+        }
+
+        .result-card.last-cutoff-card .rc-type {
+            color: #34d399;
+        }
         
         .rc-main {
             flex: 1;
@@ -820,6 +834,49 @@
             border-color: #22d3ee;
             color: white;
             box-shadow: 0 4px 20px rgba(6, 182, 212, 0.4), 0 0 10px rgba(6, 182, 212, 0.2);
+        }
+
+        /* Standalone Glowing Last Cutoff Tab */
+        .last-cutoff-tab-standalone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 160px;
+            padding: 0.65rem 1.2rem;
+            margin: 0;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: var(--text-muted);
+            border-radius: 14px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.05);
+        }
+
+        .last-cutoff-tab-standalone svg {
+            transition: transform 0.3s ease;
+        }
+
+        .last-cutoff-tab-standalone:hover {
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.7);
+            background: rgba(16, 185, 129, 0.05);
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
+        }
+        
+        .last-cutoff-tab-standalone:hover svg {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .last-cutoff-tab-standalone.active {
+            background: linear-gradient(135deg, #059669, #047857);
+            border-color: #34d399;
+            color: white;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4), 0 0 10px rgba(16, 185, 129, 0.2);
         }
 
         /* Standalone Glowing AI Assistant Tab */
@@ -1360,6 +1417,13 @@
                     </svg>
                     Search Database
                 </button>
+                <button type="button" id="tab-last-cutoff" class="last-cutoff-tab-standalone">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 3v18h18"/>
+                        <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                    </svg>
+                    Last Cutoffs
+                </button>
                 <button type="button" id="tab-ai" class="ai-tab-standalone">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
@@ -1611,6 +1675,76 @@
                 </div>
             </form>
 
+            <form id="last-cutoff-form" style="display: none;">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="last_counseling_type">Counseling Type</label>
+                        <select id="last_counseling_type" name="last_counseling_type" required>
+                            <option value="CSAB" selected>CSAB</option>
+                            <option value="JOSAA">JoSAA</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_round">Select Round</label>
+                        <select id="last_round" name="last_round" required>
+                            <!-- Options populated by JS -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_institute_type">Institute Type</label>
+                        <select id="last_institute_type" name="last_institute_type" required>
+                            <option value="All" selected>All (GFTI+NIT+IIIT)</option>
+                            <option value="GFTI">GFTI - Govt. Funded</option>
+                            <option value="NIT">NIT - National Inst. of Tech</option>
+                            <option value="IIIT">IIIT - Indian Inst. of Info Tech</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="position: relative;">
+                        <label for="last_college_name">College Name (Optional)</label>
+                        <input type="text" id="last_college_name" name="last_college_name" placeholder="e.g. Punjab Engineering" autocomplete="off">
+                        <div id="autocomplete-list-last" class="autocomplete-items"></div>
+                    </div>
+
+                    <div class="form-group" style="position: relative;">
+                        <label for="last_branch">Branch (Optional)</label>
+                        <input type="text" id="last_branch" name="last_branch" placeholder="e.g. Computer Science" autocomplete="off">
+                        <div id="autocomplete-list-branch-last" class="autocomplete-items"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last_category">Category (Optional)</label>
+                        <select id="last_category" name="last_category">
+                            <option value="" selected>All Categories</option>
+                            <option value="OPEN">OPEN / General</option>
+                            <option value="OBC-NCL">OBC-NCL</option>
+                            <option value="EWS">EWS</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                            <option value="OPEN (PwD)">OPEN (PwD)</option>
+                            <option value="OBC-NCL (PwD)">OBC-NCL (PwD)</option>
+                            <option value="EWS (PwD)">EWS (PwD)</option>
+                            <option value="SC (PwD)">SC (PwD)</option>
+                            <option value="ST (PwD)">ST (PwD)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last_gender">Gender (Optional)</label>
+                        <select id="last_gender" name="last_gender">
+                            <option value="" selected>All Genders</option>
+                            <option value="Gender-Neutral">Gender-Neutral</option>
+                            <option value="Female-only">Female-only</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="last-cutoff-btn">
+                        <span>Search Last Cutoff</span>
+                    </button>
+                </div>
+            </form>
+
             <!-- <form id="lowest-cutoff-form" style="display: none;">
                 <div class="form-grid">
                     <div class="form-group">
@@ -1825,12 +1959,14 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
         const tabPredict = document.getElementById('tab-predict');
         const tabJosaa = document.getElementById('tab-josaa');
         const tabSearch = document.getElementById('tab-search');
+        const tabLastCutoff = document.getElementById('tab-last-cutoff');
         const tabLowest = document.getElementById('tab-lowest');
         const tabChat = document.getElementById('tab-chat');
         const tabAi = document.getElementById('tab-ai');
         const formPredict = document.getElementById('prediction-form');
         const formJosaa = document.getElementById('josaa-prediction-form');
         const formSearch = document.getElementById('search-form');
+        const formLastCutoff = document.getElementById('last-cutoff-form');
         const formLowest = document.getElementById('lowest-cutoff-form');
         const formChat = document.getElementById('commented-chat-form');
         const resultsContainer = document.getElementById('results-container');
@@ -1857,8 +1993,8 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
             }
         }
 
-        ['counseling_type', 'josaa_counseling_type', 'search_counseling_type', 'lowest_counseling_type'].forEach((typeId, idx) => {
-            const roundIds = ['round', 'josaa_round', 'search_round', 'lowest_round'];
+        ['counseling_type', 'josaa_counseling_type', 'search_counseling_type', 'last_counseling_type', 'lowest_counseling_type'].forEach((typeId, idx) => {
+            const roundIds = ['round', 'josaa_round', 'search_round', 'last_round', 'lowest_round'];
             const typeEl = document.getElementById(typeId);
             if(typeEl) {
                 typeEl.addEventListener('change', () => updateRoundOptions(typeId, roundIds[idx]));
@@ -1914,6 +2050,14 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
         const autocompleteListBranch = document.getElementById("autocomplete-list-branch");
         setupAutocomplete(branchInput, autocompleteListBranch, () => branchList);
 
+        const lastInput = document.getElementById("last_college_name");
+        const autocompleteListLast = document.getElementById("autocomplete-list-last");
+        setupAutocomplete(lastInput, autocompleteListLast, () => collegeList);
+
+        const lastBranchInput = document.getElementById("last_branch");
+        const autocompleteListBranchLast = document.getElementById("autocomplete-list-branch-last");
+        setupAutocomplete(lastBranchInput, autocompleteListBranchLast, () => branchList);
+
         /*
         const lowestBranchInput = document.getElementById("lowest_search_branch");
         const lowestAutocompleteListBranch = document.getElementById("lowest-autocomplete-list-branch");
@@ -1958,12 +2102,12 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
         });
 
         function resetTabs() {
-            [tabPredict, tabJosaa, tabSearch, tabLowest, tabChat, tabAi].forEach(tab => {
+            [tabPredict, tabJosaa, tabSearch, tabLastCutoff, tabLowest, tabChat, tabAi].forEach(tab => {
                 if (tab) {
                     tab.classList.remove('active');
                 }
             });
-            [formPredict, formJosaa, formSearch, formLowest, formChat].forEach(form => {
+            [formPredict, formJosaa, formSearch, formLastCutoff, formLowest, formChat].forEach(form => {
                 if (form) {
                     form.style.display = 'none';
                 }
@@ -2014,6 +2158,15 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
             formSearch.style.display = 'block';
             resultsContainer.innerHTML = emptyStateHtml;
         });
+
+        if (tabLastCutoff) {
+            tabLastCutoff.addEventListener('click', () => {
+                resetTabs();
+                tabLastCutoff.classList.add('active');
+                formLastCutoff.style.display = 'block';
+                resultsContainer.innerHTML = emptyStateHtml;
+            });
+        }
 
         if (tabAi) {
             tabAi.addEventListener('click', () => {
@@ -2503,6 +2656,312 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
             } finally {
                 btn.disabled = false;
                 btn.innerHTML = '<span>Search College</span>';
+                loading.style.display = 'none';
+            }
+        });
+
+        // Last Cutoffs Form Submit Logic
+        formLastCutoff.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('last-cutoff-btn');
+            const loading = document.getElementById('loading');
+            
+            resultsContainer.innerHTML = '';
+            
+            const collegeName = document.getElementById('last_college_name').value;
+            const branch = document.getElementById('last_branch').value;
+            const categoryObj = document.getElementById('last_category');
+            const category = categoryObj.value || '';
+            const genderObj = document.getElementById('last_gender');
+            const gender = genderObj.value || '';
+            const round = document.getElementById('last_round').value;
+            const counselingType = document.getElementById('last_counseling_type').value;
+            const instituteType = document.getElementById('last_institute_type').value;
+
+            if (!collegeName && instituteType === 'All' && !branch && !category && !gender) {
+                displayMessage("Please enter a College Name or select a specific Institute Type (GFTI/NIT/IIIT) to search.", "error");
+                return;
+            }
+
+            const payloadData = {
+                counseling_type: counselingType,
+                institute_type: instituteType,
+                college_name: collegeName,
+                branch: branch,
+                category: category,
+                gender: gender,
+                round: round
+            };
+
+            btn.disabled = true;
+            btn.innerHTML = 'Searching...';
+            loading.style.display = 'block';
+
+            if (window.innerWidth <= 900) {
+                setTimeout(() => {
+                    document.querySelector('.results-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+
+            try {
+                const response = await fetch(API_BASE_URL + '/last_cutoffs', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payloadData)
+                });
+
+                const responseText = await response.text();
+                let data = {};
+                try {
+                    data = responseText ? JSON.parse(responseText) : {};
+                } catch(e) {
+                    console.error("JSON parse error:", e);
+                    throw new Error("Invalid response format received from server.");
+                }
+
+                if (!response.ok) {
+                    throw new Error(data.error || "An error occurred while searching");
+                }
+
+                const summaryHtml = `
+                    <div class="summary-card" style="border-color: rgba(16, 185, 129, 0.2); box-shadow: 0 8px 32px rgba(16, 185, 129, 0.05);">
+                        <h4 style="color: #34d399;">Last Cutoffs Summary</h4>
+                        <div class="summary-details">
+                            <div class="summary-chip" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.1); color: #34d399; font-weight: bold;">
+                                <strong>Results Found:</strong> ${data.length}
+                            </div>
+                            <div class="summary-chip"><strong>Counseling</strong> ${payloadData.counseling_type}</div>
+                            <div class="summary-chip"><strong>Round</strong> ${payloadData.round}</div>
+                            <div class="summary-chip"><strong>Inst. Type</strong> ${payloadData.institute_type}</div>
+                            ${collegeName ? `<div class="summary-chip"><strong>College</strong> ${collegeName}</div>` : '<div class="summary-chip"><strong>College</strong> All Colleges</div>'}
+                            ${branch ? `<div class="summary-chip"><strong>Branch</strong> ${branch}</div>` : '<div class="summary-chip"><strong>Branch</strong> All Branches (Last Seat Cutoff)</div>'}
+                            ${category ? `<div class="summary-chip"><strong>Category</strong> ${category}</div>` : ''}
+                        </div>
+                    </div>
+                `;
+
+                if (data.length === 0) {
+                    resultsContainer.innerHTML = summaryHtml + `
+                        <div class="message info" style="border-left-color: #10b881;">
+                            <svg style="width: 48px; height: 48px; margin-bottom: 1rem; color: #a7f3d0;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <br>
+                            No matching colleges found. Try checking the spelling or use a more general term.
+                        </div>
+                    `;
+                } else {
+                    let html = summaryHtml;
+                    html += `
+                        <div class="message info" style="margin-bottom: 1.5rem; text-align: left; padding: 1rem; border-left: 4px solid #10b881;">
+                            <strong>Data Source:</strong> Results are based on <strong>${payloadData.counseling_type} ${round.toUpperCase()} data</strong>. If Branch filter was empty, results show the absolute last closing cutoff seat for each category/gender.
+                        </div>
+                        <div class="match-count" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                            <div>Found <span>${data.length}</span> result${data.length > 1 ? 's' : ''}</div>
+                            <button id="download-pdf-btn" class="download-btn" style="background: linear-gradient(135deg, #059669, #047857); border-color: #34d399; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                Download PDF
+                            </button>
+                        </div>
+                    `;
+                    
+                    html += `<div class="results-grid">`;
+                    data.forEach((item, index) => {
+                        const delay = Math.min(index * 0.05, 1);
+                        html += `
+                            <div class="result-card last-cutoff-card" style="animation-delay: ${delay}s">
+                                <div class="rc-main">
+                                    <div class="rc-type">${item.Institute_Type}</div>
+                                    <h3>${item.College}</h3>
+                                    <div class="rc-branch">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                        <span>${item.Branch}</span>
+                                    </div>
+                                </div>
+                                <div class="rc-meta">
+                                    <div class="rc-tags">
+                                        <span class="rc-tag" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #34d399;">${item.Category}</span>
+                                        <span class="rc-tag" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #34d399;">${item.Quota}</span>
+                                        <span class="rc-tag" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #34d399;">${item.Gender}</span>
+                                    </div>
+                                    <div class="rc-rank">
+                                        Opening: ${item['Opening Rank'] ? item['Opening Rank'].toLocaleString() : 'N/A'} <span style="margin: 0 0.5rem; color: rgba(255,255,255,0.2);">|</span> Closing: <strong style="color: #34d399;">${item['Closing Rank'].toLocaleString()}</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    html += `</div>`;
+                    
+                    resultsContainer.innerHTML = html;
+
+                    document.getElementById('download-pdf-btn').addEventListener('click', function() {
+                        const { jsPDF } = window.jspdf;
+                        let doc;
+                        try {
+                            doc = new jsPDF({
+                                encryption: {
+                                    userPermissions: ["print"],
+                                    ownerPassword: "CampusCipher_Owner_" + Math.random().toString(36).substring(2, 10),
+                                    userPassword: ""
+                                }
+                            });
+                        } catch (e) {
+                            console.warn("jsPDF encryption error, falling back to standard PDF:", e);
+                            doc = new jsPDF();
+                        }
+                        
+                        doc.setFillColor(15, 23, 42);
+                        doc.rect(0, 0, 210, 42, 'F');
+                        
+                        doc.setTextColor(255, 255, 255);
+                        doc.setFontSize(24);
+                        doc.setFont("helvetica", "bold");
+                        doc.text("CampusCipher College Predictor", 105, 20, { align: "center" });
+
+                        doc.setFontSize(12);
+                        doc.setFont("helvetica", "normal");
+                        doc.setTextColor(16, 185, 129);
+                        doc.text("JEE Main Database Last Cutoff Report", 105, 28, { align: "center" });
+                        doc.setFontSize(10);
+                        doc.setTextColor(200, 200, 200);
+                        doc.text(`Based on ${payloadData.counseling_type} ${round.toUpperCase()} Data`, 105, 34, { align: "center" });
+                        
+                        let yPos = 52;
+                        doc.setFontSize(14);
+                        doc.setTextColor(15, 23, 42);
+                        doc.setFont("helvetica", "bold");
+                        doc.text("Last Cutoff Search Filters Applied", 14, yPos);
+                        
+                        doc.setDrawColor(220, 220, 220);
+                        doc.setLineWidth(0.5);
+                        doc.line(14, yPos + 3, 196, yPos + 3);
+                        
+                        const profileRows = [
+                            [
+                                { content: 'Counseling:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.counseling_type },
+                                { content: 'Round:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.round }
+                            ],
+                            [
+                                { content: 'Institute Type:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.institute_type },
+                                { content: 'College Query:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.college_name || 'ALL COLLEGES' }
+                            ],
+                            [
+                                { content: 'Branch Query:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.branch || 'ALL BRANCHES (Last Seat Cutoff)' },
+                                { content: 'Category Filter:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.category || 'ALL CATEGORIES' }
+                            ],
+                            [
+                                { content: 'Gender Filter:', styles: { fontStyle: 'bold' } },
+                                { content: payloadData.gender || 'ALL GENDERS' },
+                                { content: 'Results Found:', styles: { fontStyle: 'bold', textColor: [16, 185, 129] } },
+                                { content: data.length.toString() + (data.length === 1 ? ' result matched' : ' results matched'), styles: { fontStyle: 'bold', textColor: [16, 185, 129] } }
+                            ]
+                        ];
+                        
+                        doc.autoTable({
+                            startY: yPos + 6,
+                            body: profileRows,
+                            theme: 'plain',
+                            styles: {
+                                font: 'helvetica',
+                                fontSize: 9.5,
+                                cellPadding: { top: 1.5, bottom: 1.5, left: 0, right: 0 },
+                                textColor: [80, 80, 80],
+                                valign: 'top'
+                            },
+                            columnStyles: {
+                                0: { cellWidth: 28 },
+                                1: { cellWidth: 64 },
+                                2: { cellWidth: 26 },
+                                3: { cellWidth: 64 }
+                            },
+                            margin: { left: 14, right: 14 }
+                        });
+                        
+                        yPos = doc.lastAutoTable.finalY + 8;
+                        
+                        const tableBody = data.map((item, i) => [
+                            (i + 1).toString(),
+                            item.Institute_Type,
+                            item.College,
+                            item.Branch,
+                            item.Category,
+                            item.Quota,
+                            item.Gender,
+                            item['Opening Rank'] ? item['Opening Rank'].toLocaleString() : 'N/A',
+                            item['Closing Rank'].toLocaleString()
+                        ]);
+                        
+                        doc.autoTable({
+                            startY: yPos,
+                            head: [['S.No.', 'Type', 'College Name', 'Branch', 'Category', 'Quota', 'Gender', 'Opening Rank', 'Closing Rank']],
+                            body: tableBody,
+                            theme: 'grid',
+                            headStyles: { 
+                                fillColor: [15, 23, 42],
+                                textColor: 255,
+                                fontStyle: 'bold',
+                                halign: 'center'
+                            },
+                            alternateRowStyles: { fillColor: [248, 250, 252] },
+                            styles: { 
+                                font: 'helvetica', 
+                                fontSize: 8.5, 
+                                cellPadding: 2, 
+                                lineColor: [220, 220, 220],
+                                lineWidth: 0.1
+                            },
+                            columnStyles: {
+                                0: { cellWidth: 10, halign: 'center' },
+                                1: { cellWidth: 12, halign: 'center', fontStyle: 'bold', textColor: [16, 185, 129] },
+                                2: { cellWidth: 46 },
+                                3: { cellWidth: 34 },
+                                4: { cellWidth: 16, halign: 'center' },
+                                5: { cellWidth: 12, halign: 'center' },
+                                6: { cellWidth: 16, halign: 'center' },
+                                7: { cellWidth: 18, halign: 'center' },
+                                8: { cellWidth: 18, halign: 'center' }
+                            },
+                            margin: { left: 14, right: 14 },
+                            didDrawPage: function(data) {
+                                try {
+                                    if (typeof doc.saveGraphicsState === 'function') {
+                                        doc.saveGraphicsState();
+                                    }
+                                    doc.setFont("helvetica", "bold");
+                                    doc.setFontSize(35);
+                                    doc.setTextColor(230, 230, 230);
+                                    doc.setGState(new doc.GState({ opacity: 0.04 }));
+                                    
+                                    const yPositions = [80, 150, 220];
+                                    yPositions.forEach(y => {
+                                        doc.text("CampusCipher", 105, y, { align: "center", angle: 45 });
+                                    });
+                                    
+                                    if (typeof doc.restoreGraphicsState === 'function') {
+                                        doc.restoreGraphicsState();
+                                    }
+                                } catch (err) {
+                                    console.warn("Watermark error:", err);
+                                }
+                            }
+                        });
+                        
+                        doc.save(`CampusCipher_Last_Cutoff_Report.pdf`);
+                        showToast(`Last Cutoff PDF Report downloaded successfully!`);
+                    });
+                }
+            } catch (error) {
+                console.error("Fetch API Error:", error);
+                displayMessage(error.message || "Failed to reach servers.", "error");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<span>Search Last Cutoff</span>';
                 loading.style.display = 'none';
             }
         });

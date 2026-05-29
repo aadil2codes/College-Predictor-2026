@@ -55,6 +55,7 @@ self.addEventListener('fetch', event => {
     requestUrl.pathname === '/predict' ||
     requestUrl.pathname === '/search' ||
     requestUrl.pathname === '/lowest_cutoff' ||
+    requestUrl.pathname === '/last_cutoffs' ||
     requestUrl.pathname === '/api/colleges' ||
     requestUrl.pathname === '/api/branches' ||
     requestUrl.pathname === '/api/chat' ||

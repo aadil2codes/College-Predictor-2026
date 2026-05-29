@@ -410,10 +410,6 @@ def search_college():
 
         if branch:
             filtered_df = filtered_df[filtered_df['Branch'].str.contains(branch, case=False, na=False)]
-        else:
-            if not filtered_df.empty:
-                idx = filtered_df.groupby(['College', 'Category', 'Quota', 'Gender', 'Institute_Type'])['Closing Rank'].idxmax()
-                filtered_df = filtered_df.loc[idx]
             
         if category:
             cat_variants = get_category_variants(category)
@@ -433,6 +429,79 @@ def search_college():
         print(f"Error occurring in /search endpoint: {e}")
         traceback.print_exc()
         return jsonify({"error": "An internal server error occurred processing the search."}), 500
+
+@app.route('/last_cutoffs', methods=['POST'])
+def search_last_cutoffs():
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({"error": "Invalid request, JSON required"}), 400
+
+        college_name = data.get('college_name', '').strip()
+        branch = data.get('branch', '').strip()
+        category = data.get('category', '').strip()
+        gender = data.get('gender', '').strip()
+        institute_type = data.get('institute_type', 'All').strip()
+
+        # At least one filter must be applied to prevent huge database dump
+        if not college_name and institute_type == 'All' and not branch and not category and not gender:
+            return jsonify({"error": "Please provide a College Name, Branch, or select a specific Institute Type (GFTI/NIT/IIIT) to search."}), 400
+
+        round_selected = data.get('round', 'Round 3')
+        counseling_type = data.get('counseling_type', 'CSAB')
+        file_map = get_file_map(counseling_type, round_selected)
+
+        dfs = []
+        for itype, fname in file_map.items():
+            try:
+                temp_df = safe_read_csv(fname)
+                temp_df['Institute_Type'] = itype
+                dfs.append(temp_df)
+            except Exception as e:
+                print(f"Error loading {fname}: {e}")
+        
+        if not dfs:
+            return jsonify({"error": "Failed to load datasets."}), 500
+            
+        df = pd.concat(dfs, ignore_index=True)
+
+        filtered_df = df.copy()
+
+        if college_name:
+            filtered_df = filtered_df[filtered_df['College'].str.contains(college_name, case=False, na=False)]
+
+        if institute_type and institute_type != 'All':
+            filtered_df = filtered_df[filtered_df['Institute_Type'] == institute_type]
+
+        if branch:
+            filtered_df = filtered_df[filtered_df['Branch'].str.contains(branch, case=False, na=False)]
+            
+        if category:
+            cat_variants = get_category_variants(category)
+            cat_variants_lower = [c.lower() for c in cat_variants]
+            filtered_df = filtered_df[filtered_df['Category'].str.lower().isin(cat_variants_lower)]
+
+        if gender:
+            filtered_df = filtered_df[filtered_df['Gender'].str.lower() == gender.lower()]
+
+        # If NO branch was selected, perform the "Last Cutoff" aggregation
+        # (Find the branch with the highest Closing Rank for each College, Category, Quota, Gender combination)
+        if not branch and not filtered_df.empty:
+            # Sort by Closing Rank ascending so the maximum closing rank is at the bottom
+            filtered_df = filtered_df.sort_values(by='Closing Rank')
+            # Group by college, category, quota, and gender, and take the last record (maximum Closing Rank)
+            filtered_df = filtered_df.groupby(['College', 'Category', 'Quota', 'Gender'], as_index=False).last()
+
+        filtered_df = filtered_df.sort_values(by=['College', 'Closing Rank'])
+
+        results = filtered_df[['College', 'Branch', 'Category', 'Quota', 'Gender', 'Opening Rank', 'Closing Rank', 'Institute_Type']].to_dict(orient='records')
+        
+        return jsonify(results), 200
+
+    except Exception as e:
+        print(f"Error occurring in /last_cutoffs endpoint: {e}")
+        traceback.print_exc()
+        return jsonify({"error": "An internal server error occurred processing the last cutoffs."}), 500
 
 @app.route('/lowest_cutoff', methods=['POST'])
 def lowest_cutoff():
