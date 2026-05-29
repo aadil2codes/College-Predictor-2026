@@ -1,7 +1,7 @@
 import os
 import re
 import requests
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory, make_response
 from flask_cors import CORS
 import pandas as pd
 import traceback
@@ -165,6 +165,34 @@ def get_gemini_response(prompt, history=None):
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for frontend requests
+
+# PWA Root Static Asset Serving
+@app.route('/')
+def serve_index():
+    return send_from_directory('.', 'index.html')
+
+@app.route('/manifest.json')
+def serve_manifest():
+    return send_from_directory('.', 'manifest.json')
+
+@app.route('/service-worker.js')
+def serve_service_worker():
+    response = make_response(send_from_directory('.', 'service-worker.js'))
+    response.headers['Content-Type'] = 'application/javascript'
+    response.headers['Service-Worker-Allowed'] = '/'
+    return response
+
+@app.route('/icon-192.png')
+def serve_icon192():
+    return send_from_directory('.', 'icon-192.png')
+
+@app.route('/icon-512.png')
+def serve_icon512():
+    return send_from_directory('.', 'icon-512.png')
+
+@app.route('/favicon.png')
+def serve_favicon():
+    return send_from_directory('.', 'favicon.png')
 
 USER_CONTEXT = {
     "last_rank": None,
