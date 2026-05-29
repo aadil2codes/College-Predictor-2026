@@ -410,6 +410,10 @@ def search_college():
 
         if branch:
             filtered_df = filtered_df[filtered_df['Branch'].str.contains(branch, case=False, na=False)]
+        else:
+            if not filtered_df.empty:
+                idx = filtered_df.groupby(['College', 'Category', 'Quota', 'Gender', 'Institute_Type'])['Closing Rank'].idxmax()
+                filtered_df = filtered_df.loc[idx]
             
         if category:
             cat_variants = get_category_variants(category)
