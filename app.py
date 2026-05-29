@@ -485,12 +485,12 @@ def search_last_cutoffs():
             filtered_df = filtered_df[filtered_df['Gender'].str.lower() == gender.lower()]
 
         # If NO branch was selected, perform the "Last Cutoff" aggregation
-        # (Find the branch with the highest Closing Rank for each College, Category, Quota, Gender combination)
+        # (Find the branch with the highest Closing Rank for each College, Category, Gender combination)
         if not branch and not filtered_df.empty:
             # Sort by Closing Rank ascending so the maximum closing rank is at the bottom
             filtered_df = filtered_df.sort_values(by='Closing Rank')
-            # Group by college, category, quota, and gender, and take the last record (maximum Closing Rank)
-            filtered_df = filtered_df.groupby(['College', 'Category', 'Quota', 'Gender'], as_index=False).last()
+            # Group by college, category, and gender, and take the last record (maximum Closing Rank)
+            filtered_df = filtered_df.groupby(['College', 'Category', 'Gender'], as_index=False).last()
 
         filtered_df = filtered_df.sort_values(by=['College', 'Closing Rank'])
 
