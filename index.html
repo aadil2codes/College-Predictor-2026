@@ -1630,9 +1630,14 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
     </div>
 
     <script>
+        // API Base URL (Change to your Render/Production backend URL when deploying)
+        const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+            ? ''
+            : 'https://college-predictor-backend.onrender.com'; // Replace with actual backend URL
+
         // Fetch college list for autocomplete
         let collegeList = [];
-        fetch('/api/colleges')
+        fetch(API_BASE_URL + '/api/colleges')
             .then(res => res.text())
             .then(text => {
                 try {
@@ -1645,7 +1650,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
 
         // Fetch branch list for autocomplete
         let branchList = [];
-        fetch('/api/branches')
+        fetch(API_BASE_URL + '/api/branches')
             .then(res => res.text())
             .then(text => {
                 try {
@@ -1904,7 +1909,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
             }
 
             try {
-                const response = await fetch('/lowest_cutoff', {
+                const response = await fetch(API_BASE_URL + '/lowest_cutoff', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payloadData)
@@ -2040,7 +2045,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
             }
 
             try {
-                const response = await fetch('/search', {
+                const response = await fetch(API_BASE_URL + '/search', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payloadData)
@@ -2188,7 +2193,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
             }
 
             try {
-                const response = await fetch('/predict', {
+                const response = await fetch(API_BASE_URL + '/predict', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payloadData)
@@ -2655,7 +2660,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
             appendChatLoading(loadingId);
             
             try {
-                const response = await fetch('/api/chat', {
+                const response = await fetch(API_BASE_URL + '/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ 
