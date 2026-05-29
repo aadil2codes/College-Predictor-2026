@@ -2972,6 +2972,10 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                     if (chatExpand) {
                         chatExpand.title = "Toggle Fullscreen";
                     }
+                    const chatPlaceholder = document.getElementById('chat-placeholder');
+                    if (chatPlaceholder) {
+                        chatPlaceholder.appendChild(chatContainer);
+                    }
                     return;
                 }
 
@@ -3011,10 +3015,23 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                     // Minimize icon
                     iconSvg.innerHTML = '<path d="M4 14h6v6M20 10h-6V4M14 10l7-7M10 14l-7 7"></path>';
                     chatExpand.title = "Exit Fullscreen";
+                    
+                    // If in inline-tab mode, append to body to ensure it escapes parent layers and covers the complete screen
+                    if (chatContainer.classList.contains('inline-tab')) {
+                        document.body.appendChild(chatContainer);
+                    }
                 } else {
                     // Maximize icon
                     iconSvg.innerHTML = '<path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path>';
                     chatExpand.title = "Toggle Fullscreen";
+                    
+                    // If in inline-tab mode, restore it back inside the card placeholder
+                    if (chatContainer.classList.contains('inline-tab')) {
+                        const chatPlaceholder = document.getElementById('chat-placeholder');
+                        if (chatPlaceholder) {
+                            chatPlaceholder.appendChild(chatContainer);
+                        }
+                    }
                 }
             });
         }
