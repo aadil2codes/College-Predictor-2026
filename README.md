@@ -6,7 +6,7 @@ The platform combines traditional cutoff prediction with an intelligent AI couns
 
 ---
 
-🔗 # Live Preview: https://college-predictor-2026.vercel.app/
+🔗Live Preview: https://college-predictor-2026.vercel.app/
 
 ## 🚀 Features
 
