@@ -79,6 +79,11 @@ def safe_read_csv(filename):
             
         df.columns = expected_cols
         
+    # Defensively clean and cast Rank columns to numeric, removing commas and handling non-numeric gracefully
+    for col in ['Opening Rank', 'Closing Rank']:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col].astype(str).str.replace(',', '').str.strip(), errors='coerce')
+            
     return df
 
 def is_data_query(message):
