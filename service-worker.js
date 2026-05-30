@@ -1,4 +1,4 @@
-const CACHE_NAME = 'campus-cipher-pwa-v2';
+const CACHE_NAME = 'campus-cipher-pwa-v3';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
