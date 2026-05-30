@@ -153,7 +153,7 @@ Unlike traditional predictors, this platform also shows colleges that are slight
 
 ## 👨‍💻 Developer
 
-Built by **Aadil** to help JEE aspirants make better counseling decisions using data-driven insights and AI-powered guidance.
+Built by **Aadil Hussain** to help JEE aspirants make better counseling decisions using data-driven insights and AI-powered guidance.
 
 ---
 
