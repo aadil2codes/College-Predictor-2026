@@ -13,7 +13,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>window.jsPDF = window.jspdf.jsPDF;</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
@@ -2105,6 +2105,25 @@
         body.theme-csab .chat-bubble.user {
             background: #0f2537 !important;
             color: #ffffff !important;
+        }
+
+        /* CSAB Font family override */
+        body.theme-csab,
+        body.theme-csab h1,
+        body.theme-csab h2,
+        body.theme-csab h3,
+        body.theme-csab h4,
+        body.theme-csab h5,
+        body.theme-csab h6,
+        body.theme-csab input,
+        body.theme-csab select,
+        body.theme-csab button,
+        body.theme-csab textarea,
+        body.theme-csab span,
+        body.theme-csab a,
+        body.theme-csab div,
+        body.theme-csab p {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
         }
     </style>
 </head>
