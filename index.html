@@ -2119,6 +2119,87 @@
             border: 1px solid rgba(15, 37, 55, 0.2) !important;
         }
 
+        /* CSAB Table display configuration */
+        .csab-results-table-container {
+            display: none;
+        }
+
+        body.theme-csab .csab-results-table-container {
+            display: block !important;
+            width: 100%;
+            overflow-x: auto;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            background: #ffffff;
+        }
+
+        body.theme-csab .results-grid {
+            display: none !important;
+        }
+
+        body.theme-csab .csab-results-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.88rem;
+            color: #334155;
+            min-width: 900px;
+        }
+
+        body.theme-csab .csab-results-table th {
+            background: #d8ecf8;
+            color: #0f2537;
+            font-weight: 700;
+            padding: 0.95rem 1.1rem;
+            border: 1px solid #cbd5e1;
+            white-space: nowrap;
+        }
+
+        body.theme-csab .csab-results-table td {
+            padding: 0.9rem 1.1rem;
+            border: 1px solid #cbd5e1;
+            line-height: 1.5;
+        }
+
+        body.theme-csab .csab-results-table tbody tr {
+            background-color: #ffffff;
+            transition: background-color 0.15s ease;
+        }
+
+        body.theme-csab .csab-results-table tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        body.theme-csab .csab-results-table tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        body.theme-csab .csab-results-table td.col-institute {
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        body.theme-csab .csab-results-table td.col-program {
+            color: #475569;
+        }
+
+        body.theme-csab .csab-results-table td.col-closing strong {
+            color: #8b0000 !important;
+            font-weight: 800 !important;
+            font-size: 0.95rem;
+        }
+
+        /* Subtle row chance hints in CSAB mode (Safe gets very soft green border-left, Low gets very soft red) */
+        body.theme-csab .csab-results-table tbody tr.row-safe td:first-child {
+            border-left: 4px solid #16a34a;
+        }
+        
+        body.theme-csab .csab-results-table tbody tr.row-low td:first-child {
+            border-left: 4px solid #dc2626;
+        }
+
         /* CSAB Font family override */
         body.theme-csab,
         body.theme-csab h1,
@@ -3366,6 +3447,45 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                         `;
                     });
                     html += `</div>`;
+
+                    // CSAB structured table compilation
+                    let tableHtml = `
+                        <div class="csab-results-table-container">
+                            <table class="csab-results-table">
+                                <thead>
+                                    <tr>
+                                        <th>Institute</th>
+                                        <th>Academic Program Name</th>
+                                        <th>Quota</th>
+                                        <th>Seat Type</th>
+                                        <th>Gender</th>
+                                        <th>Opening Rank</th>
+                                        <th>Closing Rank</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                    `;
+                    data.forEach((item) => {
+                        const openingRank = item['Opening Rank'] ? Number(item['Opening Rank']).toLocaleString('en-IN') : 'N/A';
+                        const closingRank = item['Closing Rank'] ? Number(item['Closing Rank']).toLocaleString('en-IN') : 'N/A';
+                        tableHtml += `
+                                    <tr>
+                                        <td class="col-institute">${item.College}</td>
+                                        <td class="col-program">${item.Branch}</td>
+                                        <td class="col-quota">${item.Quota || 'All India'}</td>
+                                        <td class="col-category">${item.Category || 'OPEN'}</td>
+                                        <td class="col-gender">${item.Gender || 'Gender-Neutral'}</td>
+                                        <td class="col-opening">${openingRank}</td>
+                                        <td class="col-closing"><strong>${closingRank}</strong></td>
+                                    </tr>
+                        `;
+                    });
+                    tableHtml += `
+                                </tbody>
+                            </table>
+                        </div>
+                    `;
+                    html += tableHtml;
                     
                     resultsContainer.innerHTML = html;
 
@@ -3672,6 +3792,45 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                         `;
                     });
                     html += `</div>`;
+
+                    // CSAB structured table compilation
+                    let tableHtml = `
+                        <div class="csab-results-table-container">
+                            <table class="csab-results-table">
+                                <thead>
+                                    <tr>
+                                        <th>Institute</th>
+                                        <th>Academic Program Name</th>
+                                        <th>Quota</th>
+                                        <th>Seat Type</th>
+                                        <th>Gender</th>
+                                        <th>Opening Rank</th>
+                                        <th>Closing Rank</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                    `;
+                    data.forEach((item) => {
+                        const openingRank = item['Opening Rank'] ? Number(item['Opening Rank']).toLocaleString('en-IN') : 'N/A';
+                        const closingRank = item['Closing Rank'] ? Number(item['Closing Rank']).toLocaleString('en-IN') : 'N/A';
+                        tableHtml += `
+                                    <tr class="row-last-cutoff">
+                                        <td class="col-institute">${item.College}</td>
+                                        <td class="col-program">${item.Branch}</td>
+                                        <td class="col-quota">${item.Quota || 'All India'}</td>
+                                        <td class="col-category">${item.Category || 'OPEN'}</td>
+                                        <td class="col-gender">${item.Gender || 'Gender-Neutral'}</td>
+                                        <td class="col-opening">${openingRank}</td>
+                                        <td class="col-closing"><strong style="color: #059669 !important;">${closingRank}</strong></td>
+                                    </tr>
+                        `;
+                    });
+                    tableHtml += `
+                                </tbody>
+                            </table>
+                        </div>
+                    `;
+                    html += tableHtml;
                     
                     resultsContainer.innerHTML = html;
 
@@ -3967,6 +4126,8 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                         </div>
                     `;
                     
+
+                    
                     html += `<div class="results-grid">`;
                     data.forEach((item, index) => {
                         const delay = Math.min(index * 0.05, 1);
@@ -3993,7 +4154,46 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                         `;
                     });
                     html += `</div>`;
-                    
+
+                    // CSAB structured table compilation
+                    let tableHtml = `
+                        <div class="csab-results-table-container">
+                            <table class="csab-results-table">
+                                <thead>
+                                    <tr>
+                                        <th>Institute</th>
+                                        <th>Academic Program Name</th>
+                                        <th>Quota</th>
+                                        <th>Seat Type</th>
+                                        <th>Gender</th>
+                                        <th>Opening Rank</th>
+                                        <th>Closing Rank</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                    `;
+                    data.forEach((item) => {
+                        const openingRank = item['Opening Rank'] ? Number(item['Opening Rank']).toLocaleString('en-IN') : 'N/A';
+                        const closingRank = item['Closing Rank'] ? Number(item['Closing Rank']).toLocaleString('en-IN') : 'N/A';
+                        tableHtml += `
+                                    <tr class="${item.Status === 'Safe' ? 'row-safe' : 'row-low'}">
+                                        <td class="col-institute">${item.College}</td>
+                                        <td class="col-program">${item.Branch}</td>
+                                        <td class="col-quota">${item.Quota || payloadData.quota || 'All India'}</td>
+                                        <td class="col-category">${item.Category || payloadData.category || 'OPEN'}</td>
+                                        <td class="col-gender">${item.Gender || payloadData.gender || 'Gender-Neutral'}</td>
+                                        <td class="col-opening">${openingRank}</td>
+                                        <td class="col-closing"><strong>${closingRank}</strong></td>
+                                    </tr>
+                        `;
+                    });
+                    tableHtml += `
+                                </tbody>
+                            </table>
+                        </div>
+                    `;
+                    html += tableHtml;
+
                     resultsContainer.innerHTML = html;
 
                     document.getElementById('download-pdf-btn').addEventListener('click', function() {
