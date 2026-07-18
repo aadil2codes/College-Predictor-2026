@@ -325,22 +325,23 @@ def predict():
         except ValueError:
             return jsonify({"error": "Rank must be a valid number."}), 400
 
-        if gender == 'Female-only':
-            gender_condition = df['Gender'].isin(['Female-only', 'Gender-Neutral'])
+        if gender.lower() == 'female-only':
+            gender_condition = df['Gender'].str.lower().isin(['female-only', 'gender-neutral'])
         else:
-            gender_condition = df['Gender'] == gender
+            gender_condition = df['Gender'].str.lower() == gender.lower()
 
-        if quota == "All India + Other State":
-            quota_condition = df['Quota'].isin(["All India", "Other State"])
+        if quota.lower() == "all india + other state":
+            quota_condition = df['Quota'].str.lower().isin(["all india", "other state"])
         else:
-            quota_condition = df['Quota'] == quota
+            quota_condition = df['Quota'].str.lower() == quota.lower()
 
         # Apply logic: Filter rows based on rank <= Closing Rank + buffer
         rank_buffer = get_buffer(rank)
         cat_variants = get_category_variants(category)
+        cat_variants_lower = [c.lower() for c in cat_variants]
         filtered_df = df[
             quota_condition &
-            (df['Category'].isin(cat_variants)) &
+            (df['Category'].str.lower().isin(cat_variants_lower)) &
             gender_condition &
             (df['Closing Rank'] >= (rank - rank_buffer))
         ].copy()
@@ -1214,20 +1215,21 @@ def chat():
         # Filter Category (Required matching)
         if category:
             cat_variants = get_category_variants(category)
-            df_filtered = df_filtered[df_filtered['Category'].isin(cat_variants)]
+            cat_variants_lower = [c.lower() for c in cat_variants]
+            df_filtered = df_filtered[df_filtered['Category'].str.lower().isin(cat_variants_lower)]
             
         # Filter Gender
-        if gender == 'Female-only':
-            df_filtered = df_filtered[df_filtered['Gender'].isin(['Female-only', 'Gender-Neutral'])]
+        if gender.lower() == 'female-only':
+            df_filtered = df_filtered[df_filtered['Gender'].str.lower().isin(['female-only', 'gender-neutral'])]
         else:
-            df_filtered = df_filtered[df_filtered['Gender'] == 'Gender-Neutral']
+            df_filtered = df_filtered[df_filtered['Gender'].str.lower() == 'gender-neutral']
             
         # Filter Quota
         if quota:
-            if quota == "All India + Other State":
-                df_filtered = df_filtered[df_filtered['Quota'].isin(["All India", "Other State"])]
+            if quota.lower() == "all india + other state":
+                df_filtered = df_filtered[df_filtered['Quota'].str.lower().isin(["all india", "other state"])]
             else:
-                df_filtered = df_filtered[df_filtered['Quota'] == quota]
+                df_filtered = df_filtered[df_filtered['Quota'].str.lower() == quota.lower()]
             
         # Filter College (If mentioned)
         if college:
