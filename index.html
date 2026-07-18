@@ -2186,9 +2186,9 @@
         }
 
         body.theme-csab .csab-results-table td.col-closing strong {
-            color: #8b0000 !important;
-            font-weight: 800 !important;
-            font-size: 0.95rem;
+            color: #0f172a !important;
+            font-weight: 400 !important;
+            font-size: inherit !important;
         }
 
         /* Subtle row chance hints in CSAB mode (Safe gets very soft green border-left, Low gets very soft red) */
@@ -3854,7 +3854,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                                         <td class="col-category">${item.Category || 'OPEN'}</td>
                                         <td class="col-gender">${item.Gender || 'Gender-Neutral'}</td>
                                         <td class="col-opening">${openingRank}</td>
-                                        <td class="col-closing"><strong style="color: #059669 !important;">${closingRank}</strong></td>
+                                        <td class="col-closing"><strong>${closingRank}</strong></td>
                                     </tr>
                         `;
                     });
