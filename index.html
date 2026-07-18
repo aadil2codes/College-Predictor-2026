@@ -2277,20 +2277,56 @@
                 display: none !important; /* Hide left logo and right counselling badge to save mobile screen space */
             }
 
+            /* 1. Header Banner Stack and Alignment */
+            body.theme-csab .header-banner {
+                flex-direction: column !important;
+                padding: 1.25rem 1rem !important;
+                gap: 0.6rem !important;
+                text-align: center !important;
+                margin-bottom: 0 !important;
+                width: 100% !important;
+            }
+
+            body.theme-csab .header-center-info {
+                width: 100% !important;
+                text-align: center !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            body.theme-csab .header-logo-left,
+            body.theme-csab .header-logo-right {
+                display: none !important;
+            }
+
             body.theme-csab .header-title {
-                font-size: 1.25rem !important;
+                font-size: 1.35rem !important;
                 line-height: 1.3 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                text-align: center !important;
+                width: 100% !important;
+            }
+
+            body.theme-csab .header-subtitle-span {
+                display: block !important;
+                margin: 0.25rem 0 0 0 !important;
+                font-size: 0.95rem !important;
+                color: #64748b !important;
             }
 
             body.theme-csab .header-subtitle-csab {
                 font-size: 0.8rem !important;
-                margin-top: 0.25rem !important;
+                margin-top: 0.35rem !important;
                 line-height: 1.4 !important;
+                text-align: center !important;
             }
 
             /* 2. Navbar Adjustment (Theme switcher: Cyberpunk on Left, CSAB Theme on Right) */
             .csab-navbar {
-                padding: 0.5rem 1rem !important;
+                padding: 0.65rem 1rem !important;
                 margin-bottom: 1.25rem !important;
                 display: flex !important;
                 justify-content: space-between !important;
@@ -2303,23 +2339,28 @@
                 justify-content: space-between !important;
             }
 
-            .csab-navbar .nav-links {
+            .csab-navbar .nav-links,
+            body.theme-csab .csab-navbar .nav-links {
                 display: none !important; /* Hide links on mobile to make room for clean switcher bar */
             }
 
-            .csab-navbar .nav-actions {
+            .csab-navbar .nav-actions,
+            body.theme-csab .csab-navbar .nav-actions {
                 width: 100% !important;
                 position: static !important; /* Reset Cyberpunk mode absolute positioning */
                 display: flex !important;
                 justify-content: space-between !important;
                 align-items: center !important;
                 gap: 0.5rem !important;
+                padding: 0 !important;
+                margin: 0 !important;
             }
 
             .theme-toggle-button {
-                padding: 0.45rem 0.8rem !important;
-                font-size: 0.76rem !important;
+                padding: 0.55rem 0.85rem !important;
+                font-size: 0.78rem !important;
                 min-width: unset !important;
+                white-space: nowrap !important;
             }
 
             /* 3. Main Content Container Padding */
