@@ -1464,6 +1464,13 @@
             box-shadow: 0 6px 20px rgba(168, 85, 247, 0.2);
         }
 
+        .theme-toggle-button.active {
+            background: rgba(168, 85, 247, 0.2) !important;
+            border-color: var(--accent-primary) !important;
+            color: var(--accent-primary) !important;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.35) !important;
+        }
+
         /* Default hidden CSAB components */
         .csab-info-banner, .csab-footer {
             display: none !important;
@@ -1640,6 +1647,13 @@
         body.theme-csab .theme-toggle-button:hover {
             background: rgba(255, 255, 255, 0.15) !important;
             border-color: rgba(255, 255, 255, 0.3) !important;
+        }
+
+        body.theme-csab .theme-toggle-button.active {
+            background: #ffffff !important;
+            color: #0f2537 !important;
+            font-weight: 700 !important;
+            border-color: #ffffff !important;
         }
 
         /* CSAB Content Layout */
@@ -2274,33 +2288,35 @@
                 line-height: 1.4 !important;
             }
 
-            /* 2. Navbar Adjustment */
-            body.theme-csab .csab-navbar {
+            /* 2. Navbar Adjustment (Theme switcher: Cyberpunk on Left, CSAB Theme on Right) */
+            .csab-navbar {
                 padding: 0.5rem 1rem !important;
-                flex-direction: column !important;
-                gap: 0.5rem !important;
-                align-items: center !important;
-                justify-content: center !important;
                 margin-bottom: 1.25rem !important;
-            }
-
-            body.theme-csab .csab-navbar .nav-links {
-                gap: 0.5rem !important;
-            }
-
-            body.theme-csab .csab-navbar .nav-link {
-                font-size: 0.85rem !important;
-                padding: 0.3rem 0.6rem !important;
-            }
-
-            body.theme-csab .csab-navbar .nav-actions {
-                width: 100% !important;
-                justify-content: center !important;
-                gap: 0.5rem !important;
                 display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
             }
 
-            body.theme-csab .theme-toggle-button {
+            body.theme-csab .csab-navbar {
+                justify-content: space-between !important;
+            }
+
+            .csab-navbar .nav-links {
+                display: none !important; /* Hide links on mobile to make room for clean switcher bar */
+            }
+
+            .csab-navbar .nav-actions {
+                width: 100% !important;
+                position: static !important; /* Reset Cyberpunk mode absolute positioning */
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                gap: 0.5rem !important;
+            }
+
+            .theme-toggle-button {
                 padding: 0.45rem 0.8rem !important;
                 font-size: 0.76rem !important;
                 min-width: unset !important;
@@ -2424,6 +2440,10 @@
             <a href="#" class="nav-link active">🏠 Home</a>
         </div>
         <div class="nav-actions">
+            <!-- Theme Switcher Buttons -->
+            <button type="button" id="toggle-cyberpunk-btn" class="theme-toggle-button">
+                <span>⚡ Cyberpunk</span>
+            </button>
             <!-- PWA Install Button -->
             <button type="button" id="pwa-install-btn" class="theme-toggle-button" style="display: none;">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
@@ -2431,10 +2451,8 @@
                 </svg>
                 <span>Install App</span>
             </button>
-            <!-- Theme Toggle Button -->
-            <button type="button" id="theme-toggle-btn" class="theme-toggle-button">
-                <span id="theme-toggle-icon">⚡</span>
-                <span id="theme-toggle-text">Cyberpunk Mode</span>
+            <button type="button" id="toggle-csab-btn" class="theme-toggle-button">
+                <span>🎨 CSAB Theme</span>
             </button>
         </div>
     </div>
@@ -3011,17 +3029,16 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
         // ==========================================
         //          THEME SWITCHER IMPLEMENTATION
         // ==========================================
-        const themeBtn = document.getElementById('theme-toggle-btn');
-        const themeIcon = document.getElementById('theme-toggle-icon');
-        const themeText = document.getElementById('theme-toggle-text');
+        const cyberThemeBtn = document.getElementById('toggle-cyberpunk-btn');
+        const csabThemeBtn = document.getElementById('toggle-csab-btn');
 
-        function updateThemeButtonState(theme) {
+        function updateThemeSwitcherUI(theme) {
             if (theme === 'cyberpunk') {
-                if (themeIcon) themeIcon.textContent = '🎨';
-                if (themeText) themeText.textContent = 'CSAB Theme';
+                if (cyberThemeBtn) cyberThemeBtn.classList.add('active');
+                if (csabThemeBtn) csabThemeBtn.classList.remove('active');
             } else {
-                if (themeIcon) themeIcon.textContent = '⚡';
-                if (themeText) themeText.textContent = 'Cyberpunk Mode';
+                if (csabThemeBtn) csabThemeBtn.classList.add('active');
+                if (cyberThemeBtn) cyberThemeBtn.classList.remove('active');
             }
         }
 
@@ -3029,24 +3046,25 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'cyberpunk') {
             document.body.classList.remove('theme-csab');
-            updateThemeButtonState('cyberpunk');
+            updateThemeSwitcherUI('cyberpunk');
         } else {
             document.body.classList.add('theme-csab');
-            updateThemeButtonState('csab');
+            updateThemeSwitcherUI('csab');
         }
 
-        if (themeBtn) {
-            themeBtn.addEventListener('click', () => {
-                const isCSAB = document.body.classList.contains('theme-csab');
-                if (isCSAB) {
-                    document.body.classList.remove('theme-csab');
-                    localStorage.setItem('theme', 'cyberpunk');
-                    updateThemeButtonState('cyberpunk');
-                } else {
-                    document.body.classList.add('theme-csab');
-                    localStorage.setItem('theme', 'csab');
-                    updateThemeButtonState('csab');
-                }
+        if (cyberThemeBtn) {
+            cyberThemeBtn.addEventListener('click', () => {
+                document.body.classList.remove('theme-csab');
+                localStorage.setItem('theme', 'cyberpunk');
+                updateThemeSwitcherUI('cyberpunk');
+            });
+        }
+
+        if (csabThemeBtn) {
+            csabThemeBtn.addEventListener('click', () => {
+                document.body.classList.add('theme-csab');
+                localStorage.setItem('theme', 'csab');
+                updateThemeSwitcherUI('csab');
             });
         }
 
