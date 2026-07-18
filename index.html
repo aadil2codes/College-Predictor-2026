@@ -2200,6 +2200,35 @@
             border-left: 4px solid #dc2626;
         }
 
+        body.theme-csab .csab-results-table td.col-sr {
+            font-weight: 700;
+            color: #64748b;
+            text-align: center;
+            width: 60px;
+        }
+
+        body.theme-csab .csab-status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        body.theme-csab .csab-status-badge.safe {
+            background: #dcfce7 !important;
+            color: #15803d !important;
+            border: 1px solid #bbf7d0 !important;
+        }
+
+        body.theme-csab .csab-status-badge.low {
+            background: #ffebeb !important;
+            color: #b91c1c !important;
+            border: 1px solid #fca5a5 !important;
+        }
+
         /* CSAB Font family override */
         body.theme-csab,
         body.theme-csab h1,
@@ -3454,6 +3483,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                             <table class="csab-results-table">
                                 <thead>
                                     <tr>
+                                        <th>Sr. No.</th>
                                         <th>Institute</th>
                                         <th>Academic Program Name</th>
                                         <th>Quota</th>
@@ -3465,11 +3495,12 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                                 </thead>
                                 <tbody>
                     `;
-                    data.forEach((item) => {
+                    data.forEach((item, index) => {
                         const openingRank = item['Opening Rank'] ? Number(item['Opening Rank']).toLocaleString('en-IN') : 'N/A';
                         const closingRank = item['Closing Rank'] ? Number(item['Closing Rank']).toLocaleString('en-IN') : 'N/A';
                         tableHtml += `
                                     <tr>
+                                        <td class="col-sr">${index + 1}</td>
                                         <td class="col-institute">${item.College}</td>
                                         <td class="col-program">${item.Branch}</td>
                                         <td class="col-quota">${item.Quota || 'All India'}</td>
@@ -3799,6 +3830,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                             <table class="csab-results-table">
                                 <thead>
                                     <tr>
+                                        <th>Sr. No.</th>
                                         <th>Institute</th>
                                         <th>Academic Program Name</th>
                                         <th>Quota</th>
@@ -3810,11 +3842,12 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                                 </thead>
                                 <tbody>
                     `;
-                    data.forEach((item) => {
+                    data.forEach((item, index) => {
                         const openingRank = item['Opening Rank'] ? Number(item['Opening Rank']).toLocaleString('en-IN') : 'N/A';
                         const closingRank = item['Closing Rank'] ? Number(item['Closing Rank']).toLocaleString('en-IN') : 'N/A';
                         tableHtml += `
                                     <tr class="row-last-cutoff">
+                                        <td class="col-sr">${index + 1}</td>
                                         <td class="col-institute">${item.College}</td>
                                         <td class="col-program">${item.Branch}</td>
                                         <td class="col-quota">${item.Quota || 'All India'}</td>
@@ -4161,6 +4194,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                             <table class="csab-results-table">
                                 <thead>
                                     <tr>
+                                        <th>Sr. No.</th>
                                         <th>Institute</th>
                                         <th>Academic Program Name</th>
                                         <th>Quota</th>
@@ -4168,15 +4202,17 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                                         <th>Gender</th>
                                         <th>Opening Rank</th>
                                         <th>Closing Rank</th>
+                                        <th>Chances</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                     `;
-                    data.forEach((item) => {
+                    data.forEach((item, index) => {
                         const openingRank = item['Opening Rank'] ? Number(item['Opening Rank']).toLocaleString('en-IN') : 'N/A';
                         const closingRank = item['Closing Rank'] ? Number(item['Closing Rank']).toLocaleString('en-IN') : 'N/A';
                         tableHtml += `
                                     <tr class="${item.Status === 'Safe' ? 'row-safe' : 'row-low'}">
+                                        <td class="col-sr">${index + 1}</td>
                                         <td class="col-institute">${item.College}</td>
                                         <td class="col-program">${item.Branch}</td>
                                         <td class="col-quota">${item.Quota || payloadData.quota || 'All India'}</td>
@@ -4184,6 +4220,11 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                                         <td class="col-gender">${item.Gender || payloadData.gender || 'Gender-Neutral'}</td>
                                         <td class="col-opening">${openingRank}</td>
                                         <td class="col-closing"><strong>${closingRank}</strong></td>
+                                        <td class="col-chances">
+                                            <span class="csab-status-badge ${item.Status === 'Safe' ? 'safe' : 'low'}">
+                                                ${item.Status === 'Safe' ? 'Safe Chance' : 'Low Chance'}
+                                            </span>
+                                        </td>
                                     </tr>
                         `;
                     });
