@@ -1369,21 +1369,788 @@
             overflow: hidden;
             padding: 1rem;
         }
+
+        /* ========================================== */
+        /*          PREMIUM CSAB THEME OVERRIDES      */
+        /* ========================================== */
+
+        /* Header banner container styles */
+        .header-banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 2.5rem;
+            box-sizing: border-box;
+            transition: all 0.3s;
+        }
+
+        .header-logo-left, .header-logo-right {
+            display: none;
+        }
+
+        .header-subtitle-csab {
+            display: none;
+        }
+
+        .header-subtitle-cyber {
+            display: block;
+        }
+
+        /* Default Cyberpunk style for header title */
+        .header-title {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(168, 85, 247, 0.4);
+        }
+
+        /* Navbar container */
+        .csab-navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 1.5rem;
+            box-sizing: border-box;
+            padding: 0;
+            transition: all 0.3s;
+        }
+
+        .csab-navbar .nav-links {
+            display: none;
+        }
+
+        /* Position theme toggler top-right in Cyberpunk mode */
+        .csab-navbar .nav-actions {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 10;
+        }
+
+        /* Premium theme switcher button styling */
+        .theme-toggle-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 30px;
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .theme-toggle-button:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.2);
+        }
+
+        /* Default hidden CSAB components */
+        .csab-info-banner, .csab-footer {
+            display: none !important;
+        }
+
+        body.theme-csab .csab-info-banner {
+            display: block !important;
+        }
+
+        body.theme-csab .csab-footer {
+            display: block !important;
+        }
+
+        /* CSAB Active Color Variables and Element Overrides */
+        body.theme-csab {
+            --bg-color-1: #f8fafc;
+            --bg-color-2: #f1f5f9;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --surface-glass: #ffffff;
+            --surface-border: #cbd5e1;
+            --card-glass: #ffffff;
+            --input-bg: #ffffff;
+            --input-border: #cbd5e1;
+            --accent-glow: #2563eb;
+            --accent-primary: #0f2537;
+            --accent-secondary: #8b0000;
+            background: #f1f5f9 !important;
+            padding: 0 0 0 0 !important;
+            color: #0f172a !important;
+        }
+
+        body.theme-csab::before,
+        body.theme-csab::after {
+            display: none !important;
+        }
+
+        /* CSAB Header Banner */
+        body.theme-csab .header-banner {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            background: #ffffff !important;
+            padding: 1.5rem 4.5rem !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            border-bottom: 4px solid #8b0000 !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+            margin-bottom: 0 !important;
+            gap: 2.5rem;
+            text-align: left;
+        }
+
+        body.theme-csab .header-logo-left {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            color: #0f2537;
+        }
+
+        body.theme-csab .header-logo-right {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body.theme-csab .header-logo-left svg {
+            color: #0f2537;
+            filter: drop-shadow(0 2px 4px rgba(15, 37, 55, 0.15));
+        }
+
+        body.theme-csab .counselling-badge {
+            background: #fcfcfc;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 0.6rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
+        }
+
+        body.theme-csab .badge-tag {
+            color: #8b0000;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.05rem;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+
+        body.theme-csab .badge-text {
+            color: #475569;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.76rem;
+            margin-top: 0.15rem;
+        }
+
+        body.theme-csab .header-title {
+            color: #0f2537 !important;
+            background: none !important;
+            -webkit-text-fill-color: initial !important;
+            text-shadow: none !important;
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body.theme-csab .header-subtitle-span {
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: #64748b !important;
+            background: none !important;
+            -webkit-text-fill-color: initial !important;
+            margin-left: 0.4rem;
+        }
+
+        body.theme-csab .header-subtitle-csab {
+            display: block !important;
+            color: #475569 !important;
+            font-size: 0.95rem !important;
+            font-weight: 600 !important;
+            margin-top: 0.35rem !important;
+            letter-spacing: 0.1px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body.theme-csab .header-subtitle-cyber {
+            display: none !important;
+        }
+
+        /* CSAB Navbar */
+        body.theme-csab .csab-navbar {
+            background: #0f2537 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 0.65rem 4.5rem !important;
+            margin-bottom: 2rem !important;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06) !important;
+            justify-content: space-between !important;
+        }
+
+        body.theme-csab .csab-navbar .nav-links {
+            display: flex !important;
+            gap: 1rem;
+        }
+
+        body.theme-csab .csab-navbar .nav-link {
+            color: #ffffff !important;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.92rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        body.theme-csab .csab-navbar .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        body.theme-csab .csab-navbar .nav-actions {
+            position: static !important;
+        }
+
+        body.theme-csab .theme-toggle-button {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: #ffffff !important;
+            box-shadow: none !important;
+        }
+
+        body.theme-csab .theme-toggle-button:hover {
+            background: rgba(255, 255, 255, 0.15) !important;
+            border-color: rgba(255, 255, 255, 0.3) !important;
+        }
+
+        /* CSAB Content Layout */
+        body.theme-csab .main-content {
+            padding: 0 4.5rem 3rem 4.5rem !important;
+            max-width: 100% !important;
+            box-sizing: border-box;
+        }
+
+        body.theme-csab .container {
+            background: #ffffff !important;
+            border: 1.5px solid #e2e8f0 !important;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
+            border-radius: 8px !important;
+            padding: 2.2rem 2.5rem !important;
+            box-sizing: border-box;
+        }
+
+        /* Tab Switchers styled like Segmented Selector */
+        body.theme-csab .tabs {
+            background: #f8fafc !important;
+            border: 1.5px solid #e2e8f0 !important;
+            border-radius: 8px !important;
+            padding: 0.4rem !important;
+            display: inline-flex !important;
+            gap: 0.25rem !important;
+            align-items: center;
+            justify-content: flex-start !important;
+            margin-bottom: 2rem !important;
+            box-sizing: border-box;
+            width: fit-content;
+        }
+
+        body.theme-csab .predictor-toggle-group {
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
+            display: inline-flex !important;
+            gap: 0.25rem;
+        }
+
+        body.theme-csab .predictor-tab, 
+        body.theme-csab .search-tab-standalone,
+        body.theme-csab .last-cutoff-tab-standalone,
+        body.theme-csab .ai-tab-standalone {
+            background: transparent !important;
+            color: #475569 !important;
+            border: none !important;
+            border-radius: 6px !important;
+            padding: 0.55rem 1.3rem !important;
+            font-size: 0.88rem !important;
+            font-weight: 700 !important;
+            box-shadow: none !important;
+            text-transform: none !important;
+            transition: all 0.2s !important;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        body.theme-csab .predictor-tab.active,
+        body.theme-csab .search-tab-standalone.active,
+        body.theme-csab .last-cutoff-tab-standalone.active,
+        body.theme-csab .ai-tab-standalone.active {
+            background: #0f2537 !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 10px rgba(15, 37, 55, 0.15) !important;
+        }
+
+        body.theme-csab .predictor-tab:hover:not(.active),
+        body.theme-csab .search-tab-standalone:hover:not(.active),
+        body.theme-csab .last-cutoff-tab-standalone:hover:not(.active),
+        body.theme-csab .ai-tab-standalone:hover:not(.active) {
+            background: #f1f5f9 !important;
+            color: #0f172a !important;
+        }
+
+        /* Dynamic form heading */
+        body.theme-csab h2.form-header-title {
+            color: #8b0000 !important;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.6rem;
+            margin: 0 0 1.5rem 0 !important;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.6rem;
+            text-align: left;
+            position: relative;
+            display: block !important;
+        }
+
+        body.theme-csab h2.form-header-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: #8b0000;
+        }
+
+        /* Default hide form header in Cyberpunk */
+        h2.form-header-title {
+            display: none;
+        }
+
+        /* soft orange note banner */
+        body.theme-csab .csab-info-banner {
+            background: #fffbeb !important;
+            border: 1px solid #fde68a !important;
+            border-left: 5px solid #d97706 !important;
+            border-radius: 6px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            box-sizing: border-box;
+            text-align: left;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        body.theme-csab .csab-info-banner .banner-heading {
+            font-weight: 700;
+            color: #b45309;
+            font-size: 0.98rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body.theme-csab .csab-info-banner .banner-notes {
+            color: #92400e;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* Inputs */
+        body.theme-csab .form-group label {
+            color: #1e293b !important;
+            font-weight: 700 !important;
+            font-size: 0.86rem !important;
+            margin-bottom: 0.45rem !important;
+        }
+
+        body.theme-csab input, 
+        body.theme-csab select {
+            background: #ffffff !important;
+            border: 1.5px solid #cbd5e1 !important;
+            color: #0f172a !important;
+            border-radius: 6px !important;
+            padding: 0.7rem 0.9rem !important;
+            font-size: 0.88rem !important;
+            font-weight: 500 !important;
+            transition: all 0.2s !important;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.02) !important;
+        }
+
+        body.theme-csab input:focus, 
+        body.theme-csab select:focus {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+            outline: none !important;
+        }
+
+        body.theme-csab input::placeholder {
+            color: #94a3b8 !important;
+        }
+
+        /* CSAB Action Buttons */
+        body.theme-csab button[type="submit"] {
+            background: #0f2537 !important;
+            color: #ffffff !important;
+            border: none !important;
+            border-radius: 6px !important;
+            padding: 0.85rem 2rem !important;
+            font-size: 0.94rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.2px !important;
+            box-shadow: 0 4px 12px rgba(15, 37, 55, 0.15) !important;
+            transition: all 0.2s !important;
+            width: 100% !important;
+        }
+
+        body.theme-csab button[type="submit"]:hover {
+            background: #1e3a8a !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 6px 15px rgba(15, 37, 55, 0.22) !important;
+        }
+
+        /* Results UI */
+        body.theme-csab .results-area h2 {
+            color: #8b0000 !important;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.6rem;
+            position: relative;
+        }
+
+        body.theme-csab .results-area h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: #8b0000;
+        }
+
+        body.theme-csab .summary-card {
+            background: #f8fafc !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 8px !important;
+            padding: 1.5rem !important;
+            box-shadow: none !important;
+        }
+
+        body.theme-csab .summary-card h4 {
+            color: #0f2537 !important;
+            font-size: 1.05rem !important;
+            font-weight: 700 !important;
+            margin-bottom: 1rem !important;
+        }
+
+        body.theme-csab .summary-chip {
+            background: #ffffff !important;
+            border: 1.5px solid #e2e8f0 !important;
+            color: #475569 !important;
+            font-size: 0.82rem !important;
+            font-weight: 600 !important;
+            border-radius: 4px !important;
+            padding: 0.35rem 0.75rem !important;
+        }
+
+        body.theme-csab .message.info {
+            background: #eff6ff !important;
+            border-left: 4px solid #2563eb !important;
+            color: #1e40af !important;
+        }
+
+        body.theme-csab .download-btn {
+            background: #8b0000 !important;
+            color: #ffffff !important;
+            border: none !important;
+            border-radius: 6px !important;
+            font-weight: 700 !important;
+            box-shadow: 0 4px 10px rgba(139, 0, 0, 0.15) !important;
+        }
+
+        body.theme-csab .download-btn:hover {
+            background: #b91c1c !important;
+            box-shadow: 0 6px 15px rgba(139, 0, 0, 0.25) !important;
+        }
+
+        /* Result Cards */
+        body.theme-csab .result-card {
+            background: #ffffff !important;
+            border: 1px solid #cbd5e1 !important;
+            border-left: 5px solid #0f2537 !important;
+            border-radius: 6px !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02) !important;
+            padding: 1.5rem !important;
+            transform: none !important;
+            transition: all 0.2s ease-in-out !important;
+        }
+
+        body.theme-csab .result-card:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03) !important;
+            border-color: #94a3b8 !important;
+        }
+
+        body.theme-csab .rc-type {
+            background: #f1f5f9 !important;
+            color: #0f2537 !important;
+            border: 1.5px solid #cbd5e1 !important;
+            font-weight: 700 !important;
+            font-size: 0.72rem !important;
+            border-radius: 4px !important;
+            padding: 0.2rem 0.55rem !important;
+        }
+
+        body.theme-csab .result-card h3 {
+            color: #0f2537 !important;
+            font-size: 1.25rem !important;
+            font-weight: 800 !important;
+            margin: 0.5rem 0 !important;
+            line-height: 1.4 !important;
+        }
+
+        body.theme-csab .rc-branch span {
+            color: #475569 !important;
+            font-size: 0.88rem !important;
+            font-weight: 600 !important;
+        }
+
+        body.theme-csab .rc-branch svg {
+            color: #94a3b8 !important;
+        }
+
+        body.theme-csab .rc-tag {
+            background: #f8fafc !important;
+            color: #64748b !important;
+            border: 1.5px solid #e2e8f0 !important;
+            font-size: 0.75rem !important;
+            font-weight: 600 !important;
+            border-radius: 4px !important;
+            padding: 0.22rem 0.6rem !important;
+        }
+
+        body.theme-csab .rc-rank {
+            color: #334155 !important;
+            font-size: 0.88rem !important;
+            font-weight: 600 !important;
+        }
+
+        body.theme-csab .rc-rank strong {
+            color: #8b0000 !important; /* Closing Rank Highlighted Crimson */
+            font-weight: 800 !important;
+            font-size: 1rem;
+        }
+
+        body.theme-csab .status-badge.safe {
+            background: #dcfce7 !important;
+            color: #15803d !important;
+            border: 1.5px solid #bbf7d0 !important;
+        }
+
+        body.theme-csab .status-badge.low {
+            background: #fef9c3 !important;
+            color: #a16207 !important;
+            border: 1.5px solid #fef08a !important;
+        }
+
+        /* CSAB Footer */
+        body.theme-csab .csab-footer {
+            display: block !important;
+            width: 100%;
+            background: #0f2537;
+            box-sizing: border-box;
+            margin-top: auto;
+            border-top: 4px solid #8b0000;
+        }
+
+        body.theme-csab .csab-footer .footer-nav {
+            background: #0b1a27;
+            padding: 1rem 4.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        body.theme-csab .csab-footer .footer-nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        body.theme-csab .csab-footer .footer-nav a:hover {
+            color: #ffffff;
+        }
+
+        body.theme-csab .csab-footer .footer-nav .sep {
+            color: rgba(255,255,255,0.15);
+            font-size: 0.82rem;
+        }
+
+        body.theme-csab .csab-footer .footer-main {
+            padding: 2.2rem 4.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: #0f2537;
+        }
+
+        body.theme-csab .csab-footer .disclaimer-text {
+            color: #94a3b8;
+            font-size: 0.82rem;
+            max-width: 800px;
+            line-height: 1.6;
+            margin: 0 0 1.8rem 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body.theme-csab .csab-footer .footer-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        body.theme-csab .csab-footer .footer-logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 4px;
+            padding: 0.4rem 1.2rem;
+            background: rgba(255,255,255,0.02);
+            min-width: 140px;
+        }
+
+        body.theme-csab .logo-txt {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+            line-height: 1.2;
+        }
+
+        body.theme-csab .logo-txt.red { color: #fca5a5; }
+        body.theme-csab .logo-txt.blue { color: #93c5fd; }
+        body.theme-csab .logo-txt.gold { color: #fde047; }
+
+        body.theme-csab .logo-sub {
+            color: #64748b;
+            font-size: 0.65rem;
+            font-weight: 600;
+            margin-top: 0.15rem;
+        }
+
+        /* Autocomplete dropdown styles in CSAB */
+        body.theme-csab .autocomplete-items div {
+            background-color: #ffffff !important;
+            border-bottom: 1px solid #e2e8f0 !important;
+            color: #0f172a !important;
+        }
+
+        body.theme-csab .autocomplete-items div:hover {
+            background-color: #f1f5f9 !important;
+        }
+
+        body.theme-csab .autocomplete-active {
+            background-color: #e2e8f0 !important;
+            color: #0f172a !important;
+        }
+
+        /* AI Assistant active styling in CSAB */
+        body.theme-csab .chat-widget {
+            border: 1px solid #cbd5e1 !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1) !important;
+        }
+
+        body.theme-csab .chat-widget-header {
+            background: #0f2537 !important;
+            border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+        }
+
+        body.theme-csab .chat-widget-body {
+            background: #ffffff !important;
+        }
+
+        body.theme-csab .chat-widget-footer {
+            background: #f8fafc !important;
+            border-top: 1px solid #e2e8f0 !important;
+        }
+
+        body.theme-csab .chat-bubble.assistant {
+            background: #f1f5f9 !important;
+            color: #0f172a !important;
+            border: 1px solid #cbd5e1 !important;
+        }
+
+        body.theme-csab .chat-bubble.user {
+            background: #0f2537 !important;
+            color: #ffffff !important;
+        }
     </style>
 </head>
-<body>
+<body class="theme-csab">
 
-    <div class="header">
-        <h1>College Predictor <span style="font-size: 1.8rem; font-weight: 500; background: linear-gradient(to right, #ffffff, var(--text-muted)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; vertical-align: middle; margin-left: 0.5rem; letter-spacing: -0.5px;">by CampusCipher</span></h1>
-        <p>Find your dream engineering institution based on real data</p>
-        <!-- PWA Install Button (Hidden by default) -->
-        <button type="button" id="pwa-install-btn" style="display: none; align-items: center; justify-content: center; gap: 0.5rem; width: auto; min-width: 150px; margin: 1rem auto 0 auto !important; padding: 0.55rem 1.25rem; font-size: 0.88rem; background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.4); color: var(--accent-primary); border-radius: 30px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.1); position: relative;">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+    <!-- Header wrapper that adapts to the active theme -->
+    <div class="header-banner">
+        <div class="header-logo-left">
+            <svg class="csab-logo-icon" viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#0f2537" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span>Install App</span>
-        </button>
+        </div>
+        <div class="header-center-info">
+            <h1 class="header-title">College Predictor <span class="header-subtitle-span">by CampusCipher</span></h1>
+            <p class="header-subtitle-csab">NITs, IIEST, IIITs, SPAs, Other-GFTIs, and a few other Premier Technical Institutes</p>
+            <p class="header-subtitle-cyber">Find your dream engineering institution based on real data</p>
+        </div>
+        <div class="header-logo-right">
+            <div class="counselling-badge">
+                <span class="badge-tag">e-Counselling Services</span>
+                <span class="badge-text">Simplifying The Admission Process</span>
+            </div>
+        </div>
     </div>
+
+    <!-- Navigation bar with theme toggle -->
+    <div class="csab-navbar">
+        <div class="nav-links">
+            <a href="#" class="nav-link active">🏠 Home</a>
+        </div>
+        <div class="nav-actions">
+            <!-- Theme Toggle Button -->
+            <button type="button" id="theme-toggle-btn" class="theme-toggle-button">
+                <span id="theme-toggle-icon">⚡</span>
+                <span id="theme-toggle-text">Cyberpunk Mode</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- PWA Install Button (Hidden by default, styled dynamically for theme alignment) -->
+    <button type="button" id="pwa-install-btn" style="display: none; align-items: center; justify-content: center; gap: 0.5rem; width: auto; min-width: 150px; margin: 0 auto 1.5rem auto !important; padding: 0.55rem 1.25rem; font-size: 0.88rem; background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.4); color: var(--accent-primary); border-radius: 30px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.1); z-index: 5;">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+        </svg>
+        <span>Install App</span>
+    </button>
 
     <div class="main-content">
         <!-- Sidebar: Form -->
@@ -1414,6 +2181,19 @@
                     AI Assistant
                 </button>
             </div>
+
+            <!-- Soft orange warning/info banner for CSAB theme -->
+            <div class="csab-info-banner">
+                <div class="banner-heading">Opening and closing ranks for New (Fresh Allottee) and Upgraded (Seat Upgraded) candidates in the Special Rounds.</div>
+                <div class="banner-notes">
+                    <strong>Note:</strong><br>
+                    1. All ranks shown are All India CRL Ranks.<br>
+                    2. These ranks are based on JoSAA and CSAB seat allocation rounds.
+                </div>
+            </div>
+
+            <!-- Dynamic header title for CSAB theme -->
+            <h2 class="form-header-title" id="form-title-text">CSAB Predictor</h2>
             <form id="prediction-form">
                 <div class="form-grid">
                     <div class="form-group" style="display: none;">
@@ -1906,7 +2686,83 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
         </div>
     </div>
 
+    <!-- CSAB Footer (Visible only in CSAB Theme) -->
+    <footer class="csab-footer">
+        <div class="footer-nav">
+            <a href="#" onclick="event.preventDefault()">Terms and Conditions</a>
+            <span class="sep">/</span>
+            <a href="#" onclick="event.preventDefault()">Hyperlink Policy</a>
+            <span class="sep">/</span>
+            <a href="#" onclick="event.preventDefault()">Privacy Policy</a>
+            <span class="sep">/</span>
+            <a href="#" onclick="event.preventDefault()">Copyright Policy</a>
+            <span class="sep">/</span>
+            <a href="#" onclick="event.preventDefault()">Disclaimer</a>
+        </div>
+        <div class="footer-main">
+            <p class="disclaimer-text">
+                <strong>Disclaimer:</strong> This site is designed and hosted by NIC and the contents are provided by CSAB. For any further information, please contact CSAB.
+            </p>
+            <div class="footer-logos">
+                <div class="footer-logo-item">
+                    <span class="logo-txt red">e-Counselling</span>
+                    <span class="logo-sub">Simplifying Process</span>
+                </div>
+                <div class="footer-logo-item nic-logo">
+                    <span class="logo-txt blue">NIC</span>
+                    <span class="logo-sub">National Informatics Centre</span>
+                </div>
+                <div class="footer-logo-item digital-india">
+                    <span class="logo-txt gold">Digital India</span>
+                    <span class="logo-sub">Power To Empower</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script>
+        // ==========================================
+        //          THEME SWITCHER IMPLEMENTATION
+        // ==========================================
+        const themeBtn = document.getElementById('theme-toggle-btn');
+        const themeIcon = document.getElementById('theme-toggle-icon');
+        const themeText = document.getElementById('theme-toggle-text');
+
+        function updateThemeButtonState(theme) {
+            if (theme === 'cyberpunk') {
+                if (themeIcon) themeIcon.textContent = '🎨';
+                if (themeText) themeText.textContent = 'CSAB Theme';
+            } else {
+                if (themeIcon) themeIcon.textContent = '⚡';
+                if (themeText) themeText.textContent = 'Cyberpunk Mode';
+            }
+        }
+
+        // Initialize theme based on localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'cyberpunk') {
+            document.body.classList.remove('theme-csab');
+            updateThemeButtonState('cyberpunk');
+        } else {
+            document.body.classList.add('theme-csab');
+            updateThemeButtonState('csab');
+        }
+
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                const isCSAB = document.body.classList.contains('theme-csab');
+                if (isCSAB) {
+                    document.body.classList.remove('theme-csab');
+                    localStorage.setItem('theme', 'cyberpunk');
+                    updateThemeButtonState('cyberpunk');
+                } else {
+                    document.body.classList.add('theme-csab');
+                    localStorage.setItem('theme', 'csab');
+                    updateThemeButtonState('csab');
+                }
+            });
+        }
+
         // API Base URL (Change to your Render/Production backend URL when deploying)
         const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
             ? (window.location.port && window.location.port !== '5000' ? 'http://127.0.0.1:5000' : '')
@@ -2125,6 +2981,8 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
             tabPredict.classList.add('active');
             formPredict.style.display = 'block';
             resultsContainer.innerHTML = emptyStateHtml;
+            const formTitle = document.getElementById('form-title-text');
+            if (formTitle) formTitle.textContent = 'CSAB Predictor';
         });
 
         
@@ -2133,6 +2991,8 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
             tabJosaa.classList.add('active');
             formJosaa.style.display = 'block';
             resultsContainer.innerHTML = emptyStateHtml;
+            const formTitle = document.getElementById('form-title-text');
+            if (formTitle) formTitle.textContent = 'JoSAA Predictor';
         });
 
         tabSearch.addEventListener('click', () => {
@@ -2140,6 +3000,8 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
             tabSearch.classList.add('active');
             formSearch.style.display = 'block';
             resultsContainer.innerHTML = emptyStateHtml;
+            const formTitle = document.getElementById('form-title-text');
+            if (formTitle) formTitle.textContent = 'Search Cutoff Database';
         });
 
         if (tabLastCutoff) {
@@ -2148,6 +3010,8 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                 tabLastCutoff.classList.add('active');
                 formLastCutoff.style.display = 'block';
                 resultsContainer.innerHTML = emptyStateHtml;
+                const formTitle = document.getElementById('form-title-text');
+                if (formTitle) formTitle.textContent = 'Last Cutoffs Analysis';
             });
         }
 
@@ -2155,6 +3019,9 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
             tabAi.addEventListener('click', () => {
                 resetTabs();
                 tabAi.classList.add('active');
+                
+                const formTitle = document.getElementById('form-title-text');
+                if (formTitle) formTitle.textContent = 'Counseling AI Assistant';
                 
                 const chatWidget = document.getElementById('chat-widget-container');
                 const chatPlaceholder = document.getElementById('chat-placeholder');
