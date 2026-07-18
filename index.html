@@ -2244,6 +2244,138 @@
             border: 1px solid #fca5a5 !important;
         }
 
+        /* ==================================================== */
+        /* PREMIUM CSAB THEME - MOBILE RESPONSIVENESS OVERRIDES */
+        /* ==================================================== */
+        @media (max-width: 768px) {
+            /* 1. Header Banner Stack and Alignment */
+            body.theme-csab .header-banner {
+                flex-direction: column !important;
+                padding: 1.25rem 1rem !important;
+                gap: 0.8rem !important;
+                text-align: center !important;
+                margin-bottom: 0 !important;
+                width: 100% !important;
+            }
+
+            body.theme-csab .header-logo-left,
+            body.theme-csab .header-logo-right {
+                display: none !important; /* Hide left logo and right counselling badge to save mobile screen space */
+            }
+
+            body.theme-csab .header-title {
+                font-size: 1.25rem !important;
+                line-height: 1.3 !important;
+            }
+
+            body.theme-csab .header-subtitle-csab {
+                font-size: 0.8rem !important;
+                margin-top: 0.25rem !important;
+                line-height: 1.4 !important;
+            }
+
+            /* 2. Navbar Adjustment */
+            body.theme-csab .csab-navbar {
+                padding: 0.5rem 1rem !important;
+                flex-direction: column !important;
+                gap: 0.5rem !important;
+                align-items: center !important;
+                justify-content: center !important;
+                margin-bottom: 1.25rem !important;
+            }
+
+            body.theme-csab .csab-navbar .nav-links {
+                gap: 0.5rem !important;
+            }
+
+            body.theme-csab .csab-navbar .nav-link {
+                font-size: 0.85rem !important;
+                padding: 0.3rem 0.6rem !important;
+            }
+
+            body.theme-csab .csab-navbar .nav-actions {
+                width: 100% !important;
+                justify-content: center !important;
+                gap: 0.5rem !important;
+                display: flex !important;
+            }
+
+            body.theme-csab .theme-toggle-button {
+                padding: 0.45rem 0.8rem !important;
+                font-size: 0.76rem !important;
+                min-width: unset !important;
+            }
+
+            /* 3. Main Content Container Padding */
+            body.theme-csab .main-content {
+                padding: 0 0.75rem 2rem 0.75rem !important;
+            }
+
+            body.theme-csab .container {
+                padding: 1.25rem 1rem !important;
+                border-radius: 6px !important;
+            }
+
+            /* 4. Tab Segmented Selectors */
+            body.theme-csab .tabs {
+                width: 100% !important;
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0.5rem !important;
+                padding: 0.5rem !important;
+            }
+
+            body.theme-csab .predictor-toggle-group {
+                display: flex !important;
+                width: 100% !important;
+            }
+
+            body.theme-csab .predictor-tab {
+                flex: 1 !important;
+                text-align: center !important;
+                padding: 0.5rem !important;
+                font-size: 0.82rem !important;
+            }
+
+            body.theme-csab .search-tab-standalone {
+                width: 100% !important;
+                justify-content: center !important;
+                padding: 0.5rem !important;
+                font-size: 0.82rem !important;
+            }
+
+            /* 5. CSAB Table Mobile Responsiveness (Preventing crushing) */
+            body.theme-csab .csab-results-table-container {
+                border-radius: 6px !important;
+                border: 1px solid #e2e8f0 !important;
+                overflow-x: auto !important;
+                width: 100% !important;
+                -webkit-overflow-scrolling: touch !important;
+                margin-top: 1rem !important;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.03) !important;
+            }
+
+            body.theme-csab .csab-results-table {
+                min-width: 850px !important; /* Forces scrollbar to maintain column spacing and prevent squishing */
+                font-size: 0.8rem !important;
+            }
+
+            body.theme-csab .csab-results-table th,
+            body.theme-csab .csab-results-table td {
+                padding: 0.65rem 0.5rem !important;
+            }
+
+            /* 6. Form elements spacing */
+            body.theme-csab .form-row {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+
+            body.theme-csab .form-group {
+                margin-bottom: 1rem !important;
+            }
+        }
+
         /* CSAB Font family override */
         body.theme-csab,
         body.theme-csab h1,
