@@ -33,6 +33,7 @@ Birla Institute of Technology Mesra Ranchi,Architecture,All India,EWS,Gender-Neu
 Birla Institute of Technology Mesra Ranchi,Architecture,All India,SC,Gender-Neutral,11129,11129
 Birla Institute of Technology Mesra Ranchi,Architecture,Home State,OPEN,Gender-Neutral,19050,19050
 Birla Institute of Technology Mesra Ranchi,Artificial Intelligence and Machine Learning,All India,OPEN,Gender-Neutral,26762,27324
+Birla Institute of Technology Mesra Ranchi,Artificial Intelligence and Machine Learning,All India,OPEN PWD,Gender-Neutral,1065859,1065859
 Birla Institute of Technology Mesra Ranchi,Artificial Intelligence and Machine Learning,All India,OBC-NCL,Gender-Neutral,39077,39895
 Birla Institute of Technology Mesra Ranchi,Artificial Intelligence and Machine Learning,All India,ST,Gender-Neutral,265654,265654
 Birla Institute of Technology Mesra Ranchi,Artificial Intelligence and Machine Learning,Home State,OPEN,Female-only,58715,58715
@@ -54,9 +55,9 @@ Birla Institute of Technology Mesra Ranchi,Chemical Engineering,All India,SC,Gen
 Birla Institute of Technology Mesra Ranchi,Chemical Engineering,All India,ST,Gender-Neutral,840580,1222237
 Birla Institute of Technology Mesra Ranchi,Chemical Engineering,Home State,OPEN,Gender-Neutral,148150,194565
 Birla Institute of Technology Mesra Ranchi,Chemical Engineering,Home State,OPEN,Female-only,164875,175112
-Birla Institute of Technology Mesra Ranchi,Chemical Engineering,Home State,EWS,Gender-Neutral,212074,232594
-Birla Institute of Technology Mesra Ranchi,Chemical Engineering,Home State,SC,Gender-Neutral,526391,526391
-Birla Institute of Technology Mesra Ranchi,Civil Engineering,All India,OPEN,Gender-Neutral,85238,99499
+Birla Institute of Technology Mesra Ranchi,Chemical Engineering,Home State,OPEN,Gender-Neutral,212074,232594
+Birla Institute of Technology Mesra Ranchi,Chemical Engineering,Home State,EWS,Gender-Neutral,526391,526391
+Birla Institute of Technology Mesra Ranchi,Civil Engineering,All India,SC,Gender-Neutral,85238,99499
 Birla Institute of Technology Mesra Ranchi,Civil Engineering,All India,OPEN,Female-only,111383,142323
 Birla Institute of Technology Mesra Ranchi,Civil Engineering,All India,EWS,Gender-Neutral,111985,122996
 Birla Institute of Technology Mesra Ranchi,Civil Engineering,All India,OBC-NCL,Gender-Neutral,104041,118921
@@ -64,9 +65,9 @@ Birla Institute of Technology Mesra Ranchi,Civil Engineering,All India,SC,Gender
 Birla Institute of Technology Mesra Ranchi,Civil Engineering,All India,ST,Gender-Neutral,387171,387171
 Birla Institute of Technology Mesra Ranchi,Civil Engineering,Home State,OPEN,Gender-Neutral,147765,148354
 Birla Institute of Technology Mesra Ranchi,Civil Engineering,Home State,OPEN,Female-only,243973,243973
+Birla Institute of Technology Mesra Ranchi,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,33822,33902
 Birla Institute of Technology Mesra Ranchi,Computer Science and Engineering,All India,OPEN,Gender-Neutral,23596,23596
 Birla Institute of Technology Mesra Ranchi,Computer Science and Engineering,All India,OPEN,Female-only,37359,37359
-Birla Institute of Technology Mesra Ranchi,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,33822,33902
 Birla Institute of Technology Mesra Ranchi,Computer Science and Engineering,All India,SC,Gender-Neutral,165580,165580
 Birla Institute of Technology Mesra Ranchi,Computer Science and Engineering,Home State,OPEN,Female-only,53742,53742
 Birla Institute of Technology Mesra Ranchi,Computer Science and Engineering,Home State,EWS,Gender-Neutral,60408,60408
@@ -79,6 +80,7 @@ Birla Institute of Technology Mesra Ranchi,Electrical and Electronics Engineerin
 Birla Institute of Technology Mesra Ranchi,Electrical and Electronics Engineering,Home State,EWS,Gender-Neutral,99382,99661
 Birla Institute of Technology Mesra Ranchi,Electrical and Electronics Engineering,Home State,SC,Gender-Neutral,346785,346785
 Birla Institute of Technology Mesra Ranchi,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,35710,37550
+Birla Institute of Technology Mesra Ranchi,Electronics and Communication Engineering,All India,OPEN PWD,Gender-Neutral,1419586,1419586
 Birla Institute of Technology Mesra Ranchi,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,44441,51182
 Birla Institute of Technology Mesra Ranchi,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,51879,53635
 Birla Institute of Technology Mesra Ranchi,Electronics and Communication Engineering,All India,SC,Gender-Neutral,213725,219768
@@ -153,35 +155,26 @@ Gurukula Kangri Vishwavidyalaya Haridwar,Mechanical Engineering,All India,EWS,Ge
 Gurukula Kangri Vishwavidyalaya Haridwar,Mechanical Engineering,All India,SC,Gender-Neutral,864323,1299236
 Indian Institute of Carpet Technology Bhadohi,Carpet and Textile Technology,All India,OPEN,Gender-Neutral,1064246,1343430
 Indian Institute of Carpet Technology Bhadohi,Carpet and Textile Technology,All India,OPEN,Female-only,775940,1082121
-Institute of Infrastructure Technology Research and Management Ahmedabad,Civil Engineering,All India,OPEN,Gender-Neutral,206628,271018
-Institute of Infrastructure Technology Research and Management Ahmedabad,Civil Engineering,All India,EWS,Gender-Neutral,331505,533277
-Institute of Infrastructure Technology Research and Management Ahmedabad,Civil Engineering,All India,OBC-NCL,Gender-Neutral,294219,449607
-Institute of Infrastructure Technology Research and Management Ahmedabad,Civil Engineering,All India,SC,Gender-Neutral,386979,488220
-Institute of Infrastructure Technology Research and Management Ahmedabad,Civil Engineering,All India,ST,Gender-Neutral,702143,702143
-Institute of Infrastructure Technology Research and Management Ahmedabad,Computer Engineering,All India,OPEN,Gender-Neutral,77413,79460
-Institute of Infrastructure Technology Research and Management Ahmedabad,Computer Engineering,All India,EWS,Gender-Neutral,81600,97362
-Institute of Infrastructure Technology Research and Management Ahmedabad,Computer Engineering,All India,OBC-NCL,Gender-Neutral,90075,108496
-Institute of Infrastructure Technology Research and Management Ahmedabad,Computer Engineering,All India,SC,Gender-Neutral,254725,264095
-Institute of Infrastructure Technology Research and Management Ahmedabad,Computer Engineering,All India,ST,Gender-Neutral,508918,508918
-Institute of Infrastructure Technology Research and Management Ahmedabad,Electrical Engineering,All India,OPEN,Gender-Neutral,130459,152488
-Institute of Infrastructure Technology Research and Management Ahmedabad,Electrical Engineering,All India,EWS,Gender-Neutral,155170,249746
-Institute of Infrastructure Technology Research and Management Ahmedabad,Electrical Engineering,All India,OBC-NCL,Gender-Neutral,156168,241710
-Institute of Infrastructure Technology Research and Management Ahmedabad,Electrical Engineering,All India,SC,Gender-Neutral,323559,349416
-Institute of Infrastructure Technology Research and Management Ahmedabad,Electrical Engineering,All India,ST,Gender-Neutral,706732,793016
-Institute of Infrastructure Technology Research and Management Ahmedabad,Mechanical Engineering,All India,OPEN,Gender-Neutral,164413,204168
-Institute of Infrastructure Technology Research and Management Ahmedabad,Mechanical Engineering,All India,EWS,Gender-Neutral,213672,271135
-Institute of Infrastructure Technology Research and Management Ahmedabad,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,236513,342932
-Institute of Infrastructure Technology Research and Management Ahmedabad,Mechanical Engineering,All India,SC,Gender-Neutral,392628,434863
-Institute of Infrastructure Technology Research and Management Ahmedabad,Mechanical Engineering,All India,ST,Gender-Neutral,769338,769338
-J K Institute of Applied Physics and Technology Department of Electronics and Communication University of Allahabad Allahabad,Computer Science and Engineering with Major in Artificial Intelligence,All India,OPEN,Gender-Neutral,86956,93596
-J K Institute of Applied Physics and Technology Department of Electronics and Communication University of Allahabad Allahabad,Computer Science and Engineering with Major in Artificial Intelligence,All India,EWS,Gender-Neutral,100167,102201
-J K Institute of Applied Physics and Technology Department of Electronics and Communication University of Allahabad Allahabad,Computer Science and Engineering with Major in Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,106422,116299
-J K Institute of Applied Physics and Technology Department of Electronics and Communication University of Allahabad Allahabad,Computer Science and Engineering with Major in Artificial Intelligence,All India,SC,Gender-Neutral,255860,264708
-J K Institute of Applied Physics and Technology Department of Electronics and Communication University of Allahabad Allahabad,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,118247,134774
-J K Institute of Applied Physics and Technology Department of Electronics and Communication University of Allahabad Allahabad,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,140038,180904
-J K Institute of Applied Physics and Technology Department of Electronics and Communication University of Allahabad Allahabad,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,135993,176795
-J K Institute of Applied Physics and Technology Department of Electronics and Communication University of Allahabad Allahabad,Electronics and Communication Engineering,All India,SC,Gender-Neutral,305153,310180
-J K Institute of Applied Physics and Technology Department of Electronics and Communication University of Allahabad Allahabad,Electronics and Communication Engineering,All India,ST,Gender-Neutral,1166402,1166402
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Civil Engineering,All India,OPEN,Gender-Neutral,206628,271018
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Civil Engineering,All India,EWS,Gender-Neutral,331505,533277
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Civil Engineering,All India,OBC-NCL,Gender-Neutral,294219,449607
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Civil Engineering,All India,SC,Gender-Neutral,386979,488220
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Civil Engineering,All India,ST,Gender-Neutral,702143,702143
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Computer Engineering,All India,OPEN,Gender-Neutral,77413,79460
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Computer Engineering,All India,EWS,Gender-Neutral,81600,97362
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Computer Engineering,All India,OBC-NCL,Gender-Neutral,90075,108496
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Computer Engineering,All India,SC,Gender-Neutral,254725,264095
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Computer Engineering,All India,ST,Gender-Neutral,508918,508918
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Electrical Engineering,All India,OPEN,Gender-Neutral,130459,152488
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Electrical Engineering,All India,EWS,Gender-Neutral,155170,249746
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Electrical Engineering,All India,OBC-NCL,Gender-Neutral,156168,241710
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Electrical Engineering,All India,SC,Gender-Neutral,323559,349416
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Electrical Engineering,All India,ST,Gender-Neutral,706732,793016
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Mechanical Engineering,All India,OPEN,Gender-Neutral,164413,204168
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Mechanical Engineering,All India,EWS,Gender-Neutral,213672,271135
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,236513,342932
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Mechanical Engineering,All India,SC,Gender-Neutral,392628,434863
+Institute of Infrastructure Technology Research and Management-Ahmedabad,Mechanical Engineering,All India,ST,Gender-Neutral,769338,769338
 School of Studies of Engineering and Technology Guru Ghasidas Vishwavidyalaya Bilaspur,Animation and VFX,All India,OPEN,Gender-Neutral,264907,415669
 School of Studies of Engineering and Technology Guru Ghasidas Vishwavidyalaya Bilaspur,Animation and VFX,All India,EWS,Gender-Neutral,447705,558333
 School of Studies of Engineering and Technology Guru Ghasidas Vishwavidyalaya Bilaspur,Animation and VFX,All India,OBC-NCL,Gender-Neutral,420039,1072274
@@ -226,15 +219,24 @@ School of Studies of Engineering and Technology Guru Ghasidas Vishwavidyalaya Bi
 School of Studies of Engineering and Technology Guru Ghasidas Vishwavidyalaya Bilaspur,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,392622,857845
 School of Studies of Engineering and Technology Guru Ghasidas Vishwavidyalaya Bilaspur,Mechanical Engineering,All India,SC,Gender-Neutral,459071,515925
 School of Studies of Engineering and Technology Guru Ghasidas Vishwavidyalaya Bilaspur,Mechanical Engineering,All India,ST,Gender-Neutral,850779,850779
-National Institute of Electronics and Information Technology Aurangabad,Computer Science and Engineering,All India,OPEN,Gender-Neutral,90963,110494
-National Institute of Electronics and Information Technology Aurangabad,Computer Science and Engineering,All India,EWS,Gender-Neutral,116287,144160
-National Institute of Electronics and Information Technology Aurangabad,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,113623,134015
-National Institute of Electronics and Information Technology Aurangabad,Computer Science and Engineering,All India,SC,Gender-Neutral,248220,255214
-National Institute of Electronics and Information Technology Aurangabad,Computer Science and Engineering,All India,ST,Gender-Neutral,486932,486932
-National Institute of Electronics and Information Technology Aurangabad,Electronic Engineering,All India,OPEN,Gender-Neutral,140375,166314
-National Institute of Electronics and Information Technology Aurangabad,Electronic Engineering,All India,EWS,Gender-Neutral,173624,243703
-National Institute of Electronics and Information Technology Aurangabad,Electronic Engineering,All India,OBC-NCL,Gender-Neutral,172329,238743
-National Institute of Electronics and Information Technology Aurangabad,Electronic Engineering,All India,SC,Gender-Neutral,266797,291516
+J.K. Institute of Applied Physics & Technology Department of Electronics & Communication University of Allahabad-Allahabad,Computer Science and Engineering with Major in Artificial Intelligence,All India,OPEN,Gender-Neutral,86956,93596
+J.K. Institute of Applied Physics & Technology Department of Electronics & Communication University of Allahabad-Allahabad,Computer Science and Engineering with Major in Artificial Intelligence,All India,EWS,Gender-Neutral,100167,102201
+J.K. Institute of Applied Physics & Technology Department of Electronics & Communication University of Allahabad-Allahabad,Computer Science and Engineering with Major in Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,106422,116299
+J.K. Institute of Applied Physics & Technology Department of Electronics & Communication University of Allahabad-Allahabad,Computer Science and Engineering with Major in Artificial Intelligence,All India,SC,Gender-Neutral,255860,264708
+J.K. Institute of Applied Physics & Technology Department of Electronics & Communication University of Allahabad-Allahabad,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,118247,134774
+J.K. Institute of Applied Physics & Technology Department of Electronics & Communication University of Allahabad-Allahabad,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,140038,180904
+J.K. Institute of Applied Physics & Technology Department of Electronics & Communication University of Allahabad-Allahabad,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,135993,176795
+J.K. Institute of Applied Physics & Technology Department of Electronics & Communication University of Allahabad-Allahabad,Electronics and Communication Engineering,All India,SC,Gender-Neutral,305153,310180
+J.K. Institute of Applied Physics & Technology Department of Electronics & Communication University of Allahabad-Allahabad,Electronics and Communication Engineering,All India,ST,Gender-Neutral,1166402,1166402
+National Institute of Electronics and Information Technology Aurangabad (Maharashtra),Computer Science and Engineering,All India,OPEN,Gender-Neutral,90963,110494
+National Institute of Electronics and Information Technology Aurangabad (Maharashtra),Computer Science and Engineering,All India,EWS,Gender-Neutral,116287,144160
+National Institute of Electronics and Information Technology Aurangabad (Maharashtra),Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,113623,134015
+National Institute of Electronics and Information Technology Aurangabad (Maharashtra),Computer Science and Engineering,All India,SC,Gender-Neutral,248220,255214
+National Institute of Electronics and Information Technology Aurangabad (Maharashtra),Computer Science and Engineering,All India,ST,Gender-Neutral,486932,486932
+National Institute of Electronics and Information Technology Aurangabad (Maharashtra),Electronic Engineering,All India,OPEN,Gender-Neutral,140375,166314
+National Institute of Electronics and Information Technology Aurangabad (Maharashtra),Electronic Engineering,All India,EWS,Gender-Neutral,173624,243703
+National Institute of Electronics and Information Technology Aurangabad (Maharashtra),Electronic Engineering,All India,OBC-NCL,Gender-Neutral,172329,238743
+National Institute of Electronics and Information Technology Aurangabad (Maharashtra),Electronic Engineering,All India,SC,Gender-Neutral,266797,291516
 National Institute of Advanced Manufacturing Technology Ranchi,Computer Engineering,All India,OPEN,Gender-Neutral,81412,85419
 National Institute of Advanced Manufacturing Technology Ranchi,Computer Engineering,All India,OPEN,Female-only,85787,87304
 National Institute of Advanced Manufacturing Technology Ranchi,Computer Engineering,All India,EWS,Gender-Neutral,93588,101169
@@ -289,19 +291,19 @@ Sant Longowal Institute of Engineering and Technology,Computer Science and Engin
 Sant Longowal Institute of Engineering and Technology,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,113907,121219
 Sant Longowal Institute of Engineering and Technology,Computer Science and Engineering,All India,SC,Gender-Neutral,264594,264594
 Sant Longowal Institute of Engineering and Technology,Computer Science and Engineering,All India,ST,Gender-Neutral,677630,950902
-Sant Longowal Institute of Engineering and Technology,Computer Science and Engineering Dual Degree,All India,OPEN,Gender-Neutral,128642,139018
-Sant Longowal Institute of Engineering and Technology,Computer Science and Engineering Dual Degree,All India,EWS,Gender-Neutral,143923,149759
-Sant Longowal Institute of Engineering and Technology,Computer Science and Engineering Dual Degree,All India,OBC-NCL,Gender-Neutral,158949,177552
-Sant Longowal Institute of Engineering and Technology,Computer Science and Engineering Dual Degree,All India,SC,Gender-Neutral,340938,344867
+Sant Longowal Institute of Engineering and Technology,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OPEN,Gender-Neutral,128642,139018
+Sant Longowal Institute of Engineering and Technology,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,EWS,Gender-Neutral,143923,149759
+Sant Longowal Institute of Engineering and Technology,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OBC-NCL,Gender-Neutral,158949,177552
+Sant Longowal Institute of Engineering and Technology,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,SC,Gender-Neutral,340938,344867
 Sant Longowal Institute of Engineering and Technology,Electrical Engineering,All India,OPEN,Gender-Neutral,163792,175736
 Sant Longowal Institute of Engineering and Technology,Electrical Engineering,All India,EWS,Gender-Neutral,184378,204651
 Sant Longowal Institute of Engineering and Technology,Electrical Engineering,All India,OBC-NCL,Gender-Neutral,189997,224134
 Sant Longowal Institute of Engineering and Technology,Electrical Engineering,All India,SC,Gender-Neutral,366960,399800
 Sant Longowal Institute of Engineering and Technology,Electrical Engineering,All India,ST,Gender-Neutral,721922,721922
-Sant Longowal Institute of Engineering and Technology,Electrical Engineering Dual Degree,All India,OPEN,Gender-Neutral,214301,241386
-Sant Longowal Institute of Engineering and Technology,Electrical Engineering Dual Degree,All India,EWS,Gender-Neutral,249342,270431
-Sant Longowal Institute of Engineering and Technology,Electrical Engineering Dual Degree,All India,OBC-NCL,Gender-Neutral,255790,356910
-Sant Longowal Institute of Engineering and Technology,Electrical Engineering Dual Degree,All India,SC,Gender-Neutral,479749,507150
+Sant Longowal Institute of Engineering and Technology,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OPEN,Gender-Neutral,214301,241386
+Sant Longowal Institute of Engineering and Technology,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,EWS,Gender-Neutral,249342,270431
+Sant Longowal Institute of Engineering and Technology,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OBC-NCL,Gender-Neutral,255790,356910
+Sant Longowal Institute of Engineering and Technology,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,SC,Gender-Neutral,479749,507150
 Sant Longowal Institute of Engineering and Technology,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,125556,139914
 Sant Longowal Institute of Engineering and Technology,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,141455,145885
 Sant Longowal Institute of Engineering and Technology,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,140704,161548
@@ -319,10 +321,10 @@ Sant Longowal Institute of Engineering and Technology,Mechanical Engineering,All
 Sant Longowal Institute of Engineering and Technology,Mechanical Engineering,All India,EWS,Gender-Neutral,266156,335302
 Sant Longowal Institute of Engineering and Technology,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,284943,356767
 Sant Longowal Institute of Engineering and Technology,Mechanical Engineering,All India,SC,Gender-Neutral,428315,522149
-Sant Longowal Institute of Engineering and Technology,Mechanical Engineering Dual Degree,All India,OPEN,Gender-Neutral,392430,468759
-Sant Longowal Institute of Engineering and Technology,Mechanical Engineering Dual Degree,All India,EWS,Gender-Neutral,478843,769668
-Sant Longowal Institute of Engineering and Technology,Mechanical Engineering Dual Degree,All India,OBC-NCL,Gender-Neutral,485698,1347546
-Sant Longowal Institute of Engineering and Technology,Mechanical Engineering Dual Degree,All India,SC,Gender-Neutral,515961,598681
+Sant Longowal Institute of Engineering and Technology,Mechanical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OPEN,Gender-Neutral,392430,468759
+Sant Longowal Institute of Engineering and Technology,Mechanical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,EWS,Gender-Neutral,478843,769668
+Sant Longowal Institute of Engineering and Technology,Mechanical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OBC-NCL,Gender-Neutral,485698,1347546
+Sant Longowal Institute of Engineering and Technology,Mechanical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,SC,Gender-Neutral,515961,598681
 Sant Longowal Institute of Engineering and Technology,Physics,All India,OPEN,Gender-Neutral,244270,244270
 Sant Longowal Institute of Engineering and Technology,Physics,All India,OBC-NCL,Gender-Neutral,406244,406244
 Sant Longowal Institute of Engineering and Technology,Physics,All India,SC,Gender-Neutral,576986,576986
@@ -344,17 +346,17 @@ Mizoram University Aizawl,Electronics and Communication Engineering,All India,SC
 Mizoram University Aizawl,Information Technology,All India,OPEN,Gender-Neutral,236026,284174
 Mizoram University Aizawl,Information Technology,All India,EWS,Gender-Neutral,302761,308062
 Mizoram University Aizawl,Information Technology,All India,SC,Gender-Neutral,391517,391517
-School of Engineering Tezpur University Napaam Tezpur,Civil Engineering MBA Dual Degree,All India,OPEN,Gender-Neutral,206346,206346
-School of Engineering Tezpur University Napaam Tezpur,Computer Science and Engineering MBA Dual Degree,All India,SC,Gender-Neutral,381415,381415
-School of Engineering Tezpur University Napaam Tezpur,Electrical Engineering MBA Dual Degree,All India,OPEN,Gender-Neutral,138372,138372
-School of Engineering Tezpur University Napaam Tezpur,Electrical Engineering MBA Dual Degree,All India,EWS,Gender-Neutral,179202,179202
-School of Engineering Tezpur University Napaam Tezpur,Electrical Engineering MBA Dual Degree,All India,OBC-NCL,Gender-Neutral,186448,186448
-School of Engineering Tezpur University Napaam Tezpur,Electronics and Communication Engineering MBA Dual Degree,All India,EWS,Gender-Neutral,127147,127147
-School of Engineering Tezpur University Napaam Tezpur,Food Engineering and Technology MBA Dual Degree,All India,OPEN,Gender-Neutral,257289,257289
-School of Engineering Tezpur University Napaam Tezpur,Food Engineering and Technology MBA Dual Degree,All India,SC,Gender-Neutral,567412,567412
-School of Engineering Tezpur University Napaam Tezpur,Mechanical Engineering MBA Dual Degree,All India,OPEN,Gender-Neutral,205556,205556
-School of Engineering Tezpur University Napaam Tezpur,Mechanical Engineering MBA Dual Degree,All India,OBC-NCL,Gender-Neutral,297590,297590
-School of Engineering Tezpur University Napaam Tezpur,Mechanical Engineering MBA Dual Degree,All India,SC,Gender-Neutral,420234,420234
+School of Engineering Tezpur University Napaam Tezpur,Civil Engineering - MBA (5 Years Bachelor of Technology and MBA (Dual Degree)),All India,OPEN,Gender-Neutral,206346,206346
+School of Engineering Tezpur University Napaam Tezpur,Computer Science and Engineering - MBA (5 Years Bachelor of Technology and MBA (Dual Degree)),All India,SC,Gender-Neutral,381415,381415
+School of Engineering Tezpur University Napaam Tezpur,Electrical Engineering - MBA (5 Years Bachelor of Technology and MBA (Dual Degree)),All India,OPEN,Gender-Neutral,138372,138372
+School of Engineering Tezpur University Napaam Tezpur,Electrical Engineering - MBA (5 Years Bachelor of Technology and MBA (Dual Degree)),All India,EWS,Gender-Neutral,179202,179202
+School of Engineering Tezpur University Napaam Tezpur,Electrical Engineering - MBA (5 Years Bachelor of Technology and MBA (Dual Degree)),All India,OBC-NCL,Gender-Neutral,186448,186448
+School of Engineering Tezpur University Napaam Tezpur,Electronics and Communication Engineering - MBA (5 Years Bachelor of Technology and MBA (Dual Degree)),All India,EWS,Gender-Neutral,127147,127147
+School of Engineering Tezpur University Napaam Tezpur,Food Engineering and Technology - MBA (5 Years Bachelor of Technology and MBA (Dual Degree)),All India,OPEN,Gender-Neutral,257289,257289
+School of Engineering Tezpur University Napaam Tezpur,Food Engineering and Technology - MBA (5 Years Bachelor of Technology and MBA (Dual Degree)),All India,SC,Gender-Neutral,567412,567412
+School of Engineering Tezpur University Napaam Tezpur,Mechanical Engineering - MBA (5 Years Bachelor of Technology and MBA (Dual Degree)),All India,OPEN,Gender-Neutral,205556,205556
+School of Engineering Tezpur University Napaam Tezpur,Mechanical Engineering - MBA (5 Years Bachelor of Technology and MBA (Dual Degree)),All India,OBC-NCL,Gender-Neutral,297590,297590
+School of Engineering Tezpur University Napaam Tezpur,Mechanical Engineering - MBA (5 Years Bachelor of Technology and MBA (Dual Degree)),All India,SC,Gender-Neutral,420234,420234
 School of Engineering Tezpur University Napaam Tezpur,Bachelor of Design,All India,OPEN,Gender-Neutral,189002,189002
 School of Engineering Tezpur University Napaam Tezpur,Bachelor of Design,All India,OBC-NCL,Gender-Neutral,472287,472287
 School of Engineering Tezpur University Napaam Tezpur,Civil Engineering,All India,OPEN,Gender-Neutral,191442,205463
@@ -378,54 +380,55 @@ School of Engineering Tezpur University Napaam Tezpur,Food Engineering and Techn
 School of Engineering Tezpur University Napaam Tezpur,Mechanical Engineering,All India,OPEN,Gender-Neutral,162069,168265
 School of Engineering Tezpur University Napaam Tezpur,Mechanical Engineering,All India,EWS,Gender-Neutral,200182,202028
 School of Engineering Tezpur University Napaam Tezpur,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,237127,288546
-School of Planning and Architecture New Delhi,Planning,All India,OPEN,Gender-Neutral,660,751
-School of Planning and Architecture New Delhi,Planning,All India,SC,Gender-Neutral,5971,6743
-School of Planning and Architecture Bhopal,Architecture,All India,OPEN,Gender-Neutral,746,799
-School of Planning and Architecture Bhopal,Planning,All India,OPEN,Gender-Neutral,1429,1696
-School of Planning and Architecture Bhopal,Planning,All India,OBC-NCL,Gender-Neutral,5737,7624
-School of Planning and Architecture Bhopal,Planning,All India,SC,Gender-Neutral,6103,6103
-School of Planning and Architecture Vijayawada,Planning,All India,OPEN,Gender-Neutral,1283,1283
-School of Planning and Architecture Vijayawada,Planning,All India,EWS,Gender-Neutral,18399,18399
-School of Planning and Architecture Vijayawada,Planning,All India,OBC-NCL,Gender-Neutral,4962,4962
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Architecture,All India,OPEN,Gender-Neutral,3022,3022
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Architecture,All India,EWS,Gender-Neutral,19231,19231
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Architecture,All India,OBC-NCL,Gender-Neutral,5754,5890
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Architecture,All India,SC,Gender-Neutral,14294,21391
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Architecture,All India,ST,Gender-Neutral,23034,23034
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Mathematics and Computing,All India,OPEN,Gender-Neutral,162611,181398
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Mathematics and Computing,All India,EWS,Gender-Neutral,206259,232623
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Mathematics and Computing,All India,OBC-NCL,Gender-Neutral,214424,266327
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Mathematics and Computing,All India,SC,Gender-Neutral,379337,430983
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Bio Technology,All India,OPEN,Gender-Neutral,319001,351644
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Bio Technology,All India,SC,Gender-Neutral,566943,566943
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Civil Engineering,All India,OPEN,Gender-Neutral,348602,446423
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Civil Engineering,All India,EWS,Gender-Neutral,668426,743895
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Civil Engineering,All India,OBC-NCL,Gender-Neutral,463540,1059073
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Civil Engineering,All India,SC,Gender-Neutral,514195,577445
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Civil Engineering,All India,ST,Gender-Neutral,450585,596969
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Computer Science and Engineering,All India,OPEN,Gender-Neutral,123154,135569
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Computer Science and Engineering,All India,EWS,Gender-Neutral,146083,159142
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,155125,198977
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Computer Science and Engineering,All India,SC,Gender-Neutral,321496,350797
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Computer Science and Engineering,All India,ST,Gender-Neutral,666173,666173
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Electrical Engineering,All India,OPEN,Gender-Neutral,236994,299440
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Electrical Engineering,All India,EWS,Gender-Neutral,367021,587241
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Electrical Engineering,All India,OBC-NCL,Gender-Neutral,314214,521573
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Electrical Engineering,All India,SC,Gender-Neutral,407937,495414
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Electrical Engineering,All India,ST,Gender-Neutral,624388,624388
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,196550,270122
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,276603,473361
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,272139,442377
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Electronics and Communication Engineering,All India,SC,Gender-Neutral,413974,497691
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Mechanical Engineering,All India,OPEN,Gender-Neutral,266862,315040
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Mechanical Engineering,All India,EWS,Gender-Neutral,1029419,1029419
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,332181,492328
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Mechanical Engineering,All India,SC,Gender-Neutral,448561,448561
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Robotics and AI,All India,OPEN,Gender-Neutral,164336,179732
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Robotics and AI,All India,EWS,Gender-Neutral,261363,263095
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Robotics and AI,All India,OBC-NCL,Gender-Neutral,210238,241475
-Shri Mata Vaishno Devi University Katra Jammu and Kashmir,Robotics and AI,All India,SC,Gender-Neutral,359005,400315
+School of Planning & Architecture Bhopal,Architecture,All India,OPEN,Gender-Neutral,746,799
+School of Planning & Architecture Bhopal,Planning,All India,OPEN,Gender-Neutral,1429,1696
+School of Planning & Architecture Bhopal,Planning,All India,OBC-NCL,Gender-Neutral,5737,7624
+School of Planning & Architecture Bhopal,Planning,All India,SC,Gender-Neutral,6103,6103
+School of Planning & Architecture New Delhi,Planning,All India,OPEN,Gender-Neutral,660,751
+School of Planning & Architecture New Delhi,Planning,All India,SC,Gender-Neutral,5971,6743
+School of Planning & Architecture: Vijayawada,Planning,All India,OPEN,Gender-Neutral,1283,1283
+School of Planning & Architecture: Vijayawada,Planning,All India,EWS,Gender-Neutral,18399,18399
+School of Planning & Architecture: Vijayawada,Planning,All India,OBC-NCL,Gender-Neutral,4962,4962
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Architecture,All India,OPEN,Gender-Neutral,3022,3022
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Architecture,All India,EWS,Gender-Neutral,19231,19231
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Architecture,All India,OBC-NCL,Gender-Neutral,5754,5890
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Architecture,All India,SC,Gender-Neutral,14294,21391
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Architecture,All India,ST,Gender-Neutral,23034,23034
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Mathematics and Computing,All India,OPEN,Gender-Neutral,162611,181398
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Mathematics and Computing,All India,EWS,Gender-Neutral,206259,232623
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Mathematics and Computing,All India,OBC-NCL,Gender-Neutral,214424,266327
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Mathematics and Computing,All India,SC,Gender-Neutral,379337,430983
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Bio Technology,All India,OPEN,Gender-Neutral,319001,351644
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Bio Technology,All India,SC,Gender-Neutral,566943,566943
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Civil Engineering,All India,OPEN,Gender-Neutral,348602,446423
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Civil Engineering,All India,EWS,Gender-Neutral,668426,743895
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Civil Engineering,All India,OBC-NCL,Gender-Neutral,463540,1059073
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Civil Engineering,All India,SC,Gender-Neutral,514195,577445
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Civil Engineering,All India,ST,Gender-Neutral,450585,596969
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Computer Science and Engineering,All India,OPEN,Gender-Neutral,123154,135569
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Computer Science and Engineering,All India,EWS,Gender-Neutral,146083,159142
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,155125,198977
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Computer Science and Engineering,All India,SC,Gender-Neutral,321496,350797
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Computer Science and Engineering,All India,ST,Gender-Neutral,666173,666173
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Electrical Engineering,All India,OPEN,Gender-Neutral,236994,299440
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Electrical Engineering,All India,EWS,Gender-Neutral,367021,587241
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Electrical Engineering,All India,OBC-NCL,Gender-Neutral,314214,521573
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Electrical Engineering,All India,SC,Gender-Neutral,407937,495414
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Electrical Engineering,All India,ST,Gender-Neutral,624388,624388
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,196550,270122
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,276603,473361
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,272139,442377
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Electronics and Communication Engineering,All India,SC,Gender-Neutral,413974,497691
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Mechanical Engineering,All India,OPEN,Gender-Neutral,266862,315040
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Mechanical Engineering,All India,EWS,Gender-Neutral,1029419,1029419
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,332181,492328
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Mechanical Engineering,All India,SC,Gender-Neutral,448561,448561
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Robotics and AI,All India,OPEN,Gender-Neutral,164336,179732
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Robotics and AI,All India,EWS,Gender-Neutral,261363,263095
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Robotics and AI,All India,OBC-NCL,Gender-Neutral,210238,241475
+Shri Mata Vaishno Devi University Katra Jammu & Kashmir,Robotics and AI,All India,SC,Gender-Neutral,359005,400315
 International Institute of Information Technology Naya Raipur,Computer Science and Engineering,All India,OPEN,Female-only,40537,41117
+International Institute of Information Technology Naya Raipur,Computer Science and Engineering,All India,OPEN PWD,Gender-Neutral,823866,823866
 International Institute of Information Technology Naya Raipur,Data Science and Artificial Intelligence,All India,OPEN,Gender-Neutral,28189,28226
 International Institute of Information Technology Naya Raipur,Data Science and Artificial Intelligence,All India,OPEN,Female-only,44744,44744
 International Institute of Information Technology Naya Raipur,Data Science and Artificial Intelligence,All India,EWS,Gender-Neutral,32016,32810
@@ -436,12 +439,63 @@ International Institute of Information Technology Naya Raipur,Electronics and Co
 International Institute of Information Technology Naya Raipur,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,41775,42355
 International Institute of Information Technology Naya Raipur,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,84554,84554
 International Institute of Information Technology Naya Raipur,Electronics and Communication Engineering,All India,SC,Gender-Neutral,193680,193680
+International Institute of Information Technology Naya Raipur,Data Science and Artificial Intelligence,All India,EWS,Gender-Neutral,32016,32810
+International Institute of Information Technology Naya Raipur,Data Science and Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,36030,36030
+International Institute of Information Technology Naya Raipur,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,35010,35010
+International Institute of Information Technology Naya Raipur,Electronics and Communication Engineering,All India,OPEN,Female-only,59243,59243
+International Institute of Information Technology Naya Raipur,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,43669,43669
+International Institute of Information Technology Naya Raipur,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,41775,42355
+International Institute of Information Technology Naya Raipur,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,84554,84554
+International Institute of Information Technology Naya Raipur,Electronics and Communication Engineering,All India,SC,Gender-Neutral,193680,193680
 International Institute of Information Technology Naya Raipur,Electronics and Communication Engineering,All India,SC,Female-only,266334,266334
-University of Hyderabad,Computer Science and Engineering,All India,SC,Gender-Neutral,145533,145533
-University of Hyderabad,Materials Engineering,All India,OPEN,Gender-Neutral,117334,127215
-University of Hyderabad,Materials Engineering,All India,EWS,Gender-Neutral,141982,163604
-University of Hyderabad,Materials Engineering,All India,OBC-NCL,Gender-Neutral,151475,180877
-University of Hyderabad,Materials Engineering,All India,SC,Gender-Neutral,263317,263317
+University of Hyderabad,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,SC,Gender-Neutral,145533,145533
+University of Hyderabad,Materials Engineering (5 Years Integrated Master of Technology),All India,OPEN,Gender-Neutral,117334,127215
+University of Hyderabad,Materials Engineering (5 Years Integrated Master of Technology),All India,EWS,Gender-Neutral,141982,163604
+University of Hyderabad,Materials Engineering (5 Years Integrated Master of Technology),All India,OBC-NCL,Gender-Neutral,151475,180877
+University of Hyderabad,Materials Engineering (5 Years Integrated Master of Technology),All India,SC,Gender-Neutral,263317,263317
+Punjab Engineering College Chandigarh,Aerospace Engineering,All India,EWS,Gender-Neutral,63007,63007
+Punjab Engineering College Chandigarh,Aerospace Engineering,Home State,OPEN,Gender-Neutral,88998,88998
+Punjab Engineering College Chandigarh,Aerospace Engineering,Other State,OPEN,Gender-Neutral,41204,41204
+Punjab Engineering College Chandigarh,Aerospace Engineering,Other State,EWS,Gender-Neutral,66171,69700
+Punjab Engineering College Chandigarh,Civil Engineering,All India,EWS,Gender-Neutral,85431,96457
+Punjab Engineering College Chandigarh,Civil Engineering,Home State,OPEN,Gender-Neutral,254521,254521
+Punjab Engineering College Chandigarh,Civil Engineering,Home State,SC,Gender-Neutral,548584,548584
+Punjab Engineering College Chandigarh,Civil Engineering,Other State,OPEN,Gender-Neutral,71291,75311
+Punjab Engineering College Chandigarh,Civil Engineering,Other State,EWS,Gender-Neutral,99314,107442
+Punjab Engineering College Chandigarh,Computer Science and Engineering,Home State,OPEN,Gender-Neutral,26091,26091
+Punjab Engineering College Chandigarh,Computer Science Engineering (Artificial Intelligence) (4 Years B. Tech / B. Tech (Hons. text)),Home State,OPEN,Gender-Neutral,26388,26388
+Punjab Engineering College Chandigarh,Computer Science Engineering (Artificial Intelligence) (4 Years B. Tech / B. Tech (Hons. text)),Other State,OPEN,Gender-Neutral,15573,15573
+Punjab Engineering College Chandigarh,Computer Science Engineering (Artificial Intelligence) (4 Years B. Tech / B. Tech (Hons. text)),Other State,EWS,Gender-Neutral,19098,19098
+Punjab Engineering College Chandigarh,Computer Science Engineering (Data Science) (4 Years B. Tech / B. Tech (Hons. text)),Home State,OPEN,Gender-Neutral,31502,31502
+Punjab Engineering College Chandigarh,Computer Science Engineering (Data Science) (4 Years B. Tech / B. Tech (Hons. text)),Other State,OPEN,Gender-Neutral,18335,18335
+Punjab Engineering College Chandigarh,Computer Science Engineering (Data Science) (4 Years B. Tech / B. Tech (Hons. text)),Other State,PWD OPEN,Gender-Neutral,498724,498724
+Punjab Engineering College Chandigarh,Computer Science Engineering (Data Science) (4 Years B. Tech / B. Tech (Hons. text)),Other State,EWS,Gender-Neutral,20578,20578
+Punjab Engineering College Chandigarh,Electrical Engineering,Home State,OPEN,Gender-Neutral,70189,71673
+Punjab Engineering College Chandigarh,Electrical Engineering,Other State,OPEN,Gender-Neutral,31338,32228
+Punjab Engineering College Chandigarh,Electrical Engineering,Other State,EWS,Gender-Neutral,34514,34514
+Punjab Engineering College Chandigarh,Electronics and Communication Engineering,Home State,OPEN,Gender-Neutral,43986,44008
+Punjab Engineering College Chandigarh,Electronics and Communication Engineering,Other State,OPEN,Gender-Neutral,23342,24083
+Punjab Engineering College Chandigarh,Electronics and Communication Engineering,Other State,EWS,Gender-Neutral,27240,28758
+Punjab Engineering College Chandigarh,Electronics Engineering (VLSI Design and Technology),Other State,OPEN,Gender-Neutral,24964,25249
+Punjab Engineering College Chandigarh,Electronics Engineering (VLSI Design and Technology),Other State,EWS,Gender-Neutral,31205,31437
+Punjab Engineering College Chandigarh,Mathematics and Computing,Home State,OPEN,Gender-Neutral,35174,35174
+Punjab Engineering College Chandigarh,Mathematics and Computing,Other State,OPEN,Gender-Neutral,20050,20166
+Punjab Engineering College Chandigarh,Mathematics and Computing,Other State,EWS,Gender-Neutral,23240,23240
+Punjab Engineering College Chandigarh,Mechanical Engineering,All India,EWS,Gender-Neutral,51379,51379
+Punjab Engineering College Chandigarh,Mechanical Engineering,Home State,OPEN,Gender-Neutral,108286,108286
+Punjab Engineering College Chandigarh,Mechanical Engineering,Home State,SC,Gender-Neutral,378877,378877
+Punjab Engineering College Chandigarh,Mechanical Engineering,Other State,OPEN,Gender-Neutral,47361,48066
+Punjab Engineering College Chandigarh,Mechanical Engineering,Other State,EWS,Gender-Neutral,62491,62491
+Punjab Engineering College Chandigarh,Metallurgical and Materials Engineering,All India,EWS,Gender-Neutral,94485,95256
+Punjab Engineering College Chandigarh,Metallurgical and Materials Engineering,Home State,OPEN,Gender-Neutral,424149,450748
+Punjab Engineering College Chandigarh,Metallurgical and Materials Engineering,Home State,SC,Gender-Neutral,594113,667236
+Punjab Engineering College Chandigarh,Metallurgical and Materials Engineering,Other State,OPEN,Gender-Neutral,78111,84826
+Punjab Engineering College Chandigarh,Metallurgical and Materials Engineering,Other State,EWS,Gender-Neutral,101475,103740
+Punjab Engineering College Chandigarh,Metallurgical and Materials Engineering,Other State,SC,Gender-Neutral,223445,223445
+Punjab Engineering College Chandigarh,Production and Industrial Engineering,All India,EWS,Gender-Neutral,76525,76525
+Punjab Engineering College Chandigarh,Production and Industrial Engineering,Home State,SC,Gender-Neutral,444383,444383
+Punjab Engineering College Chandigarh,Production and Industrial Engineering,Other State,OPEN,Gender-Neutral,59153,61620
+Punjab Engineering College Chandigarh,Production and Industrial Engineering,Other State,EWS,Gender-Neutral,85982,90698
 Jawaharlal Nehru University Delhi,Computer Science and Engineering,All India,OPEN,Gender-Neutral,37860,37965
 Jawaharlal Nehru University Delhi,Computer Science and Engineering,All India,EWS,Gender-Neutral,42257,42960
 Jawaharlal Nehru University Delhi,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,50385,55399
@@ -450,48 +504,6 @@ Jawaharlal Nehru University Delhi,Electronics and Communication Engineering,All 
 Jawaharlal Nehru University Delhi,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,58224,62547
 Jawaharlal Nehru University Delhi,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,68078,71004
 Jawaharlal Nehru University Delhi,Electronics and Communication Engineering,All India,ST,Gender-Neutral,300293,300293
-Punjab Engineering College Chandigarh,Aerospace Engineering,Other State,EWS,Gender-Neutral,63007,63007
-Punjab Engineering College Chandigarh,Aerospace Engineering,Home State,OPEN,Gender-Neutral,88998,88998
-Punjab Engineering College Chandigarh,Aerospace Engineering,Other State,OPEN,Gender-Neutral,41204,41204
-Punjab Engineering College Chandigarh,Aerospace Engineering,Other State,EWS,Gender-Neutral,66171,69700
-Punjab Engineering College Chandigarh,Civil Engineering,Other State,EWS,Gender-Neutral,85431,96457
-Punjab Engineering College Chandigarh,Civil Engineering,Home State,OPEN,Gender-Neutral,254521,254521
-Punjab Engineering College Chandigarh,Civil Engineering,Home State,SC,Gender-Neutral,548584,548584
-Punjab Engineering College Chandigarh,Civil Engineering,Other State,OPEN,Gender-Neutral,71291,75311
-Punjab Engineering College Chandigarh,Civil Engineering,Other State,EWS,Gender-Neutral,99314,107442
-Punjab Engineering College Chandigarh,Computer Science and Engineering,Home State,OPEN,Gender-Neutral,26091,26091
-Punjab Engineering College Chandigarh,Computer Science Engineering Artificial Intelligence,Home State,OPEN,Gender-Neutral,26388,26388
-Punjab Engineering College Chandigarh,Computer Science Engineering Artificial Intelligence,Other State,OPEN,Gender-Neutral,15573,15573
-Punjab Engineering College Chandigarh,Computer Science Engineering Artificial Intelligence,Other State,EWS,Gender-Neutral,19098,19098
-Punjab Engineering College Chandigarh,Computer Science Engineering Data Science,Home State,OPEN,Gender-Neutral,31502,31502
-Punjab Engineering College Chandigarh,Computer Science Engineering Data Science,Other State,OPEN,Gender-Neutral,18335,18335
-Punjab Engineering College Chandigarh,Computer Science Engineering Data Science,Other State,EWS,Gender-Neutral,20578,20578
-Punjab Engineering College Chandigarh,Electrical Engineering,Home State,OPEN,Gender-Neutral,70189,71673
-Punjab Engineering College Chandigarh,Electrical Engineering,Other State,OPEN,Gender-Neutral,31338,32228
-Punjab Engineering College Chandigarh,Electrical Engineering,Other State,EWS,Gender-Neutral,34514,34514
-Punjab Engineering College Chandigarh,Electronics and Communication Engineering,Home State,OPEN,Gender-Neutral,43986,44008
-Punjab Engineering College Chandigarh,Electronics and Communication Engineering,Other State,OPEN,Gender-Neutral,23342,24083
-Punjab Engineering College Chandigarh,Electronics and Communication Engineering,Other State,EWS,Gender-Neutral,27240,28758
-Punjab Engineering College Chandigarh,Electronics Engineering VLSI Design and Technology,Other State,OPEN,Gender-Neutral,24964,25249
-Punjab Engineering College Chandigarh,Electronics Engineering VLSI Design and Technology,Other State,EWS,Gender-Neutral,31205,31437
-Punjab Engineering College Chandigarh,Mathematics and Computing,Home State,OPEN,Gender-Neutral,35174,35174
-Punjab Engineering College Chandigarh,Mathematics and Computing,Other State,OPEN,Gender-Neutral,20050,20166
-Punjab Engineering College Chandigarh,Mathematics and Computing,Other State,EWS,Gender-Neutral,23240,23240
-Punjab Engineering College Chandigarh,Mechanical Engineering,Other State,EWS,Gender-Neutral,51379,51379
-Punjab Engineering College Chandigarh,Mechanical Engineering,Home State,OPEN,Gender-Neutral,108286,108286
-Punjab Engineering College Chandigarh,Mechanical Engineering,Home State,SC,Gender-Neutral,378877,378877
-Punjab Engineering College Chandigarh,Mechanical Engineering,Other State,OPEN,Gender-Neutral,47361,48066
-Punjab Engineering College Chandigarh,Mechanical Engineering,Other State,EWS,Gender-Neutral,62491,62491
-Punjab Engineering College Chandigarh,Metallurgical and Materials Engineering,Other State,EWS,Gender-Neutral,94485,95256
-Punjab Engineering College Chandigarh,Metallurgical and Materials Engineering,Home State,OPEN,Gender-Neutral,424149,450748
-Punjab Engineering College Chandigarh,Metallurgical and Materials Engineering,Home State,SC,Gender-Neutral,594113,667236
-Punjab Engineering College Chandigarh,Metallurgical and Materials Engineering,Other State,OPEN,Gender-Neutral,78111,84826
-Punjab Engineering College Chandigarh,Metallurgical and Materials Engineering,Other State,EWS,Gender-Neutral,101475,103740
-Punjab Engineering College Chandigarh,Metallurgical and Materials Engineering,Other State,SC,Gender-Neutral,223445,223445
-Punjab Engineering College Chandigarh,Production and Industrial Engineering,Other State,EWS,Gender-Neutral,76525,76525
-Punjab Engineering College Chandigarh,Production and Industrial Engineering,Home State,SC,Gender-Neutral,444383,444383
-Punjab Engineering College Chandigarh,Production and Industrial Engineering,Other State,OPEN,Gender-Neutral,59153,61620
-Punjab Engineering College Chandigarh,Production and Industrial Engineering,Other State,EWS,Gender-Neutral,85982,90698
 International Institute of Information Technology Bhubaneswar,Computer Engineering,All India,OPEN,Gender-Neutral,57856,61040
 International Institute of Information Technology Bhubaneswar,Computer Engineering,All India,EWS,Gender-Neutral,67670,70129
 International Institute of Information Technology Bhubaneswar,Computer Engineering,All India,OBC-NCL,Gender-Neutral,74554,77326
@@ -544,6 +556,7 @@ Puducherry Technological University Puducherry,Electrical and Electronics Engine
 Puducherry Technological University Puducherry,Electrical and Electronics Engineering,All India,EWS,Gender-Neutral,193580,193580
 Puducherry Technological University Puducherry,Electrical and Electronics Engineering,All India,OBC-NCL,Gender-Neutral,157308,166798
 Puducherry Technological University Puducherry,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,112771,138051
+Puducherry Technological University Puducherry,Electronics and Communication Engineering,All India,PWD OPEN,Gender-Neutral,1347264,1347264
 Puducherry Technological University Puducherry,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,169987,189301
 Puducherry Technological University Puducherry,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,142255,159817
 Puducherry Technological University Puducherry,Electronics and Communication Engineering,All India,SC,Gender-Neutral,262422,268125
@@ -572,18 +585,18 @@ Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,C
 Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Civil and Environmental Engineering,Other State,OPEN,Gender-Neutral,446465,551750
 Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Civil and Environmental Engineering,Other State,OPEN,Female-only,497286,499092
 Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Civil and Environmental Engineering,Other State,SC,Gender-Neutral,585029,599847
-Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering Artificial Intelligence and Machine Learning,All India,EWS,Gender-Neutral,216606,216606
-Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering Artificial Intelligence and Machine Learning,All India,OBC-NCL,Gender-Neutral,155139,155139
-Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering Artificial Intelligence and Machine Learning,All India,SC,Gender-Neutral,185557,185557
-Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering Artificial Intelligence and Machine Learning,All India,ST,Gender-Neutral,523026,523026
-Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering Artificial Intelligence and Machine Learning,Home State,OPEN,Gender-Neutral,483058,520954
-Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering Artificial Intelligence and Machine Learning,Home State,SC,Gender-Neutral,582606,582606
-Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering Artificial Intelligence and Machine Learning,Other State,OPEN,Gender-Neutral,115462,120457
-Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering Artificial Intelligence and Machine Learning,Other State,OPEN,Female-only,193418,193418
-Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering Artificial Intelligence and Machine Learning,Other State,EWS,Gender-Neutral,232289,239366
-Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering Artificial Intelligence and Machine Learning,Other State,OBC-NCL,Gender-Neutral,168445,201537
-Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering Artificial Intelligence and Machine Learning,Other State,SC,Gender-Neutral,285859,302986
-Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering Artificial Intelligence and Machine Learning,Other State,ST,Gender-Neutral,668124,668124
+Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering (Artificial Intelligence and Machine Learning),All India,EWS,Gender-Neutral,216606,216606
+Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering (Artificial Intelligence and Machine Learning),All India,OBC-NCL,Gender-Neutral,155139,155139
+Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering (Artificial Intelligence and Machine Learning),All India,SC,Gender-Neutral,185557,185557
+Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering (Artificial Intelligence and Machine Learning),All India,ST,Gender-Neutral,523026,523026
+Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering (Artificial Intelligence and Machine Learning),Home State,OPEN,Gender-Neutral,483058,520954
+Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering (Artificial Intelligence and Machine Learning),Home State,SC,Gender-Neutral,582606,582606
+Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering (Artificial Intelligence and Machine Learning),Other State,OPEN,Gender-Neutral,115462,120457
+Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering (Artificial Intelligence and Machine Learning),Other State,OPEN,Female-only,193418,193418
+Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering (Artificial Intelligence and Machine Learning),Other State,EWS,Gender-Neutral,232289,239366
+Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering (Artificial Intelligence and Machine Learning),Other State,OBC-NCL,Gender-Neutral,168445,201537
+Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering (Artificial Intelligence and Machine Learning),Other State,SC,Gender-Neutral,285859,302986
+Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Computer Science Engineering (Artificial Intelligence and Machine Learning),Other State,ST,Gender-Neutral,668124,668124
 Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Electrical Engineering,All India,OPEN,Female-only,242265,242265
 Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Electrical Engineering,All India,OBC-NCL,Gender-Neutral,288862,381219
 Ghani Khan Choudhary Institute of Engineering and Technology Malda West Bengal,Electrical Engineering,All India,SC,Gender-Neutral,346797,370895
@@ -624,52 +637,38 @@ National Institute of Food Technology Entrepreneurship and Management Thanjavur,
 National Institute of Food Technology Entrepreneurship and Management Thanjavur,Food Technology,All India,OBC-NCL,Gender-Neutral,277112,311262
 National Institute of Food Technology Entrepreneurship and Management Thanjavur,Food Technology,All India,SC,Gender-Neutral,300206,301094
 National Institute of Food Technology Entrepreneurship and Management Thanjavur,Food Technology,All India,ST,Gender-Neutral,662029,662029
-North Eastern Regional Institute of Science and Technology Nirjuli Itanagar Arunachal Pradesh,Agricultural Engineering,All India,OPEN,Gender-Neutral,645335,645335
-North Eastern Regional Institute of Science and Technology Nirjuli Itanagar Arunachal Pradesh,Civil Engineering,All India,EWS,Gender-Neutral,538962,538962
-North Eastern Regional Institute of Science and Technology Nirjuli Itanagar Arunachal Pradesh,Civil Engineering,All India,OBC-NCL,Gender-Neutral,787723,787723
-North Eastern Regional Institute of Science and Technology Nirjuli Itanagar Arunachal Pradesh,Computer Science and Engineering,All India,OPEN,Gender-Neutral,135999,144947
-North Eastern Regional Institute of Science and Technology Nirjuli Itanagar Arunachal Pradesh,Computer Science and Engineering,All India,EWS,Gender-Neutral,182394,220389
-North Eastern Regional Institute of Science and Technology Nirjuli Itanagar Arunachal Pradesh,Electrical Engineering,All India,EWS,Gender-Neutral,361102,361102
-North Eastern Regional Institute of Science and Technology Nirjuli Itanagar Arunachal Pradesh,Electrical Engineering,All India,SC,Gender-Neutral,341978,341978
-North Eastern Regional Institute of Science and Technology Nirjuli Itanagar Arunachal Pradesh,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,206519,206519
-North Eastern Regional Institute of Science and Technology Nirjuli Itanagar Arunachal Pradesh,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,316170,316170
-North Eastern Regional Institute of Science and Technology Nirjuli Itanagar Arunachal Pradesh,Mechanical Engineering,All India,EWS,Gender-Neutral,490764,490764
-Indian Institute of Handloom Technology IIHT Varanasi,Handloom and Textile Technology,All India,OPEN,Gender-Neutral,671359,799742
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Civil Engineering,All India,OPEN,Gender-Neutral,377391,568882
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Civil Engineering,All India,OBC-NCL,Gender-Neutral,573839,1183609
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Civil Engineering,All India,SC,Gender-Neutral,570500,642827
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Civil Engineering,All India,ST,Gender-Neutral,768975,768975
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Computer Science Engineering Artificial Intelligence,All India,OPEN,Gender-Neutral,175338,230193
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Computer Science Engineering Artificial Intelligence,All India,EWS,Gender-Neutral,236470,258959
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Computer Science Engineering Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,241455,289152
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Computer Science Engineering Artificial Intelligence,All India,SC,Gender-Neutral,344706,344706
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Computer Science Engineering Artificial Intelligence,All India,ST,Gender-Neutral,826718,1150190
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Computer Science Engineering Data Science,All India,OPEN,Gender-Neutral,192654,256363
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Computer Science Engineering Data Science,All India,EWS,Gender-Neutral,268191,287622
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Computer Science Engineering Data Science,All India,OBC-NCL,Gender-Neutral,262396,340917
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Computer Science Engineering Data Science,All India,SC,Gender-Neutral,360352,410507
-Chhattisgarh Swami Vivekanada Technical University Bhilai,Computer Science Engineering Data Science,All India,ST,Gender-Neutral,959665,1019745
-Central University of Jammu,Computer Science and Engineering,All India,OPEN,Gender-Neutral,189646,219410
-Central University of Jammu,Computer Science and Engineering,All India,EWS,Gender-Neutral,247635,288493
-Central University of Jammu,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,237411,302565
-Central University of Jammu,Computer Science and Engineering,All India,SC,Gender-Neutral,370156,385057
-Central University of Jammu,Computer Science and Engineering,All India,ST,Gender-Neutral,1310941,1310941
-Central University of Jammu,Computer Science and Engineering with specialization in Cyber Security,All India,OPEN,Gender-Neutral,219793,286921
-Central University of Jammu,Computer Science and Engineering with specialization in Cyber Security,All India,EWS,Gender-Neutral,294459,378194
-Central University of Jammu,Computer Science and Engineering with specialization in Cyber Security,All India,OBC-NCL,Gender-Neutral,313050,411114
-Central University of Jammu,Computer Science and Engineering with specialization in Cyber Security,All India,SC,Gender-Neutral,385801,426130
-Central University of Jammu,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,267150,456375
-Central University of Jammu,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,474657,501504
-Central University of Jammu,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,473325,1050740
-Central University of Jammu,Electronics and Communication Engineering,All India,SC,Gender-Neutral,475848,529585
-Central University of Jammu,Electronics and Communication Engineering Avionics,All India,OPEN,Gender-Neutral,318232,481414
-Central University of Jammu,Electronics and Communication Engineering Avionics,All India,EWS,Gender-Neutral,684205,684205
-Central University of Jammu,Electronics and Communication Engineering Avionics,All India,OBC-NCL,Gender-Neutral,608173,887154
-Central University of Jammu,Electronics and Communication Engineering Avionics,All India,SC,Gender-Neutral,514939,552146
-Central University of Jammu,Mathematics and Computing,All India,OPEN,Gender-Neutral,279127,466906
-Central University of Jammu,Mathematics and Computing,All India,EWS,Gender-Neutral,504096,504096
-Central University of Jammu,Mathematics and Computing,All India,OBC-NCL,Gender-Neutral,474105,1177278
-Central University of Jammu,Mathematics and Computing,All India,SC,Gender-Neutral,471678,512691
+North Eastern Regional Institute of Science and Technology Nirjuli-791109 (Itanagar) Arunachal Pradesh,Agricultural Engineering,All India,OPEN,Gender-Neutral,645335,645335
+North Eastern Regional Institute of Science and Technology Nirjuli-791109 (Itanagar) Arunachal Pradesh,Civil Engineering,All India,EWS,Gender-Neutral,538962,538962
+North Eastern Regional Institute of Science and Technology Nirjuli-791109 (Itanagar) Arunachal Pradesh,Civil Engineering,All India,OBC-NCL,Gender-Neutral,787723,787723
+North Eastern Regional Institute of Science and Technology Nirjuli-791109 (Itanagar) Arunachal Pradesh,Computer Science and Engineering,All India,OPEN,Gender-Neutral,135999,144947
+North Eastern Regional Institute of Science and Technology Nirjuli-791109 (Itanagar) Arunachal Pradesh,Computer Science and Engineering,All India,EWS,Gender-Neutral,182394,220389
+North Eastern Regional Institute of Science and Technology Nirjuli-791109 (Itanagar) Arunachal Pradesh,Electrical Engineering,All India,EWS,Gender-Neutral,361102,361102
+North Eastern Regional Institute of Science and Technology Nirjuli-791109 (Itanagar) Arunachal Pradesh,Electrical Engineering,All India,SC,Gender-Neutral,341978,341978
+North Eastern Regional Institute of Science and Technology Nirjuli-791109 (Itanagar) Arunachal Pradesh,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,206519,206519
+North Eastern Regional Institute of Science and Technology Nirjuli-791109 (Itanagar) Arunachal Pradesh,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,316170,316170
+North Eastern Regional Institute of Science and Technology Nirjuli-791109 (Itanagar) Arunachal Pradesh,Mechanical Engineering,All India,EWS,Gender-Neutral,490764,490764
+Indian Institute of Handloom Technology(IIHT) Varanasi,Handloom and Textile Technology,All India,OPEN,Gender-Neutral,671359,799742
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Civil Engineering,All India,OPEN,Gender-Neutral,377391,568882
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Civil Engineering,All India,OBC-NCL,Gender-Neutral,573839,1183609
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Civil Engineering,All India,SC,Gender-Neutral,570500,642827
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Civil Engineering,All India,ST,Gender-Neutral,768975,768975
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Computer Science Engineering (Artificial Intelligence) (4 Years B. Tech / B. Tech (Hons. text)),All India,OPEN,Gender-Neutral,175338,230193
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Computer Science Engineering (Artificial Intelligence) (4 Years B. Tech / B. Tech (Hons. text)),All India,EWS,Gender-Neutral,236470,258959
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Computer Science Engineering (Artificial Intelligence) (4 Years B. Tech / B. Tech (Hons. text)),All India,OBC-NCL,Gender-Neutral,241455,289152
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Computer Science Engineering (Artificial Intelligence) (4 Years B. Tech / B. Tech (Hons. text)),All India,SC,Gender-Neutral,344706,344706
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Computer Science Engineering (Artificial Intelligence) (4 Years B. Tech / B. Tech (Hons. text)),All India,ST,Gender-Neutral,826718,1150190
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Computer Science Engineering (Data Science) (4 Years B. Tech / B. Tech (Hons. text)),All India,OPEN,Gender-Neutral,192654,256363
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Computer Science Engineering (Data Science) (4 Years B. Tech / B. Tech (Hons. text)),All India,EWS,Gender-Neutral,268191,287622
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Computer Science Engineering (Data Science) (4 Years B. Tech / B. Tech (Hons. text)),All India,OBC-NCL,Gender-Neutral,262396,340917
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Computer Science Engineering (Data Science) (4 Years B. Tech / B. Tech (Hons. text)),All India,SC,Gender-Neutral,360352,410507
+Chhattisgarh Swami Vivekanada Technical University Bhilai (CSVTU Bhilai),Computer Science Engineering (Data Science) (4 Years B. Tech / B. Tech (Hons. text)),All India,ST,Gender-Neutral,959665,1019745
+Institute of Chemical Technology Mumbai: Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering (5 Years Integrated Masters in Technology),All India,OPEN,Gender-Neutral,96164,115110
+Institute of Chemical Technology Mumbai: Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering (5 Years Integrated Masters in Technology),All India,EWS,Gender-Neutral,161735,179007
+Institute of Chemical Technology Mumbai: Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering (5 Years Integrated Masters in Technology),All India,OBC-NCL,Gender-Neutral,180798,261361
+Institute of Chemical Technology Mumbai: Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering (5 Years Integrated Masters in Technology),All India,SC,Gender-Neutral,317728,343168
+Institute of Chemical Technology Mumbai: Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering (5 Years Integrated Masters in Technology),All India,ST,Gender-Neutral,622191,645795
+Institute of Chemical Technology Mumbai: Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering (5 Years Integrated Masters in Technology),Home State,OPEN,Gender-Neutral,285981,350286
+Institute of Chemical Technology Mumbai: Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering (5 Years Integrated Masters in Technology),Home State,SC,Gender-Neutral,427367,427367
 North-Eastern Hill University Shillong,Biomedical Engineering,All India,OPEN,Gender-Neutral,409551,606929
 North-Eastern Hill University Shillong,Biomedical Engineering,All India,OBC-NCL,Gender-Neutral,694908,1022911
 North-Eastern Hill University Shillong,Biomedical Engineering,All India,SC,Gender-Neutral,657396,761792
@@ -684,29 +683,43 @@ North-Eastern Hill University Shillong,Energy Engineering,All India,SC,Gender-Ne
 North-Eastern Hill University Shillong,Information Technology,All India,OPEN,Gender-Neutral,153531,173345
 North-Eastern Hill University Shillong,Information Technology,All India,EWS,Gender-Neutral,197743,197743
 North-Eastern Hill University Shillong,Information Technology,All India,OBC-NCL,Gender-Neutral,244912,286666
-Institute of Chemical Technology Mumbai Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering,All India,OPEN,Gender-Neutral,96164,115110
-Institute of Chemical Technology Mumbai Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering,All India,EWS,Gender-Neutral,161735,179007
-Institute of Chemical Technology Mumbai Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering,All India,OBC-NCL,Gender-Neutral,180798,261361
-Institute of Chemical Technology Mumbai Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering,All India,SC,Gender-Neutral,317728,343168
-Institute of Chemical Technology Mumbai Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering,All India,ST,Gender-Neutral,622191,645795
-Institute of Chemical Technology Mumbai Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering,Home State,OPEN,Gender-Neutral,285981,350286
-Institute of Chemical Technology Mumbai Indian Oil Odisha Campus Bhubaneswar,Chemical Engineering,Home State,SC,Gender-Neutral,427367,427367
-Institute of Engineering and Technology Dr H S Gour University Sagar,Aeronautical Engineering,All India,OPEN,Gender-Neutral,252990,389543
-Institute of Engineering and Technology Dr H S Gour University Sagar,Aeronautical Engineering,All India,EWS,Gender-Neutral,431103,1155777
-Institute of Engineering and Technology Dr H S Gour University Sagar,Aeronautical Engineering,All India,OBC-NCL,Gender-Neutral,417725,855721
-Institute of Engineering and Technology Dr H S Gour University Sagar,Aeronautical Engineering,All India,SC,Gender-Neutral,439855,495254
-Institute of Engineering and Technology Dr H S Gour University Sagar,Computer Science and Engineering,All India,OPEN,Gender-Neutral,171951,223741
-Institute of Engineering and Technology Dr H S Gour University Sagar,Computer Science and Engineering,All India,EWS,Gender-Neutral,228164,245436
-Institute of Engineering and Technology Dr H S Gour University Sagar,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,240303,327881
-Institute of Engineering and Technology Dr H S Gour University Sagar,Computer Science and Engineering,All India,SC,Gender-Neutral,342363,364853
-Institute of Engineering and Technology Dr H S Gour University Sagar,Computer Science and Engineering,All India,ST,Gender-Neutral,660019,660019
-Institute of Engineering and Technology Dr H S Gour University Sagar,Dairy Engineering,All India,OPEN,Gender-Neutral,1144789,1144789
-Institute of Engineering and Technology Dr H S Gour University Sagar,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,250461,385582
-Institute of Engineering and Technology Dr H S Gour University Sagar,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,476182,817042
-Institute of Engineering and Technology Dr H S Gour University Sagar,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,420089,835468
-Institute of Engineering and Technology Dr H S Gour University Sagar,Electronics and Communication Engineering,All India,SC,Gender-Neutral,407263,496653
-Institute of Engineering and Technology Dr H S Gour University Sagar,Fashion and Apparel Engineering,All India,OPEN,Gender-Neutral,750279,1243297
-Institute of Engineering and Technology Dr H S Gour University Sagar,Food Engineering and Technology,All India,OPEN,Gender-Neutral,892319,1076579
+Central University of Jammu,Computer Science and Engineering,All India,OPEN,Gender-Neutral,189646,219410
+Central University of Jammu,Computer Science and Engineering,All India,EWS,Gender-Neutral,247635,288493
+Central University of Jammu,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,237411,302565
+Central University of Jammu,Computer Science and Engineering,All India,SC,Gender-Neutral,370156,385057
+Central University of Jammu,Computer Science and Engineering,All India,ST,Gender-Neutral,1310941,1310941
+Central University of Jammu,Computer Science and Engineering with specialization in Cyber Security,All India,OPEN,Gender-Neutral,219793,286921
+Central University of Jammu,Computer Science and Engineering with specialization in Cyber Security,All India,EWS,Gender-Neutral,294459,378194
+Central University of Jammu,Computer Science and Engineering with specialization in Cyber Security,All India,OBC-NCL,Gender-Neutral,313050,411114
+Central University of Jammu,Computer Science and Engineering with specialization in Cyber Security,All India,SC,Gender-Neutral,385801,426130
+Central University of Jammu,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,267150,456375
+Central University of Jammu,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,474657,501504
+Central University of Jammu,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,473325,1050740
+Central University of Jammu,Electronics and Communication Engineering,All India,SC,Gender-Neutral,475848,529585
+Central University of Jammu,Electronics and Communication Engineering (Avionics),All India,OPEN,Gender-Neutral,318232,481414
+Central University of Jammu,Electronics and Communication Engineering (Avionics),All India,EWS,Gender-Neutral,684205,684205
+Central University of Jammu,Electronics and Communication Engineering (Avionics),All India,OBC-NCL,Gender-Neutral,608173,887154
+Central University of Jammu,Electronics and Communication Engineering (Avionics),All India,SC,Gender-Neutral,514939,552146
+Central University of Jammu,Mathematics and Computing,All India,OPEN,Gender-Neutral,279127,466906
+Central University of Jammu,Mathematics and Computing,All India,EWS,Gender-Neutral,504096,504096
+Central University of Jammu,Mathematics and Computing,All India,OBC-NCL,Gender-Neutral,474105,1177278
+Central University of Jammu,Mathematics and Computing,All India,SC,Gender-Neutral,471678,512691
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Aeronautical Engineering,All India,OPEN,Gender-Neutral,252990,389543
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Aeronautical Engineering,All India,EWS,Gender-Neutral,431103,1155777
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Aeronautical Engineering,All India,OBC-NCL,Gender-Neutral,417725,855721
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Aeronautical Engineering,All India,SC,Gender-Neutral,439855,495254
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Computer Science and Engineering,All India,OPEN,Gender-Neutral,171951,223741
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Computer Science and Engineering,All India,EWS,Gender-Neutral,228164,245436
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,240303,327881
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Computer Science and Engineering,All India,SC,Gender-Neutral,342363,364853
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Computer Science and Engineering,All India,ST,Gender-Neutral,660019,660019
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Dairy Engineering,All India,OPEN,Gender-Neutral,1144789,1144789
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,250461,385582
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Electronics and Communication Engineering,All India,EWS,Gender-Neutral,476182,817042
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,420089,835468
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Electronics and Communication Engineering,All India,SC,Gender-Neutral,407263,496653
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Fashion and Apparel Engineering,All India,OPEN,Gender-Neutral,750279,1243297
+Institute of Engineering and Technology Dr. H. S. Gour University. Sagar (A Central University),Food Engineering and Technology,All India,OPEN,Gender-Neutral,892319,1076579
 Central University of Haryana,Civil Engineering,All India,OPEN,Gender-Neutral,327374,404929
 Central University of Haryana,Civil Engineering,All India,EWS,Gender-Neutral,832353,832353
 Central University of Haryana,Civil Engineering,All India,OBC-NCL,Gender-Neutral,486953,1078882
@@ -724,180 +737,180 @@ Central University of Haryana,Electrical Engineering,All India,SC,Gender-Neutral
 Central University of Haryana,Printing and Packaging Technology,All India,OPEN,Gender-Neutral,507898,916399
 Central University of Haryana,Printing and Packaging Technology,All India,OBC-NCL,Gender-Neutral,1307704,1307704
 Central University of Haryana,Printing and Packaging Technology,All India,SC,Gender-Neutral,1083122,1230195
-Birla Institute of Technology Deoghar Off Campus,Computer Science and Engineering,All India,OPEN,Gender-Neutral,116168,146515
-Birla Institute of Technology Deoghar Off Campus,Computer Science and Engineering,All India,OPEN,Female-only,121626,176919
-Birla Institute of Technology Deoghar Off Campus,Computer Science and Engineering,All India,EWS,Gender-Neutral,158882,207138
-Birla Institute of Technology Deoghar Off Campus,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,168755,226948
-Birla Institute of Technology Deoghar Off Campus,Computer Science and Engineering,All India,SC,Gender-Neutral,298494,320513
-Birla Institute of Technology Deoghar Off Campus,Computer Science and Engineering,Home State,OPEN,Gender-Neutral,286205,354449
-Birla Institute of Technology Deoghar Off Campus,Computer Science and Engineering,Home State,OPEN,Female-only,250913,275918
-Birla Institute of Technology Deoghar Off Campus,Computer Science and Engineering,Home State,SC,Gender-Neutral,570561,570561
-Birla Institute of Technology Deoghar Off Campus,Electrical and Electronics Engineering,All India,OPEN,Gender-Neutral,243441,448874
-Birla Institute of Technology Deoghar Off Campus,Electrical and Electronics Engineering,All India,OPEN,Female-only,224444,300979
-Birla Institute of Technology Deoghar Off Campus,Electrical and Electronics Engineering,All India,EWS,Gender-Neutral,504670,994508
-Birla Institute of Technology Deoghar Off Campus,Electrical and Electronics Engineering,All India,OBC-NCL,Gender-Neutral,473608,899959
-Birla Institute of Technology Deoghar Off Campus,Electrical and Electronics Engineering,All India,SC,Gender-Neutral,448896,512073
-Birla Institute of Technology Deoghar Off Campus,Electrical and Electronics Engineering,Home State,OPEN,Gender-Neutral,824821,1111485
-Birla Institute of Technology Deoghar Off Campus,Electrical and Electronics Engineering,Home State,OPEN,Female-only,731694,731694
-Birla Institute of Technology Deoghar Off Campus,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,193094,255029
-Birla Institute of Technology Deoghar Off Campus,Electronics and Communication Engineering,All India,OPEN,Female-only,227227,249620
-Birla Institute of Technology Deoghar Off Campus,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,262865,692700
-Birla Institute of Technology Deoghar Off Campus,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,289268,721649
-Birla Institute of Technology Deoghar Off Campus,Electronics and Communication Engineering,All India,SC,Gender-Neutral,354734,449327
-Birla Institute of Technology Deoghar Off Campus,Electronics and Communication Engineering,Home State,OPEN,Gender-Neutral,446517,765687
-Birla Institute of Technology Deoghar Off Campus,Electronics and Communication Engineering,Home State,OPEN,Female-only,421644,434101
-Birla Institute of Technology Deoghar Off Campus,Electronics and Communication Engineering,Home State,SC,Gender-Neutral,842547,842547
-Birla Institute of Technology Deoghar Off Campus,Mechanical Engineering,All India,OPEN,Gender-Neutral,269025,575840
-Birla Institute of Technology Deoghar Off Campus,Mechanical Engineering,All India,OPEN,Female-only,325869,520677
-Birla Institute of Technology Deoghar Off Campus,Mechanical Engineering,All India,EWS,Gender-Neutral,781424,781424
-Birla Institute of Technology Deoghar Off Campus,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,638791,711000
-Birla Institute of Technology Deoghar Off Campus,Mechanical Engineering,All India,SC,Gender-Neutral,595820,627883
-Birla Institute of Technology Deoghar Off Campus,Mechanical Engineering,Home State,OPEN,Gender-Neutral,1191984,1191984
-Birla Institute of Technology Patna Off Campus,Artificial Intelligence and Machine Learning,All India,OPEN,Gender-Neutral,97938,118778
-Birla Institute of Technology Patna Off Campus,Artificial Intelligence and Machine Learning,All India,OPEN,Female-only,121415,145390
-Birla Institute of Technology Patna Off Campus,Artificial Intelligence and Machine Learning,All India,EWS,Gender-Neutral,148852,154590
-Birla Institute of Technology Patna Off Campus,Artificial Intelligence and Machine Learning,All India,OBC-NCL,Gender-Neutral,122515,169215
-Birla Institute of Technology Patna Off Campus,Artificial Intelligence and Machine Learning,All India,SC,Gender-Neutral,286404,298090
-Birla Institute of Technology Patna Off Campus,Artificial Intelligence and Machine Learning,All India,ST,Gender-Neutral,731423,1367475
-Birla Institute of Technology Patna Off Campus,Artificial Intelligence and Machine Learning,Home State,OPEN,Gender-Neutral,149638,204231
-Birla Institute of Technology Patna Off Campus,Artificial Intelligence and Machine Learning,Home State,OPEN,Female-only,156070,186043
-Birla Institute of Technology Patna Off Campus,Artificial Intelligence and Machine Learning,Home State,EWS,Gender-Neutral,204774,240819
-Birla Institute of Technology Patna Off Campus,Artificial Intelligence and Machine Learning,Home State,SC,Gender-Neutral,583289,645126
-Birla Institute of Technology Patna Off Campus,Civil Engineering,All India,OPEN,Gender-Neutral,322651,562448
-Birla Institute of Technology Patna Off Campus,Civil Engineering,All India,OPEN,Female-only,384241,425740
-Birla Institute of Technology Patna Off Campus,Civil Engineering,All India,EWS,Gender-Neutral,745365,745365
-Birla Institute of Technology Patna Off Campus,Civil Engineering,All India,OBC-NCL,Gender-Neutral,609082,1076922
-Birla Institute of Technology Patna Off Campus,Civil Engineering,All India,SC,Gender-Neutral,567104,639145
-Birla Institute of Technology Patna Off Campus,Civil Engineering,All India,ST,Gender-Neutral,888622,888622
-Birla Institute of Technology Patna Off Campus,Civil Engineering,Home State,OPEN,Gender-Neutral,664691,937097
-Birla Institute of Technology Patna Off Campus,Civil Engineering,Home State,OPEN,Female-only,649065,1002843
-Birla Institute of Technology Patna Off Campus,Computer Science and Engineering,All India,OPEN,Gender-Neutral,86998,98719
-Birla Institute of Technology Patna Off Campus,Computer Science and Engineering,All India,EWS,Gender-Neutral,120356,148969
-Birla Institute of Technology Patna Off Campus,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,112000,128571
-Birla Institute of Technology Patna Off Campus,Computer Science and Engineering,All India,SC,Gender-Neutral,285284,285284
-Birla Institute of Technology Patna Off Campus,Computer Science and Engineering,All India,ST,Gender-Neutral,726594,726594
-Birla Institute of Technology Patna Off Campus,Computer Science and Engineering,Home State,OPEN,Gender-Neutral,108336,146820
-Birla Institute of Technology Patna Off Campus,Computer Science and Engineering,Home State,OPEN,Female-only,105653,111903
-Birla Institute of Technology Patna Off Campus,Computer Science and Engineering,Home State,EWS,Gender-Neutral,157797,189859
-Birla Institute of Technology Patna Off Campus,Computer Science and Engineering,Home State,SC,Gender-Neutral,482927,539937
-Birla Institute of Technology Patna Off Campus,Electrical and Electronics Engineering,All India,OPEN,Gender-Neutral,172855,366074
-Birla Institute of Technology Patna Off Campus,Electrical and Electronics Engineering,All India,OPEN,Female-only,211233,276637
-Birla Institute of Technology Patna Off Campus,Electrical and Electronics Engineering,All India,EWS,Gender-Neutral,411859,927999
-Birla Institute of Technology Patna Off Campus,Electrical and Electronics Engineering,All India,OBC-NCL,Gender-Neutral,389124,1153004
-Birla Institute of Technology Patna Off Campus,Electrical and Electronics Engineering,All India,SC,Gender-Neutral,415999,467687
-Birla Institute of Technology Patna Off Campus,Electrical and Electronics Engineering,Home State,OPEN,Gender-Neutral,394392,1141719
-Birla Institute of Technology Patna Off Campus,Electrical and Electronics Engineering,Home State,OPEN,Female-only,519397,854329
-Birla Institute of Technology Patna Off Campus,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,138009,196089
-Birla Institute of Technology Patna Off Campus,Electronics and Communication Engineering,All India,OPEN,Female-only,151108,186470
-Birla Institute of Technology Patna Off Campus,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,223330,289282
-Birla Institute of Technology Patna Off Campus,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,202486,262970
-Birla Institute of Technology Patna Off Campus,Electronics and Communication Engineering,All India,SC,Gender-Neutral,360141,399452
-Birla Institute of Technology Patna Off Campus,Electronics and Communication Engineering,Home State,OPEN,Gender-Neutral,220553,442160
-Birla Institute of Technology Patna Off Campus,Electronics and Communication Engineering,Home State,OPEN,Female-only,197680,390664
-Birla Institute of Technology Patna Off Campus,Electronics and Communication Engineering,Home State,EWS,Gender-Neutral,539965,798586
-Birla Institute of Technology Patna Off Campus,Electronics and Communication Engineering,Home State,SC,Gender-Neutral,654447,819738
-Birla Institute of Technology Patna Off Campus,Mathematics and Computing,All India,OPEN,Gender-Neutral,143384,178242
-Birla Institute of Technology Patna Off Campus,Mathematics and Computing,All India,OPEN,Female-only,210123,210123
-Birla Institute of Technology Patna Off Campus,Mathematics and Computing,All India,EWS,Gender-Neutral,189437,683452
-Birla Institute of Technology Patna Off Campus,Mathematics and Computing,All India,OBC-NCL,Gender-Neutral,228378,268282
-Birla Institute of Technology Patna Off Campus,Mathematics and Computing,All India,SC,Gender-Neutral,342634,373601
-Birla Institute of Technology Patna Off Campus,Mathematics and Computing,Home State,OPEN,Gender-Neutral,222602,357125
-Birla Institute of Technology Patna Off Campus,Mathematics and Computing,Home State,OPEN,Female-only,802300,940604
-Birla Institute of Technology Patna Off Campus,Mechanical Engineering,All India,OPEN,Gender-Neutral,261923,619460
-Birla Institute of Technology Patna Off Campus,Mechanical Engineering,All India,OPEN,Female-only,290915,527417
-Birla Institute of Technology Patna Off Campus,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,777746,777746
-Birla Institute of Technology Patna Off Campus,Mechanical Engineering,All India,SC,Gender-Neutral,625967,715336
+Birla Institute of Technology Deoghar Off-Campus,Computer Science and Engineering,All India,OPEN,Gender-Neutral,116168,146515
+Birla Institute of Technology Deoghar Off-Campus,Computer Science and Engineering,All India,OPEN,Female-only,121626,176919
+Birla Institute of Technology Deoghar Off-Campus,Computer Science and Engineering,All India,EWS,Gender-Neutral,158882,207138
+Birla Institute of Technology Deoghar Off-Campus,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,168755,226948
+Birla Institute of Technology Deoghar Off-Campus,Computer Science and Engineering,All India,SC,Gender-Neutral,298494,320513
+Birla Institute of Technology Deoghar Off-Campus,Computer Science and Engineering,Home State,OPEN,Gender-Neutral,286205,354449
+Birla Institute of Technology Deoghar Off-Campus,Computer Science and Engineering,Home State,OPEN,Female-only,250913,275918
+Birla Institute of Technology Deoghar Off-Campus,Computer Science and Engineering,Home State,SC,Gender-Neutral,570561,570561
+Birla Institute of Technology Deoghar Off-Campus,Electrical and Electronics Engineering,All India,OPEN,Gender-Neutral,243441,448874
+Birla Institute of Technology Deoghar Off-Campus,Electrical and Electronics Engineering,All India,OPEN,Female-only,224444,300979
+Birla Institute of Technology Deoghar Off-Campus,Electrical and Electronics Engineering,All India,EWS,Gender-Neutral,504670,994508
+Birla Institute of Technology Deoghar Off-Campus,Electrical and Electronics Engineering,All India,OBC-NCL,Gender-Neutral,473608,899959
+Birla Institute of Technology Deoghar Off-Campus,Electrical and Electronics Engineering,All India,SC,Gender-Neutral,448896,512073
+Birla Institute of Technology Deoghar Off-Campus,Electrical and Electronics Engineering,Home State,OPEN,Gender-Neutral,824821,1111485
+Birla Institute of Technology Deoghar Off-Campus,Electrical and Electronics Engineering,Home State,OPEN,Female-only,731694,731694
+Birla Institute of Technology Deoghar Off-Campus,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,193094,255029
+Birla Institute of Technology Deoghar Off-Campus,Electronics and Communication Engineering,All India,OPEN,Female-only,227227,249620
+Birla Institute of Technology Deoghar Off-Campus,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,262865,692700
+Birla Institute of Technology Deoghar Off-Campus,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,289268,721649
+Birla Institute of Technology Deoghar Off-Campus,Electronics and Communication Engineering,All India,SC,Gender-Neutral,354734,449327
+Birla Institute of Technology Deoghar Off-Campus,Electronics and Communication Engineering,Home State,OPEN,Gender-Neutral,446517,765687
+Birla Institute of Technology Deoghar Off-Campus,Electronics and Communication Engineering,Home State,OPEN,Female-only,421644,434101
+Birla Institute of Technology Deoghar Off-Campus,Electronics and Communication Engineering,Home State,SC,Gender-Neutral,842547,842547
+Birla Institute of Technology Deoghar Off-Campus,Mechanical Engineering,All India,OPEN,Gender-Neutral,269025,575840
+Birla Institute of Technology Deoghar Off-Campus,Mechanical Engineering,All India,OPEN,Female-only,325869,520677
+Birla Institute of Technology Deoghar Off-Campus,Mechanical Engineering,All India,EWS,Gender-Neutral,781424,781424
+Birla Institute of Technology Deoghar Off-Campus,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,638791,711000
+Birla Institute of Technology Deoghar Off-Campus,Mechanical Engineering,All India,SC,Gender-Neutral,595820,627883
+Birla Institute of Technology Deoghar Off-Campus,Mechanical Engineering,Home State,OPEN,Gender-Neutral,1191984,1191984
+Birla Institute of Technology Patna Off-Campus,Artificial Intelligence and Machine Learning,All India,OPEN,Gender-Neutral,97938,118778
+Birla Institute of Technology Patna Off-Campus,Artificial Intelligence and Machine Learning,All India,OPEN,Female-only,121415,145390
+Birla Institute of Technology Patna Off-Campus,Artificial Intelligence and Machine Learning,All India,EWS,Gender-Neutral,148852,154590
+Birla Institute of Technology Patna Off-Campus,Artificial Intelligence and Machine Learning,All India,OBC-NCL,Gender-Neutral,122515,169215
+Birla Institute of Technology Patna Off-Campus,Artificial Intelligence and Machine Learning,All India,SC,Gender-Neutral,286404,298090
+Birla Institute of Technology Patna Off-Campus,Artificial Intelligence and Machine Learning,All India,ST,Gender-Neutral,731423,1367475
+Birla Institute of Technology Patna Off-Campus,Artificial Intelligence and Machine Learning,Home State,OPEN,Gender-Neutral,149638,204231
+Birla Institute of Technology Patna Off-Campus,Artificial Intelligence and Machine Learning,Home State,OPEN,Female-only,156070,186043
+Birla Institute of Technology Patna Off-Campus,Artificial Intelligence and Machine Learning,Home State,EWS,Gender-Neutral,204774,240819
+Birla Institute of Technology Patna Off-Campus,Artificial Intelligence and Machine Learning,Home State,SC,Gender-Neutral,583289,645126
+Birla Institute of Technology Patna Off-Campus,Civil Engineering,All India,OPEN,Gender-Neutral,322651,562448
+Birla Institute of Technology Patna Off-Campus,Civil Engineering,All India,OPEN,Female-only,384241,425740
+Birla Institute of Technology Patna Off-Campus,Civil Engineering,All India,EWS,Gender-Neutral,745365,745365
+Birla Institute of Technology Patna Off-Campus,Civil Engineering,All India,OBC-NCL,Gender-Neutral,609082,1076922
+Birla Institute of Technology Patna Off-Campus,Civil Engineering,All India,SC,Gender-Neutral,567104,639145
+Birla Institute of Technology Patna Off-Campus,Civil Engineering,All India,ST,Gender-Neutral,888622,888622
+Birla Institute of Technology Patna Off-Campus,Civil Engineering,Home State,OPEN,Gender-Neutral,664691,937097
+Birla Institute of Technology Patna Off-Campus,Civil Engineering,Home State,OPEN,Female-only,649065,1002843
+Birla Institute of Technology Patna Off-Campus,Computer Science and Engineering,All India,OPEN,Gender-Neutral,86998,98719
+Birla Institute of Technology Patna Off-Campus,Computer Science and Engineering,All India,EWS,Gender-Neutral,120356,148969
+Birla Institute of Technology Patna Off-Campus,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,112000,128571
+Birla Institute of Technology Patna Off-Campus,Computer Science and Engineering,All India,SC,Gender-Neutral,285284,285284
+Birla Institute of Technology Patna Off-Campus,Computer Science and Engineering,All India,ST,Gender-Neutral,726594,726594
+Birla Institute of Technology Patna Off-Campus,Computer Science and Engineering,Home State,OPEN,Gender-Neutral,108336,146820
+Birla Institute of Technology Patna Off-Campus,Computer Science and Engineering,Home State,OPEN,Female-only,105653,111903
+Birla Institute of Technology Patna Off-Campus,Computer Science and Engineering,Home State,EWS,Gender-Neutral,157797,189859
+Birla Institute of Technology Patna Off-Campus,Computer Science and Engineering,Home State,SC,Gender-Neutral,482927,539937
+Birla Institute of Technology Patna Off-Campus,Electrical and Electronics Engineering,All India,OPEN,Gender-Neutral,172855,366074
+Birla Institute of Technology Patna Off-Campus,Electrical and Electronics Engineering,All India,OPEN,Female-only,211233,276637
+Birla Institute of Technology Patna Off-Campus,Electrical and Electronics Engineering,All India,EWS,Gender-Neutral,411859,927999
+Birla Institute of Technology Patna Off-Campus,Electrical and Electronics Engineering,All India,OBC-NCL,Gender-Neutral,389124,1153004
+Birla Institute of Technology Patna Off-Campus,Electrical and Electronics Engineering,All India,SC,Gender-Neutral,415999,467687
+Birla Institute of Technology Patna Off-Campus,Electrical and Electronics Engineering,Home State,OPEN,Gender-Neutral,394392,1141719
+Birla Institute of Technology Patna Off-Campus,Electrical and Electronics Engineering,Home State,OPEN,Female-only,519397,854329
+Birla Institute of Technology Patna Off-Campus,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,138009,196089
+Birla Institute of Technology Patna Off-Campus,Electronics and Communication Engineering,All India,OPEN,Female-only,151108,186470
+Birla Institute of Technology Patna Off-Campus,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,223330,289282
+Birla Institute of Technology Patna Off-Campus,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,202486,262970
+Birla Institute of Technology Patna Off-Campus,Electronics and Communication Engineering,All India,SC,Gender-Neutral,360141,399452
+Birla Institute of Technology Patna Off-Campus,Electronics and Communication Engineering,Home State,OPEN,Gender-Neutral,220553,442160
+Birla Institute of Technology Patna Off-Campus,Electronics and Communication Engineering,Home State,OPEN,Female-only,197680,390664
+Birla Institute of Technology Patna Off-Campus,Electronics and Communication Engineering,Home State,EWS,Gender-Neutral,539965,798586
+Birla Institute of Technology Patna Off-Campus,Electronics and Communication Engineering,Home State,SC,Gender-Neutral,654447,819738
+Birla Institute of Technology Patna Off-Campus,Mathematics and Computing (5 Years Integrated Master of Science),All India,OPEN,Gender-Neutral,143384,178242
+Birla Institute of Technology Patna Off-Campus,Mathematics and Computing (5 Years Integrated Master of Science),All India,OPEN,Female-only,210123,210123
+Birla Institute of Technology Patna Off-Campus,Mathematics and Computing (5 Years Integrated Master of Science),All India,EWS,Gender-Neutral,189437,683452
+Birla Institute of Technology Patna Off-Campus,Mathematics and Computing (5 Years Integrated Master of Science),All India,OBC-NCL,Gender-Neutral,228378,268282
+Birla Institute of Technology Patna Off-Campus,Mathematics and Computing (5 Years Integrated Master of Science),All India,SC,Gender-Neutral,342634,373601
+Birla Institute of Technology Patna Off-Campus,Mathematics and Computing (5 Years Integrated Master of Science),Home State,OPEN,Gender-Neutral,222602,357125
+Birla Institute of Technology Patna Off-Campus,Mathematics substitute text,Home State,OPEN,Female-only,802300,940604
+Birla Institute of Technology Patna Off-Campus,Mechanical Engineering,All India,OPEN,Gender-Neutral,261923,619460
+Birla Institute of Technology Patna Off-Campus,Mechanical Engineering,All India,OPEN,Female-only,290915,527417
+Birla Institute of Technology Patna Off-Campus,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,777746,777746
+Birla Institute of Technology Patna Off-Campus,Mechanical Engineering,All India,SC,Gender-Neutral,625967,715336
 Indian Institute of Handloom Technology Salem,Handloom and Textile Technology,All India,OPEN,Gender-Neutral,457304,592456
 Indian Institute of Handloom Technology Salem,Handloom and Textile Technology,All India,SC,Gender-Neutral,675903,897207
 Indian Institute of Handloom Technology Salem,Handloom and Textile Technology,All India,ST,Gender-Neutral,890573,890573
-Central University of Jharkhand,Civil Engineering,All India,OPEN,Gender-Neutral,261407,296854
-Central University of Jharkhand,Civil Engineering,All India,EWS,Gender-Neutral,381045,474114
-Central University of Jharkhand,Civil Engineering,All India,OBC-NCL,Gender-Neutral,354865,678610
-Central University of Jharkhand,Civil Engineering,All India,SC,Gender-Neutral,447378,495728
-Central University of Jharkhand,Computer Science and Engineering,All India,OPEN,Gender-Neutral,173147,191657
-Central University of Jharkhand,Computer Science and Engineering,All India,EWS,Gender-Neutral,209241,249748
-Central University of Jharkhand,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,198447,213580
-Central University of Jharkhand,Computer Science and Engineering,All India,SC,Gender-Neutral,284753,284753
-Central University of Jharkhand,Computer Science and Engineering,All India,ST,Gender-Neutral,584599,584599
-Central University of Jharkhand,Electrical Engineering,All India,OPEN,Gender-Neutral,261534,285366
-Central University of Jharkhand,Electrical Engineering,All India,EWS,Gender-Neutral,344114,462977
-Central University of Jharkhand,Electrical Engineering,All India,OBC-NCL,Gender-Neutral,292118,356601
-Central University of Jharkhand,Electrical Engineering,All India,SC,Gender-Neutral,359891,434748
-Central University of Jharkhand,Metallurgical and Materials Engineering,All India,OPEN,Gender-Neutral,445395,591804
-Central University of Jharkhand,Metallurgical and Materials Engineering,All India,OBC-NCL,Gender-Neutral,981688,1177237
-Central University of Jharkhand,Metallurgical and Materials Engineering,All India,SC,Gender-Neutral,659787,722890
-Gati Shakti Vishwavidyalaya Vadodara,Artificial Intelligence and Data Science Transportation and Logistics,All India,OPEN,Gender-Neutral,81723,83219
-Gati Shakti Vishwavidyalaya Vadodara,Artificial Intelligence and Data Science Transportation and Logistics,All India,EWS,Gender-Neutral,91984,92573
-Gati Shakti Vishwavidyalaya Vadodara,Artificial Intelligence and Data Science Transportation and Logistics,All India,OBC-NCL,Gender-Neutral,99461,108965
-Gati Shakti Vishwavidyalaya Vadodara,Artificial Intelligence and Data Science Transportation and Logistics,All India,SC,Gender-Neutral,259615,260669
-Gati Shakti Vishwavidyalaya Vadodara,Artificial Intelligence and Data Science Transportation and Logistics,All India,ST,Gender-Neutral,401649,401649
-Gati Shakti Vishwavidyalaya Vadodara,Aviation Engineering,All India,OPEN,Gender-Neutral,100284,105239
-Gati Shakti Vishwavidyalaya Vadodara,Aviation Engineering,All India,EWS,Gender-Neutral,131688,131688
-Gati Shakti Vishwavidyalaya Vadodara,Aviation Engineering,All India,OBC-NCL,Gender-Neutral,144552,192221
-Gati Shakti Vishwavidyalaya Vadodara,Aviation Engineering,All India,SC,Gender-Neutral,330541,330541
-Gati Shakti Vishwavidyalaya Vadodara,Civil Engineering Rail Engineering,All India,OPEN,Gender-Neutral,186744,212417
-Gati Shakti Vishwavidyalaya Vadodara,Civil Engineering Rail Engineering,All India,OPEN,Female-only,160448,161769
-Gati Shakti Vishwavidyalaya Vadodara,Civil Engineering Rail Engineering,All India,EWS,Gender-Neutral,212767,261630
-Gati Shakti Vishwavidyalaya Vadodara,Civil Engineering Rail Engineering,All India,EWS,Female-only,243783,243783
-Gati Shakti Vishwavidyalaya Vadodara,Civil Engineering Rail Engineering,All India,OBC-NCL,Gender-Neutral,227281,284912
-Gati Shakti Vishwavidyalaya Vadodara,Civil Engineering Rail Engineering,All India,OBC-NCL,Female-only,250374,267061
-Gati Shakti Vishwavidyalaya Vadodara,Civil Engineering Rail Engineering,All India,SC,Gender-Neutral,390795,404058
-Gati Shakti Vishwavidyalaya Vadodara,Civil Engineering Rail Engineering,All India,ST,Gender-Neutral,796932,796932
-Gati Shakti Vishwavidyalaya Vadodara,Civil Engineering Rail Engineering,All India,ST,Female-only,777673,777673
-Gati Shakti Vishwavidyalaya Vadodara,Electrical Engineering Rail Engineering,All India,OPEN,Gender-Neutral,121190,135156
-Gati Shakti Vishwavidyalaya Vadodara,Electrical Engineering Rail Engineering,All India,EWS,Gender-Neutral,139364,155889
-Gati Shakti Vishwavidyalaya Vadodara,Electrical Engineering Rail Engineering,All India,OBC-NCL,Gender-Neutral,172690,185276
-Gati Shakti Vishwavidyalaya Vadodara,Electrical Engineering Rail Engineering,All India,SC,Gender-Neutral,337733,367345
-Gati Shakti Vishwavidyalaya Vadodara,Electrical Engineering Rail Engineering,All India,ST,Gender-Neutral,661428,661428
-Gati Shakti Vishwavidyalaya Vadodara,Electronics and Communication Engineering Rail Engineering,All India,OPEN,Gender-Neutral,100580,108136
-Gati Shakti Vishwavidyalaya Vadodara,Electronics and Communication Engineering Rail Engineering,All India,OPEN,Female-only,85096,85096
-Gati Shakti Vishwavidyalaya Vadodara,Electronics and Communication Engineering Rail Engineering,All India,EWS,Gender-Neutral,108673,127613
-Gati Shakti Vishwavidyalaya Vadodara,Electronics and Communication Engineering Rail Engineering,All India,OBC-NCL,Gender-Neutral,118903,128205
-Gati Shakti Vishwavidyalaya Vadodara,Electronics and Communication Engineering Rail Engineering,All India,OBC-NCL,Female-only,151914,151914
-Gati Shakti Vishwavidyalaya Vadodara,Electronics and Communication Engineering Rail Engineering,All India,SC,Gender-Neutral,298893,329309
-Gati Shakti Vishwavidyalaya Vadodara,Electronics and Communication Engineering Rail Engineering,All India,SC,Female-only,304055,304055
-Gati Shakti Vishwavidyalaya Vadodara,Electronics and Communication Engineering Rail Engineering,All India,ST,Gender-Neutral,566790,566790
-Gati Shakti Vishwavidyalaya Vadodara,Mechanical Engineering Rail Engineering,All India,OPEN,Gender-Neutral,133059,157878
-Gati Shakti Vishwavidyalaya Vadodara,Mechanical Engineering Rail Engineering,All India,OPEN,Female-only,146460,146460
-Gati Shakti Vishwavidyalaya Vadodara,Mechanical Engineering Rail Engineering,All India,EWS,Gender-Neutral,169664,189242
-Gati Shakti Vishwavidyalaya Vadodara,Mechanical Engineering Rail Engineering,All India,OBC-NCL,Gender-Neutral,195930,237278
-Gati Shakti Vishwavidyalaya Vadodara,Mechanical Engineering Rail Engineering,All India,SC,Gender-Neutral,360932,383441
-Gati Shakti Vishwavidyalaya Vadodara,Mechanical Engineering Rail Engineering,All India,SC,Female-only,382375,382375
-Gati Shakti Vishwavidyalaya Vadodara,Mechanical Engineering Rail Engineering,All India,ST,Gender-Neutral,652791,652791
-National Institute of Electronics and Information Technology Ropar Punjab,Computer Science and Engineering (AI and ML),All India,OPEN,Gender-Neutral,88649,102823
-National Institute of Electronics and Information Technology Ropar Punjab,Computer Science and Engineering (AI and ML),All India,EWS,Gender-Neutral,105741,130362
-National Institute of Electronics and Information Technology Ropar Punjab,Computer Science and Engineering (AI and ML),All India,OBC-NCL,Gender-Neutral,139807,162143
-National Institute of Electronics and Information Technology Ropar Punjab,Computer Science and Engineering (AI and ML),All India,SC,Gender-Neutral,273457,280138
-National Institute of Electronics and Information Technology Ropar Punjab,Computer Science and Engineering (AI and ML),All India,ST,Gender-Neutral,665274,665274
-National Institute of Electronics and Information Technology Patna Bihar,Computer Science and Engineering,All India,OPEN,Gender-Neutral,122249,139158
-National Institute of Electronics and Information Technology Patna Bihar,Computer Science and Engineering,All India,EWS,Gender-Neutral,146374,205537
-National Institute of Electronics and Information Technology Patna Bihar,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,144838,185129
-National Institute of Electronics and Information Technology Patna Bihar,Computer Science and Engineering,All India,SC,Gender-Neutral,299474,340906
-National Institute of Electronics and Information Technology Ajmer Rajasthan,Computer Science and Engineering (Internet of Things Cyber Security including Block Chain Technology),All India,OPEN,Gender-Neutral,128493,166386
-National Institute of Electronics and Information Technology Ajmer Rajasthan,Computer Science and Engineering (Internet of Things Cyber Security including Block Chain Technology),All India,EWS,Gender-Neutral,169794,196830
-National Institute of Electronics and Information Technology Ajmer Rajasthan,Computer Science and Engineering (Internet of Things Cyber Security including Block Chain Technology),All India,OBC-NCL,Gender-Neutral,182942,213331
-National Institute of Electronics and Information Technology Ajmer Rajasthan,Computer Science and Engineering (Internet of Things Cyber Security including Block Chain Technology),All India,SC,Gender-Neutral,339564,368582
-National Institute of Electronics and Information Technology Gorakhpur UP,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,182534,259876
-National Institute of Electronics and Information Technology Gorakhpur UP,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,271098,380331
-National Institute of Electronics and Information Technology Gorakhpur UP,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,264692,328298
-National Institute of Electronics and Information Technology Gorakhpur UP,Electronics and Communication Engineering,All India,SC,Gender-Neutral,369925,413961
-National Institute of Electronics and Information Technology Gorakhpur UP,Electronics and Communication Engineering,All India,ST,Gender-Neutral,793286,845462
-National Institute of Electronics and Information Technology Gorakhpur UP,Computer Science and Engineering,All India,OPEN,Gender-Neutral,133252,178718
-National Institute of Electronics and Information Technology Gorakhpur UP,Computer Science and Engineering,All India,EWS,Gender-Neutral,180246,242273
-National Institute of Electronics and Information Technology Gorakhpur UP,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,181676,236269
-National Institute of Electronics and Information Technology Gorakhpur UP,Computer Science and Engineering,All India,SC,Gender-Neutral,320747,345842
-Rajiv Gandhi National Aviation University Fursatganj Amethi UP,Aerospace Engineering,All India,OPEN,Gender-Neutral,160643,199133
-Rajiv Gandhi National Aviation University Fursatganj Amethi UP,Aerospace Engineering,All India,EWS,Gender-Neutral,221448,270002
-Rajiv Gandhi National Aviation University Fursatganj Amethi UP,Aerospace Engineering,All India,OBC-NCL,Gender-Neutral,200417,348425
-Rajiv Gandhi National Aviation University Fursatganj Amethi UP,Aerospace Engineering,All India,SC,Gender-Neutral,388654,421975
-Rajiv Gandhi National Aviation University Fursatganj Amethi UP,Aerospace Engineering,All India,ST,Gender-Neutral,636304,636304
-Rajiv Gandhi National Aviation University Fursatganj Amethi UP,Electronics and Communication Engineering Avionics,All India,OPEN,Gender-Neutral,206892,265455
-Rajiv Gandhi National Aviation University Fursatganj Amethi UP,Electronics and Communication Engineering Avionics,All India,EWS,Gender-Neutral,282576,319133
-Rajiv Gandhi National Aviation University Fursatganj Amethi UP,Electronics and Communication Engineering Avionics,All India,OBC-NCL,Gender-Neutral,266450,393603
-Rajiv Gandhi National Aviation University Fursatganj Amethi UP,Electronics and Communication Engineering Avionics,All India,SC,Gender-Neutral,372181,439363
-Rajiv Gandhi National Aviation University Fursatganj Amethi UP,Electronics and Communication Engineering Avionics,All India,ST,Gender-Neutral,693053,855981
-Islamic University of Science and Technology Kashmir,Architecture,All India,OPEN,Gender-Neutral,10045,19216
-Islamic University of Science and Technology Kashmir,Architecture,All India,SC,Gender-Neutral,21507,23838
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Artificial Intelligenece and Data Science (Transportation and Logistics),All India,OPEN,Gender-Neutral,81723,83219
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Artificial Intelligenece and Data Science (Transportation and Logistics),All India,EWS,Gender-Neutral,91984,92573
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Artificial Intelligenece and Data Science (Transportation and Logistics),All India,OBC-NCL,Gender-Neutral,99461,108965
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Artificial Intelligenece and Data Science (Transportation and Logistics),All India,SC,Gender-Neutral,259615,260669
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Artificial Intelligenece and Data Science (Transportation and Logistics),All India,ST,Gender-Neutral,401649,401649
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Aviation Engineering,All India,OPEN,Gender-Neutral,100284,105239
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Aviation Engineering,All India,EWS,Gender-Neutral,131688,131688
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Aviation Engineering,All India,OBC-NCL,Gender-Neutral,144552,192221
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Aviation Engineering,All India,SC,Gender-Neutral,330541,330541
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Civil Engineering (Rail Engineering),All India,OPEN,Gender-Neutral,186744,212417
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Civil Engineering (Rail Engineering),All India,OPEN,Female-only,160448,161769
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Civil Engineering (Rail Engineering),All India,EWS,Gender-Neutral,212767,261630
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Civil Engineering (Rail Engineering),All India,EWS,Female-only,243783,243783
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Civil Engineering (Rail Engineering),All India,OBC-NCL,Gender-Neutral,227281,284912
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Civil Engineering (Rail Engineering),All India,OBC-NCL,Female-only,250374,267061
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Civil Engineering (Rail Engineering),All India,SC,Gender-Neutral,390795,404058
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Civil Engineering (Rail Engineering),All India,ST,Gender-Neutral,796932,796932
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Civil Engineering (Rail Engineering),All India,ST,Female-only,777673,777673
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electrical Engineering (Rail Engineering),All India,OPEN,Gender-Neutral,121190,135156
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electrical Engineering (Rail Engineering),All India,EWS,Gender-Neutral,139364,155889
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electrical Engineering (Rail Engineering),All India,OBC-NCL,Gender-Neutral,172690,185276
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electrical Engineering (Rail Engineering),All India,SC,Gender-Neutral,337733,367345
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electrical Engineering (Rail Engineering),All India,ST,Gender-Neutral,661428,661428
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electronics & Communication Engineering (Rail Engineering),All India,OPEN,Gender-Neutral,100580,108136
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electronics & Communication Engineering (Rail Engineering),All India,OPEN,Female-only,85096,85096
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electronics & Communication Engineering (Rail Engineering),All India,EWS,Gender-Neutral,108673,127613
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electronics & Communication Engineering (Rail Engineering),All India,OBC-NCL,Gender-Neutral,118903,128205
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electronics & Communication Engineering (Rail Engineering),All India,OBC-NCL,Female-only,151914,151914
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electronics & Communication Engineering (Rail Engineering),All India,SC,Gender-Neutral,298893,329309
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electronics & Communication Engineering (Rail Engineering),All India,SC,Female-only,304055,304055
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Electronics & Communication Engineering (Rail Engineering),All India,ST,Gender-Neutral,566790,566790
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Mechanical Engineering (Rail Engineering),All India,OPEN,Gender-Neutral,133059,157878
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Mechanical Engineering (Rail Engineering),All India,OPEN,Female-only,146460,146460
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Mechanical Engineering (Rail Engineering),All India,EWS,Gender-Neutral,169664,189242
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Mechanical Engineering (Rail Engineering),All India,OBC-NCL,Gender-Neutral,195930,237278
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Mechanical Engineering (Rail Engineering),All India,SC,Gender-Neutral,360932,383441
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Mechanical Engineering (Rail Engineering),All India,SC,Female-only,382375,382375
+Gati Shakti Vishwavidyalaya Vadodara,B.Tech in Mechanical Engineering (Rail Engineering),All India,ST,Gender-Neutral,652791,652791
+CU Jharkhand,Civil Engineering,All India,OPEN,Gender-Neutral,261407,296854
+CU Jharkhand,Civil Engineering,All India,EWS,Gender-Neutral,381045,474114
+CU Jharkhand,Civil Engineering,All India,OBC-NCL,Gender-Neutral,354865,678610
+CU Jharkhand,Civil Engineering,All India,SC,Gender-Neutral,447378,495728
+CU Jharkhand,Computer Science and Engineering,All India,OPEN,Gender-Neutral,173147,191657
+CU Jharkhand,Computer Science and Engineering,All India,EWS,Gender-Neutral,209241,249748
+CU Jharkhand,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,198447,213580
+CU Jharkhand,Computer Science and Engineering,All India,SC,Gender-Neutral,284753,284753
+CU Jharkhand,Computer Science and Engineering,All India,ST,Gender-Neutral,584599,584599
+CU Jharkhand,Electrical Engineering,All India,OPEN,Gender-Neutral,261534,285366
+CU Jharkhand,Electrical Engineering,All India,EWS,Gender-Neutral,344114,462977
+CU Jharkhand,Electrical Engineering,All India,OBC-NCL,Gender-Neutral,292118,356601
+CU Jharkhand,Electrical Engineering,All India,SC,Gender-Neutral,359891,434748
+CU Jharkhand,Metallurgical and Materials Engineering,All India,OPEN,Gender-Neutral,445395,591804
+CU Jharkhand,Metallurgical and Materials Engineering,All India,OBC-NCL,Gender-Neutral,981688,1177237
+CU Jharkhand,Metallurgical and Materials Engineering,All India,SC,Gender-Neutral,659787,722890
+National Institute of Electronics and Information Technology Ropar (Punjab),B.Tech in CSE (AI and ML),All India,OPEN,Gender-Neutral,88649,102823
+National Institute of Electronics and Information Technology Ropar (Punjab),B.Tech in CSE (AI and ML),All India,EWS,Gender-Neutral,105741,130362
+National Institute of Electronics and Information Technology Ropar (Punjab),B.Tech in CSE (AI and ML),All India,OBC-NCL,Gender-Neutral,139807,162143
+National Institute of Electronics and Information Technology Ropar (Punjab),B.Tech in CSE (Al and ML),All India,SC,Gender-Neutral,273457,280138
+National Institute of Electronics and Information Technology Ropar (Punjab),B.Tech in CSE (AI and ML),All India,ST,Gender-Neutral,665274,665274
+National Institute of Electronics and Information Technology Patna (Bihar),Computer Science and Engineering,All India,OPEN,Gender-Neutral,122249,139158
+National Institute of Electronics and Information Technology Patna (Bihar),Computer Science and Engineering,All India,EWS,Gender-Neutral,146374,205537
+National Institute of Electronics and Information Technology Patna (Bihar),Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,144838,185129
+National Institute of Electronics and Information Technology Patna (Bihar),Computer Science and Engineering,All India,SC,Gender-Neutral,299474,340906
+National Institute of Electronics and Information Technology Ajmer (Rajasthan),Computer Science and Engineering (Internet of Things Cyber Security including Block Chain Technology),All India,OPEN,Gender-Neutral,128493,166386
+National Institute of Electronics and Information Technology Ajmer (Rajasthan),Computer Science and Engineering (Internet of Things Cyber Security including Block Chain Technology),All India,EWS,Gender-Neutral,169794,196830
+National Institute of Electronics and Information Technology Ajmer (Rajasthan),Computer Science and Engineering (Internet of Things Cyber Security including Block Chain Technology),All India,OBC-NCL,Gender-Neutral,182942,213331
+National Institute of Electronics and Information Technology Ajmer (Rajasthan),Computer Science and Engineering (Internet of Things Cyber Security including Block Chain Technology),All India,SC,Gender-Neutral,339564,368582
+National Institute of Electronics and Information Technology Gorakhpur (UP),B. Tech in Electronics and Communication Engineering with minor in Wearable Electronics,All India,OPEN,Gender-Neutral,182534,259876
+National Institute of Electronics and Information Technology Gorakhpur (UP),B. Tech in Electronics and Communication Engineering with minor in Wearable Electronics,All India,EWS,Gender-Neutral,271098,380331
+National Institute of Electronics and Information Technology Gorakhpur (UP),B. Tech in Electronics and Communication Engineering with minor in Wearable Electronics,All India,OBC-NCL,Gender-Neutral,264692,328298
+National Institute of Electronics and Information Technology Gorakhpur (UP),B. Tech in Electronics and Communication Engineering with minor in Wearable Electronics,All India,SC,Gender-Neutral,369925,413961
+National Institute of Electronics and Information Technology Gorakhpur (UP),B. Tech in Electronics and Communication Engineering with minor in Wearable Electronics,All India,ST,Gender-Neutral,793286,845462
+National Institute of Electronics and Information Technology Gorakhpur (UP),Computer Science and Engineering with minor in Al and ML,All India,OPEN,Gender-Neutral,133252,178718
+National Institute of Electronics and Information Technology Gorakhpur (UP),Computer Science and Engineering with minor in Al and ML,All India,EWS,Gender-Neutral,180246,242273
+National Institute of Electronics and Information Technology Gorakhpur (UP),Computer Science and Engineering with minor in Al and ML,All India,OBC-NCL,Gender-Neutral,181676,236269
+National Institute of Electronics and Information Technology Gorakhpur (UP),Computer Science and Engineering with minor in Al and ML,All India,SC,Gender-Neutral,320747,345842
+Rajiv Gandhi National Aviation University Fursatganj Amethi (UP),Aerospace Engineering,All India,OPEN,Gender-Neutral,160643,199133
+Rajiv Gandhi National Aviation University Fursatganj Amethi (UP),Aerospace Engineering,All India,EWS,Gender-Neutral,221448,270002
+Rajiv Gandhi National Aviation University Fursatganj Amethi (UP),Aerospace Engineering,All India,OBC-NCL,Gender-Neutral,200417,348425
+Rajiv Gandhi National Aviation University Fursatganj Amethi (UP),Aerospace Engineering,All India,SC,Gender-Neutral,388654,421975
+Rajiv Gandhi National Aviation University Fursatganj Amethi (UP),Aerospace Engineering,All India,ST,Gender-Neutral,636304,636304
+Rajiv Gandhi National Aviation University Fursatganj Amethi (UP),Electronics and Communication Engineering (Avionics),All India,OPEN,Gender-Neutral,206892,265455
+Rajiv Gandhi National Aviation University Fursatganj Amethi (UP),Electronics and Communication Engineering (Avionics),All India,EWS,Gender-Neutral,282576,319133
+Rajiv Gandhi National Aviation University Fursatganj Amethi (UP),Electronics and Communication Engineering (Avionics),All India,OBC-NCL,Gender-Neutral,266450,393603
+Rajiv Gandhi National Aviation University Fursatganj Amethi (UP),Electronics and Communication Engineering (Avionics),All India,SC,Gender-Neutral,372181,439363
+Rajiv Gandhi National Aviation University Fursatganj Amethi (UP),Electronics and Communication Engineering (Avionics),All India,ST,Gender-Neutral,693053,855981
+Islamic University of Science and Technology Kashmir,Architecture (5 Years Bachelor of Architecture),All India,OPEN,Gender-Neutral,10045,19216
+Islamic University of Science and Technology Kashmir,Architecture (5 Years Bachelor of Architecture),All India,SC,Gender-Neutral,21507,23838
 Shri G. S. Institute of Technology and Science Indore,Biomedical Engineering,All India,OPEN,Gender-Neutral,140134,193204
 Shri G. S. Institute of Technology and Science Indore,Civil Engineering,All India,OPEN,Gender-Neutral,106565,107419
 Shri G. S. Institute of Technology and Science Indore,Electrical Engineering,All India,OPEN,Gender-Neutral,72528,75618
@@ -906,3 +919,6 @@ Shri G. S. Institute of Technology and Science Indore,Electronics and Telecommun
 Shri G. S. Institute of Technology and Science Indore,Industrial and Production Engineering,All India,OPEN,Gender-Neutral,126332,152178
 Shri G. S. Institute of Technology and Science Indore,Information Technology,All India,OPEN,Gender-Neutral,48712,48894
 Shri G. S. Institute of Technology and Science Indore,Mechanical Engineering,All India,OPEN,Gender-Neutral,87770,89523
+Delhi Technological University Delhi,Electronics and Communication Engineering for DASA-Non CIWG,DASA-Non CIWG,OPEN,Gender-Neutral,1117096,1117096
+Delhi Technological University Delhi,Mechanical Engineering for DASA-CIWG,DASA-CIWG,OPEN,Gender-Neutral,473418,473418
+Indira Gandhi Delhi Technical University for Women New Delhi,Computer Science and Engineering for DASA-CIWG,DASA-CIWG,OPEN,Gender-Neutral,672213,672213

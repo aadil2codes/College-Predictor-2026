@@ -1,65 +1,520 @@
 College,Branch,Quota,Category,Gender,Opening Rank,Closing Rank
-Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,OPEN,Gender-Neutral,63989,66967
-Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,OPEN,Female-only,90455,97386
-Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,EWS,Gender-Neutral,87810,92513
-Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,EWS,Female-only,108614,114310
-Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,78786,87157
-Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,OBC-NCL,Female-only,108433,121761
-Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,SC,Gender-Neutral,236193,245043
-Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,SC,Female-only,238442,238442
-Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,ST,Gender-Neutral,462394,513024
-Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,ST,Female-only,422529,442755
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Computer Science and Engineering,All India,OPEN,Gender-Neutral,11090,11201
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Computer Science and Engineering,All India,OBC-NCL,Female-only,25786,25786
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Electrical and Electronics Engineering,All India,OPEN,Gender-Neutral,21853,22339
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Electrical and Electronics Engineering,All India,OPEN,Female-only,34279,34279
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Electrical and Electronics Engineering,All India,EWS,Gender-Neutral,23095,23095
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Electrical and Electronics Engineering,All India,SC,Gender-Neutral,117149,117149
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Integrated B. Tech.(IT) and M. Tech (IT),All India,OPEN,Gender-Neutral,14574,14765
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Integrated B. Tech.(IT) and MBA,All India,OPEN,Gender-Neutral,17370,17622
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Integrated B. Tech. (IT) and MBA,All India,OPEN,Female-only,25726,27450
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Integrated B. Tech. (IT) and MBA,All India,EWS,Gender-Neutral,19223,19223
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Mathematics and Scientific Computing,All India,OPEN,Gender-Neutral,14447,14447
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Mathematics and Scientific Computing,All India,OPEN,Female-only,25117,25117
+Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior,Mathematics and Scientific Computing,All India,SC,Gender-Neutral,103386,103386
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Artificial Intelligence and Data Engineering,All India,OPEN,Gender-Neutral,37155,37763
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Artificial Intelligence and Data Engineering,All India,OPEN,Female-only,56788,56788
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Artificial Intelligence and Data Engineering,All India,OPEN PwD,Gender-Neutral,1296716,1296716
+Indian Institute of Information Technology (IIIT) Kota Rajasthan,Artificial Intelligence and Data Engineering,All India,EWS,Gender-Neutral,42326,42889
+Indian Institute of Information Technology (IIIT) Kota Rajasthan,Artificial Intelligence and Data Engineering,All India,OBC-NCL,Gender-Neutral,45135,48182
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Artificial Intelligence and Data Engineering,All India,OBC-NCL,Female-only,74129,74129
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Computer Science and Engineering,All India,OPEN,Gender-Neutral,33401,33434
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Computer Science and Engineering,All India,OPEN,Female-only,45042,45042
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Computer Science and Engineering,All India,OPEN PwD,Gender-Neutral,988673,988673
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Computer Science and Engineering,All India,OPEN PwD,Female-only,914975,914975
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Computer Science and Engineering,All India,EWS,Gender-Neutral,41498,42415
+Indian Institute of Information Technology (IIIT) Kota Rajasthan,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,43606,44688
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Computer Science and Engineering,All India,OBC-NCL,Female-only,66578,71604
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Computer Science and Engineering,All India,SC,Female-only,207053,207053
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,46488,48011
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Electronics and Communication Engineering,All India,OPEN,Female-only,62498,65994
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,53727,57693
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Electronics and Communication Engineering,All India,EWS,Female-only,76446,76446
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,61297,64226
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,81427,82122
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Electronics and Communication Engineering,All India,SC,Gender-Neutral,207156,207156
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Electronics and Communication Engineering,All India,SC,Female-only,230679,230679
+Indian Institute of Information Technology (IIIT)Kota Rajasthan,Electronics and Communication Engineering,All India,ST,Gender-Neutral,328432,328432
+Indian Institute of Information Technology Guwahati,Computer Science and Engineering,All India,OPEN,Gender-Neutral,28156,28255
+Indian Institute of Information Technology Guwahati,Computer Science and Engineering,All India,OPEN,Female-only,43557,43557
+Indian Institute of Information Technology Guwahati,Computer Science and Engineering,All India,EWS,Gender-Neutral,34518,34877
+Indian Institute of Information Technology Guwahati,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,38657,39759
+Indian Institute of Information Technology Guwahati,Computer Science and Engineering,All India,OBC-NCL,Female-only,64363,69861
+Indian Institute of Information Technology Guwahati,Computer Science and Engineering,All India,SC,Gender-Neutral,164471,164471
+Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,43987,44592
+Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,OPEN,Female-only,68411,75761
+Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,53380,60689
+Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,EWS,Female-only,79828,79828
+Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,56559,59649
+Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,89527,89527
+Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,SC,Gender-Neutral,201491,201491
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering ( Artificial Intelligence & Data Science),All India,OPEN,Gender-Neutral,45719,48636
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering ( Artificial Intelligence & Data Science),All India,EWS,Gender-Neutral,65970,69777
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering ( Artificial Intelligence & Data Science),All India,OBC-NCL,Gender-Neutral,72703,76282
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering,All India,OPEN,Gender-Neutral,58514,62216
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering,All India,EWS,Gender-Neutral,78505,87767
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering,All India,EWS,Female-only,93143,93143
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,75741,82882
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering,All India,OBC-NCL,Female-only,91155,91777
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering,All India,SC,Gender-Neutral,216206,216206
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering,All India,ST,Gender-Neutral,416322,423801
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering (Cyber Security),All India,OPEN,Gender-Neutral,60492,64936
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering (Cyber Security),All India,OPEN,Female-only,78802,78802
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering (Cyber Security),All India,EWS,Gender-Neutral,72504,94003
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering (Cyber Security),All India,OBC-NCL,Gender-Neutral,77530,83395
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering (Cyber Security),All India,OBC-NCL,Female-only,105988,105988
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering (Cyber Security),All India,SC,Gender-Neutral,222417,227547
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Computer Science and Engineering (Cyber Security),All India,ST,Gender-Neutral,453928,453928
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,66914,73412
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Electronics and Communication Engineering,All India,OPEN,Female-only,73694,73694
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,89307,98219
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Electronics and Communication Engineering,All India,EWS,Female-only,111248,111248
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,89261,96400
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,127261,127261
+Indian Institute of Information Technology(IIIT) Kalyani West Bengal,Electronics and Communication Engineering,All India,SC,Gender-Neutral,238750,243842
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,Computer Science and Engineering,All India,OPEN,Gender-Neutral,39726,41492
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,57874,61875
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,Computer Science and Engineering,All India,SC,Gender-Neutral,197545,197545
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,Computer Science and Engineering,All India,ST,Gender-Neutral,417434,417434
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,CSE (Data Science & Analytics),All India,OPEN,Gender-Neutral,48493,49257
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,CSE (Data Science & Analytics),All India,EWS,Gender-Neutral,54245,54245
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,CSE (Data Science & Analytics),All India,OBC-NCL,Gender-Neutral,61745,63835
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,CSE (Data Science & Analytics),All India,SC,Gender-Neutral,202405,202405
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,Information Technology,All India,OPEN,Gender-Neutral,50847,52399
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,Information Technology,All India,EWS,Gender-Neutral,57875,58244
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,Information Technology,All India,OBC-NCL,Gender-Neutral,63861,67471
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,Information Technology,All India,SC,Gender-Neutral,211804,211804
+Indian Institute of Information Technology(IIIT) Kilohrad Sonepat Haryana,Information Technology,All India,ST,Gender-Neutral,431649,431649
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering,All India,OPEN,Gender-Neutral,42177,42692
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering,All India,EWS,Gender-Neutral,54257,55304
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering,All India,EWS,Female-only,67463,67463
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,55550,59699
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering,All India,SC,Gender-Neutral,200387,200387
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering,All India,ST,Gender-Neutral,390461,390461
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering (Cyber Security),All India,OPEN,Gender-Neutral,46041,47183
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering (Cyber Security),All India,EWS,Gender-Neutral,56405,56683
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering (Cyber Security),All India,OBC-NCL,Gender-Neutral,59930,63851
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering (Data Science),All India,OPEN,Gender-Neutral,44101,45713
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering (Data Science),All India,EWS,Gender-Neutral,56009,56009
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering (Data Science),All India,OBC-NCL,Gender-Neutral,60531,63037
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Computer Science and Engineering (Data Science),All India,ST,Gender-Neutral,401583,401583
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,57676,60792
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,65965,77644
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,71837,79526
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,88263,88263
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Electronics and Communication Engineering,All India,SC,Gender-Neutral,222808,227809
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Electronics and Communication Engineering,All India,SC,Female-only,262098,262098
+Indian Institute of Information Technology(IIIT) Una Himachal Pradesh,Electronics and Communication Engineering,All India,ST,Gender-Neutral,529455,554969
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Artificial Intelligence and Data Science,All India,OPEN,Gender-Neutral,30392,30479
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Artificial Intelligence and Data Science,All India,OPEN,Female-only,41618,41618
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Artificial Intelligence and Data Science,All India,OPEN PwD,Gender-Neutral,568978,568978
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Artificial Intelligence and Data Science,All India,EWS,Gender-Neutral,35766,36610
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Artificial Intelligence and Data Science,All India,OBC-NCL,Gender-Neutral,41091,41304
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Artificial Intelligence and Data Science,All India,OBC-NCL,Female-only,61600,61600
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Artificial Intelligence and Data Science,All India,SC,Gender-Neutral,174100,174100
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Computer Science and Engineering,All India,OPEN,Gender-Neutral,28837,29046
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Computer Science and Engineering,All India,OPEN,Female-only,38675,38675
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Computer Science and Engineering,All India,OPEN PwD,Gender-Neutral,871147,871147
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Computer Science and Engineering,All India,EWS,Gender-Neutral,34538,35054
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Computer Science and Engineering,All India,EWS,Female-only,44617,47896
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Computer Science and Engineering,All India,EWS PwD,Gender-Neutral,1193162,1193162
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,40171,40944
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Computer Science and Engineering,All India,OBC-NCL,Female-only,55757,61535
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Computer Science and Engineering,All India,OBC-NCL PwD,Gender-Neutral,1297663,1329389
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Computer Science and Engineering,All India,SC,Gender-Neutral,170462,170462
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Computer Science and Engineering,All India,SC,Female-only,184610,197427
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Computer Science and Engineering,All India,ST,Gender-Neutral,274381,274381
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,37940,39075
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Electronics and Communication Engineering,All India,OPEN,Female-only,53102,54476
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Electronics and Communication Engineering,All India,OPEN PwD,Gender-Neutral,1301768,1301768
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,43810,45474
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Electronics and Communication Engineering,All India,EWS,Female-only,65256,65256
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,47933,49683
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Electronics and Communication Engineering,All India,SC,Gender-Neutral,193312,204577
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Electronics and Communication Engineering,All India,SC,Female-only,237915,237915
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Electronics and Communication Engineering,All India,ST,Gender-Neutral,316801,316801
+Indian Institute of Information Technology (IIIT) Sri City Chittoor,Electronics and Communication Engineering,All India,ST,Female-only,345569,345569
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Artificial Intelligence,All India,OPEN,Gender-Neutral,39798,41886
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Artificial Intelligence,All India,OPEN,Female-only,55871,57735
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Artificial Intelligence,All India,EWS,Gender-Neutral,44719,45811
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,55151,60875
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Artificial Intelligence,All India,OBC-NCL,Female-only,84827,89672
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Artificial Intelligence,All India,SC,Gender-Neutral,209452,209452
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Artificial Intelligence,All India,SC,Female-only,257920,257920
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Artificial Intelligence,All India,ST,Female-only,458092,458092
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Computer Science and Engineering,All India,OPEN,Gender-Neutral,35103,36583
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Computer Science and Engineering,All India,OPEN,Female-only,47793,48920
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Computer Science and Engineering,All India,EWS,Gender-Neutral,44127,44127
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,50931,53730
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Computer Science and Engineering,All India,OBC-NCL,Female-only,74205,79851
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Computer Science and Engineering,All India,SC,Female-only,208405,211665
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Computer Science and Engineering,All India,ST,Gender-Neutral,346116,346116
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Computer Science and Engineering,All India,ST,Female-only,420053,420053
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,53749,58622
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Electronics and Communication Engineering,All India,OPEN,Female-only,70394,76776
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,63161,67064
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Electronics and Communication Engineering,All India,EWS,Female-only,81907,81907
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,70123,75883
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,102714,119094
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Electronics and Communication Engineering,All India,SC,Gender-Neutral,227270,243319
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Electronics and Communication Engineering,All India,SC,Female-only,258319,263801
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Electronics and Communication Engineering,All India,ST,Gender-Neutral,422961,448931
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Electronics and Communication Engineering,All India,ST,Female-only,473671,473671
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Information Technology,All India,OPEN,Gender-Neutral,42613,43522
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Information Technology,All India,OPEN,Female-only,58269,63154
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Information Technology,All India,EWS,Gender-Neutral,48419,50125
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Information Technology,All India,EWS,Female-only,67567,67567
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Information Technology,All India,OBC-NCL,Gender-Neutral,53850,62168
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Information Technology,All India,OBC-NCL,Female-only,82528,94297
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Information Technology,All India,SC,Gender-Neutral,215581,216632
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Information Technology,All India,SC,Female-only,234702,234702
+Indian Institute of Information Technology(IIIT) Vadodara Gujrat,Information Technology,All India,ST,Female-only,455184,455184
 Indian Institute of Information Technology Allahabad,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,9513,9639
 Indian Institute of Information Technology Allahabad,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,11736,11740
 Indian Institute of Information Technology Allahabad,Information Technology,All India,OPEN,Gender-Neutral,6926,6926
 Indian Institute of Information Technology Allahabad,Information Technology,All India,OPEN,Female-only,12382,13000
 Indian Institute of Information Technology Allahabad,Information Technology,All India,OBC-NCL,Female-only,23152,23152
-Indian Institute of Information Technology Allahabad,Information Technology Business Informatics,All India,OPEN,Female-only,13456,13456
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,OPEN,Gender-Neutral,44154,46325
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,OPEN,Female-only,50923,50923
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,EWS,Gender-Neutral,52461,53184
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,OBC-NCL,Gender-Neutral,53831,53831
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,OBC-NCL,Female-only,77140,78758
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,SC,Female-only,194466,194466
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Computer Science and Engineering,All India,OPEN,Gender-Neutral,38918,39803
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Computer Science and Engineering,All India,EWS,Gender-Neutral,50185,52202
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Computer Science and Engineering,All India,EWS,Female-only,49973,49973
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,48716,50248
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Computer Science and Engineering,All India,OBC-NCL,Female-only,69002,69324
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Computer Science and Engineering Dual Degree,All India,OPEN,Gender-Neutral,52112,52112
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Computer Science and Engineering Dual Degree,All India,OPEN,Female-only,74546,74546
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Computer Science and Engineering Dual Degree,All India,EWS,Gender-Neutral,62614,62614
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Computer Science and Engineering Dual Degree,All India,OBC-NCL,Female-only,86480,86480
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Computer Science and Engineering Dual Degree,All India,SC,Gender-Neutral,152926,152926
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Computer Science and Engineering Dual Degree,All India,SC,Female-only,229542,229542
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Electronics and Communication Engineering Dual Degree,All India,OPEN,Gender-Neutral,60155,68152
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Electronics and Communication Engineering Dual Degree,All India,OPEN,Female-only,88134,88134
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Electronics and Communication Engineering Dual Degree,All India,EWS,Gender-Neutral,74043,74043
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Electronics and Communication Engineering Dual Degree,All India,EWS,Female-only,116495,116495
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Electronics and Communication Engineering Dual Degree,All India,OBC-NCL,Gender-Neutral,74710,83499
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Electronics and Communication Engineering Dual Degree,All India,OBC-NCL,Female-only,120518,120518
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Electronics and Communication Engineering Dual Degree,All India,SC,Gender-Neutral,185424,185424
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Electronics and Communication Engineering Design and Manufacturing,All India,OPEN,Gender-Neutral,53873,58090
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Electronics and Communication Engineering Design and Manufacturing,All India,OPEN,Female-only,74887,81053
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Electronics and Communication Engineering Design and Manufacturing,All India,OBC-NCL,Gender-Neutral,66752,74325
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Electronics and Communication Engineering Design and Manufacturing,All India,OBC-NCL,Female-only,94884,117094
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Dual Degree,All India,OPEN,Gender-Neutral,86763,94749
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Dual Degree,All India,OPEN,Female-only,159480,159480
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Dual Degree,All India,EWS,Gender-Neutral,102838,102838
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Dual Degree,All India,EWS,Female-only,203282,203282
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Dual Degree,All India,OBC-NCL,Gender-Neutral,97404,103216
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Dual Degree,All India,OBC-NCL,Female-only,169087,187257
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Dual Degree,All India,SC,Gender-Neutral,204100,204100
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Dual Degree,All India,SC,Female-only,263901,263901
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Design and Manufacturing,All India,OPEN,Gender-Neutral,81004,83921
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Design and Manufacturing,All India,OPEN,Female-only,120973,148396
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Design and Manufacturing,All India,EWS,Gender-Neutral,87772,99668
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Design and Manufacturing,All India,EWS,Female-only,151278,163028
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Design and Manufacturing,All India,OBC-NCL,Gender-Neutral,92212,101470
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Design and Manufacturing,All India,OBC-NCL,Female-only,152536,186665
-Indian Institute of Information Technology Design and Manufacturing Kurnool Andhra Pradesh,Mechanical Engineering Design and Manufacturing,All India,SC,Female-only,255426,255426
+Indian Institute of Information Technology Allahabad,Information Technology for DASA-CIWG,Other State,OPEN,Gender-Neutral,225013,225013
+Indian Institute of Information Technology Allahabad,Information Technology for DASA-Non CIWG,Other State,OPEN,Gender-Neutral,423129,423129
+Indian Institute of Information Technology Allahabad,Information Technology-Business Informatics,All India,OPEN,Female-only,13456,13456
+Indian Institute of Information Technology Allahabad,Information Technology-Business Informatics,All India,OPEN PwD,Gender-Neutral,170805,170805
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,B.Tech in Mechanical Engineering and M.Tech in Al and Robotics,All India,OPEN,Gender-Neutral,42918,45791
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,B.Tech in Mechanical Engineering and M.Tech in Al and Robotics,All India,OPEN,Female-only,91894,96388
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,B.Tech in Mechanical Engineering and M.Tech in Al and Robotics,All India,EWS,Gender-Neutral,78107,78107
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,B.Tech in Mechanical Engineering and M.Tech in Al and Robotics,All India,EWS,Female-only,116722,116722
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,B.Tech in Mechanical Engineering and M.Tech in Al and Robotics,All India,OBC-NCL,Gender-Neutral,64833,65258
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,B.Tech in Mechanical Engineering and M.Tech in Al and Robotics,All India,OBC-NCL,Female-only,124276,130593
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,B.Tech. in Electronics and Communication Engineering and M.Tech. in Communication Systems,All India,OPEN,Gender-Neutral,32103,34328
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,B.Tech. in Electronics and Communication Engineering and M.Tech. in Communication Systems,All India,OPEN,Female-only,54339,54339
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,B.Tech. in Electronics and Communication Engineering and M.Tech. in Communication Systems,All India,OBC-NCL,Female-only,82830,82830
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,B.Tech. in Electronics and Communication Engineering and M.Tech. in Communication Systems,All India,ST,Gender-Neutral,256327,256327
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,B.Tech. in Electronics and Communication Engineering and M.Tech. in Microelectronics and VLSI Systems,All India,ST,Gender-Neutral,248844,248844
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Computer Science and Engineering,All India,OPEN,Gender-Neutral,22123,22123
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,27895,28116
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Computer Science and Engineering,All India,OPEN,Gender-Neutral,28896,28897
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Computer Science and Engineering,All India,EWS,Gender-Neutral,35830,35830
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,36952,36952
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Computer Science and Engineering,All India,SC,Gender-Neutral,126148,126148
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Computer Science and Engineering with Major in Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,28147,28155
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Design Engineering,All India,OPEN,Gender-Neutral,73115,73115
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Design Engineering,All India,EWS,Gender-Neutral,97088,104681
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Design Engineering,All India,OBC-NCL,Gender-Neutral,84360,86953
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Design Engineering,All India,ST,Gender-Neutral,369336,369336
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,29605,29987
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Electronics and Communication Engineering,All India,OPEN,Female-only,40662,40662
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,38632,38831
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,52128,52128
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Electronics and Communication Engineering,All India,SC,Gender-Neutral,142610,142610
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Engineering Physics,All India,OPEN,Gender-Neutral,62441,62441
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Engineering Physics,All India,EWS,Gender-Neutral,102313,105224
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Engineering Physics,All India,OBC-NCL,Gender-Neutral,74328,74328
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Mechanical Engineering,All India,OPEN,Gender-Neutral,52557,53610
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Mechanical Engineering,All India,OPEN,Female-only,84548,84548
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Mechanical Engineering,All India,EWS,Gender-Neutral,77749,78850
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,68371,71465
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Mechanical Engineering,All India,OBC-NCL,Female-only,103979,122314
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Mechanical Engineering,All India,SC,Female-only,218554,218554
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Smart Manufacturing,All India,OPEN,Gender-Neutral,65687,67255
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Smart Manufacturing,All India,OPEN,Female-only,67661,81428
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Smart Manufacturing,All India,EWS,Gender-Neutral,88107,88107
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Smart Manufacturing,All India,OBC-NCL,Gender-Neutral,86437,89950
+Indian Institute of Information Technology Design & Manufacturing Kancheepuram,Smart Manufacturing,All India,OBC-NCL,Female-only,100485,100485
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Computer Science and Engineering,All India,OPEN,Gender-Neutral,16426,16611
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Computer Science and Engineering,All India,OPEN,Female-only,26038,26038
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Computer Science and Engineering,All India,EWS,Gender-Neutral,18683,18856
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Computer Science and Engineering,All India,EWS,Female-only,34686,38494
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,22398,22398
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Computer Science and Engineering,All India,OBC-NCL,Female-only,41349,41349
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,20533,20916
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,24681,24681
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Electronics and Communication Engineering,All India,EWS,Female-only,40549,40549
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,27935,28214
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Electronics and Communication Engineering,All India,SC,Gender-Neutral,118719,118719
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Electronics and Communication Engineering,All India,ST,Gender-Neutral,169708,169708
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Mechanical Engineering,All India,OPEN,Gender-Neutral,50004,52908
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Mechanical Engineering,All India,EWS,Gender-Neutral,61827,65397
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,62389,64779
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Mechanical Engineering,All India,OBC-NCL,Female-only,102050,118978
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Mechanical Engineering,All India,ST,Gender-Neutral,257922,257922
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Smart Manufacturing,All India,OPEN,Gender-Neutral,64001,64090
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Smart Manufacturing,All India,OPEN,Female-only,94278,94278
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Smart Manufacturing,All India,EWS,Female-only,119308,119308
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Smart Manufacturing,All India,OBC-NCL,Gender-Neutral,77306,81973
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Smart Manufacturing,All India,OBC-NCL,Female-only,114013,114013
+Pt. Dwarka Prasad Mishra Indian Institute of Information Technology Design & Manufacture Jabalpur,Smart Manufacturing,All India,ST,Gender-Neutral,299702,299702
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering,All India,OPEN,Gender-Neutral,99492,119721
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering,All India,OPEN,Female-only,127213,147862
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering,All India,EWS,Gender-Neutral,127802,153654
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering,All India,EWS,Female-only,151064,190932
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,122046,150821
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering,All India,OBC-NCL,Female-only,186657,231890
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering,All India,SC,Gender-Neutral,277196,308203
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering,All India,ST,Gender-Neutral,582908,672155
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering,All India,ST,Female-only,778181,778181
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,OPEN,Gender-Neutral,100642,115760
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,OPEN,Female-only,147926,193978
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,EWS,Gender-Neutral,118257,148292
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,EWS,Female-only,197943,220911
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,OBC-NCL,Gender-Neutral,118188,160096
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,OBC-NCL,Female-only,205809,234444
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,SC,Gender-Neutral,272912,318325
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,SC,Female-only,289884,321145
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,ST,Gender-Neutral,613345,650407
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,ST,Female-only,988396,988396
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Cyber Security,All India,OPEN,Gender-Neutral,109608,136045
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Cyber Security,All India,OPEN,Female-only,159819,208271
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Cyber Security,All India,EWS,Gender-Neutral,136554,154515
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Cyber Security,All India,EWS,Female-only,223379,223379
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Cyber Security,All India,OBC-NCL,Gender-Neutral,140461,174869
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Cyber Security,All India,OBC-NCL,Female-only,246816,252634
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Cyber Security,All India,SC,Gender-Neutral,284804,326283
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Cyber Security,All India,SC,Female-only,326292,326292
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Cyber Security,All India,ST,Gender-Neutral,551784,551784
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Quantum Technologies,All India,OPEN,Gender-Neutral,105228,119746
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Quantum Technologies,All India,OPEN,Female-only,176634,204725
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Quantum Technologies,All India,EWS,Gender-Neutral,120452,138873
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Quantum Technologies,All India,EWS,Female-only,210798,210798
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Quantum Technologies,All India,OBC-NCL,Gender-Neutral,122758,153350
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Quantum Technologies,All India,OBC-NCL,Female-only,220985,225237
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Quantum Technologies,All India,SC,Gender-Neutral,276465,298031
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Quantum Technologies,All India,SC,Female-only,318194,318194
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Quantum Technologies,All India,ST,Gender-Neutral,527263,545306
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Computer Science and Engineering with specialization in Quantum Technologies,All India,ST,Female-only,786485,786485
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,123987,181376
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering,All India,OPEN,Female-only,212200,242080
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,181411,215720
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering,All India,EWS,Female-only,288945,294107
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,182420,204319
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,270795,304958
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering,All India,SC,Gender-Neutral,313173,350675
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering,All India,SC,Female-only,334148,342293
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering,All India,ST,Gender-Neutral,624190,778682
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,OPEN,Gender-Neutral,141573,207984
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,OPEN,Female-only,244590,300825
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,EWS,Gender-Neutral,216525,233375
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,EWS,Female-only,308133,321650
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,OBC-NCL,Gender-Neutral,208547,234226
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,OBC-NCL,Female-only,302584,352007
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,SC,Gender-Neutral,332197,367397
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,SC,Female-only,366287,369031
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,ST,Gender-Neutral,791685,1171835
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,ST,Female-only,804450,804450
+Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering ( Artificial Intelligence & Data Science),All India,OPEN,Gender-Neutral,40719,41779
+Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering ( Artificial Intelligence & Data Science),All India,EWS,Gender-Neutral,51996,52145
+Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering ( Artificial Intelligence & Data Science),All India,OBC-NCL,Gender-Neutral,54282,57384
+Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,OPEN,Gender-Neutral,39182,39693
+Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,OPEN,Female-only,55827,60571
+Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,OPEN PwD,Gender-Neutral,646152,646152
+Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,EWS,Gender-Neutral,49449,51529
+Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,EWS,Female-only,67869,67869
+Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,50249,55969
+Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,OBC-NCL,Female-only,71473,79348
+Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,SC,Female-only,179943,179943
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,56128,65225
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,OPEN,Female-only,71452,86301
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,70631,80033
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,EWS,Female-only,95437,108164
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,70772,82295
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,91155,117273
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,SC,Gender-Neutral,182994,182994
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,ST,Gender-Neutral,302411,302411
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering (VLSI Design),All India,OPEN,Gender-Neutral,55361,58997
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering (VLSI Design),All India,EWS,Gender-Neutral,63978,74976
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering (VLSI Design),All India,OBC-NCL,Gender-Neutral,65129,75369
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering (VLSI Design),All India,SC,Gender-Neutral,165244,165244
+Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering (VLSI Design),All India,ST,Gender-Neutral,317516,317516
+Indian Institute of Information Technology Lucknow,Computer Science,All India,OPEN,Female-only,15554,15554
+Indian Institute of Information Technology Lucknow,Computer Science,All India,EWS,Female-only,22242,22242
+Indian Institute of Information Technology Lucknow,Computer Science and Artificial Intelligence,All India,OPEN,Female-only,15421,15421
+Indian Institute of Information Technology Lucknow,Computer Science and Business,All India,OPEN,Gender-Neutral,12726,13100
+Indian Institute of Information Technology Lucknow,Computer Science and Business,All India,OPEN,Female-only,21480,22498
+Indian Institute of Information Technology Lucknow,Computer Science and Business,All India,OBC-NCL,Gender-Neutral,17621,17621
+Indian Institute of Information Technology Lucknow,Information Technology,All India,OPEN,Gender-Neutral,13202,13233
+Indian Institute of Information Technology Lucknow,Information Technology,All India,OPEN,Female-only,18562,21093
+Indian Institute of Information Technology Lucknow,Information Technology,All India,EWS,Gender-Neutral,15086,15086
+Indian Institute of Information Technology Lucknow,Information Technology,All India,EWS,Female-only,33057,33057
+Indian Institute of Information Technology(IIIT) Dharwad,Computer Science and Engineering,All India,OPEN,Gender-Neutral,55069,56863
+Indian Institute of Information Technology(IIIT) Dharwad,Computer Science and Engineering,All India,OPEN,Female-only,64118,68592
+Indian Institute of Information Technology(IIIT) Dharwad,Computer Science and Engineering,All India,OPEN PwD,Gender-Neutral,651036,651036
+Indian Institute of Information Technology(IIIT) Dharwad,Computer Science and Engineering,All India,EWS,Gender-Neutral,71049,78213
+Indian Institute of Information Technology(IIIT) Dharwad,Computer Science and Engineering,All India,EWS,Female-only,92316,92316
+Indian Institute of Information Technology(IIIT) Dharwad,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,73766,83720
+Indian Institute of Information Technology(IIIT) Dharwad,Computer Science and Engineering,All India,OBC-NCL,Female-only,87816,100395
+Indian Institute of Information Technology(IIIT) Dharwad,Computer Science and Engineering,All India,SC,Gender-Neutral,228101,232592
+Indian Institute of Information Technology(IIIT) Dharwad,Computer Science and Engineering,All India,SC,Female-only,218792,218792
+Indian Institute of Information Technology(IIIT) Dharwad,Computer Science and Engineering,All India,ST,Gender-Neutral,400203,416174
+Indian Institute of Information Technology(IIIT) Dharwad,Computer Science and Engineering,All India,ST,Female-only,352998,352998
+Indian Institute of Information Technology(IIIT) Dharwad,Data Science and Artificial Intelligence,All India,OPEN,Gender-Neutral,57265,62152
+Indian Institute of Information Technology(IIIT) Dharwad,Data Science and Artificial Intelligence,All India,OPEN,Female-only,72624,73746
+Indian Institute of Information Technology(IIIT) Dharwad,Data Science and Artificial Intelligence,All India,OPEN PwD,Gender-Neutral,662342,662342
+Indian Institute of Information Technology(IIIT) Dharwad,Data Science and Artificial Intelligence,All India,EWS,Gender-Neutral,79454,85319
+Indian Institute of Information Technology(IIIT) Dharwad,Data Science and Artificial Intelligence,All India,EWS,Female-only,90334,90334
+Indian Institute of Information Technology(IIIT) Dharwad,Data Science and Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,76838,86797
+Indian Institute of Information Technology(IIIT) Dharwad,Data Science and Artificial Intelligence,All India,OBC-NCL,Female-only,94215,103336
+Indian Institute of Information Technology(IIIT) Dharwad,Data Science and Artificial Intelligence,All India,SC,Gender-Neutral,234035,240170
+Indian Institute of Information Technology(IIIT) Dharwad,Data Science and Artificial Intelligence,All India,SC,Female-only,240380,240380
+Indian Institute of Information Technology(IIIT) Dharwad,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,63506,73989
+Indian Institute of Information Technology(IIIT) Dharwad,Electronics and Communication Engineering,All India,OPEN,Female-only,78345,87533
+Indian Institute of Information Technology(IIIT) Dharwad,Electronics and Communication Engineering,All India,OPEN PwD,Gender-Neutral,894086,894086
+Indian Institute of Information Technology(IIIT) Dharwad,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,85352,96166
+Indian Institute of Information Technology(IIIT) Dharwad,Electronics resilience and Communication Engineering,All India,EWS,Female-only,102522,108829
+Indian Institute of Information Technology(IIIT) Dharwad,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,83678,94743
+Indian Institute of Information Technology(IIIT) Dharwad,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,105555,117458
+Indian Institute of Information Technology(IIIT) Dharwad,Electronics and Communication Engineering,All India,SC,Gender-Neutral,240092,248598
+Indian Institute of Information Technology(IIIT) Dharwad,Electronics and Communication Engineering,All India,SC,Female-only,260802,260802
+Indian Institute of Information Technology(IIIT) Dharwad,Electronics and Communication Engineering,All India,ST,Gender-Neutral,380275,397960
+Indian Institute of Information Technology Design & Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,OPEN,Gender-Neutral,44154,46325
+Indian Institute of Information Technology Design & Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,OPEN,Female-only,50923,50923
+Indian Institute of Information Technology Design & Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,OPEN PwD,Gender-Neutral,666799,666799
+Indian Institute of Information Technology Design & Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,EWS,Gender-Neutral,52461,53184
+Indian Institute of Information Technology Design & Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,OBC-NCL,Gender-Neutral,53831,53831
+Indian Institute of Information Technology Design & Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,OBC-NCL,Female-only,77140,78758
+Indian Institute of Information Technology Design & Manufacturing Kurnool Andhra Pradesh,Artificial Intelligence and Data Science,All India,SC,Female-only,194466,194466
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Computer Science and Engineering,All India,OPEN,Gender-Neutral,38918,39803
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Computer Science and Engineering,All India,OPEN(PWD),Gender-Neutral,358990,358990
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Computer Science and Engineering,All India,EWS,Gender-Neutral,50185,52202
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Computer Science and Engineering,All India,EWS,Female-only,49973,49973
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,48716,50248
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Computer Science and Engineering,All India,OBC-NCL,Female-only,69002,69324
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OPEN,Gender-Neutral,52112,52112
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OPEN,Female-only,74546,74546
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,EWS,Gender-Neutral,62614,62614
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OBC-NCL,Female-only,86480,86480
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,SC,Gender-Neutral,152926,152926
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,SC,Female-only,229542,229542
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Electronics and Communication Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OPEN,Gender-Neutral,60155,68152
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Electronics and Communication Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OPEN,Female-only,88134,88134
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Electronics and Communication Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,EWS,Gender-Neutral,74043,74043
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Electronics and Communication Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,EWS,Female-only,116495,116495
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Electronics and Communication Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OBC-NCL,Gender-Neutral,74710,83499
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Electronics and Communication Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OBC-NCL,Female-only,120518,120518
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Electronics and Communication Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,SC,Gender-Neutral,185424,185424
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Electronics and Communication Engineering with specialization in Design and Manufacturing,All India,OPEN,Gender-Neutral,53873,58090
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Electronics and Communication Engineering with specialization in Design and Manufacturing,All India,OPEN,Female-only,74887,81053
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Electronics and Communication Engineering with specialization in Design and Manufacturing,All India,OBC-NCL,Gender-Neutral,66752,74325
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Electronics and Communication Engineering with specialization in Design and Manufacturing,All India,OBC-NCL,Female-only,94884,117094
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OPEN,Gender-Neutral,86763,94749
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OPEN,Female-only,159480,159480
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,EWS,Gender-Neutral,102838,102838
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,EWS,Female-only,203282,203282
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OBC-NCL,Gender-Neutral,97404,103216
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,OBC-NCL,Female-only,169087,187257
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,SC,Gender-Neutral,204100,204100
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),All India,SC,Female-only,263901,263901
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering with specialization in Design and Manufacturing,All India,OPEN,Gender-Neutral,81004,83921
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering with specialization in Design and Manufacturing,All India,OPEN,Female-only,120973,148396
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering with specialization in Design and Manufacturing,All India,EWS,Gender-Neutral,87772,99668
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering with specialization in Design and Manufacturing,All India,EWS,Female-only,151278,163028
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering with specialization in Design and Manufacturing,All India,OBC-NCL,Gender-Neutral,92212,101470
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering with specialization in Design and Manufacturing,All India,OBC-NCL,Female-only,152536,186665
+Indian Institute of Information Technology Design & Manufacturing Kurnool,Mechanical Engineering with specialization in Design and Manufacturing,All India,SC,Female-only,255426,255426
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering,All India,OPEN,Gender-Neutral,49076,50277
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering,All India,OPEN,Female-only,61540,61540
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering,All India,EWS,Gender-Neutral,64902,72939
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering,All India,EWS,Female-only,87280,87280
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,64254,69089
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering,All India,OBC-NCL,Female-only,86756,87241
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering,All India,SC,Gender-Neutral,218809,220942
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering,All India,SC,Female-only,234645,234759
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering,All India,ST,Gender-Neutral,382506,382506
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering,All India,ST,Female-only,382467,382467
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,EWS,Gender-Neutral,47483,47483
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,OBC-NCL,Gender-Neutral,47287,47287
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,SC,Female-only,218360,218360
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,OPEN,Gender-Neutral,53828,55979
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,OPEN,Female-only,71583,72125
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,EWS,Gender-Neutral,70520,77461
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,EWS,Female-only,95178,95178
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,OBC-NCL,Gender-Neutral,65490,71753
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,OBC-NCL,Female-only,82485,82485
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,SC,Gender-Neutral,221070,221070
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,SC,Female-only,238753,238753
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,ST,Gender-Neutral,336901,336901
+Indian Institute of Information Technology(IIIT) Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,ST,Female-only,516153,516153
+Indian Institute of Information Technology(IIIT) Kottayam,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,53435,55182
+Indian Institute of Information Technology(IIIT) Kottayam,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,69959,72608
+Indian Institute of Information Technology(IIIT) Kottayam,Electronics and Communication Engineering,All India,EWS,Female-only,106282,106282
+Indian Institute of Information Technology(IIIT) Kottayam,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,68683,77080
+Indian Institute of Information Technology(IIIT) Kottayam,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,82840,82840
+Indian Institute of Information Technology(IIIT) Kottayam,Electronics and Communication Engineering,All India,SC,Gender-Neutral,226313,242590
+Indian Institute of Information Technology(IIIT) Kottayam,Electronics and Communication Engineering,All India,SC,Female-only,230849,230849
+Indian Institute of Information Technology(IIIT) Kottayam,Electronics and Communication Engineering,All India,ST,Gender-Neutral,382617,439350
+Indian Institute of Information Technology(IIIT) Kottayam,Electronics and Communication Engineering,All India,ST,Female-only,502912,502912
+Indian Institute of Information Technology (IIIT) Ranchi,B.Tech in Mathematics and Computing,All India,OPEN,Gender-Neutral,61474,65782
+Indian Institute of Information Technology (IIIT) Ranchi,B.Tech in Mathematics and Computing,All India,EWS,Gender-Neutral,70108,81634
+Indian Institute of Information Technology (IIIT) Ranchi,B.Tech in Mathematics and Computing,All India,OBC-NCL,Gender-Neutral,73342,79289
+Indian Institute of Information Technology (IIIT) Ranchi,B.Tech in Mathematics and Computing,All India,SC,Gender-Neutral,234834,240843
+Indian Institute of Information Technology (IIIT) Ranchi,B.Tech in Mathematics and Computing,All India,ST,Gender-Neutral,549293,578141
+Indian Institute of Information Technology (IIIT) Ranchi,Computer Science and Engineering,All India,OPEN,Gender-Neutral,52756,57250
+Indian Institute of Information Technology (IIIT) Ranchi,Computer Science and Engineering,All India,EWS,Gender-Neutral,60082,64410
+Indian Institute of Information Technology (IIIT) Ranchi,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,64603,69667
+Indian Institute of Information Technology (IIIT) Ranchi,Computer Science and Engineering,All India,SC,Gender-Neutral,217795,227244
+Indian Institute of Information Technology (IIIT) Ranchi,Computer Science and Engineering,All India,ST,Gender-Neutral,388061,388061
+Indian Institute of Information Technology (IIIT) Ranchi,Computer Science and Engineering (with Specialization of Data Science and Artificial Intelligence),All India,OPEN,Gender-Neutral,45001,45001
+Indian Institute of Information Technology (IIIT) Ranchi,Computer Science and Engineering (with Specialization of Data Science and Artificial Intelligence),All India,OBC-NCL,Gender-Neutral,57622,61877
+Indian Institute of Information Technology (IIIT) Ranchi,Computer Science and Engineering (with Specialization of Data Science and Artificial Intelligence),All India,SC,Gender-Neutral,215177,215177
+Indian Institute of Information Technology (IIIT) Ranchi,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,66762,75726
+Indian Institute of Information Technology (IIIT) Ranchi,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,81152,94984
+Indian Institute of Information Technology (IIIT) Ranchi,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,78644,91071
+Indian Institute of Information Technology (IIIT) Ranchi,Electronics and Communication Engineering,All India,SC,Gender-Neutral,247466,255942
+Indian Institute of Information Technology (IIIT) Ranchi,Electronics and Communication Engineering,All India,ST,Gender-Neutral,518493,553921
+Indian Institute of Information Technology (IIIT) Ranchi,Electronics and Communication Engineering (with Specialization of Embedded Systems and Internet of Things),All India,OPEN,Gender-Neutral,67583,74575
+Indian Institute of Information Technology (IIIT) Ranchi,Electronics and Communication Engineering (with Specialization of Embedded Systems and Internet of Things),All India,EWS,Gender-Neutral,80716,85147
+Indian Institute of Information Technology (IIIT) Ranchi,Electronics and Communication Engineering (with Specialization of Embedded Systems and Internet of Things),All India,OBC-NCL,Gender-Neutral,78164,83761
+Indian Institute of Information Technology (IIIT) Ranchi,Electronics and Communication Engineering (with Specialization of Embedded Systems and Internet of Things),All India,SC,Gender-Neutral,243094,251232
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science and Engineering,All India,OPEN,Gender-Neutral,34472,35506
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science and Engineering,All India,OPEN(PWD),Gender-Neutral,520314,520314
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science and Engineering,All India,EWS,Gender-Neutral,39664,39664
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,43907,44491
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science and Engineering,All India,SC,Gender-Neutral,166256,183023
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Artificial Intelligence and Machine Learning),All India,OPEN,Gender-Neutral,29882,30331
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Artificial Intelligence and Machine Learning),All India,SC,Gender-Neutral,167075,179256
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Artificial Intelligence and Machine Learning),All India,ST,Gender-Neutral,309644,309644
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Data Science and Analytics),All India,OPEN,Gender-Neutral,36699,37653
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Data Science and Analytics),All India,EWS,Gender-Neutral,40150,41406
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Data Science and Analytics),All India,OBC-NCL,Gender-Neutral,45778,46755
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Data Science and Analytics),All India,SC,Gender-Neutral,183334,185666
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Human Computer Interaction and Gaming Technology),All India,OPEN,Gender-Neutral,42348,43918
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Human Computer Interaction and Gaming Technology),All India,OPEN(PwD),Gender-Neutral,668139,668139
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Human Computer Interaction and Gaming Technology),All India,EWS,Gender-Neutral,45488,45709
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Human Computer Interaction and Gaming Technology),All India,OBC-NCL,Gender-Neutral,49749,50856
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Human Computer Interaction and Gaming Technology),All India,OBC-NCL(PWD),Gender-Neutral,863232,863232
+Indian Institute of Information Technology (IIIT) Nagpur,Computer Science Engineering (Human Computer Interaction and Gaming Technology),All India,SC,Gender-Neutral,190246,195919
+Indian Institute of Information Technology (IIIT) Nagpur,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,51862,56011
+Indian Institute of Information Technology (IIIT) Nagpur,Electronics and Communication Engineering,All India,OPEN(PWD),Gender-Neutral,900357,900357
+Indian Institute of Information Technology (IIIT) Nagpur,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,64110,69118
+Indian Institute of Information Technology (IIIT) Nagpur,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,65270,70926
+Indian Institute of Information Technology (IIIT) Nagpur,Electronics wagons and Communication Engineering,All India,OBC-NCL(PWD),Gender-Neutral,1425391,1425391
+Indian Institute of Information Technology (IIIT) Nagpur,Electronics and Communication Engineering,All India,SC,Gender-Neutral,211948,216512
+Indian Institute of Information Technology (IIIT) Nagpur,Electronics and Communication Engineering,All India,ST,Gender-Neutral,383752,408650
+Indian Institute of Information Technology (IIIT) Nagpur,Electronics and Communication Engineering (Internet of Things),All India,OPEN,Gender-Neutral,50496,53384
+Indian Institute of Information Technology (IIIT) Nagpur,Electronics and Communication Engineering (Internet of Things),All India,OBC-NCL,Gender-Neutral,60827,66110
+Indian Institute of Information Technology (IIIT) Nagpur,Electronics and Communication Engineering (Internet of Things),All India,SC,Gender-Neutral,210571,213615
+Indian Institute of Information Technology (IIIT) Pune,Computer Science and Engineering,All India,OPEN,Gender-Neutral,27517,27931
+Indian Institute of Information Technology (IIIT) Pune,Computer Science and Engineering,All India,OPEN,Female-only,41741,43979
+Indian Institute of Information Technology (IIIT) Pune,Computer Science and Engineering,All India,EWS,Gender-Neutral,35969,35969
+Indian Institute of Information Technology (IIIT) Pune,Computer Science and Engineering,All India,EWS,Female-only,56544,56544
+Indian Institute of Information Technology (IIIT) Pune,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,39366,40318
+Indian Institute of Information Technology (IIIT) Pune,Computer Science and Engineering,All India,OBC-NCL,Female-only,64108,66445
+Indian Institute of Information Technology (IIIT) Pune,Computer Science and Engineering,All India,OBC-NCL(PWD),Gender-Neutral,1062009,1062009
+Indian Institute of Information Technology (IIIT) Pune,Computer Science and Engineering,All India,SC,Gender-Neutral,138201,139568
+Indian Institute of Information Technology (IIIT) Pune,Computer Science and Engineering,All India,SC,Female-only,189287,189287
+Indian Institute of Information Technology (IIIT) Pune,Computer Science and Engineering,All India,ST,Gender-Neutral,282552,282552
+Indian Institute of Information Technology (IIIT) Pune,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,38043,38412
+Indian Institute of Information Technology (IIIT) Pune,Electronics and Communication Engineering,All India,OPEN,Female-only,57391,59229
+Indian Institute of Information Technology (IIIT) Pune,Electronics and Communication Engineering,All India,OPEN(PwD),Gender-Neutral,751040,751040
+Indian Institute of Information Technology (IIIT) Pune,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,44795,44906
+Indian Institute of Information Technology (IIIT) Pune,Electronics and Communication Engineering,All India,EWS,Female-only,74066,74066
+Indian Institute of Information Technology (IIIT) Pune,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,48934,50860
+Indian Institute of Information Technology (IIIT) Pune,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,75699,89075
+Indian Institute of Information Technology (IIIT) Pune,Electronics and Communication Engineering,All India,OBC-NCL(PwD),Gender-Neutral,1114908,1114908
+Indian Institute of Information Technology (IIIT) Pune,Electronics and Communication Engineering,All India,SC,Gender-Neutral,181637,181637
+Indian Institute of Information Technology (IIIT) Pune,Electronics and Communication Engineering,All India,SC,Female-only,218864,218864
+Indian Institute of Information Technology (IIIT) Pune,Electronics and Communication Engineering,All India,ST,Gender-Neutral,336412,340811
+Indian Institute of Information Technology (IIIT) Pune,Electronics and Communication Engineering,All India,ST,Female-only,429639,429639
 Indian Institute of Information Technology Bhagalpur,Computer Science and Engineering,All India,OPEN,Gender-Neutral,57894,60253
 Indian Institute of Information Technology Bhagalpur,Computer Science and Engineering,All India,OPEN,Female-only,69079,69079
+Indian Institute of Information Technology Bhagalpur,Computer Science and Engineering,All India,OPEN(PwD),Gender-Neutral,1419426,1419426
 Indian Institute of Information Technology Bhagalpur,Computer Science and Engineering,All India,EWS,Gender-Neutral,69648,79106
 Indian Institute of Information Technology Bhagalpur,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,71381,77377
 Indian Institute of Information Technology Bhagalpur,Computer Science and Engineering,All India,OBC-NCL,Female-only,89644,89644
@@ -92,35 +547,37 @@ Indian Institute of Information Technology Bhagalpur,Mechatronics and Automation
 Indian Institute of Information Technology Bhagalpur,Mechatronics and Automation Engineering,All India,SC,Gender-Neutral,254702,267593
 Indian Institute of Information Technology Bhagalpur,Mechatronics and Automation Engineering,All India,SC,Female-only,282012,282012
 Indian Institute of Information Technology Bhagalpur,Mechatronics and Automation Engineering,All India,ST,Gender-Neutral,609578,687701
-Indian Institute of Information Technology Bhopal,Mathematics and Computing,All India,OPEN,Gender-Neutral,45767,46529
-Indian Institute of Information Technology Bhopal,Mathematics and Computing,All India,EWS,Gender-Neutral,50480,54149
-Indian Institute of Information Technology Bhopal,Mathematics and Computing,All India,OBC-NCL,Gender-Neutral,59786,63693
-Indian Institute of Information Technology Bhopal,Mathematics and Computing,All India,SC,Gender-Neutral,218421,218421
+Indian Institute of Information Technology Bhopal,B.Tech in Mathematics and Computing,All India,OPEN,Gender-Neutral,45767,46529
+Indian Institute of Information Technology Bhopal,B.Tech in Mathematics and Computing,All India,EWS,Gender-Neutral,50480,54149
+Indian Institute of Information Technology Bhopal,B.Tech in Mathematics and Computing,All India,OBC-NCL,Gender-Neutral,59786,63693
+Indian Institute of Information Technology Bhopal,B.Tech in Mathematics and Computing,All India,SC,Gender-Neutral,218421,218421
 Indian Institute of Information Technology Bhopal,Computer Science and Engineering,All India,OPEN,Gender-Neutral,34844,35569
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering,All India,OPEN(PwD),Gender-Neutral,735259,735259
 Indian Institute of Information Technology Bhopal,Computer Science and Engineering,All India,EWS,Gender-Neutral,42196,44250
 Indian Institute of Information Technology Bhopal,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,46831,48300
 Indian Institute of Information Technology Bhopal,Computer Science and Engineering,All India,SC,Gender-Neutral,182693,182780
 Indian Institute of Information Technology Bhopal,Computer Science and Engineering,All India,ST,Gender-Neutral,293761,293761
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Artificial Intelligence,All India,OPEN,Gender-Neutral,33591,34325
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Artificial Intelligence,All India,EWS,Gender-Neutral,39618,40401
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,47232,47321
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Artificial Intelligence,All India,SC,Gender-Neutral,173676,173676
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Artificial Intelligence,All India,ST,Gender-Neutral,334392,334392
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Cyber Physical System,All India,OPEN,Gender-Neutral,47056,49482
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Cyber Physical System,All India,EWS,Gender-Neutral,53763,56041
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Cyber Physical System,All India,OBC-NCL,Gender-Neutral,56054,59562
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Cyber Physical System,All India,SC,Gender-Neutral,216460,217007
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Cyber Physical System,All India,ST,Gender-Neutral,428961,434486
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Cyber Security,All India,OPEN,Gender-Neutral,41923,43566
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Cyber Security,All India,EWS,Gender-Neutral,46748,46748
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Cyber Security,All India,OBC-NCL,Gender-Neutral,53971,55784
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Cyber Security,All India,SC,Gender-Neutral,203412,203412
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Cyber Security,All India,ST,Gender-Neutral,387612,387612
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Data Science,All India,OPEN,Gender-Neutral,37514,38445
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Data Science,All India,EWS,Gender-Neutral,43807,44130
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Data Science,All India,OBC-NCL,Gender-Neutral,49896,51687
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Data Science,All India,SC,Gender-Neutral,189271,193885
-Indian Institute of Information Technology Bhopal,Computer Science and Engineering Data Science,All India,ST,Gender-Neutral,328774,328774
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Artificial Intelligence),All India,OPEN,Gender-Neutral,33591,34325
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Artificial Intelligence),All India,EWS,Gender-Neutral,39618,40401
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Artificial Intelligence),All India,OBC-NCL,Gender-Neutral,47232,47321
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Artificial Intelligence),All India,SC,Gender-Neutral,173676,173676
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Artificial Intelligence),All India,ST,Gender-Neutral,334392,334392
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Cyber Physical System),All India,OPEN,Gender-Neutral,47056,49482
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Cyber Physical System),All India,EWS,Gender-Neutral,53763,56041
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Cyber Physical System),All India,OBC-NCL,Gender-Neutral,56054,59562
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Cyber Physical System),All India,SC,Gender-Neutral,216460,217007
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Cyber Physical System),All India,ST,Gender-Neutral,428961,434486
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Cyber Security),All India,OPEN,Gender-Neutral,41923,43566
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Cyber Security),All India,EWS,Gender-Neutral,46748,46748
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Cyber Security),All India,OBC-NCL,Gender-Neutral,53971,55784
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Cyber Security),All India,SC,Gender-Neutral,203412,203412
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Cyber Security),All India,ST,Gender-Neutral,387612,387612
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Data Science),All India,OPEN,Gender-Neutral,37514,38445
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Data Science),All India,EWS,Gender-Neutral,43807,44130
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Data Science),All India,OBC-NCL,Gender-Neutral,49896,51687
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Data Science),All India,OBC-NCL(PwD),Gender-Neutral,1035910,1035910
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Data Science),All India,SC,Gender-Neutral,189271,193885
+Indian Institute of Information Technology Bhopal,Computer Science and Engineering (Data Science),All India,ST,Gender-Neutral,328774,328774
 Indian Institute of Information Technology Bhopal,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,54761,59459
 Indian Institute of Information Technology Bhopal,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,62139,68004
 Indian Institute of Information Technology Bhopal,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,68754,74468
@@ -136,522 +593,89 @@ Indian Institute of Information Technology Bhopal,Physics and Computational Engi
 Indian Institute of Information Technology Bhopal,Physics and Computational Engineering,All India,OBC-NCL,Gender-Neutral,80125,85217
 Indian Institute of Information Technology Bhopal,Physics and Computational Engineering,All India,SC,Gender-Neutral,258173,258173
 Indian Institute of Information Technology Bhopal,Physics and Computational Engineering,All India,ST,Gender-Neutral,558016,571894
-Indian Institute of Information Technology Sri City Chittoor,Artificial Intelligence and Data Science,All India,OPEN,Gender-Neutral,30392,30479
-Indian Institute of Information Technology Sri City Chittoor,Artificial Intelligence and Data Science,All India,OPEN,Female-only,41618,41618
-Indian Institute of Information Technology Sri City Chittoor,Artificial Intelligence and Data Science,All India,EWS,Gender-Neutral,35766,36610
-Indian Institute of Information Technology Sri City Chittoor,Artificial Intelligence and Data Science,All India,OBC-NCL,Gender-Neutral,41091,41304
-Indian Institute of Information Technology Sri City Chittoor,Artificial Intelligence and Data Science,All India,OBC-NCL,Female-only,61600,61600
-Indian Institute of Information Technology Sri City Chittoor,Artificial Intelligence and Data Science,All India,SC,Gender-Neutral,174100,174100
-Indian Institute of Information Technology Sri City Chittoor,Computer Science and Engineering,All India,OPEN,Gender-Neutral,28837,29046
-Indian Institute of Information Technology Sri City Chittoor,Computer Science and Engineering,All India,OPEN,Female-only,38675,38675
-Indian Institute of Information Technology Sri City Chittoor,Computer Science and Engineering,All India,EWS,Gender-Neutral,34538,35054
-Indian Institute of Information Technology Sri City Chittoor,Computer Science and Engineering,All India,EWS,Female-only,44617,47896
-Indian Institute of Information Technology Sri City Chittoor,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,40171,40944
-Indian Institute of Information Technology Sri City Chittoor,Computer Science and Engineering,All India,OBC-NCL,Female-only,55757,61535
-Indian Institute of Information Technology Sri City Chittoor,Computer Science and Engineering,All India,SC,Gender-Neutral,170462,170462
-Indian Institute of Information Technology Sri City Chittoor,Computer Science and Engineering,All India,SC,Female-only,184610,197427
-Indian Institute of Information Technology Sri City Chittoor,Computer Science and Engineering,All India,ST,Gender-Neutral,274381,274381
-Indian Institute of Information Technology Sri City Chittoor,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,37940,39075
-Indian Institute of Information Technology Sri City Chittoor,Electronics and Communication Engineering,All India,OPEN,Female-only,53102,54476
-Indian Institute of Information Technology Sri City Chittoor,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,43810,45474
-Indian Institute of Information Technology Sri City Chittoor,Electronics and Communication Engineering,All India,EWS,Female-only,65256,65256
-Indian Institute of Information Technology Sri City Chittoor,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,47933,49683
-Indian Institute of Information Technology Sri City Chittoor,Electronics and Communication Engineering,All India,SC,Gender-Neutral,193312,204577
-Indian Institute of Information Technology Sri City Chittoor,Electronics and Communication Engineering,All India,SC,Female-only,237915,237915
-Indian Institute of Information Technology Sri City Chittoor,Electronics and Communication Engineering,All India,ST,Gender-Neutral,316801,316801
-Indian Institute of Information Technology Sri City Chittoor,Electronics and Communication Engineering,All India,ST,Female-only,345569,345569
-Indian Institute of Information Technology Guwahati,Computer Science and Engineering,All India,OPEN,Gender-Neutral,28156,28255
-Indian Institute of Information Technology Guwahati,Computer Science and Engineering,All India,OPEN,Female-only,43557,43557
-Indian Institute of Information Technology Guwahati,Computer Science and Engineering,All India,EWS,Gender-Neutral,34518,34877
-Indian Institute of Information Technology Guwahati,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,38657,39759
-Indian Institute of Information Technology Guwahati,Computer Science and Engineering,All India,OBC-NCL,Female-only,64363,69861
-Indian Institute of Information Technology Guwahati,Computer Science and Engineering,All India,SC,Gender-Neutral,164471,164471
-Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,43987,44592
-Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,OPEN,Female-only,68411,75761
-Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,53380,60689
-Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,EWS,Female-only,79828,79828
-Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,56559,59649
-Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,89527,89527
-Indian Institute of Information Technology Guwahati,Electronics and Communication Engineering,All India,SC,Gender-Neutral,201491,201491
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Computer Science and Engineering,All India,OPEN,Gender-Neutral,11090,11201
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Computer Science and Engineering,All India,OBC-NCL,Female-only,25786,25786
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Electrical and Electronics Engineering,All India,OPEN,Gender-Neutral,21853,22339
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Electrical and Electronics Engineering,All India,OPEN,Female-only,34279,34279
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Electrical and Electronics Engineering,All India,EWS,Gender-Neutral,23095,23095
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Electrical and Electronics Engineering,All India,SC,Gender-Neutral,117149,117149
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Integrated BTech IT and MTech IT,All India,OPEN,Gender-Neutral,14574,14765
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Integrated BTech IT and MBA,All India,OPEN,Gender-Neutral,17370,17622
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Integrated BTech IT and MBA,All India,OPEN,Female-only,25726,27450
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Integrated BTech IT and MBA,All India,EWS,Gender-Neutral,19223,19223
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Mathematics and Scientific Computing,All India,OPEN,Gender-Neutral,14447,14447
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Mathematics and Scientific Computing,All India,OPEN,Female-only,25117,25117
-Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior,Mathematics and Scientific Computing,All India,SC,Gender-Neutral,103386,103386
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering,All India,OPEN,Gender-Neutral,42177,42692
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering,All India,EWS,Gender-Neutral,54257,55304
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering,All India,EWS,Female-only,67463,67463
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,55550,59699
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering,All India,SC,Gender-Neutral,200387,200387
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering,All India,ST,Gender-Neutral,390461,390461
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering Cyber Security,All India,OPEN,Gender-Neutral,46041,47183
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering Cyber Security,All India,EWS,Gender-Neutral,56405,56683
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering Cyber Security,All India,OBC-NCL,Gender-Neutral,59930,63851
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering Data Science,All India,OPEN,Gender-Neutral,44101,45713
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering Data Science,All India,EWS,Gender-Neutral,56009,56009
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering Data Science,All India,OBC-NCL,Gender-Neutral,60531,63037
-Indian Institute of Information Technology Una Himachal Pradesh,Computer Science and Engineering Data Science,All India,ST,Gender-Neutral,401583,401583
-Indian Institute of Information Technology Una Himachal Pradesh,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,57676,60792
-Indian Institute of Information Technology Una Himachal Pradesh,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,65965,77644
-Indian Institute of Information Technology Una Himachal Pradesh,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,71837,79526
-Indian Institute of Information Technology Una Himachal Pradesh,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,88263,88263
-Indian Institute of Information Technology Una Himachal Pradesh,Electronics and Communication Engineering,All India,SC,Gender-Neutral,222808,227809
-Indian Institute of Information Technology Una Himachal Pradesh,Electronics and Communication Engineering,All India,SC,Female-only,262098,262098
-Indian Institute of Information Technology Una Himachal Pradesh,Electronics and Communication Engineering,All India,ST,Gender-Neutral,529455,554969
-Indian Institute of Information Technology IIIT Dharwad,Computer Science and Engineering,All India,OPEN,Gender-Neutral,55069,56863
-Indian Institute of Information Technology IIIT Dharwad,Computer Science and Engineering,All India,OPEN,Female-only,64118,68592
-Indian Institute of Information Technology IIIT Dharwad,Computer Science and Engineering,All India,EWS,Gender-Neutral,71049,78213
-Indian Institute of Information Technology IIIT Dharwad,Computer Science and Engineering,All India,EWS,Female-only,92316,92316
-Indian Institute of Information Technology IIIT Dharwad,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,73766,83720
-Indian Institute of Information Technology IIIT Dharwad,Computer Science and Engineering,All India,OBC-NCL,Female-only,87816,100395
-Indian Institute of Information Technology IIIT Dharwad,Computer Science and Engineering,All India,SC,Gender-Neutral,228101,232592
-Indian Institute of Information Technology IIIT Dharwad,Computer Science and Engineering,All India,SC,Female-only,218792,218792
-Indian Institute of Information Technology IIIT Dharwad,Computer Science and Engineering,All India,ST,Gender-Neutral,400203,416174
-Indian Institute of Information Technology IIIT Dharwad,Computer Science and Engineering,All India,ST,Female-only,352998,352998
-Indian Institute of Information Technology IIIT Dharwad,Data Science and Artificial Intelligence,All India,OPEN,Gender-Neutral,57265,62152
-Indian Institute of Information Technology IIIT Dharwad,Data Science and Artificial Intelligence,All India,OPEN,Female-only,72624,73746
-Indian Institute of Information Technology IIIT Dharwad,Data Science and Artificial Intelligence,All India,EWS,Gender-Neutral,79454,85319
-Indian Institute of Information Technology IIIT Dharwad,Data Science and Artificial Intelligence,All India,EWS,Female-only,90334,90334
-Indian Institute of Information Technology IIIT Dharwad,Data Science and Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,76838,86797
-Indian Institute of Information Technology IIIT Dharwad,Data Science and Artificial Intelligence,All India,OBC-NCL,Female-only,94215,103336
-Indian Institute of Information Technology IIIT Dharwad,Data Science and Artificial Intelligence,All India,SC,Gender-Neutral,234035,240170
-Indian Institute of Information Technology IIIT Dharwad,Data Science and Artificial Intelligence,All India,SC,Female-only,240380,240380
-Indian Institute of Information Technology IIIT Dharwad,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,63506,73989
-Indian Institute of Information Technology IIIT Dharwad,Electronics and Communication Engineering,All India,OPEN,Female-only,78345,87533
-Indian Institute of Information Technology IIIT Dharwad,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,85352,96166
-Indian Institute of Information Technology IIIT Dharwad,Electronics and Communication Engineering,All India,EWS,Female-only,102522,108829
-Indian Institute of Information Technology IIIT Dharwad,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,83678,94743
-Indian Institute of Information Technology IIIT Dharwad,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,105555,117458
-Indian Institute of Information Technology IIIT Dharwad,Electronics and Communication Engineering,All India,SC,Gender-Neutral,240092,248598
-Indian Institute of Information Technology IIIT Dharwad,Electronics and Communication Engineering,All India,SC,Female-only,260802,260802
-Indian Institute of Information Technology IIIT Dharwad,Electronics and Communication Engineering,All India,ST,Gender-Neutral,380275,397960
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Computer Science and Engineering,All India,OPEN,Gender-Neutral,16426,16611
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Computer Science and Engineering,All India,OPEN,Female-only,26038,26038
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Computer Science and Engineering,All India,EWS,Gender-Neutral,18683,18856
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Computer Science and Engineering,All India,EWS,Female-only,34686,38494
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,22398,22398
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Computer Science and Engineering,All India,OBC-NCL,Female-only,41349,41349
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,20533,20916
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,24681,24681
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Electronics and Communication Engineering,All India,EWS,Female-only,40549,40549
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,27935,28214
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Electronics and Communication Engineering,All India,SC,Gender-Neutral,118719,118719
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Electronics and Communication Engineering,All India,ST,Gender-Neutral,169708,169708
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Mechanical Engineering,All India,OPEN,Gender-Neutral,50004,52908
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Mechanical Engineering,All India,EWS,Gender-Neutral,61827,65397
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,62389,64779
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Mechanical Engineering,All India,OBC-NCL,Female-only,102050,118978
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Mechanical Engineering,All India,ST,Gender-Neutral,257922,257922
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Smart Manufacturing,All India,OPEN,Gender-Neutral,64001,64090
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Smart Manufacturing,All India,OPEN,Female-only,94278,94278
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Smart Manufacturing,All India,EWS,Female-only,119308,119308
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Smart Manufacturing,All India,OBC-NCL,Gender-Neutral,77306,81973
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Smart Manufacturing,All India,OBC-NCL,Female-only,114013,114013
-Pt Dwarka Prasad Mishra Indian Institute of Information Technology Design and Manufacture Jabalpur,Smart Manufacturing,All India,ST,Gender-Neutral,299702,299702
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering Artificial Intelligence and Data Science,All India,OPEN,Gender-Neutral,45719,48636
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering Artificial Intelligence and Data Science,All India,EWS,Gender-Neutral,65970,69777
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering Artificial Intelligence and Data Science,All India,OBC-NCL,Gender-Neutral,72703,76282
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering,All India,OPEN,Gender-Neutral,58514,62216
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering,All India,EWS,Gender-Neutral,78505,87767
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering,All India,EWS,Female-only,93143,93143
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,75741,82882
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering,All India,OBC-NCL,Female-only,91155,91777
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering,All India,SC,Gender-Neutral,216206,216206
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering,All India,ST,Gender-Neutral,416322,423801
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering Cyber Security,All India,OPEN,Gender-Neutral,60492,64936
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering Cyber Security,All India,OPEN,Female-only,78802,78802
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering Cyber Security,All India,EWS,Gender-Neutral,72504,94003
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering Cyber Security,All India,OBC-NCL,Gender-Neutral,77530,83395
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering Cyber Security,All India,OBC-NCL,Female-only,105988,105988
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering Cyber Security,All India,SC,Gender-Neutral,222417,227547
-Indian Institute of Information Technology Kalyani West Bengal,Computer Science and Engineering Cyber Security,All India,ST,Gender-Neutral,453928,453928
-Indian Institute of Information Technology Kalyani West Bengal,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,66914,73412
-Indian Institute of Information Technology Kalyani West Bengal,Electronics and Communication Engineering,All India,OPEN,Female-only,73694,73694
-Indian Institute of Information Technology Kalyani West Bengal,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,89307,98219
-Indian Institute of Information Technology Kalyani West Bengal,Electronics and Communication Engineering,All India,EWS,Female-only,111248,111248
-Indian Institute of Information Technology Kalyani West Bengal,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,89261,96400
-Indian Institute of Information Technology Kalyani West Bengal,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,127261,127261
-Indian Institute of Information Technology Kalyani West Bengal,Electronics and Communication Engineering,All India,SC,Gender-Neutral,238750,243842
-Indian Institute of Information Technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,OPEN,Gender-Neutral,61603,70386
-Indian Institute of Information Technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,OPEN,Female-only,80384,90292
-Indian Institute of Information Technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,EWS,Gender-Neutral,79673,83627
-Indian Institute of Information Technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,EWS,Female-only,91807,101328
-Indian Institute of Information Technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,OBC-NCL,Gender-Neutral,78439,85583
-Indian Institute of Information Technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,OBC-NCL,Female-only,97711,108269
-Indian Institute of Information Technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,SC,Gender-Neutral,236605,244129
-Indian Institute of Information Technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,SC,Female-only,238330,238330
-Indian Institute of Information Technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,ST,Gender-Neutral,400008,400008
-Indian Institute of Information Technology Raichur Karnataka,Computer Science and Engineering,All India,OPEN,Gender-Neutral,55803,65543
-Indian Institute of Information Technology Raichur Karnataka,Computer Science and Engineering,All India,OPEN,Female-only,74529,84082
-Indian Institute of Information Technology Raichur Karnataka,Computer Science and Engineering,All India,EWS,Gender-Neutral,71811,77997
-Indian Institute of Information Technology Raichur Karnataka,Computer Science and Engineering,All India,EWS,Female-only,85851,91314
-Indian Institute of Information Technology Raichur Karnataka,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,71051,79652
-Indian Institute of Information Technology Raichur Karnataka,Computer Science and Engineering,All India,OBC-NCL,Female-only,89604,98838
-Indian Institute of Information Technology Raichur Karnataka,Computer Science and Engineering,All India,SC,Gender-Neutral,215635,226178
-Indian Institute of Information Technology Raichur Karnataka,Computer Science and Engineering,All India,SC,Female-only,244302,250557
-Indian Institute of Information Technology Raichur Karnataka,Mathematics and Computing,All India,OPEN,Gender-Neutral,64581,74623
-Indian Institute of Information Technology Raichur Karnataka,Mathematics and Computing,All India,OPEN,Female-only,88852,92773
-Indian Institute of Information Technology Raichur Karnataka,Mathematics and Computing,All India,EWS,Gender-Neutral,83108,93529
-Indian Institute of Information Technology Raichur Karnataka,Mathematics and Computing,All India,EWS,Female-only,107541,107541
-Indian Institute of Information Technology Raichur Karnataka,Mathematics and Computing,All India,OBC-NCL,Gender-Neutral,80988,89745
-Indian Institute of Information Technology Raichur Karnataka,Mathematics and Computing,All India,OBC-NCL,Female-only,119748,121461
-Indian Institute of Information Technology Raichur Karnataka,Mathematics and Computing,All India,SC,Gender-Neutral,240074,242363
-Indian Institute of Information Technology Raichur Karnataka,Mathematics and Computing,All India,ST,Gender-Neutral,460668,475776
-Indian Institute of Information Technology Raichur Karnataka,Mathematics and Computing,All India,ST,Female-only,517025,517025
-Indian Institute of Information Technology Kota Rajasthan,Artificial Intelligence and Data Engineering,All India,OPEN,Gender-Neutral,37155,37763
-Indian Institute of Information Technology Kota Rajasthan,Artificial Intelligence and Data Engineering,All India,OPEN,Female-only,56788,56788
-Indian Institute of Information Technology Kota Rajasthan,Artificial Intelligence and Data Engineering,All India,EWS,Gender-Neutral,42326,42889
-Indian Institute of Information Technology Kota Rajasthan,Artificial Intelligence and Data Engineering,All India,OBC-NCL,Gender-Neutral,45135,48182
-Indian Institute of Information Technology Kota Rajasthan,Artificial Intelligence and Data Engineering,All India,OBC-NCL,Female-only,74129,74129
-Indian Institute of Information Technology Kota Rajasthan,Computer Science and Engineering,All India,OPEN,Gender-Neutral,33401,33434
-Indian Institute of Information Technology Kota Rajasthan,Computer Science and Engineering,All India,OPEN,Female-only,45042,45042
-Indian Institute of Information Technology Kota Rajasthan,Computer Science and Engineering,All India,EWS,Gender-Neutral,41498,42415
-Indian Institute of Information Technology Kota Rajasthan,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,43606,44688
-Indian Institute of Information Technology Kota Rajasthan,Computer Science and Engineering,All India,OBC-NCL,Female-only,66578,71604
-Indian Institute of Information Technology Kota Rajasthan,Computer Science and Engineering,All India,SC,Female-only,207053,207053
-Indian Institute of Information Technology Kota Rajasthan,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,46488,48011
-Indian Institute of Information Technology Kota Rajasthan,Electronics and Communication Engineering,All India,OPEN,Female-only,62498,65994
-Indian Institute of Information Technology Kota Rajasthan,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,53727,57693
-Indian Institute of Information Technology Kota Rajasthan,Electronics and Communication Engineering,All India,EWS,Female-only,76446,76446
-Indian Institute of Information Technology Kota Rajasthan,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,61297,64226
-Indian Institute of Information Technology Kota Rajasthan,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,81427,82122
-Indian Institute of Information Technology Kota Rajasthan,Electronics and Communication Engineering,All India,SC,Gender-Neutral,207156,207156
-Indian Institute of Information Technology Kota Rajasthan,Electronics and Communication Engineering,All India,SC,Female-only,230679,230679
-Indian Institute of Information Technology Kota Rajasthan,Electronics and Communication Engineering,All India,ST,Gender-Neutral,328432,328432
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering,All India,OPEN,Gender-Neutral,49076,50277
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering,All India,OPEN,Female-only,61540,61540
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering,All India,EWS,Gender-Neutral,64902,72939
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering,All India,EWS,Female-only,87280,87280
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,64254,69089
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering,All India,OBC-NCL,Female-only,86756,87241
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering,All India,SC,Gender-Neutral,218809,220942
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering,All India,SC,Female-only,234645,234759
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering,All India,ST,Gender-Neutral,382506,382506
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering,All India,ST,Female-only,382467,382467
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,EWS,Gender-Neutral,47483,47483
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,OBC-NCL,Gender-Neutral,47287,47287
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,SC,Female-only,218360,218360
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,OPEN,Gender-Neutral,53828,55979
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,OPEN,Female-only,71583,72125
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,EWS,Gender-Neutral,70520,77461
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,EWS,Female-only,95178,95178
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,OBC-NCL,Gender-Neutral,65490,71753
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,OBC-NCL,Female-only,82485,82485
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,SC,Gender-Neutral,221070,221070
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,SC,Female-only,238753,238753
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,ST,Gender-Neutral,336901,336901
-Indian Institute of Information Technology IIIT Kottayam,Computer Science and Engineering with specialization in Cyber Security,All India,ST,Female-only,516153,516153
-Indian Institute of Information Technology IIIT Kottayam,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,53435,55182
-Indian Institute of Information Technology IIIT Kottayam,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,69959,72608
-Indian Institute of Information Technology IIIT Kottayam,Electronics and Communication Engineering,All India,EWS,Female-only,106282,106282
-Indian Institute of Information Technology IIIT Kottayam,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,68683,77080
-Indian Institute of Information Technology IIIT Kottayam,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,82840,82840
-Indian Institute of Information Technology IIIT Kottayam,Electronics and Communication Engineering,All India,SC,Gender-Neutral,226313,242590
-Indian Institute of Information Technology IIIT Kottayam,Electronics and Communication Engineering,All India,SC,Female-only,230849,230849
-Indian Institute of Information Technology IIIT Kottayam,Electronics and Communication Engineering,All India,ST,Gender-Neutral,382617,439350
-Indian Institute of Information Technology IIIT Kottayam,Electronics and Communication Engineering,All India,ST,Female-only,502912,502912
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Mechanical Engineering and M.Tech in AI and Robotics,All India,OPEN,Gender-Neutral,42918,45791
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Mechanical Engineering and M.Tech in AI and Robotics,All India,OPEN,Female-only,91894,96388
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Mechanical Engineering and M.Tech in AI and Robotics,All India,EWS,Gender-Neutral,78107,78107
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Mechanical Engineering and M.Tech in AI and Robotics,All India,EWS,Female-only,116722,116722
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Mechanical Engineering and M.Tech in AI and Robotics,All India,OBC-NCL,Gender-Neutral,64833,65258
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Mechanical Engineering and M.Tech in AI and Robotics,All India,OBC-NCL,Female-only,124276,130593
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Electronics and Communication Engineering and M.Tech in Communication Systems,All India,OPEN,Gender-Neutral,32103,34328
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Electronics and Communication Engineering and M.Tech in Communication Systems,All India,OPEN,Female-only,54339,54339
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Electronics and Communication Engineering and M.Tech in Communication Systems,All India,OBC-NCL,Female-only,82830,82830
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Electronics and Communication Engineering and M.Tech in Communication Systems,All India,ST,Gender-Neutral,256327,256327
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Electronics and Communication Engineering and M.Tech in Microelectronics and VLSI Systems,All India,ST,Gender-Neutral,248844,248844
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Computer Science and Engineering,All India,OPEN,Gender-Neutral,22123,22123
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,27895,28116
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Computer Science and Engineering Dual Degree,All India,OPEN,Gender-Neutral,28896,28897
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Computer Science and Engineering Dual Degree,All India,EWS,Gender-Neutral,35830,35830
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Computer Science and Engineering Dual Degree,All India,OBC-NCL,Gender-Neutral,36952,36952
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Computer Science and Engineering Dual Degree,All India,SC,Gender-Neutral,126148,126148
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Computer Science and Engineering Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,28147,28155
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Design Engineering,All India,OPEN,Gender-Neutral,73115,73115
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Design Engineering,All India,EWS,Gender-Neutral,97088,104681
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Design Engineering,All India,OBC-NCL,Gender-Neutral,84360,86953
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Design Engineering,All India,ST,Gender-Neutral,369336,369336
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,29605,29987
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Electronics and Communication Engineering,All India,OPEN,Female-only,40662,40662
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,38632,38831
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,52128,52128
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Electronics and Communication Engineering,All India,SC,Gender-Neutral,142610,142610
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Engineering Physics,All India,OPEN,Gender-Neutral,62441,62441
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Engineering Physics,All India,EWS,Gender-Neutral,102313,105224
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Engineering Physics,All India,OBC-NCL,Gender-Neutral,74328,74328
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Mechanical Engineering,All India,OPEN,Gender-Neutral,52557,53610
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Mechanical Engineering,All India,OPEN,Female-only,84548,84548
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Mechanical Engineering,All India,EWS,Gender-Neutral,77749,78850
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Mechanical Engineering,All India,OBC-NCL,Gender-Neutral,68371,71465
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Mechanical Engineering,All India,OBC-NCL,Female-only,103979,122314
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Mechanical Engineering,All India,SC,Female-only,218554,218554
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Smart Manufacturing,All India,OPEN,Gender-Neutral,65687,67255
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Smart Manufacturing,All India,OPEN,Female-only,67661,81428
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Smart Manufacturing,All India,EWS,Gender-Neutral,88107,88107
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Smart Manufacturing,All India,OBC-NCL,Gender-Neutral,86437,89950
-Indian Institute of Information Technology Design and Manufacturing Kancheepuram,Smart Manufacturing,All India,OBC-NCL,Female-only,100485,100485
-Indian Institute of Information Technology Lucknow,Computer Science,All India,OPEN,Female-only,15554,15554
-Indian Institute of Information Technology Lucknow,Computer Science,All India,EWS,Female-only,22242,22242
-Indian Institute of Information Technology Lucknow,Computer Science and Artificial Intelligence,All India,OPEN,Female-only,15421,15421
-Indian Institute of Information Technology Lucknow,Computer Science and Business,All India,OPEN,Gender-Neutral,12726,13100
-Indian Institute of Information Technology Lucknow,Computer Science and Business,All India,OPEN,Female-only,21480,22498
-Indian Institute of Information Technology Lucknow,Computer Science and Business,All India,OBC-NCL,Gender-Neutral,17621,17621
-Indian Institute of Information Technology Lucknow,Information Technology,All India,OPEN,Gender-Neutral,13202,13233
-Indian Institute of Information Technology Lucknow,Information Technology,All India,OPEN,Female-only,18562,21093
-Indian Institute of Information Technology Lucknow,Information Technology,All India,EWS,Gender-Neutral,15086,15086
-Indian Institute of Information Technology Lucknow,Information Technology,All India,EWS,Female-only,33057,33057
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering,All India,OPEN,Gender-Neutral,99492,119721
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering,All India,OPEN,Female-only,127213,147862
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering,All India,EWS,Gender-Neutral,127802,153654
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering,All India,EWS,Female-only,151064,190932
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,122046,150821
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering,All India,OBC-NCL,Female-only,186657,231890
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering,All India,SC,Gender-Neutral,277196,308203
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering,All India,ST,Gender-Neutral,582908,672155
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering,All India,ST,Female-only,778181,778181
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,OPEN,Gender-Neutral,100642,115760
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,OPEN,Female-only,147926,193978
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,EWS,Gender-Neutral,118257,148292
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,EWS,Female-only,197943,220911
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,OBC-NCL,Gender-Neutral,118188,160096
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,OBC-NCL,Female-only,205809,234444
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,SC,Gender-Neutral,272912,318325
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,SC,Female-only,289884,321145
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,ST,Gender-Neutral,613345,650407
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Artificial Intelligence and Data Science,All India,ST,Female-only,988396,988396
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Cyber Security,All India,OPEN,Gender-Neutral,109608,136045
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Cyber Security,All India,OPEN,Female-only,159819,208271
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Cyber Security,All India,EWS,Gender-Neutral,136554,154515
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Cyber Security,All India,EWS,Female-only,223379,223379
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Cyber Security,All India,OBC-NCL,Gender-Neutral,140461,174869
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Cyber Security,All India,OBC-NCL,Female-only,246816,252634
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Cyber Security,All India,SC,Gender-Neutral,284804,326283
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Cyber Security,All India,SC,Female-only,326292,326292
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Cyber Security,All India,ST,Gender-Neutral,551784,551784
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Quantum Technologies,All India,OPEN,Gender-Neutral,105228,119746
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Quantum Technologies,All India,OPEN,Female-only,176634,204725
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Quantum Technologies,All India,EWS,Gender-Neutral,120452,138873
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Quantum Technologies,All India,EWS,Female-only,210798,210798
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Quantum Technologies,All India,OBC-NCL,Gender-Neutral,122758,153350
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Quantum Technologies,All India,OBC-NCL,Female-only,220985,225237
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Quantum Technologies,All India,SC,Gender-Neutral,276465,298031
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Quantum Technologies,All India,SC,Female-only,318194,318194
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Quantum Technologies,All India,ST,Gender-Neutral,527263,545306
-Indian Institute of Information Technology Senapati Manipur,Computer Science and Engineering with specialization in Quantum Technologies,All India,ST,Female-only,786485,786485
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,123987,181376
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering,All India,OPEN,Female-only,212200,242080
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,181411,215720
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering,All India,EWS,Female-only,288945,294107
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,182420,204319
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,270795,304958
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering,All India,SC,Gender-Neutral,313173,350675
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering,All India,SC,Female-only,334148,342293
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering,All India,ST,Gender-Neutral,624190,778682
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,OPEN,Gender-Neutral,141573,207984
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,OPEN,Female-only,244590,300825
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,EWS,Gender-Neutral,216525,233375
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,EWS,Female-only,308133,321650
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,OBC-NCL,Gender-Neutral,208547,234226
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,OBC-NCL,Female-only,302584,352007
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,SC,Gender-Neutral,332197,367397
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,SC,Female-only,366287,369031
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,ST,Gender-Neutral,791685,1171835
-Indian Institute of Information Technology Senapati Manipur,Electronics and Communication Engineering with specialization in VLSI and Embedded Systems,All India,ST,Female-only,804450,804450
-Indian Institute of Information Technology Nagpur,Computer Science and Engineering,All India,OPEN,Gender-Neutral,34472,35506
-Indian Institute of Information Technology Nagpur,Computer Science and Engineering,All India,EWS,Gender-Neutral,39664,39664
-Indian Institute of Information Technology Nagpur,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,43907,44491
-Indian Institute of Information Technology Nagpur,Computer Science and Engineering,All India,SC,Gender-Neutral,166256,183023
-Indian Institute of Information Technology Nagpur,Computer Science Engineering Artificial Intelligence and Machine Learning,All India,OPEN,Gender-Neutral,29882,30331
-Indian Institute of Information Technology Nagpur,Computer Science Engineering Artificial Intelligence and Machine Learning,All India,SC,Gender-Neutral,167075,179256
-Indian Institute of Information Technology Nagpur,Computer Science Engineering Artificial Intelligence and Machine Learning,All India,ST,Gender-Neutral,309644,309644
-Indian Institute of Information Technology Nagpur,Computer Science Engineering Data Science and Analytics,All India,OPEN,Gender-Neutral,36699,37653
-Indian Institute of Information Technology Nagpur,Computer Science Engineering Data Science and Analytics,All India,EWS,Gender-Neutral,40150,41406
-Indian Institute of Information Technology Nagpur,Computer Science Engineering Data Science and Analytics,All India,OBC-NCL,Gender-Neutral,45778,46755
-Indian Institute of Information Technology Nagpur,Computer Science Engineering Data Science and Analytics,All India,SC,Gender-Neutral,183334,185666
-Indian Institute of Information Technology Nagpur,Computer Science Engineering Human Computer Interaction and Gaming Technology,All India,OPEN,Gender-Neutral,42348,43918
-Indian Institute of Information Technology Nagpur,Computer Science Engineering Human Computer Interaction and Gaming Technology,All India,EWS,Gender-Neutral,45488,45709
-Indian Institute of Information Technology Nagpur,Computer Science Engineering Human Computer Interaction and Gaming Technology,All India,OBC-NCL,Gender-Neutral,49749,50856
-Indian Institute of Information Technology Nagpur,Computer Science Engineering Human Computer Interaction and Gaming Technology,All India,SC,Gender-Neutral,190246,195919
-Indian Institute of Information Technology Nagpur,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,51862,56011
-Indian Institute of Information Technology Nagpur,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,64110,69118
-Indian Institute of Information Technology Nagpur,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,65270,70926
-Indian Institute of Information Technology Nagpur,Electronics and Communication Engineering,All India,SC,Gender-Neutral,211948,216512
-Indian Institute of Information Technology Nagpur,Electronics and Communication Engineering,All India,ST,Gender-Neutral,383752,408650
-Indian Institute of Information Technology Nagpur,Electronics and Communication Engineering Internet of Things,All India,OPEN,Gender-Neutral,50496,53384
-Indian Institute of Information Technology Nagpur,Electronics and Communication Engineering Internet of Things,All India,OBC-NCL,Gender-Neutral,60827,66110
-Indian Institute of Information Technology Nagpur,Electronics and Communication Engineering Internet of Things,All India,SC,Gender-Neutral,210571,213615
-Indian Institute of Information Technology Pune,Computer Science and Engineering,All India,OPEN,Gender-Neutral,27517,27931
-Indian Institute of Information Technology Pune,Computer Science and Engineering,All India,OPEN,Female-only,41741,43979
-Indian Institute of Information Technology Pune,Computer Science and Engineering,All India,EWS,Gender-Neutral,35969,35969
-Indian Institute of Information Technology Pune,Computer Science and Engineering,All India,EWS,Female-only,56544,56544
-Indian Institute of Information Technology Pune,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,39366,40318
-Indian Institute of Information Technology Pune,Computer Science and Engineering,All India,OBC-NCL,Female-only,64108,66445
-Indian Institute of Information Technology Pune,Computer Science and Engineering,All India,SC,Gender-Neutral,138201,139568
-Indian Institute of Information Technology Pune,Computer Science and Engineering,All India,SC,Female-only,189287,189287
-Indian Institute of Information Technology Pune,Computer Science and Engineering,All India,ST,Gender-Neutral,282552,282552
-Indian Institute of Information Technology Pune,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,38043,38412
-Indian Institute of Information Technology Pune,Electronics and Communication Engineering,All India,OPEN,Female-only,57391,59229
-Indian Institute of Information Technology Pune,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,44795,44906
-Indian Institute of Information Technology Pune,Electronics and Communication Engineering,All India,EWS,Female-only,74066,74066
-Indian Institute of Information Technology Pune,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,48934,50860
-Indian Institute of Information Technology Pune,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,75699,89075
-Indian Institute of Information Technology Pune,Electronics and Communication Engineering,All India,SC,Gender-Neutral,181637,181637
-Indian Institute of Information Technology Pune,Electronics and Communication Engineering,All India,SC,Female-only,218864,218864
-Indian Institute of Information Technology Pune,Electronics and Communication Engineering,All India,ST,Gender-Neutral,336412,340811
-Indian Institute of Information Technology Pune,Electronics and Communication Engineering,All India,ST,Female-only,429639,429639
-Indian Institute of Information Technology Ranchi,Mathematics and Computing,All India,OPEN,Gender-Neutral,61474,65782
-Indian Institute of Information Technology Ranchi,Mathematics and Computing,All India,EWS,Gender-Neutral,70108,81634
-Indian Institute of Information Technology Ranchi,Mathematics and Computing,All India,OBC-NCL,Gender-Neutral,73342,79289
-Indian Institute of Information Technology Ranchi,Mathematics and Computing,All India,SC,Gender-Neutral,234834,240843
-Indian Institute of Information Technology Ranchi,Mathematics and Computing,All India,ST,Gender-Neutral,549293,578141
-Indian Institute of Information Technology Ranchi,Computer Science and Engineering,All India,OPEN,Gender-Neutral,52756,57250
-Indian Institute of Information Technology Ranchi,Computer Science and Engineering,All India,EWS,Gender-Neutral,60082,64410
-Indian Institute of Information Technology Ranchi,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,64603,69667
-Indian Institute of Information Technology Ranchi,Computer Science and Engineering,All India,SC,Gender-Neutral,217795,227244
-Indian Institute of Information Technology Ranchi,Computer Science and Engineering,All India,ST,Gender-Neutral,388061,388061
-Indian Institute of Information Technology Ranchi,Computer Science and Engineering Data Science and Artificial Intelligence,All India,OPEN,Gender-Neutral,45001,45001
-Indian Institute of Information Technology Ranchi,Computer Science and Engineering Data Science and Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,57622,61877
-Indian Institute of Information Technology Ranchi,Computer Science and Engineering Data Science and Artificial Intelligence,All India,SC,Gender-Neutral,215177,215177
-Indian Institute of Information Technology Ranchi,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,66762,75726
-Indian Institute of Information Technology Ranchi,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,81152,94984
-Indian Institute of Information Technology Ranchi,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,78644,91071
-Indian Institute of Information Technology Ranchi,Electronics and Communication Engineering,All India,SC,Gender-Neutral,247466,255942
-Indian Institute of Information Technology Ranchi,Electronics and Communication Engineering,All India,ST,Gender-Neutral,518493,553921
-Indian Institute of Information Technology Ranchi,Electronics and Communication Engineering Embedded Systems and Internet of Things,All India,OPEN,Gender-Neutral,67583,74575
-Indian Institute of Information Technology Ranchi,Electronics and Communication Engineering Embedded Systems and Internet of Things,All India,EWS,Gender-Neutral,80716,85147
-Indian Institute of Information Technology Ranchi,Electronics and Communication Engineering Embedded Systems and Internet of Things,All India,OBC-NCL,Gender-Neutral,78164,83761
-Indian Institute of Information Technology Ranchi,Electronics and Communication Engineering Embedded Systems and Internet of Things,All India,SC,Gender-Neutral,243094,251232
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Computer Science and Engineering,All India,OPEN,Gender-Neutral,39726,41492
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,57874,61875
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Computer Science and Engineering,All India,SC,Gender-Neutral,197545,197545
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Computer Science and Engineering,All India,ST,Gender-Neutral,417434,417434
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Computer Science and Engineering Data Science and Analytics,All India,OPEN,Gender-Neutral,48493,49257
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Computer Science and Engineering Data Science and Analytics,All India,EWS,Gender-Neutral,54245,54245
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Computer Science and Engineering Data Science and Analytics,All India,OBC-NCL,Gender-Neutral,61745,63835
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Computer Science and Engineering Data Science and Analytics,All India,SC,Gender-Neutral,202405,202405
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Information Technology,All India,OPEN,Gender-Neutral,50847,52399
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Information Technology,All India,EWS,Gender-Neutral,57875,58244
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Information Technology,All India,OBC-NCL,Gender-Neutral,63861,67471
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Information Technology,All India,SC,Gender-Neutral,211804,211804
-Indian Institute of Information Technology IIIT Kilohrad Sonepat Haryana,Information Technology,All India,ST,Gender-Neutral,431649,431649
 Indian Institute of Information Technology Surat,Computer Science and Engineering,All India,OPEN,Gender-Neutral,35724,36941
 Indian Institute of Information Technology Surat,Computer Science and Engineering,All India,OPEN,Female-only,42454,42454
 Indian Institute of Information Technology Surat,Computer Science and Engineering,All India,EWS,Gender-Neutral,44292,47343
 Indian Institute of Information Technology Surat,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,50457,52814
 Indian Institute of Information Technology Surat,Computer Science and Engineering,All India,SC,Gender-Neutral,198702,201727
-Indian Institute of Information Technology Surat,Computer Science and Engineering Artificial Intelligence and Machine Learning,All India,OPEN,Gender-Neutral,35190,35498
-Indian Institute of Information Technology Surat,Computer Science and Engineering Artificial Intelligence and Machine Learning,All India,EWS,Gender-Neutral,38286,38286
-Indian Institute of Information Technology Surat,Computer Science and Engineering Artificial Intelligence and Machine Learning,All India,OBC-NCL,Gender-Neutral,48272,48272
-Indian Institute of Information Technology Surat,Computer Science and Engineering Artificial Intelligence and Machine Learning,All India,SC,Gender-Neutral,194205,194205
-Indian Institute of Information Technology Surat,Computer Science and Engineering Cyber Security,All India,OPEN,Gender-Neutral,39617,42351
-Indian Institute of Information Technology Surat,Computer Science and Engineering Cyber Security,All India,OPEN,Female-only,44308,44308
-Indian Institute of Information Technology Surat,Computer Science and Engineering Cyber Security,All India,EWS,Gender-Neutral,46483,46483
-Indian Institute of Information Technology Surat,Computer Science and Engineering Cyber Security,All India,OBC-NCL,Gender-Neutral,54483,58708
-Indian Institute of Information Technology Surat,Computer Science and Engineering Cyber Security,All India,SC,Gender-Neutral,195261,195261
-Indian Institute of Information Technology Surat,Computer Science and Engineering Cyber Security,All India,SC,Female-only,212892,212892
+Indian Institute of Information Technology Surat,Computer Science and Engineering (Artificial Intelligence and Machine Learning),All India,OPEN,Gender-Neutral,35190,35498
+Indian Institute of Information Technology Surat,Computer Science and Engineering (Artificial Intelligence and Machine Learning),All India,EWS,Gender-Neutral,38286,38286
+Indian Institute of Information Technology Surat,Computer Science and Engineering (Artificial Intelligence and Machine Learning),All India,OBC-NCL,Gender-Neutral,48272,48272
+Indian Institute of Information Technology Surat,Computer Science and Engineering (Artificial Intelligence and Machine Learning),All India,SC,Gender-Neutral,194205,194205
+Indian Institute of Information Technology Surat,Computer Science and Engineering (Cyber Security),All India,OPEN,Gender-Neutral,39617,42351
+Indian Institute of Information Technology Surat,Computer Science and Engineering (Cyber Security),All India,OPEN,Female-only,44308,44308
+Indian Institute of Information Technology Surat,Computer Science and Engineering (Cyber Security),All India,OPEN(PwD),Gender-Neutral,859462,859462
+Indian Institute of Information Technology Surat,Computer Science and Engineering (Cyber Security),All India,EWS,Gender-Neutral,46483,46483
+Indian Institute of Information Technology Surat,Computer Science and Engineering (Cyber Security),All India,OBC-NCL,Gender-Neutral,54483,58708
+Indian Institute of Information Technology Surat,Computer Science and Engineering (Cyber Security),All India,SC,Gender-Neutral,195261,195261
+Indian Institute of Information Technology Surat,Computer Science and Engineering (Cyber Security),All India,SC,Female-only,212892,212892
 Indian Institute of Information Technology Surat,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,51647,55895
 Indian Institute of Information Technology Surat,Electronics and Communication Engineering,All India,OPEN,Female-only,66046,68984
 Indian Institute of Information Technology Surat,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,60464,68184
 Indian Institute of Information Technology Surat,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,66113,71693
 Indian Institute of Information Technology Surat,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,101626,107647
 Indian Institute of Information Technology Surat,Electronics and Communication Engineering,All India,SC,Gender-Neutral,222157,239158
-Indian Institute of Information Technology Tiruchirappalli,Computer Science Engineering Artificial Intelligence and Data Science,All India,OPEN,Gender-Neutral,40719,41779
-Indian Institute of Information Technology Tiruchirappalli,Computer Science Engineering Artificial Intelligence and Data Science,All India,EWS,Gender-Neutral,51996,52145
-Indian Institute of Information Technology Tiruchirappalli,Computer Science Engineering Artificial Intelligence and Data Science,All India,OBC-NCL,Gender-Neutral,54282,57384
-Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,OPEN,Gender-Neutral,39182,39693
-Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,OPEN,Female-only,55827,60571
-Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,EWS,Gender-Neutral,49449,51529
-Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,EWS,Female-only,67869,67869
-Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,50249,55969
-Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,OBC-NCL,Female-only,71473,79348
-Indian Institute of Information Technology Tiruchirappalli,Computer Science and Engineering,All India,SC,Female-only,179943,179943
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,56128,65225
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,OPEN,Female-only,71452,86301
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,70631,80033
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,EWS,Female-only,95437,108164
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,70772,82295
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,91155,117273
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,SC,Gender-Neutral,182994,182994
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering,All India,ST,Gender-Neutral,302411,302411
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering VLSI Design,All India,OPEN,Gender-Neutral,55361,58997
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering VLSI Design,All India,EWS,Gender-Neutral,63978,74976
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering VLSI Design,All India,OBC-NCL,Gender-Neutral,65129,75369
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering VLSI Design,All India,SC,Gender-Neutral,165244,165244
-Indian Institute of Information Technology Tiruchirappalli,Electronics and Communication Engineering VLSI Design,All India,ST,Gender-Neutral,317516,317516
-Indian Institute of Information Technology Vadodara Gujarat,Artificial Intelligence,All India,OPEN,Gender-Neutral,39798,41886
-Indian Institute of Information Technology Vadodara Gujarat,Artificial Intelligence,All India,OPEN,Female-only,55871,57735
-Indian Institute of Information Technology Vadodara Gujarat,Artificial Intelligence,All India,EWS,Gender-Neutral,44719,45811
-Indian Institute of Information Technology Vadodara Gujarat,Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,55151,60875
-Indian Institute of Information Technology Vadodara Gujarat,Artificial Intelligence,All India,OBC-NCL,Female-only,84827,89672
-Indian Institute of Information Technology Vadodara Gujarat,Artificial Intelligence,All India,SC,Gender-Neutral,209452,209452
-Indian Institute of Information Technology Vadodara Gujarat,Artificial Intelligence,All India,SC,Female-only,257920,257920
-Indian Institute of Information Technology Vadodara Gujarat,Artificial Intelligence,All India,ST,Female-only,458092,458092
-Indian Institute of Information Technology Vadodara Gujarat,Computer Science and Engineering,All India,OPEN,Gender-Neutral,35103,36583
-Indian Institute of Information Technology Vadodara Gujarat,Computer Science and Engineering,All India,OPEN,Female-only,47793,48920
-Indian Institute of Information Technology Vadodara Gujarat,Computer Science and Engineering,All India,EWS,Gender-Neutral,44127,44127
-Indian Institute of Information Technology Vadodara Gujarat,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,50931,53730
-Indian Institute of Information Technology Vadodara Gujarat,Computer Science and Engineering,All India,OBC-NCL,Female-only,74205,79851
-Indian Institute of Information Technology Vadodara Gujarat,Computer Science and Engineering,All India,SC,Female-only,208405,211665
-Indian Institute of Information Technology Vadodara Gujarat,Computer Science and Engineering,All India,ST,Gender-Neutral,346116,346116
-Indian Institute of Information Technology Vadodara Gujarat,Computer Science and Engineering,All India,ST,Female-only,420053,420053
-Indian Institute of Information Technology Vadodara Gujarat,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,53749,58622
-Indian Institute of Information Technology Vadodara Gujarat,Electronics and Communication Engineering,All India,OPEN,Female-only,70394,76776
-Indian Institute of Information Technology Vadodara Gujarat,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,63161,67064
-Indian Institute of Information Technology Vadodara Gujarat,Electronics and Communication Engineering,All India,EWS,Female-only,81907,81907
-Indian Institute of Information Technology Vadodara Gujarat,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,70123,75883
-Indian Institute of Information Technology Vadodara Gujarat,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,102714,119094
-Indian Institute of Information Technology Vadodara Gujarat,Electronics and Communication Engineering,All India,SC,Gender-Neutral,227270,243319
-Indian Institute of Information Technology Vadodara Gujarat,Electronics and Communication Engineering,All India,SC,Female-only,258319,263801
-Indian Institute of Information Technology Vadodara Gujarat,Electronics and Communication Engineering,All India,ST,Gender-Neutral,422961,448931
-Indian Institute of Information Technology Vadodara Gujarat,Electronics and Communication Engineering,All India,ST,Female-only,473671,473671
-Indian Institute of Information Technology Vadodara Gujarat,Information Technology,All India,OPEN,Gender-Neutral,42613,43522
-Indian Institute of Information Technology Vadodara Gujarat,Information Technology,All India,OPEN,Female-only,58269,63154
-Indian Institute of Information Technology Vadodara Gujarat,Information Technology,All India,EWS,Gender-Neutral,48419,50125
-Indian Institute of Information Technology Vadodara Gujarat,Information Technology,All India,EWS,Female-only,67567,67567
-Indian Institute of Information Technology Vadodara Gujarat,Information Technology,All India,OBC-NCL,Gender-Neutral,53850,62168
-Indian Institute of Information Technology Vadodara Gujarat,Information Technology,All India,OBC-NCL,Female-only,82528,94297
-Indian Institute of Information Technology Vadodara Gujarat,Information Technology,All India,SC,Gender-Neutral,215581,216632
-Indian Institute of Information Technology Vadodara Gujarat,Information Technology,All India,SC,Female-only,234702,234702
-Indian Institute of Information Technology Vadodara Gujarat,Information Technology,All India,ST,Female-only,455184,455184
-Indian Institute of Information Technology Vadodara International Campus Diu,Artificial Intelligence,All India,OPEN,Gender-Neutral,63670,70267
-Indian Institute of Information Technology Vadodara International Campus Diu,Artificial Intelligence,All India,OPEN,Female-only,83929,86898
-Indian Institute of Information Technology Vadodara International Campus Diu,Artificial Intelligence,All India,EWS,Gender-Neutral,71281,85199
-Indian Institute of Information Technology Vadodara International Campus Diu,Artificial Intelligence,All India,EWS,Female-only,100591,100591
-Indian Institute of Information Technology Vadodara International Campus Diu,Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,77496,86079
-Indian Institute of Information Technology Vadodara International Campus Diu,Artificial Intelligence,All India,OBC-NCL,Female-only,109859,113584
-Indian Institute of Information Technology Vadodara International Campus Diu,Artificial Intelligence,All India,SC,Gender-Neutral,246027,248495
-Indian Institute of Information Technology Vadodara International Campus Diu,Artificial Intelligence,All India,ST,Gender-Neutral,451489,481390
-Indian Institute of Information Technology Vadodara International Campus Diu,Artificial Intelligence,All India,ST,Female-only,620203,620203
-Indian Institute of Information Technology Vadodara International Campus Diu,Computer Science and Engineering,All India,OPEN,Gender-Neutral,60319,64458
-Indian Institute of Information Technology Vadodara International Campus Diu,Computer Science and Engineering,All India,OPEN,Female-only,77428,81844
-Indian Institute of Information Technology Vadodara International Campus Diu,Computer Science and Engineering,All India,EWS,Gender-Neutral,70000,78434
-Indian Institute of Information Technology Vadodara International Campus Diu,Computer Science and Engineering,All India,EWS,Female-only,89648,89648
-Indian Institute of Information Technology Vadodara International Campus Diu,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,76035,81715
-Indian Institute of Information Technology Vadodara International Campus Diu,Computer Science and Engineering,All India,OBC-NCL,Female-only,95134,108581
-Indian Institute of Information Technology Vadodara International Campus Diu,Computer Science and Engineering,All India,SC,Gender-Neutral,239646,246341
-Indian Institute of Information Technology Vadodara International Campus Diu,Computer Science and Engineering,All India,SC,Female-only,259831,260796
-Indian Institute of Information Technology Vadodara International Campus Diu,Computer Science and Engineering,All India,ST,Gender-Neutral,438438,440361
-Indian Institute of Information Technology Vadodara International Campus Diu,Computer Science and Engineering,All India,ST,Female-only,618508,618508
-Indian Institute of Information Technology Vadodara International Campus Diu,Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,72537,79729
-Indian Institute of Information Technology Vadodara International Campus Diu,Electronics and Communication Engineering,All India,OPEN,Female-only,93742,100766
-Indian Institute of Information Technology Vadodara International Campus Diu,Electronics and Communication Engineering,All India,EWS,Gender-Neutral,84348,98300
-Indian Institute of Information Technology Vadodara International Campus Diu,Electronics and Communication Engineering,All India,EWS,Female-only,117762,117762
-Indian Institute of Information Technology Vadodara International Campus Diu,Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,86418,97273
-Indian Institute of Information Technology Vadodara International Campus Diu,Electronics and Communication Engineering,All India,OBC-NCL,Female-only,128999,132371
-Indian Institute of Information Technology Vadodara International Campus Diu,Electronics and Communication Engineering,All India,SC,Gender-Neutral,249837,257232
-Indian Institute of Information Technology Vadodara International Campus Diu,Electronics and Communication Engineering,All India,SC,Female-only,288508,288508
-Indian Institute of Information Technology Vadodara International Campus Diu,Electronics and Communication Engineering,All India,ST,Gender-Neutral,487778,529903
-
-
-
-
-
+Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,OPEN,Gender-Neutral,63989,66967
+Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,OPEN,Female-only,90455,97386
+Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,EWS,Gender-Neutral,87810,92513
+Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,EWS,Female-only,108614,114310
+Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,78786,87157
+Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,OBC-NCL,Female-only,108433,121761
+Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,SC,Gender-Neutral,236193,245043
+Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,SC,Female-only,238442,238442
+Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,ST,Gender-Neutral,462394,513024
+Indian Institute of Information Technology Agartala,Computer Science and Engineering,All India,ST,Female-only,422529,442755
+Indian institute of information technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,OPEN,Gender-Neutral,61603,70386
+Indian institute of information technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,OPEN,Female-only,80384,90292
+Indian institute of information technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,EWS,Gender-Neutral,79673,83627
+Indian institute of information technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,EWS,Female-only,91807,101328
+Indian institute of information technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,OBC-NCL,Gender-Neutral,78439,85583
+Indian institute of information technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,OBC-NCL,Female-only,97711,108269
+Indian institute of information technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,SC,Gender-Neutral,236605,244129
+Indian institute of information technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,SC,Female-only,238330,238330
+Indian institute of information technology Raichur Karnataka,Artificial Intelligence and Data Science,All India,ST,Gender-Neutral,400008,400008
+Indian institute of information technology Raichur Karnataka,Computer Science and Engineering,All India,OPEN,Gender-Neutral,55803,65543
+Indian institute of information technology Raichur Karnataka,Computer Science and Engineering,All India,OPEN,Female-only,74529,84082
+Indian institute of information technology Raichur Karnataka,Computer Science and Engineering,All India,EWS,Gender-Neutral,71811,77997
+Indian institute of information technology Raichur Karnataka,Computer Science and Engineering,All India,EWS,Female-only,85851,91314
+Indian institute of information technology Raichur Karnataka,Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,71051,79652
+Indian institute of information technology Raichur Karnataka,Computer Science and Engineering,All India,OBC-NCL,Female-only,89604,98838
+Indian institute of information technology Raichur Karnataka,Computer Science and Engineering,All India,SC,Gender-Neutral,215635,226178
+Indian institute of information technology Raichur Karnataka,Computer Science and Engineering,All India,SC,Female-only,244302,250557
+Indian institute of information technology Raichur Karnataka,Mathematics and Computing,All India,OPEN,Gender-Neutral,64581,74623
+Indian institute of information technology Raichur Karnataka,Mathematics and Computing,All India,OPEN,Female-only,88852,92773
+Indian institute of information technology Raichur Karnataka,Mathematics and Computing,All India,EWS,Gender-Neutral,83108,93529
+Indian institute of information technology Raichur Karnataka,Mathematics and Computing,All India,EWS,Female-only,107541,107541
+Indian institute of information technology Raichur Karnataka,Mathematics and Computing,All India,OBC-NCL,Gender-Neutral,80988,89745
+Indian institute of information technology Raichur Karnataka,Mathematics and Computing,All India,OBC-NCL,Female-only,119748,121461
+Indian institute of information technology Raichur Karnataka,Mathematics and Computing,All India,SC,Gender-Neutral,240074,242363
+Indian institute of information technology Raichur Karnataka,Mathematics and Computing,All India,ST,Gender-Neutral,460668,475776
+Indian institute of information technology Raichur Karnataka,Mathematics and Computing,All India,ST,Female-only,517025,517025
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Artificial Intelligence,All India,OPEN,Gender-Neutral,63670,70267
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Artificial Intelligence,All India,OPEN,Female-only,83929,86898
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Artificial Intelligence,All India,EWS,Gender-Neutral,71281,85199
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Artificial Intelligence,All India,EWS,Female-only,100591,100591
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Artificial Intelligence,All India,OBC-NCL,Gender-Neutral,77496,86079
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Artificial Intelligence,All India,OBC-NCL,Female-only,109859,113584
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Artificial Intelligence,All India,SC,Gender-Neutral,246027,248495
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Artificial Intelligence,All India,ST,Gender-Neutral,451489,481390
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Artificial Intelligence,All India,ST,Female-only,620203,620203
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Computer Science and Engineering,All India,OPEN,Gender-Neutral,60319,64458
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Computer Science and Engineering,All India,OPEN,Female-only,77428,81844
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Computer Science and Engineering,All India,EWS,Gender-Neutral,70000,78434
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Computer Science and Engineering,All India,EWS,Female-only,89648,89648
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Computer Science and Engineering,All India,OBC-NCL,Gender-Neutral,76035,81715
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Computer Science and Engineering,All India,OBC-NCL,Female-only,95134,108581
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Computer Science and Engineering,All India,SC,Gender-Neutral,239646,246341
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Computer Science and Engineering,All India,SC,Female-only,259831,260796
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Computer Science and Engineering,All India,ST,Gender-Neutral,438438,440361
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Computer Science and Engineering,All India,ST,Female-only,618508,618508
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Electronics and Communication Engineering,All India,OPEN,Gender-Neutral,72537,79729
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Electronics and Communication Engineering,All India,OPEN,Female-only,93742,100766
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Electronics and Communication Engineering,All India,EWS,Gender-Neutral,84348,98300
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Electronics and Communication Engineering,All India,EWS,Female-only,117762,117762
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Electronics and Communication Engineering,All India,OBC-NCL,Gender-Neutral,86418,97273
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Electronics and Communication Engineering,All India,OBC-NCL,Female-only,128999,132371
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Electronics and Communication Engineering,All India,SC,Gender-Neutral,249837,257232
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Electronics and Communication Engineering,All India,SC,Female-only,288508,288508
+Indian Institute of Information Technology Vadodara International Campus Diu (IIITVICD),Electronics and Communication Engineering,All India,ST,Gender-Neutral,487778,529903
