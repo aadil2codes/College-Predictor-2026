@@ -2107,6 +2107,18 @@
             color: #ffffff !important;
         }
 
+        body.theme-csab .match-count {
+            color: #0f172a !important;
+            font-size: 1.1rem !important;
+            font-weight: 700 !important;
+        }
+
+        body.theme-csab .match-count span {
+            background: rgba(15, 37, 55, 0.08) !important;
+            color: #0f2537 !important;
+            border: 1px solid rgba(15, 37, 55, 0.2) !important;
+        }
+
         /* CSAB Font family override */
         body.theme-csab,
         body.theme-csab h1,
@@ -3947,7 +3959,7 @@ How can I help you today? Please tell me your **JEE Main Rank**, **Category**, a
                     // Top warning removed, tooltip used on hover instead.
                     html += `
                         <div class="match-count" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-                            <div>Unlocked <span>${data.length}</span> possibility${data.length > 1 ? 'ies' : ''}</div>
+                            <div>Unlocked <span>${data.length}</span> ${data.length === 1 ? 'possibility' : 'possibilities'}</div>
                             <button id="download-pdf-btn" class="download-btn">
                                 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                                 Download PDF
